@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "server": "AmazonS3",
+    "accept-ranges": "bytes",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:43 GMT",
+    "x-amz-request-id": "2F823E65BA0C2EB2",
+    "content-length": "4836",
+    "etag": "\"542c76a0a0ad124cd5512f33908fe3fc\"",
+    "content-type": "application/javascript",
+    "connection": "keep-alive",
+    "x-amz-id-2": "E6BU7XPWs3Va2M0GITnC1tcf8zTpe7NmE/ohnv3QpJ+3pv0977pdnb0sw+Y2EObiGGAXD3UMFRI="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/SVGAnimatedString.dew.js"
+}

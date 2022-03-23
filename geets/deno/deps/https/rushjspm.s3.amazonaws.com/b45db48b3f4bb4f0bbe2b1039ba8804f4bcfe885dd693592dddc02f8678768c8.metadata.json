@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "etag": "\"9d49dc875eb187add312983e8c995b9a\"",
+    "content-type": "application/javascript",
+    "x-amz-request-id": "9CCBE5327EC616EF",
+    "accept-ranges": "bytes",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "x-amz-id-2": "mICrJBHIyttp+RUvihu6zON8mX6Imn5GML21NxT5SCTyd3wDe/yZ5wuGV48tEPmHEDUpeJEBAqs=",
+    "server": "AmazonS3",
+    "content-length": "1907",
+    "connection": "keep-alive"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/ShadowRoot-impl.dew.js"
+}

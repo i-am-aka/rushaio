@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "etag": "\"817fa95abc0232cb4f6c2ef286d83bc7\"",
+    "content-type": "application/javascript",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "server": "AmazonS3",
+    "x-amz-request-id": "5B195750A63A1AA8",
+    "x-amz-id-2": "5z8Vwov1S2E1kvH+ehN6F1rI12SM/h0IHh8YR1huKLtfeTtKHI1/MyIsWL6Zvlub9e9n5kuWHeg=",
+    "content-length": "1114",
+    "accept-ranges": "bytes"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/events/EventModifierMixin-impl.dew.js"
+}

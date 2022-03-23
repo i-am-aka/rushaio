@@ -1,0 +1,429 @@
+import { t as t$4 } from "./chunk-dac557ba.js";
+import { h as h$1 } from "./chunk-0c2d1322.js";
+import t$3 from "./buffer.js";
+import "./util.js";
+import "./chunk-6e68c801.js";
+import "./events.js";
+import { o, s, e as e$2, t as t$2, i, r as r$2, m as m$1 } from "./chunk-cffba9d4.js";
+import "./punycode.js";
+import "./querystring.js";
+import o$1 from "./url.js";
+var e,
+    r = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof self ? self : global,
+    t = {};
+
+function n() {
+  if (void 0 !== e) return e;
+
+  if (r.XMLHttpRequest) {
+    e = new r.XMLHttpRequest();
+
+    try {
+      e.open("GET", r.XDomainRequest ? "/" : "https://example.com");
+    } catch (r) {
+      e = null;
+    }
+  } else e = null;
+
+  return e;
+}
+
+function f(e) {
+  var r = n();
+  if (!r) return !1;
+
+  try {
+    return r.responseType = e, r.responseType === e;
+  } catch (e) {}
+
+  return !1;
+}
+
+function a(e) {
+  return "function" == typeof e;
+}
+
+t.fetch = a(r.fetch) && a(r.ReadableStream), t.writableStream = a(r.WritableStream), t.abortController = a(r.AbortController), t.arraybuffer = t.fetch || f("arraybuffer"), t.msstream = !t.fetch && f("ms-stream"), t.mozchunkedarraybuffer = !t.fetch && f("moz-chunked-arraybuffer"), t.overrideMimeType = t.fetch || !!n() && a(n().overrideMimeType), e = null;
+var a$1 = {};
+(a$1 = a$1 = o).Stream = a$1, a$1.Readable = a$1, a$1.Writable = s, a$1.Duplex = e$2, a$1.Transform = t$2, a$1.PassThrough = i, a$1.finished = r$2, a$1.pipeline = m$1;
+var p = a$1;
+var r$1;
+
+r$1 = function () {
+  for (var r = {}, t = 0; t < arguments.length; t++) {
+    var e = arguments[t];
+
+    for (var o in e) a$2.call(e, o) && (r[o] = e[o]);
+  }
+
+  return r;
+};
+
+var a$2 = Object.prototype.hasOwnProperty;
+var t$1 = r$1;
+var e$1 = {
+  100: "Continue",
+  101: "Switching Protocols",
+  102: "Processing",
+  200: "OK",
+  201: "Created",
+  202: "Accepted",
+  203: "Non-Authoritative Information",
+  204: "No Content",
+  205: "Reset Content",
+  206: "Partial Content",
+  207: "Multi-Status",
+  208: "Already Reported",
+  226: "IM Used",
+  300: "Multiple Choices",
+  301: "Moved Permanently",
+  302: "Found",
+  303: "See Other",
+  304: "Not Modified",
+  305: "Use Proxy",
+  307: "Temporary Redirect",
+  308: "Permanent Redirect",
+  400: "Bad Request",
+  401: "Unauthorized",
+  402: "Payment Required",
+  403: "Forbidden",
+  404: "Not Found",
+  405: "Method Not Allowed",
+  406: "Not Acceptable",
+  407: "Proxy Authentication Required",
+  408: "Request Timeout",
+  409: "Conflict",
+  410: "Gone",
+  411: "Length Required",
+  412: "Precondition Failed",
+  413: "Payload Too Large",
+  414: "URI Too Long",
+  415: "Unsupported Media Type",
+  416: "Range Not Satisfiable",
+  417: "Expectation Failed",
+  418: "I'm a teapot",
+  421: "Misdirected Request",
+  422: "Unprocessable Entity",
+  423: "Locked",
+  424: "Failed Dependency",
+  425: "Unordered Collection",
+  426: "Upgrade Required",
+  428: "Precondition Required",
+  429: "Too Many Requests",
+  431: "Request Header Fields Too Large",
+  451: "Unavailable For Legal Reasons",
+  500: "Internal Server Error",
+  501: "Not Implemented",
+  502: "Bad Gateway",
+  503: "Service Unavailable",
+  504: "Gateway Timeout",
+  505: "HTTP Version Not Supported",
+  506: "Variant Also Negotiates",
+  507: "Insufficient Storage",
+  508: "Loop Detected",
+  509: "Bandwidth Limit Exceeded",
+  510: "Not Extended",
+  511: "Network Authentication Required"
+};
+
+var u = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof self ? self : global,
+    c = {},
+    d = t$3.Buffer,
+    f$1 = h$1,
+    l = t,
+    h = t$4,
+    p$1 = p,
+    m = c.readyStates = {
+  UNSENT: 0,
+  OPENED: 1,
+  HEADERS_RECEIVED: 2,
+  LOADING: 3,
+  DONE: 4
+},
+    _ = c.IncomingMessage = function (e, t, r, o) {
+  var s = this || u;
+
+  if (p$1.Readable.call(s), s._mode = r, s.headers = {}, s.rawHeaders = [], s.trailers = {}, s.rawTrailers = [], s.on("end", function () {
+    f$1.nextTick(function () {
+      s.emit("close");
+    });
+  }), "fetch" === r) {
+    if (s._fetchResponse = t, s.url = t.url, s.statusCode = t.status, s.statusMessage = t.statusText, t.headers.forEach(function (e, t) {
+      s.headers[t.toLowerCase()] = e, s.rawHeaders.push(t, e);
+    }), l.writableStream) {
+      var n = new WritableStream({
+        write: function (e) {
+          return new Promise(function (t, r) {
+            s._destroyed ? r() : s.push(d.from(e)) ? t() : s._resumeFetch = t;
+          });
+        },
+        close: function () {
+          u.clearTimeout(o), s._destroyed || s.push(null);
+        },
+        abort: function (e) {
+          s._destroyed || s.emit("error", e);
+        }
+      });
+
+      try {
+        return t.body.pipeTo(n).catch(function (e) {
+          u.clearTimeout(o), s._destroyed || s.emit("error", e);
+        }), void 0;
+      } catch (e) {}
+    }
+
+    var a = t.body.getReader();
+    !function e() {
+      a.read().then(function (t) {
+        if (!s._destroyed) {
+          if (t.done) return u.clearTimeout(o), s.push(null), void 0;
+          s.push(d.from(t.value)), e();
+        }
+      }).catch(function (e) {
+        u.clearTimeout(o), s._destroyed || s.emit("error", e);
+      });
+    }();
+  } else {
+    if (s._xhr = e, s._pos = 0, s.url = e.responseURL, s.statusCode = e.status, s.statusMessage = e.statusText, e.getAllResponseHeaders().split(/\r?\n/).forEach(function (e) {
+      var t = e.match(/^([^:]+):\s*(.*)/);
+
+      if (t) {
+        var r = t[1].toLowerCase();
+        "set-cookie" === r ? (void 0 === s.headers[r] && (s.headers[r] = []), s.headers[r].push(t[2])) : void 0 !== s.headers[r] ? s.headers[r] += ", " + t[2] : s.headers[r] = t[2], s.rawHeaders.push(t[1], t[2]);
+      }
+    }), s._charset = "x-user-defined", !l.overrideMimeType) {
+      var i = s.rawHeaders["mime-type"];
+
+      if (i) {
+        var c = i.match(/;\s*charset=([^;])(;|$)/);
+        c && (s._charset = c[1].toLowerCase());
+      }
+
+      s._charset || (s._charset = "utf-8");
+    }
+  }
+};
+
+h(_, p$1.Readable), _.prototype._read = function () {
+  var e = this || u,
+      t = e._resumeFetch;
+  t && (e._resumeFetch = null, t());
+}, _.prototype._onXHRProgress = function () {
+  var e = this || u,
+      t = e._xhr,
+      r = null;
+
+  switch (e._mode) {
+    case "text":
+      if ((r = t.responseText).length > e._pos) {
+        var o = r.substr(e._pos);
+
+        if ("x-user-defined" === e._charset) {
+          for (var s = d.alloc(o.length), n = 0; n < o.length; n++) s[n] = 255 & o.charCodeAt(n);
+
+          e.push(s);
+        } else e.push(o, e._charset);
+
+        e._pos = r.length;
+      }
+
+      break;
+
+    case "arraybuffer":
+      if (t.readyState !== m.DONE || !t.response) break;
+      r = t.response, e.push(d.from(new Uint8Array(r)));
+      break;
+
+    case "moz-chunked-arraybuffer":
+      if (r = t.response, t.readyState !== m.LOADING || !r) break;
+      e.push(d.from(new Uint8Array(r)));
+      break;
+
+    case "ms-stream":
+      if (r = t.response, t.readyState !== m.LOADING) break;
+      var a = new u.MSStreamReader();
+      a.onprogress = function () {
+        a.result.byteLength > e._pos && (e.push(d.from(new Uint8Array(a.result.slice(e._pos)))), e._pos = a.result.byteLength);
+      }, a.onload = function () {
+        e.push(null);
+      }, a.readAsArrayBuffer(r);
+  }
+
+  e._xhr.readyState === m.DONE && "ms-stream" !== e._mode && e.push(null);
+};
+var y,
+    b = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof self ? self : global,
+    T = t$3.Buffer,
+    v = h$1,
+    g = t,
+    E = t$4,
+    C = c,
+    w = p,
+    A = C.IncomingMessage,
+    R = C.readyStates;
+
+var O = y = function (e) {
+  var t,
+      r = this || b;
+  w.Writable.call(r), r._opts = e, r._body = [], r._headers = {}, e.auth && r.setHeader("Authorization", "Basic " + T.from(e.auth).toString("base64")), Object.keys(e.headers).forEach(function (t) {
+    r.setHeader(t, e.headers[t]);
+  });
+  var o = !0;
+  if ("disable-fetch" === e.mode || "requestTimeout" in e && !g.abortController) o = !1, t = !0;else if ("prefer-streaming" === e.mode) t = !1;else if ("allow-wrong-content-type" === e.mode) t = !g.overrideMimeType;else {
+    if (e.mode && "default" !== e.mode && "prefer-fast" !== e.mode) throw new Error("Invalid value for opts.mode");
+    t = !0;
+  }
+  r._mode = function (e, t) {
+    return g.fetch && t ? "fetch" : g.mozchunkedarraybuffer ? "moz-chunked-arraybuffer" : g.msstream ? "ms-stream" : g.arraybuffer && e ? "arraybuffer" : "text";
+  }(t, o), r._fetchTimer = null, r.on("finish", function () {
+    r._onFinish();
+  });
+};
+
+E(O, w.Writable), O.prototype.setHeader = function (e, t) {
+  var r = this || b,
+      o = e.toLowerCase();
+  -1 === H.indexOf(o) && (r._headers[o] = {
+    name: e,
+    value: t
+  });
+}, O.prototype.getHeader = function (e) {
+  var t = (this || b)._headers[e.toLowerCase()];
+
+  return t ? t.value : null;
+}, O.prototype.removeHeader = function (e) {
+  delete (this || b)._headers[e.toLowerCase()];
+}, O.prototype._onFinish = function () {
+  var e = this || b;
+
+  if (!e._destroyed) {
+    var t = e._opts,
+        r = e._headers,
+        o = null;
+    "GET" !== t.method && "HEAD" !== t.method && (o = new Blob(e._body, {
+      type: (r["content-type"] || {}).value || ""
+    }));
+    var s = [];
+
+    if (Object.keys(r).forEach(function (e) {
+      var t = r[e].name,
+          o = r[e].value;
+      Array.isArray(o) ? o.forEach(function (e) {
+        s.push([t, e]);
+      }) : s.push([t, o]);
+    }), "fetch" === e._mode) {
+      var n = null;
+
+      if (g.abortController) {
+        var a = new AbortController();
+        n = a.signal, e._fetchAbortController = a, "requestTimeout" in t && 0 !== t.requestTimeout && (e._fetchTimer = b.setTimeout(function () {
+          e.emit("requestTimeout"), e._fetchAbortController && e._fetchAbortController.abort();
+        }, t.requestTimeout));
+      }
+
+      b.fetch(e._opts.url, {
+        method: e._opts.method,
+        headers: s,
+        body: o || void 0,
+        mode: "cors",
+        credentials: t.withCredentials ? "include" : "same-origin",
+        signal: n
+      }).then(function (t) {
+        e._fetchResponse = t, e._connect();
+      }, function (t) {
+        b.clearTimeout(e._fetchTimer), e._destroyed || e.emit("error", t);
+      });
+    } else {
+      var i = e._xhr = new b.XMLHttpRequest();
+
+      try {
+        i.open(e._opts.method, e._opts.url, !0);
+      } catch (t) {
+        return v.nextTick(function () {
+          e.emit("error", t);
+        }), void 0;
+      }
+
+      "responseType" in i && (i.responseType = e._mode), "withCredentials" in i && (i.withCredentials = !!t.withCredentials), "text" === e._mode && "overrideMimeType" in i && i.overrideMimeType("text/plain; charset=x-user-defined"), "requestTimeout" in t && (i.timeout = t.requestTimeout, i.ontimeout = function () {
+        e.emit("requestTimeout");
+      }), s.forEach(function (e) {
+        i.setRequestHeader(e[0], e[1]);
+      }), e._response = null, i.onreadystatechange = function () {
+        switch (i.readyState) {
+          case R.LOADING:
+          case R.DONE:
+            e._onXHRProgress();
+
+        }
+      }, "moz-chunked-arraybuffer" === e._mode && (i.onprogress = function () {
+        e._onXHRProgress();
+      }), i.onerror = function () {
+        e._destroyed || e.emit("error", new Error("XHR error"));
+      };
+
+      try {
+        i.send(o);
+      } catch (t) {
+        return v.nextTick(function () {
+          e.emit("error", t);
+        }), void 0;
+      }
+    }
+  }
+}, O.prototype._onXHRProgress = function () {
+  var e = this || b;
+  (function (e) {
+    try {
+      var t = e.status;
+      return null !== t && 0 !== t;
+    } catch (e) {
+      return !1;
+    }
+  })(e._xhr) && !e._destroyed && (e._response || e._connect(), e._response._onXHRProgress());
+}, O.prototype._connect = function () {
+  var e = this || b;
+  e._destroyed || (e._response = new A(e._xhr, e._fetchResponse, e._mode, e._fetchTimer), e._response.on("error", function (t) {
+    e.emit("error", t);
+  }), e.emit("response", e._response));
+}, O.prototype._write = function (e, t, r) {
+  (this || b)._body.push(e), r();
+}, O.prototype.abort = O.prototype.destroy = function () {
+  var e = this || b;
+  e._destroyed = !0, b.clearTimeout(e._fetchTimer), e._response && (e._response._destroyed = !0), e._xhr ? e._xhr.abort() : e._fetchAbortController && e._fetchAbortController.abort();
+}, O.prototype.end = function (e, t, r) {
+  var o = this || b;
+  "function" == typeof e && (r = e, e = void 0), w.Writable.prototype.end.call(o, e, t, r);
+}, O.prototype.flushHeaders = function () {}, O.prototype.setTimeout = function () {}, O.prototype.setNoDelay = function () {}, O.prototype.setSocketKeepAlive = function () {};
+var H = ["accept-charset", "accept-encoding", "access-control-request-headers", "access-control-request-method", "connection", "content-length", "cookie", "cookie2", "date", "dnt", "expect", "host", "keep-alive", "origin", "referer", "te", "trailer", "transfer-encoding", "upgrade", "via"],
+    S = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof self ? self : global,
+    x = {},
+    k = y,
+    M = c,
+    N = t$1,
+    P = e$1,
+    D = o$1,
+    L = x;
+L.request = function (e, t) {
+  e = "string" == typeof e ? D.parse(e) : N(e);
+  var r = -1 === S.location.protocol.search(/^https?:$/) ? "http:" : "",
+      o = e.protocol || r,
+      s = e.hostname || e.host,
+      n = e.port,
+      a = e.path || "/";
+  s && -1 !== s.indexOf(":") && (s = "[" + s + "]"), e.url = (s ? o + "//" + s : "") + (n ? ":" + n : "") + a, e.method = (e.method || "GET").toUpperCase(), e.headers = e.headers || {};
+  var i = new k(e);
+  return t && i.on("response", t), i;
+}, L.get = function (e, t) {
+  var r = L.request(e, t);
+  return r.end(), r;
+}, L.ClientRequest = k, L.IncomingMessage = M.IncomingMessage, L.Agent = function () {}, L.Agent.defaultMaxSockets = 4, L.globalAgent = new L.Agent(), L.STATUS_CODES = P, L.METHODS = ["CHECKOUT", "CONNECT", "COPY", "DELETE", "GET", "HEAD", "LOCK", "M-SEARCH", "MERGE", "MKACTIVITY", "MKCOL", "MOVE", "NOTIFY", "OPTIONS", "PATCH", "POST", "PROPFIND", "PROPPATCH", "PURGE", "PUT", "REPORT", "SEARCH", "SUBSCRIBE", "TRACE", "UNLOCK", "UNSUBSCRIBE"];
+var Agent = x.Agent;
+var ClientRequest = x.ClientRequest;
+var IncomingMessage = x.IncomingMessage;
+var METHODS = x.METHODS;
+var STATUS_CODES = x.STATUS_CODES;
+var get = x.get;
+var globalAgent = x.globalAgent;
+var request = x.request;
+export default x;
+export { Agent, ClientRequest, IncomingMessage, METHODS, STATUS_CODES, get, globalAgent, request };

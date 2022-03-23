@@ -1,0 +1,5 @@
+export { dew } from "/npm:@jimp/jpeg@0.16.1/dist/index.dew.js";
+import "/npm:@babel/runtime@7/helpers/interopRequireDefault?dew";
+import "/npm:@babel/runtime@7/helpers/defineProperty?dew";
+import "/npm:jpeg-js@0.4.2?dew";
+import "/npm:@jimp/utils@0.16?dew";

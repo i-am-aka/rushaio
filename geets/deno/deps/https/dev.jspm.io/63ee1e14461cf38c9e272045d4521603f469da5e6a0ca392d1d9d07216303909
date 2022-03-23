@@ -1,0 +1,5 @@
+export { dew } from "/npm:@jimp/tiff@0.16.1/dist/index.dew.js";
+import "/npm:@babel/runtime@7/helpers/interopRequireDefault?dew";
+import "/npm:@babel/runtime@7/helpers/defineProperty?dew";
+import "/npm:utif@2?dew";
+import "/npm:@jspm/core@1/nodelibs/buffer.js";

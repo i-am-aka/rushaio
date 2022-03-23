@@ -1,0 +1,19 @@
+{
+  "headers": {
+    "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report?s=Fo5HT1pFiHeNfcx0UjSwinS0SEPa7GmWxutyWb8P6yIvDlmFSTUqhynDHi8BEJc5Pu0s1tUXKsF1pD15g61OGvpzP8AXxQUGWWuLow%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+    "access-control-allow-origin": "*",
+    "nel": "{\"report_to\":\"cf-nel\",\"max_age\":604800}",
+    "server": "cloudflare",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "set-cookie": "__cfduid=d7ae80089b7ad0955f44e40e833dc07d91607370666; expires=Wed, 06-Jan-21 19:51:06 GMT; path=/; domain=.jspm.io; HttpOnly; SameSite=Lax",
+    "cf-cache-status": "HIT",
+    "cf-request-id": "06e05b083c000092f2242da000000001",
+    "vary": "Accept-Encoding",
+    "content-type": "application/javascript",
+    "cf-ray": "5fe0c786cb9792f2-SJC",
+    "age": "227075",
+    "date": "Mon, 07 Dec 2020 19:51:06 GMT",
+    "cache-control": "max-age=31536000, public, immutable"
+  },
+  "url": "https://dev.jspm.io/npm:tinycolor2@1.4.2/tinycolor.dew.js"
+}

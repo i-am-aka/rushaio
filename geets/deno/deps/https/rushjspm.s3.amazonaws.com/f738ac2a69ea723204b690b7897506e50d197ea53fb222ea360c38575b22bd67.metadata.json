@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-id-2": "+80LxrnxYVU8y+6SRo8jVzw01+0ssRdqLsTpSGcUdGDuJTSSTICOCWPAA410bbXZHDebTMOZ9HE=",
+    "server": "AmazonS3",
+    "etag": "\"f9e6a267a4c34444279f239040b40f47\"",
+    "connection": "keep-alive",
+    "content-length": "448",
+    "content-type": "application/javascript",
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "accept-ranges": "bytes",
+    "x-amz-request-id": "DDFECC89A3B97F15",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/window/BarProp-impl.dew.js"
+}

@@ -1,0 +1,23 @@
+var exports = {},
+    _dewExec = false;
+
+var _global = typeof self !== "undefined" ? self : global;
+
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  var win;
+
+  if (typeof window !== "undefined") {
+    win = window;
+  } else if (typeof _global !== "undefined") {
+    win = _global;
+  } else if (typeof self !== "undefined") {
+    win = self;
+  } else {
+    win = {};
+  }
+
+  exports = win;
+  return exports;
+}

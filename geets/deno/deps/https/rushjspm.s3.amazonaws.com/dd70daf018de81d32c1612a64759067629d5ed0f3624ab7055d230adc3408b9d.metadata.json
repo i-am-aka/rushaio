@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "accept-ranges": "bytes",
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "etag": "\"d91058a530cd3e1ad007a52e0d40f69e\"",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "x-amz-request-id": "FFE14AF7B3817F72",
+    "content-type": "application/javascript",
+    "content-length": "399",
+    "server": "AmazonS3",
+    "x-amz-id-2": "O6Zm+ThIn8jV6wNYsWyZAKaJvMuRq9R9ZYzPcfjgQzS93xG+sCw+m8myQ5mB36RqRxQW3ElvnOY="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/HTMLMarqueeElement-impl.dew.js"
+}

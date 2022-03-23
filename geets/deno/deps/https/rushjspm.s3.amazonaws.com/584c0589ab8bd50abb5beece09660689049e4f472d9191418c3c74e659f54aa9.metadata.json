@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "content-type": "application/javascript",
+    "content-length": "2962",
+    "x-amz-id-2": "evCmLMXF4oFX3pWn2kkwMv2Pv4pMyKq1GPCCJwE3EJjrMmhZxVB3VbbB1Sy3jwQ/GIYCywj4B+I=",
+    "last-modified": "Mon, 07 Dec 2020 15:03:47 GMT",
+    "x-amz-request-id": "A4A2A0DB079F7C00",
+    "date": "Mon, 07 Dec 2020 19:50:44 GMT",
+    "accept-ranges": "bytes",
+    "etag": "\"7917ded2da6df07d0daf35a649239d1e\""
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:sshpk@1.16.1/lib/formats/putty.dew.js"
+}

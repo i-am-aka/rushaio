@@ -1,0 +1,5 @@
+export { dew } from "/npm:request-promise-native@1.0.9/lib/rp.dew.js";
+import "/npm:request-promise-core@1.1.4/configure/request2_dew.js";
+import "/npm:stealthy-require@1_dew.js";
+import "/npm:request@2_dew.js";
+import "/npm:tough-cookie@2_dew.js";

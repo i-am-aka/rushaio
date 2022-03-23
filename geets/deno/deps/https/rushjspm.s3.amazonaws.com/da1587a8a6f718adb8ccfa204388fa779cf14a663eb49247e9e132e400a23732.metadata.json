@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "content-length": "1203",
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "accept-ranges": "bytes",
+    "x-amz-id-2": "eJLw5IOpXcOvbWY7/JiKBvEOzfN+GAsnyfgkMj6yCz8qard3gMkbIVbmkQnRbpTYdQFnJmN+OCo=",
+    "server": "AmazonS3",
+    "etag": "\"87e943bfacf0a23f038f14db5ea99856\"",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "x-amz-request-id": "8B8F92D3C3E09197",
+    "content-type": "application/javascript"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/Slotable-impl.dew.js"
+}

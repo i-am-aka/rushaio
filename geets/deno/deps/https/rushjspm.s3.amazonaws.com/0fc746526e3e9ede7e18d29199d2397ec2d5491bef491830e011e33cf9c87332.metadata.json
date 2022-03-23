@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "content-length": "944",
+    "etag": "\"4917d5287991c2c57f221f63b0221493\"",
+    "accept-ranges": "bytes",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "content-type": "application/javascript",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "x-amz-request-id": "CA40FB02DCE2D54C",
+    "x-amz-id-2": "PTMAJp0Afx+wTcYsDvXKZhvhCnpPMu2l/DwzyV5mL/g1qMPd+B7UquMMLE3jnTkwALVoZ9dNxDM=",
+    "server": "AmazonS3"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/HTMLDataListElement-impl.dew.js"
+}

@@ -1,0 +1,15 @@
+import _os from "/npm:@jspm/core@1/nodelibs/os.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  const os = _os;
+  exports.implementation = class NavigatorConcurrentHardwareImpl {
+    // get hardwareConcurrency() {
+    //   return os.cpus().length;
+    // }
+
+  };
+  return exports;
+}

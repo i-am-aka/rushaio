@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-id-2": "uP85FVGrwZ1Fr7KmdbwOlwcarYY6CjIQ+ypJslTmZZWno668DOpasJjQq1jvN1bm8S/QUWgzyN0=",
+    "content-length": "803",
+    "accept-ranges": "bytes",
+    "content-type": "application/javascript",
+    "last-modified": "Mon, 07 Dec 2020 15:03:48 GMT",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "connection": "keep-alive",
+    "etag": "\"a653bb879e5698069e028da88f6c8698\"",
+    "x-amz-request-id": "271CBE82DDFAB284",
+    "server": "AmazonS3"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:whatwg-mimetype@2.3.0/lib/serializer.dew.js"
+}

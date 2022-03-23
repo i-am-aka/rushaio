@@ -1,0 +1,35 @@
+import { dew as _webidl2jsWrapperDewDew } from "./webidl2js-wrapper.dew.js";
+import { dew as _urlStateMachineDewDew } from "./dist/url-state-machine.dew.js";
+import { dew as _percentEncodingDewDew } from "./dist/percent-encoding.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const {
+    URL,
+    URLSearchParams
+  } = _webidl2jsWrapperDewDew();
+
+  const urlStateMachine = _urlStateMachineDewDew();
+
+  const percentEncoding = _percentEncodingDewDew();
+
+  const sharedGlobalObject = {};
+  URL.install(sharedGlobalObject, ["Window"]);
+  URLSearchParams.install(sharedGlobalObject, ["Window"]);
+  exports.URL = sharedGlobalObject.URL;
+  exports.URLSearchParams = sharedGlobalObject.URLSearchParams;
+  exports.parseURL = urlStateMachine.parseURL;
+  exports.basicURLParse = urlStateMachine.basicURLParse;
+  exports.serializeURL = urlStateMachine.serializeURL;
+  exports.serializeHost = urlStateMachine.serializeHost;
+  exports.serializeInteger = urlStateMachine.serializeInteger;
+  exports.serializeURLOrigin = urlStateMachine.serializeURLOrigin;
+  exports.setTheUsername = urlStateMachine.setTheUsername;
+  exports.setThePassword = urlStateMachine.setThePassword;
+  exports.cannotHaveAUsernamePasswordPort = urlStateMachine.cannotHaveAUsernamePasswordPort;
+  exports.percentDecode = percentEncoding.percentDecodeBytes;
+  return exports;
+}

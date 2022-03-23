@@ -1,0 +1,56 @@
+import _util from "/npm:@jspm/core@1/nodelibs/util.js";
+import _stream from "/npm:@jspm/core@1/nodelibs/stream.js";
+import { dew as _constantsDewDew } from "./constants.dew.js";
+import { dew as _packerDewDew } from "./packer.dew.js";
+import _buffer from "/npm:@jspm/core@1/nodelibs/buffer.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  var Buffer = _buffer.Buffer;
+  var util = _util;
+  var Stream = _stream;
+
+  var constants = _constantsDewDew();
+
+  var Packer = _packerDewDew();
+
+  var PackerAsync = exports = function (opt) {
+    Stream.call(this);
+    var options = opt || {};
+    this._packer = new Packer(options);
+    this._deflate = this._packer.createDeflate();
+    this.readable = true;
+  };
+
+  util.inherits(PackerAsync, Stream);
+
+  PackerAsync.prototype.pack = function (data, width, height, gamma) {
+    // Signature
+    this.emit('data', new Buffer(constants.PNG_SIGNATURE));
+    this.emit('data', this._packer.packIHDR(width, height));
+
+    if (gamma) {
+      this.emit('data', this._packer.packGAMA(gamma));
+    }
+
+    var filteredData = this._packer.filterData(data, width, height); // compress it
+
+
+    this._deflate.on('error', this.emit.bind(this, 'error'));
+
+    this._deflate.on('data', function (compressedData) {
+      this.emit('data', this._packer.packIDAT(compressedData));
+    }.bind(this));
+
+    this._deflate.on('end', function () {
+      this.emit('data', this._packer.packIEND());
+      this.emit('end');
+    }.bind(this));
+
+    this._deflate.end(filteredData);
+  };
+
+  return exports;
+}

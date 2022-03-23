@@ -1,0 +1,9 @@
+export { dew } from "/npm:load-bmfont@1.4.1/browser.dew.js";
+import "/npm:xhr@2?dew";
+import "/npm:parse-bmfont-ascii@1?dew";
+import "/npm:parse-bmfont-xml@1?dew";
+import "/npm:parse-bmfont-binary@1?dew";
+import "/npm:load-bmfont@1.4.1/lib/is-binary.dew.js";
+import "/npm:xtend@4?dew";
+import "/npm:@jspm/core@1/nodelibs/buffer.js";
+import "/npm:buffer-equal@0.0.1?dew";

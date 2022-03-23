@@ -1,0 +1,28 @@
+import { dew as _CharacterDataImplDewDew } from "./CharacterData-impl.dew.js";
+import { dew as _nodeTypeDewDew } from "../node-type.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const CharacterDataImpl = _CharacterDataImplDewDew().implementation;
+
+  const NODE_TYPE = _nodeTypeDewDew();
+
+  class CommentImpl extends CharacterDataImpl {
+    constructor(globalObject, args, privateData) {
+      super(globalObject, args, {
+        data: args[0],
+        ...privateData
+      });
+      this.nodeType = NODE_TYPE.COMMENT_NODE;
+    }
+
+  }
+
+  exports = {
+    implementation: CommentImpl
+  };
+  return exports;
+}

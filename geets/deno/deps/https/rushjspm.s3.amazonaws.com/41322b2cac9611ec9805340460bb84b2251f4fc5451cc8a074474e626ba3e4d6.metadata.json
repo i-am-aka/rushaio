@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "server": "AmazonS3",
+    "accept-ranges": "bytes",
+    "content-length": "622",
+    "x-amz-request-id": "CB7ADD34BF964E38",
+    "connection": "keep-alive",
+    "etag": "\"4c2c62cc1e8c6e7c0b7b7af1aa980f58\"",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "content-type": "application/javascript",
+    "x-amz-id-2": "6FF8zF5mgs1FWKGwy5xi0zeHGRl8A2ceHVgMF+Vk9xznNChP8nxoT2LA9rPY1aiUF4vpQeFRQ+Q="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/svg/SVGStringList-impl.dew.js"
+}

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:43 GMT",
+    "connection": "keep-alive",
+    "x-amz-id-2": "PIZsDS51CXRGxK36Yebna6RIRrvLAWjNXIcDYsgrcFhJV3POnNWC+WlhKv8IYi6zxIPG3DJNjuQ=",
+    "content-length": "4403",
+    "content-type": "application/javascript",
+    "server": "AmazonS3",
+    "etag": "\"9c08210049f641312d7c1f4d1fa5869f\"",
+    "accept-ranges": "bytes",
+    "x-amz-request-id": "7QFGEM3T6YCS9NAT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/SVGNumber.dew.js"
+}

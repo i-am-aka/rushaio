@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-request-id": "EFF8533FFCCCCE2D",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "connection": "keep-alive",
+    "etag": "\"35f2217c0fafe397ceeaacc5092df5fc\"",
+    "server": "AmazonS3",
+    "accept-ranges": "bytes",
+    "content-length": "1480",
+    "content-type": "application/javascript",
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "x-amz-id-2": "TFavo1ul8cMThpHssLO7zwpa1039q4JVhP2a3BkQI9MFzI+orr9V+BpthrosbBxeAf23xl1LPTQ="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/SVGTests-impl.dew.js"
+}

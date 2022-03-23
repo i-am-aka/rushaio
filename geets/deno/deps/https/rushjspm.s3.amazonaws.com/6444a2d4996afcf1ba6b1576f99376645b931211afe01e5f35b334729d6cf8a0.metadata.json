@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-request-id": "4D50F5A019D833C7",
+    "content-type": "application/javascript",
+    "accept-ranges": "bytes",
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "x-amz-id-2": "1Z9KEmOmoclsrpojv2hARQjNvJ2v+Wj1wZ9uHfe5wGdahzI7h4e0txfT867bYpVWd9fQEklMO54=",
+    "content-length": "1648",
+    "etag": "\"37db85bd2e7f7c258faea5a64ad45df8\"",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:39 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:cssom@0.4.4/lib/MatcherList.dew.js"
+}

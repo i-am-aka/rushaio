@@ -1,0 +1,102 @@
+var exports = {},
+    _dewExec = false;
+
+var _global = typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : global;
+
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  function BufferStream(buffer, offset, length, bigEndian) {
+    (this || _global).buffer = buffer;
+    (this || _global).offset = offset || 0;
+    length = typeof length === 'number' ? length : buffer.length;
+    (this || _global).endPosition = (this || _global).offset + length;
+    this.setBigEndian(bigEndian);
+  }
+
+  BufferStream.prototype = {
+    setBigEndian: function (bigEndian) {
+      (this || _global).bigEndian = !!bigEndian;
+    },
+    nextUInt8: function () {
+      var value = (this || _global).buffer.readUInt8((this || _global).offset);
+
+      (this || _global).offset += 1;
+      return value;
+    },
+    nextInt8: function () {
+      var value = (this || _global).buffer.readInt8((this || _global).offset);
+
+      (this || _global).offset += 1;
+      return value;
+    },
+    nextUInt16: function () {
+      var value = (this || _global).bigEndian ? (this || _global).buffer.readUInt16BE((this || _global).offset) : (this || _global).buffer.readUInt16LE((this || _global).offset);
+      (this || _global).offset += 2;
+      return value;
+    },
+    nextUInt32: function () {
+      var value = (this || _global).bigEndian ? (this || _global).buffer.readUInt32BE((this || _global).offset) : (this || _global).buffer.readUInt32LE((this || _global).offset);
+      (this || _global).offset += 4;
+      return value;
+    },
+    nextInt16: function () {
+      var value = (this || _global).bigEndian ? (this || _global).buffer.readInt16BE((this || _global).offset) : (this || _global).buffer.readInt16LE((this || _global).offset);
+      (this || _global).offset += 2;
+      return value;
+    },
+    nextInt32: function () {
+      var value = (this || _global).bigEndian ? (this || _global).buffer.readInt32BE((this || _global).offset) : (this || _global).buffer.readInt32LE((this || _global).offset);
+      (this || _global).offset += 4;
+      return value;
+    },
+    nextFloat: function () {
+      var value = (this || _global).bigEndian ? (this || _global).buffer.readFloatBE((this || _global).offset) : (this || _global).buffer.readFloatLE((this || _global).offset);
+      (this || _global).offset += 4;
+      return value;
+    },
+    nextDouble: function () {
+      var value = (this || _global).bigEndian ? (this || _global).buffer.readDoubleBE((this || _global).offset) : (this || _global).buffer.readDoubleLE((this || _global).offset);
+      (this || _global).offset += 8;
+      return value;
+    },
+    nextBuffer: function (length) {
+      var value = (this || _global).buffer.slice((this || _global).offset, (this || _global).offset + length);
+
+      (this || _global).offset += length;
+      return value;
+    },
+    remainingLength: function () {
+      return (this || _global).endPosition - (this || _global).offset;
+    },
+    nextString: function (length) {
+      var value = (this || _global).buffer.toString('utf8', (this || _global).offset, (this || _global).offset + length);
+
+      (this || _global).offset += length;
+      return value;
+    },
+    mark: function () {
+      var self = this || _global;
+      return {
+        openWithOffset: function (offset) {
+          offset = (offset || 0) + (this || _global).offset;
+          return new BufferStream(self.buffer, offset, self.endPosition - offset, self.bigEndian);
+        },
+        offset: (this || _global).offset
+      };
+    },
+    offsetFrom: function (marker) {
+      return (this || _global).offset - marker.offset;
+    },
+    skip: function (amount) {
+      (this || _global).offset += amount;
+    },
+    branch: function (offset, length) {
+      length = typeof length === 'number' ? length : (this || _global).endPosition - ((this || _global).offset + offset);
+      return new BufferStream((this || _global).buffer, (this || _global).offset + offset, length, (this || _global).bigEndian);
+    }
+  };
+  exports = BufferStream;
+  return exports;
+}

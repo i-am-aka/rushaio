@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "etag": "\"934c00d996b75b9bea10da9e6c6a6cfd\"",
+    "accept-ranges": "bytes",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "server": "AmazonS3",
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "content-type": "application/javascript",
+    "x-amz-request-id": "9B40204D669B3E58",
+    "content-length": "490",
+    "x-amz-id-2": "1saPzJefsMyFrhC9aTuB+jCzVhcQkvONtRKLD0GyRQHyiP394gjBL4lC0K1L/BKRWPbEKTluhmU="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/window/Screen-impl.dew.js"
+}

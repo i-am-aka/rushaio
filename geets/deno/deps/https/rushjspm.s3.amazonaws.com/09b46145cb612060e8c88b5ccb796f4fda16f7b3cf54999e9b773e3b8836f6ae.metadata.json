@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "server": "AmazonS3",
+    "x-amz-id-2": "fJZ3Mp50LGA7GWC80Dc1JPN4hgypXivUMu2mMTY+k4by/dV8OtJkyji7keXXSNJ446JLU/cMeQ4=",
+    "x-amz-request-id": "14CDB38F403F32C5",
+    "etag": "\"e25c78f0fd440ed18c2955be1d225abc\"",
+    "connection": "keep-alive",
+    "content-type": "application/javascript",
+    "accept-ranges": "bytes",
+    "date": "Mon, 07 Dec 2020 19:50:44 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:38 GMT",
+    "content-length": "1038"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:ajv@6.12.4/lib/compile/error_classes.dew.js"
+}

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-request-id": "6D765435901EB0AB",
+    "x-amz-id-2": "NiNQ/cDR1VCLsmaKm1apDtH248x2kB462nNnOTUI7wfdY+O98K4wS65DS3jfvYq9IctORCJvZ+s=",
+    "accept-ranges": "bytes",
+    "connection": "keep-alive",
+    "server": "AmazonS3",
+    "etag": "\"91da736994acecf92a51318063e7e9c1\"",
+    "content-length": "335",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Mon, 07 Dec 2020 15:03:47 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:symbol-tree@3.2.4/lib/TreePosition.dew.js"
+}

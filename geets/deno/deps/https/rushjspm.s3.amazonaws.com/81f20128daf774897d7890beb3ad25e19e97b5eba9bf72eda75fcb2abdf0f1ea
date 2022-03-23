@@ -1,0 +1,1 @@
+var empty=Object.freeze(Object.create(null));export default empty;

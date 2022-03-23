@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "content-length": "870",
+    "connection": "keep-alive",
+    "last-modified": "Mon, 07 Dec 2020 15:03:39 GMT",
+    "etag": "\"660b9d7a8f613c7bd2ddc94d914a4f27\"",
+    "x-amz-request-id": "B1E3EF0A4D78270A",
+    "x-amz-id-2": "iESyDTAsBUHn6Utv44xYcDqjq1GbHDkWfbRcJacXJ9jivKUKpTo61RfUVDBWzqmz9qRWrBWUMYE=",
+    "server": "AmazonS3",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "accept-ranges": "bytes",
+    "content-type": "application/javascript"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:domexception@2.0.1/lib/DOMException-impl.dew.js"
+}

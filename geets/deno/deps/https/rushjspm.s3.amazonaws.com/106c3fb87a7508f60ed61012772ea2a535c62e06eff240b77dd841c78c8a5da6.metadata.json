@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-request-id": "8C4E5E3F8FC7C7FE",
+    "last-modified": "Mon, 07 Dec 2020 15:03:43 GMT",
+    "server": "AmazonS3",
+    "content-type": "application/javascript",
+    "accept-ranges": "bytes",
+    "connection": "keep-alive",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "x-amz-id-2": "K/EvFxdIDwok5tthkmrur8AkZchPdAvMm3rhN76ThLtQwQ4PpfxusGuy/Jt8wn5S0UaFM5gy7K4=",
+    "etag": "\"4d5c73e704429266330501216d578bb2\"",
+    "content-length": "545"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/ShadowRootMode.dew.js"
+}

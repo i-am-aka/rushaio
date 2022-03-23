@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-request-id": "C2C06FD5F25B921D",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "content-type": "application/javascript",
+    "content-length": "2392",
+    "etag": "\"17ff4b1321df0c2a1f2e3fa40eafb221\"",
+    "connection": "keep-alive",
+    "accept-ranges": "bytes",
+    "x-amz-id-2": "X0YC6FAQJ+Agi3mBiF3w5ujJDHaSMhKa+JJKpRbiAm6hJVpfvbtjDQEaExWw+UrH66lEbSvOhb4=",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "server": "AmazonS3"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/browser/resources/async-resource-queue.dew.js"
+}

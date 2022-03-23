@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "accept-ranges": "bytes",
+    "content-length": "1340",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "x-amz-id-2": "QLsGCr2GkXtHjFCN8nagW/5xx6r2aBmpEDfsMo8XYxVBiq5q9gOvspXWL1nN8K7W6tqg5LOodeo=",
+    "server": "AmazonS3",
+    "x-amz-request-id": "4F86EDF2357EB879",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "content-type": "application/javascript",
+    "etag": "\"218f504608efad0e31ec92c38d2adbcb\""
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/events/KeyboardEvent-impl.dew.js"
+}

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-request-id": "DF30C329754C9B8C",
+    "etag": "\"b353c3495568b5f0716249a48740bc3d\"",
+    "x-amz-id-2": "hcr5Mg7wt2hua0iRASqydzFXZKMMlG/HcCmZwBPcxExduJMW59ObYlLKReD2TkRo3LOaKoWZF9I=",
+    "server": "AmazonS3",
+    "content-length": "10552",
+    "date": "Mon, 07 Dec 2020 19:50:44 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:47 GMT",
+    "content-type": "application/javascript",
+    "accept-ranges": "bytes",
+    "connection": "keep-alive"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:sshpk@1.16.1/lib/formats/dnssec.dew.js"
+}

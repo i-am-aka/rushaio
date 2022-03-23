@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "etag": "\"30e3fd177a87a1509d5e46eb8cd8c557\"",
+    "content-type": "application/javascript",
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "x-amz-request-id": "8B656AEADE3471F6",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "x-amz-id-2": "MErrh82HPi5NzWaQ3b71nRsY+KwVrBDvNCyXrQtDd/dwYOgrFg99IUPcmRcaIvpiiVP01A9I8Pg=",
+    "content-length": "401",
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "accept-ranges": "bytes"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/HTMLTableColElement-impl.dew.js"
+}

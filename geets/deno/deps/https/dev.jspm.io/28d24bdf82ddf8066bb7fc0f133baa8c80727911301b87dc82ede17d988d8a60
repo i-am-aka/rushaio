@@ -1,0 +1,21 @@
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  exports = isFunction;
+  var toString = Object.prototype.toString;
+
+  function isFunction(fn) {
+    if (!fn) {
+      return false;
+    }
+
+    var string = toString.call(fn);
+    return string === '[object Function]' || typeof fn === 'function' && string !== '[object RegExp]' || typeof window !== 'undefined' && ( // IE8 and below
+    fn === window.setTimeout || fn === window.alert || fn === window.confirm || fn === window.prompt);
+  }
+
+  ;
+  return exports;
+}

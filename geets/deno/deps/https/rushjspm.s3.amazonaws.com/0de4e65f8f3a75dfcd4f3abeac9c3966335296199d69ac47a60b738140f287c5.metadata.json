@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-request-id": "FW6T9H2SAHFS7PCW",
+    "accept-ranges": "bytes",
+    "content-type": "application/javascript",
+    "content-length": "17143",
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "last-modified": "Mon, 07 Dec 2020 15:03:43 GMT",
+    "etag": "\"baa5b176695561b03d66f2e0dccb7cca\"",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "x-amz-id-2": "IgLUldzgWQUSOSEwJhpao6p8ujvRarsG3DeB9vNWWS42DE/RgXt0UIlqe9HuVX8cVU0BH9ZwjkQ="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/NamedNodeMap.dew.js"
+}

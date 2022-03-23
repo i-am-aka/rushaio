@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "etag": "\"135f74cce01374583bddd71b19f41612\"",
+    "accept-ranges": "bytes",
+    "content-length": "1901",
+    "content-type": "application/javascript",
+    "server": "AmazonS3",
+    "x-amz-request-id": "2V3QBS1Q8R8V0WCG",
+    "x-amz-id-2": "a7FE8Jgiyj5tqSwU7AFYZnE479XIyrkimcniGqqUkDii7RTNU8xXhQQxwjXnHWdhGlA5koiAsgc=",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "connection": "keep-alive",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/attributes/Attr-impl.dew.js"
+}

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-request-id": "80D6AB9D84EF64C6",
+    "server": "AmazonS3",
+    "content-type": "application/javascript",
+    "content-length": "686",
+    "x-amz-id-2": "i62M8h2yitZAJdnQbLFW77agB4lUudA+qysPe8i0lMIWN94YZRewD612O0hseTqyAsa+Yx/nljY=",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "connection": "keep-alive",
+    "etag": "\"161309df449f58f6171ae87471456348\"",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "accept-ranges": "bytes"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/Comment-impl.dew.js"
+}

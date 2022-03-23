@@ -1,0 +1,5 @@
+export { dew } from "/npm:qs@6.5.2/lib/index.dew.js";
+import "/npm:qs@6.5.2/lib/stringify.dew.js";
+import "/npm:qs@6.5.2/lib/parse.dew.js";
+import "/npm:qs@6.5.2/lib/formats.dew.js";
+import "/npm:qs@6.5.2/lib/utils.dew.js";

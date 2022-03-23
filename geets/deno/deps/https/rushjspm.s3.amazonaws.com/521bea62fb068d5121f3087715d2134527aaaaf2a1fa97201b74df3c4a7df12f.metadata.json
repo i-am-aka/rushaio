@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "server": "AmazonS3",
+    "accept-ranges": "bytes",
+    "date": "Mon, 07 Dec 2020 18:13:12 GMT",
+    "content-length": "35149",
+    "last-modified": "Mon, 07 Dec 2020 15:03:37 GMT",
+    "x-amz-request-id": "652C8BE9DE6AC9F7",
+    "x-amz-id-2": "ENFjszxBBQPESL/cIlIS22JQMD/iLQK/pxTUi4nooga1ODxAgKYdQqjX+gav58xIfF+La+QaVUg=",
+    "etag": "\"263064b44062c62d65ad9c36dea13041\"",
+    "content-type": "application/javascript"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/jsdom.js"
+}

@@ -1,0 +1,7 @@
+export { dew } from "/npm:@jimp/custom@0.16.1/dist/index.dew.js";
+import "/npm:@babel/runtime@7/helpers/interopRequireWildcard?dew";
+import "/npm:@babel/runtime@7/helpers/interopRequireDefault?dew";
+import "/npm:@babel/runtime@7/helpers/toConsumableArray?dew";
+import "/npm:@babel/runtime@7/helpers/defineProperty?dew";
+import "/npm:@babel/runtime@7/helpers/slicedToArray?dew";
+import "/npm:@jimp/core@0.16?dew";

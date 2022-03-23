@@ -1,0 +1,21 @@
+import { dew as _npmBrowserProcessHrtime1DewDew } from "/npm:browser-process-hrtime@1_dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  // Browserify's process implementation doesn't have hrtime, and this package is small so not much of a burden for
+  // Node.js users.
+  const hrtime = _npmBrowserProcessHrtime1DewDew();
+
+  function toMS([sec, nanosec]) {
+    return sec * 1e3 + nanosec / 1e6;
+  }
+
+  exports = {
+    hrtime,
+    toMS
+  };
+  return exports;
+}

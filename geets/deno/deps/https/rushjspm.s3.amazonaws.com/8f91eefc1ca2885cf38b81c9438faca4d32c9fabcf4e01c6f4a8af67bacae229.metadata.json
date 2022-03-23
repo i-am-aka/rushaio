@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "connection": "keep-alive",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "content-length": "748",
+    "etag": "\"7df268d46d366fc9b116a4163c7ab225\"",
+    "x-amz-request-id": "DB9A655A20289E08",
+    "accept-ranges": "bytes",
+    "server": "AmazonS3",
+    "x-amz-id-2": "zdA1C33Y9zfFj6af5lq4yclf6tv4Asbxlr8yhyoW/A8bG9xb1eJb6dGOMc1U12oOdVoxf2Aro30=",
+    "content-type": "application/javascript",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/hr-time/Performance-impl.dew.js"
+}

@@ -1,0 +1,26 @@
+import { dew as _globalMonotonicClockDewDew } from "./lib/global-monotonic-clock.dew.js";
+import { dew as _performanceDewDew } from "./lib/performance.dew.js";
+import { dew as _clockIsAccurateDewDew } from "./lib/clock-is-accurate.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const {
+    getGlobalMonotonicClockMS
+  } = _globalMonotonicClockDewDew();
+
+  const {
+    Performance
+  } = _performanceDewDew();
+
+  const clockIsAccurate = _clockIsAccurateDewDew();
+
+  exports = {
+    Performance,
+    getGlobalMonotonicClockMS,
+    clockIsAccurate
+  };
+  return exports;
+}

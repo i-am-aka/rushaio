@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "x-amz-request-id": "0A2763B43806D1AE",
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "server": "AmazonS3",
+    "accept-ranges": "bytes",
+    "content-type": "application/javascript",
+    "content-length": "1487",
+    "x-amz-id-2": "eYxux3k7CDi43P4AlRVsoB/0d3Xw0qeL7Y6s0Hb0B6EAkxJkcDkvJI76N6t0UUwj8Io3qZLIAWQ=",
+    "etag": "\"aecda5e848765234f3cc570cde2a9b4a\""
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/range/boundary-point.dew.js"
+}

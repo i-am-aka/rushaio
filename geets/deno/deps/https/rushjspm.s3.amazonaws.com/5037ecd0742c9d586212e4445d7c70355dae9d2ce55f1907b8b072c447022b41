@@ -1,0 +1,8 @@
+export { dew } from "/npm:lodash@4.17.20/isFunction.dew.js";
+import "/npm:lodash@4.17.20/_baseGetTag.dew.js";
+import "/npm:lodash@4.17.20/isObject.dew.js";
+import "/npm:lodash@4.17.20/_Symbol.dew.js";
+import "/npm:lodash@4.17.20/_getRawTag.dew.js";
+import "/npm:lodash@4.17.20/_objectToString.dew.js";
+import "/npm:lodash@4.17.20/_root.dew.js";
+import "/npm:lodash@4.17.20/_freeGlobal.dew.js";

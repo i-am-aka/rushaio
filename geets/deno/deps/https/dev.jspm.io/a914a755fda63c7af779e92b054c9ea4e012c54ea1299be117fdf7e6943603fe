@@ -1,0 +1,6 @@
+import { dew } from "/npm:jimp@0.16.1/dist/index.dew.js";
+export default dew();
+import "/npm:@babel/runtime@7/helpers/interopRequireDefault?dew";
+import "/npm:@jimp/custom@0.16?dew";
+import "/npm:@jimp/types@0.16?dew";
+import "/npm:@jimp/plugins@0.16?dew";

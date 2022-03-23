@@ -1,0 +1,19 @@
+{
+  "headers": {
+    "access-control-allow-origin": "*",
+    "cf-cache-status": "HIT",
+    "vary": "Accept-Encoding",
+    "content-type": "application/javascript",
+    "date": "Mon, 07 Dec 2020 19:51:06 GMT",
+    "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report?s=34Px4%2BjI8AxQFxY3dFCkTR9xsnJVfNhmF%2BpGl2fRJmgF9XgktLo961zGMwpwN3lGZuE3xusUMkjkcfN4ItJTY6n5z240WSkzwtco8A%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+    "age": "47",
+    "cache-control": "max-age=200, public",
+    "cf-request-id": "06e05b0886000092f231a4c000000001",
+    "set-cookie": "__cfduid=d7ae80089b7ad0955f44e40e833dc07d91607370666; expires=Wed, 06-Jan-21 19:51:06 GMT; path=/; domain=.jspm.io; HttpOnly; SameSite=Lax",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "server": "cloudflare",
+    "cf-ray": "5fe0c7873c1492f2-SJC",
+    "nel": "{\"report_to\":\"cf-nel\",\"max_age\":604800}"
+  },
+  "url": "https://dev.jspm.io/npm:image-q@1?dew"
+}

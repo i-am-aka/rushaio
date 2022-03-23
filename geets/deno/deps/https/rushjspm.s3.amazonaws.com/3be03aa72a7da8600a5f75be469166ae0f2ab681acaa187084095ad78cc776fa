@@ -1,0 +1,2 @@
+export { dew } from "/npm:html-encoding-sniffer@2.0.1/lib/html-encoding-sniffer.dew.js";
+import "/npm:whatwg-encoding@1_dew.js";

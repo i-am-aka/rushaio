@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "content-length": "772",
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "x-amz-id-2": "RniXF9OL8mm3MWt0G7qHijsXLuoVd5xCIsW0WvFyyPi3j62SY4kXkgQY5inAoe6P3h1JcAoqC98=",
+    "accept-ranges": "bytes",
+    "etag": "\"cd326e730b8561319020fe1ed4a78471\"",
+    "x-amz-request-id": "5S8MCWBJEM0XEY9Y",
+    "content-type": "application/javascript",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/HTMLAudioElement-impl.dew.js"
+}

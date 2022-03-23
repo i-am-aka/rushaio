@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "accept-ranges": "bytes",
+    "content-type": "application/javascript",
+    "etag": "\"28e320499ab13ca0fae5399c351230b2\"",
+    "content-length": "12062",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:43 GMT",
+    "server": "AmazonS3",
+    "x-amz-request-id": "945C159A7BA21C5A",
+    "x-amz-id-2": "F2l420d2898XmxQ0V7UCRvDA12RcbhS7bG5Hp4YRkdD880drqOpweZjWIQ5jIMPt4jQVkeU//+A="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/Location.dew.js"
+}

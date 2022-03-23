@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "etag": "\"a181fa906a1f6109b0528b5c39d7e500\"",
+    "last-modified": "Mon, 07 Dec 2020 15:03:46 GMT",
+    "content-length": "5039",
+    "content-type": "application/javascript",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "accept-ranges": "bytes",
+    "x-amz-id-2": "exNARo4xPFxT37bL4nxnLk//pxHTZGiRBR4CnDR/FGXJLa+cKqhHOGGW5tP0nL73pF7LAWmavC4=",
+    "server": "AmazonS3",
+    "x-amz-request-id": "D549C1660C1DB37B"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/named-properties-tracker.dew.js"
+}

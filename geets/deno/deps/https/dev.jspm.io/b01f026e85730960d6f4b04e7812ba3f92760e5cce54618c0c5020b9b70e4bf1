@@ -1,0 +1,23 @@
+import { dew as _emptyDewDew } from "/npm:@jspm/core@1/nodelibs/@empty.dew.js";
+import { dew as _assertThisInitializedDewDew } from "./assertThisInitialized.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  var _typeof = _emptyDewDew();
+
+  var assertThisInitialized = _assertThisInitializedDewDew();
+
+  function _possibleConstructorReturn(self, call) {
+    if (call && (_typeof(call) === "object" || typeof call === "function")) {
+      return call;
+    }
+
+    return assertThisInitialized(self);
+  }
+
+  exports = _possibleConstructorReturn;
+  return exports;
+}

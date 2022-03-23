@@ -1,0 +1,209 @@
+import _fs from "/npm:@jspm/core@1/nodelibs/fs.js";
+import { dew as _npmWhatwgUrl8DewDew } from "/npm:whatwg-url@8_dew.js";
+import { dew as _npmDataUrls2DewDew } from "/npm:data-urls@2_dew.js";
+import { dew as _npmRequestPromiseNative1DewDew } from "/npm:request-promise-native@1_dew.js";
+import { dew as _wrapCookieJarForRequestDewDew } from "../../living/helpers/wrap-cookie-jar-for-request.dew.js";
+import { dew as _packageJsonDewDew } from "../../../../package.json.dew.js";
+import _process from "/npm:@jspm/core@1/nodelibs/process.js";
+import _buffer from "/npm:@jspm/core@1/nodelibs/buffer.js";
+var exports = {},
+    _dewExec = false;
+
+var cache = {};
+
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  var Buffer = _buffer.Buffer;
+  var process = _process;
+  const fs = _fs;
+
+  const {
+    parseURL
+  } = _npmWhatwgUrl8DewDew();
+
+  const dataURLFromRecord = _npmDataUrls2DewDew().fromURLRecord;
+
+  const request = _npmRequestPromiseNative1DewDew();
+
+  const wrapCookieJarForRequest = _wrapCookieJarForRequestDewDew();
+
+  const packageVersion = _packageJsonDewDew().version;
+
+  const IS_BROWSER = Object.prototype.toString.call(process) !== "[object process]";
+  exports = class ResourceLoader {
+    constructor({
+      strictSSL = true,
+      proxy = undefined,
+      userAgent = `Mozilla/5.0 (${process.platform || "unknown OS"}) AppleWebKit/537.36 ` + `(KHTML, like Gecko) jsdom/${packageVersion}`
+    } = {}) {
+      this._strictSSL = strictSSL;
+      this._proxy = proxy;
+      this._userAgent = userAgent;
+    }
+
+    _readDataURL(urlRecord) {
+      const dataURL = dataURLFromRecord(urlRecord);
+      let timeoutId;
+      const promise = new Promise(resolve => {
+        timeoutId = setTimeout(resolve, 0, dataURL.body);
+      });
+
+      promise.abort = () => {
+        if (timeoutId !== undefined) {
+          clearTimeout(timeoutId);
+        }
+      };
+
+      return promise;
+    }
+
+    _readFile(filePath) {
+      let readableStream;
+      let abort; // Native Promises doesn't have an "abort" method.
+
+      /*
+       * Creating a promise for two reason:
+       *   1. fetch always return a promise.
+       *   2. We need to add an abort handler.
+      */
+
+      const promise = new Promise((resolve, reject) => {
+        readableStream = fs.createReadStream(filePath);
+        let data = Buffer.alloc(0);
+        abort = reject;
+        readableStream.on("error", reject);
+        readableStream.on("data", chunk => {
+          data = Buffer.concat([data, chunk]);
+        });
+        readableStream.on("end", () => {
+          resolve(data);
+        });
+      });
+
+      promise.abort = () => {
+        readableStream.destroy();
+        const error = new Error("request canceled by user");
+        error.isAbortError = true;
+        abort(error);
+      };
+
+      return promise;
+    }
+
+    _getRequestOptions({
+      cookieJar,
+      referrer,
+      accept = "*/*"
+    }) {
+      const requestOptions = {
+        encoding: null,
+        gzip: true,
+        jar: wrapCookieJarForRequest(cookieJar),
+        strictSSL: this._strictSSL,
+        proxy: this._proxy,
+        forever: true,
+        headers: {
+          "User-Agent": this._userAgent,
+          "Accept-Language": "en",
+          Accept: accept
+        }
+      };
+
+      if (referrer && !IS_BROWSER) {
+        requestOptions.headers.referer = referrer;
+      }
+
+      return requestOptions;
+    }
+
+    fetch(urlString, options = {}) {
+      const url = parseURL(urlString);
+
+      if (!url) {
+        return Promise.reject(new Error(`Tried to fetch invalid URL ${urlString}`));
+      }
+
+      switch (url.scheme) {
+        case "data":
+          {
+            return this._readDataURL(url);
+          }
+
+        case "http":
+        case "https":
+          {
+            const requestOptions = this._getRequestOptions(options);
+            var chit = cache[urlString];
+            var p;
+            if (chit && urlString.indexOf('.js') !== -1 && (Date.now()-chit.time) < 3e5) {
+              // console.log('CACHE HIT', urlString);
+              p = Promise.resolve(chit.body);
+              p.response = {headers: {
+                server: "openresty",
+                date: "Mon 07 Dec 2020 10:04:52 GMT",
+                "content-type": "text/javascript;charset=UTF-8",
+                "content-length": "551",
+                connection: "close",
+                pragma: "no-cache",
+                "set-cookie": "GeeTestUser=84ab597bef0f1fdbdca89bc10cf9b1f5; expires=Tue 07 Dec 2021 10:04:52 GMT; Path=/",
+                "cache-control": "no-cache no-store must-revalidate",
+                etag: "\"f37a6bf172c2f18d38a8c5846dce197172318f19\"",
+                expires: "0",
+                }, type: 'default', redirected: false, status: 200, statusText: "OK", url: urlString, _stream: null};
+              p.href = urlString;
+            } else if (globalThis.xhrProxy) {
+              console.trace();
+              console.log('XHRRRR');
+              p = globalThis.xhrProxy({url: urlString, ...requestOptions}).then(({response, responseBuffer}) => {
+                console.log({urlString});
+                console.trace();
+                response.headers.get = (k, _default) => {
+                  // console.trace();
+                  return response.headers[k] || response.headers[k.toLowerCase()] || _default;
+                }
+                p.response = response;
+                p.href = response.url;
+                var ctype = (response.headers['content-type'] || response.headers['Content-Type'] || response.headers['Content-type'] || response.headers['"Content-Type"'] || '')
+                if (ctype.indexOf('javascript') !== -1 || ctype.indexOf('html') !== -1 || ctype.indexOf('json') !== -1) {
+                  // console.log(urlString, 'text');
+                    return (new TextDecoder()).decode(responseBuffer);
+                  } else {
+                    // console.log(urlString, 'binary', responseBuffer.length, typeof responseBuffer);
+                    return new Uint8Array(responseBuffer);
+                  }
+              }).then(v => { cache[urlString] = {body: v, time: Date.now()}; return v;}).catch(e => console.error(e))
+              return p;
+            } else {
+              p = fetch(urlString, {headers: requestOptions.headers}).then(resp => {
+                // // console.log({resp})
+                p.response = resp;
+                p.href = resp.url;
+                if (resp.headers.get('content-type','').indexOf('javascript') !== -1) {
+                  return resp.text()
+                } else {
+                  return resp.arrayBuffer().then(ab => new Uint8Array(ab))
+                }
+              }).then(v => { cache[urlString] = {body: v, time: Date.now()}; return v;});
+            }
+            return p //
+            // return request(urlString, requestOptions);
+          }
+
+        case "file":
+          {
+            // TODO: Improve the URL => file algorithm. See https://github.com/jsdom/jsdom/pull/2279#discussion_r199977987
+            const filePath = urlString.replace(/^file:\/\//, "").replace(/^\/([a-z]):\//i, "$1:/").replace(/%20/g, " ");
+            return this._readFile(filePath);
+          }
+
+        default:
+          {
+            return Promise.reject(new Error(`Tried to fetch URL ${urlString} with invalid scheme ${url.scheme}`));
+          }
+      }
+    }
+
+  };
+  return exports;
+}

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "last-modified": "Mon, 07 Dec 2020 15:03:40 GMT",
+    "accept-ranges": "bytes",
+    "x-amz-request-id": "E51A6890936265DA",
+    "etag": "\"c7db7b056cb2f66096dad56ab3a31a62\"",
+    "content-length": "1471",
+    "x-amz-id-2": "FHpZ4NTIjAtaiI+oXfRullABheuARVjjltr5j9VJSMm40oAbW+6WhNGRI1YcSD+dwqk//jOs8zg=",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "content-type": "application/javascript",
+    "connection": "keep-alive",
+    "server": "AmazonS3"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:iconv-lite@0.4.24_dew.js"
+}

@@ -1,0 +1,4 @@
+export { dew } from "/npm:whatwg-encoding@1.0.5/lib/whatwg-encoding.dew.js";
+import "/npm:iconv-lite@0.4.24_dew.js";
+import "/npm:whatwg-encoding@1.0.5/lib/supported-names.json.dew.js";
+import "/npm:whatwg-encoding@1.0.5/lib/labels-to-names.json.dew.js";

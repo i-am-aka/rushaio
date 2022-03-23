@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "content-type": "application/javascript",
+    "connection": "keep-alive",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "etag": "\"a2139a37d875add62db799580aa7dc39\"",
+    "x-amz-request-id": "8EC26474A35B0A6A",
+    "accept-ranges": "bytes",
+    "content-length": "2758",
+    "server": "AmazonS3",
+    "x-amz-id-2": "FMm3BZIK5XktDExaFXMSTiuDMeJSHFiODLy/GPliL+rmb6a/lkWVmIJPs9mIGIzRIjP1UDs4Bo8=",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/helpers/traversal.dew.js"
+}

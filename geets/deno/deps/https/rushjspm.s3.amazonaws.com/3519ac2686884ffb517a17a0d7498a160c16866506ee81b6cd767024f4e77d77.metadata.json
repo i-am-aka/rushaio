@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "last-modified": "Mon, 07 Dec 2020 15:03:47 GMT",
+    "date": "Mon, 07 Dec 2020 19:50:44 GMT",
+    "content-type": "application/javascript",
+    "accept-ranges": "bytes",
+    "x-amz-id-2": "JJbrInLb3Wc6N8BhvL2hLN+DWyVyj8M74peyqDHBLfN4hrfHEaBhqdbA9QXg3lVFXI4M/99mc2k=",
+    "etag": "\"a20fb3cb907b5679f977d3cea947dd4c\"",
+    "content-length": "7061",
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "x-amz-request-id": "6CBBC6114F4048DF"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:sshpk@1.16.1/lib/fingerprint.dew.js"
+}

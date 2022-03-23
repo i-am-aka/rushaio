@@ -1,0 +1,1 @@
+export { dew } from "/npm:parse-bmfont-ascii@1.0.6/index.dew.js";

@@ -1,0 +1,45 @@
+import { dew as _CSSStyleDeclarationDewDew } from "./CSSStyleDeclaration.dew.js";
+import { dew as _CSSRuleDewDew } from "./CSSRule.dew.js";
+import { dew as _CSSStyleRuleDewDew } from "./CSSStyleRule.dew.js";
+import { dew as _MediaListDewDew } from "./MediaList.dew.js";
+import { dew as _CSSMediaRuleDewDew } from "./CSSMediaRule.dew.js";
+import { dew as _CSSSupportsRuleDewDew } from "./CSSSupportsRule.dew.js";
+import { dew as _CSSImportRuleDewDew } from "./CSSImportRule.dew.js";
+import { dew as _CSSFontFaceRuleDewDew } from "./CSSFontFaceRule.dew.js";
+import { dew as _CSSHostRuleDewDew } from "./CSSHostRule.dew.js";
+import { dew as _StyleSheetDewDew } from "./StyleSheet.dew.js";
+import { dew as _CSSStyleSheetDewDew } from "./CSSStyleSheet.dew.js";
+import { dew as _CSSKeyframesRuleDewDew } from "./CSSKeyframesRule.dew.js";
+import { dew as _CSSKeyframeRuleDewDew } from "./CSSKeyframeRule.dew.js";
+import { dew as _MatcherListDewDew } from "./MatcherList.dew.js";
+import { dew as _CSSDocumentRuleDewDew } from "./CSSDocumentRule.dew.js";
+import { dew as _CSSValueDewDew } from "./CSSValue.dew.js";
+import { dew as _CSSValueExpressionDewDew } from "./CSSValueExpression.dew.js";
+import { dew as _parseDewDew } from "./parse.dew.js";
+import { dew as _cloneDewDew } from "./clone.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  exports.CSSStyleDeclaration = _CSSStyleDeclarationDewDew().CSSStyleDeclaration;
+  exports.CSSRule = _CSSRuleDewDew().CSSRule;
+  exports.CSSStyleRule = _CSSStyleRuleDewDew().CSSStyleRule;
+  exports.MediaList = _MediaListDewDew().MediaList;
+  exports.CSSMediaRule = _CSSMediaRuleDewDew().CSSMediaRule;
+  exports.CSSSupportsRule = _CSSSupportsRuleDewDew().CSSSupportsRule;
+  exports.CSSImportRule = _CSSImportRuleDewDew().CSSImportRule;
+  exports.CSSFontFaceRule = _CSSFontFaceRuleDewDew().CSSFontFaceRule;
+  exports.CSSHostRule = _CSSHostRuleDewDew().CSSHostRule;
+  exports.StyleSheet = _StyleSheetDewDew().StyleSheet;
+  exports.CSSStyleSheet = _CSSStyleSheetDewDew().CSSStyleSheet;
+  exports.CSSKeyframesRule = _CSSKeyframesRuleDewDew().CSSKeyframesRule;
+  exports.CSSKeyframeRule = _CSSKeyframeRuleDewDew().CSSKeyframeRule;
+  exports.MatcherList = _MatcherListDewDew().MatcherList;
+  exports.CSSDocumentRule = _CSSDocumentRuleDewDew().CSSDocumentRule;
+  exports.CSSValue = _CSSValueDewDew().CSSValue;
+  exports.CSSValueExpression = _CSSValueExpressionDewDew().CSSValueExpression;
+  exports.parse = _parseDewDew().parse;
+  exports.clone = _cloneDewDew().clone;
+  return exports;
+}

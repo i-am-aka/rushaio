@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "content-type": "application/javascript",
+    "x-amz-id-2": "J3X0q+swMeJUFtHdJUqRwB7xp89u88yV1sG6xGWOv0YCTq0vyavHw8VoSNpVZEw7Atk4LOPytiU=",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "accept-ranges": "bytes",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "etag": "\"93bf4ed75aa10ae165f494c01844fbbb\"",
+    "x-amz-request-id": "7B7E89732B98C4E3",
+    "server": "AmazonS3",
+    "content-length": "2051"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/DocumentFragment-impl.dew.js"
+}

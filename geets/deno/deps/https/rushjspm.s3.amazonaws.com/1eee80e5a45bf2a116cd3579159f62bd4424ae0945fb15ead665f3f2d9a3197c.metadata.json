@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "content-type": "application/javascript",
+    "server": "AmazonS3",
+    "x-amz-id-2": "sBPdNo5cMFSwCm8mMXJtoHtn8n0UGCJOp21jgxspXIRRtxbTeDmKEHgQWR877yASHpXoclj4NAM=",
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "content-length": "5718",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "etag": "\"c42471853776c97ab56bcbef86614f52\"",
+    "x-amz-request-id": "FYFJ7R3V7VBV5SCG",
+    "accept-ranges": "bytes"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/svg/SVGListBase.dew.js"
+}

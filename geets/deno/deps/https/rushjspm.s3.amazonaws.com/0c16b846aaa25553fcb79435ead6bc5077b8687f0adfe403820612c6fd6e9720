@@ -1,0 +1,3 @@
+export { dew } from "/npm:acorn-globals@6.0.0/index.dew.js";
+import "/npm:acorn@7_dew.js";
+import "/npm:acorn-walk@7_dew.js";

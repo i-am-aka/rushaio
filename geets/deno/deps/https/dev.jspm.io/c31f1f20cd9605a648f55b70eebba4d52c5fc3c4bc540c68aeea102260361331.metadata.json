@@ -1,0 +1,19 @@
+{
+  "headers": {
+    "content-type": "application/javascript",
+    "nel": "{\"report_to\":\"cf-nel\",\"max_age\":604800}",
+    "server": "cloudflare",
+    "cf-ray": "5fe0c78549dc92f2-SJC",
+    "set-cookie": "__cfduid=db67d4f45dfa71831e0f5222e56587c7d1607370665; expires=Wed, 06-Jan-21 19:51:05 GMT; path=/; domain=.jspm.io; HttpOnly; SameSite=Lax",
+    "cf-request-id": "06e05b0752000092f22aac2000000001",
+    "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report?s=A4RrOliYZk73V1j3nqkid%2BMRGAtGJYLlcmBSBfMKMIzPzGWwpp6b4KSvSgVRJzH%2BTYfAcBFmxqeqqGb0UV6DI2N4v9Rja96JEa8MKQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+    "date": "Mon, 07 Dec 2020 19:51:05 GMT",
+    "access-control-allow-origin": "*",
+    "cf-cache-status": "HIT",
+    "vary": "Accept-Encoding",
+    "age": "47",
+    "cache-control": "max-age=200, public",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+  },
+  "url": "https://dev.jspm.io/npm:@jimp/plugin-crop@0.16?dew"
+}

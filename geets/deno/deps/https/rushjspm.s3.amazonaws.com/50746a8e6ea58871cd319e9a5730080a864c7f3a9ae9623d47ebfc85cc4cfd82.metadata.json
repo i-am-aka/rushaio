@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-id-2": "Z4c06ljoftaDMQNeC4gNhylB8SHg9wQI2Q3kV+A2sw3/Fq18VGq8jR4z8/g2HDaSjYnJgfHk2Ng=",
+    "last-modified": "Mon, 07 Dec 2020 15:03:39 GMT",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "etag": "\"96ec02bece5414084cb8d6c491d7ff85\"",
+    "x-amz-request-id": "DFEB9F2FE84E8015",
+    "content-type": "application/javascript",
+    "content-length": "778",
+    "accept-ranges": "bytes",
+    "server": "AmazonS3",
+    "connection": "keep-alive"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:cssstyle@2.3.0/lib/utils/colorSpace.dew.js"
+}

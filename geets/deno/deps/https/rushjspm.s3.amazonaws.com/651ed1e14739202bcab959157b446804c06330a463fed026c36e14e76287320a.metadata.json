@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "etag": "\"b7e7c2933e4ba303aa5e3a3ece223d87\"",
+    "x-amz-request-id": "853A02285DFCA532",
+    "accept-ranges": "bytes",
+    "content-type": "application/javascript",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "server": "AmazonS3",
+    "x-amz-id-2": "FuAHl9d+BJ8Tr/9dbqft/jUvOzxGQoU6v6Oy8f2CoLCmrtYmPk/7kt+CXWSVUGbc3hmmguGuNf0=",
+    "content-length": "2990"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/constraint-validation/DefaultConstraintValidation-impl.dew.js"
+}

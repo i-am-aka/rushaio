@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-id-2": "dlpTHP5ieIbPjjjkqEcAJzyTx8cdRWo/hCZGw9siP4JShUPvhJ8gFaO52OZS/NPUkcyWlNfCySA=",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:38 GMT",
+    "x-amz-request-id": "62C0761CC1253C25",
+    "etag": "\"b0c6299951af7977d4f80c21c883f266\"",
+    "content-type": "application/javascript",
+    "connection": "keep-alive",
+    "accept-ranges": "bytes",
+    "content-length": "670",
+    "server": "AmazonS3"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:@jspm/core@1/nodelibs/crypto.js"
+}

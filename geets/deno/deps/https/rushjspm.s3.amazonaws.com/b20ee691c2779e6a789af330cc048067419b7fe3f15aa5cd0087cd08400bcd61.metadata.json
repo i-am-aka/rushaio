@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "server": "AmazonS3",
+    "last-modified": "Mon, 07 Dec 2020 15:03:43 GMT",
+    "content-length": "8024",
+    "etag": "\"52595a791d1c22c2a041b7a23dd0b1d7\"",
+    "content-type": "application/javascript",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "x-amz-id-2": "5AsXlTYc6hycOUkfDN0G+LZQRpjFeFOm1LrqwnIgSnRMLjy+befszE0P8x0kvLVuum+GMbvUpek=",
+    "x-amz-request-id": "85D36A4B889603ED",
+    "accept-ranges": "bytes"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/TreeWalker.dew.js"
+}

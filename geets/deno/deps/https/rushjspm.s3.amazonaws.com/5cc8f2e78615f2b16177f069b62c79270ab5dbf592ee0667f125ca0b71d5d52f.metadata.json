@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "connection": "keep-alive",
+    "server": "AmazonS3",
+    "accept-ranges": "bytes",
+    "content-type": "application/javascript",
+    "content-length": "3443",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:43 GMT",
+    "x-amz-request-id": "30BA995D2F3EA1FC",
+    "etag": "\"4ef25537381357f14bdc005266613eef\"",
+    "x-amz-id-2": "yNF+Y7H6INY0Or1zczT8V0lzWuhrCM4uVl4fJ1SsZaOTauEZ0HiAiNnV7lyOvhnbkqgZiqANvoU="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/KeyboardEventInit.dew.js"
+}

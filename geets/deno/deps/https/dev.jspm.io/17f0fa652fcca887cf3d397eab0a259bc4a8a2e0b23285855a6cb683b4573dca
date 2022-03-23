@@ -1,0 +1,40 @@
+import { dew as _interopRequireDefaultDewDew } from "/npm:@babel/runtime@7/helpers/interopRequireDefault?dew";
+import { dew as _npmTimm1DewDew } from "/npm:timm@1?dew";
+import { dew as _jpeg2Dew } from "/npm:@jimp/jpeg@0.16?dew";
+import { dew as _png2Dew } from "/npm:@jimp/png@0.16?dew";
+import { dew as _bmp2Dew } from "/npm:@jimp/bmp@0.16?dew";
+import { dew as _tiff2Dew } from "/npm:@jimp/tiff@0.16?dew";
+import { dew as _gif2Dew } from "/npm:@jimp/gif@0.16?dew";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  var _interopRequireDefault = _interopRequireDefaultDewDew();
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports["default"] = void 0;
+
+  var _timm = _npmTimm1DewDew();
+
+  var _jpeg = _interopRequireDefault(_jpeg2Dew());
+
+  var _png = _interopRequireDefault(_png2Dew());
+
+  var _bmp = _interopRequireDefault(_bmp2Dew());
+
+  var _tiff = _interopRequireDefault(_tiff2Dew());
+
+  var _gif = _interopRequireDefault(_gif2Dew());
+
+  var _default = function _default() {
+    return (0, _timm.mergeDeep)((0, _jpeg["default"])(), (0, _png["default"])(), (0, _bmp["default"])(), (0, _tiff["default"])(), (0, _gif["default"])());
+  };
+
+  exports["default"] = _default;
+  exports = exports.default;
+  return exports;
+}

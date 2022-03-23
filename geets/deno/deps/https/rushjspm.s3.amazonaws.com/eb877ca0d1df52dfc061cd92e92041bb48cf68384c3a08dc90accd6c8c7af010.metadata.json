@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "accept-ranges": "bytes",
+    "content-length": "1272",
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "connection": "keep-alive",
+    "etag": "\"9b4275be6ae184be8b4459020e8bcced\"",
+    "server": "AmazonS3",
+    "content-type": "application/javascript",
+    "x-amz-request-id": "1Z8NFYCTCWDN6Q3W",
+    "x-amz-id-2": "Y5ENjaCbrWDOgykCjpI0g/bN6iqgv1gqXwuEo4a7uk6vgTRNgwBBQeARs4agVCvHdM/uqbHsxc0="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/WindowEventHandlers-impl.dew.js"
+}

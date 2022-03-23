@@ -1,0 +1,47 @@
+import { dew as _npmWebidlConversions6DewDew } from "/npm:webidl-conversions@6_dew.js";
+import { dew as _utilsDewDew } from "./utils.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const conversions = _npmWebidlConversions6DewDew();
+
+  const utils = _utilsDewDew();
+
+  exports.convert = function convert(value, {
+    context = "The provided value"
+  } = {}) {
+    if (!utils.isObject(value)) {
+      throw new TypeError(`${context} is not an object.`);
+    }
+
+    function callTheUserObjectsOperation(event) {
+      let thisArg = utils.tryWrapperForImpl(this);
+      let O = value;
+      let X = O;
+
+      if (typeof O !== "function") {
+        X = O["handleEvent"];
+
+        if (typeof X !== "function") {
+          throw new TypeError(`${context} does not correctly implement EventListener.`);
+        }
+
+        thisArg = O;
+      }
+
+      event = utils.tryWrapperForImpl(event);
+      let callResult = Reflect.apply(X, thisArg, [event]);
+    }
+
+    callTheUserObjectsOperation[utils.wrapperSymbol] = value;
+    callTheUserObjectsOperation.objectReference = value;
+    return callTheUserObjectsOperation;
+  };
+
+  exports.install = (globalObject, globalNames) => {};
+
+  return exports;
+}

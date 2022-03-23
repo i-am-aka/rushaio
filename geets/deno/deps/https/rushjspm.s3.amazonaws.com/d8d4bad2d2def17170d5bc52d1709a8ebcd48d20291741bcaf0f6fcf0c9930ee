@@ -1,0 +1,15 @@
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  // https://html.spec.whatwg.org/multipage/obsolete.html#dom-external
+  exports.implementation = class ExternalImpl {
+    // The AddSearchProvider() and IsSearchProviderInstalled() methods must do nothing
+    AddSearchProvider() {}
+
+    IsSearchProviderInstalled() {}
+
+  };
+  return exports;
+}

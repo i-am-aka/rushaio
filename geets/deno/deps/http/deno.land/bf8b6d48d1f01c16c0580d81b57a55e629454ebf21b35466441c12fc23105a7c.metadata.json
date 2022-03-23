@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "date": "Mon, 07 Dec 2020 18:13:26 GMT",
+    "cache-control": "max-age=3600",
+    "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report?s=OKBTjWTp0Fnp70Yr7ChkdlpdUhTDEqCj85riur51AMFha3AEjB3%2FrUV5VCe%2FduEAOMbM9gX0EaE1hzRNJAbou22LMskP9njtOwM%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+    "vary": "Accept-Encoding",
+    "location": "https://deno.land/x/node_buffer/index.ts",
+    "cf-ray": "5fe0387b4c621c8b-SJC",
+    "server": "cloudflare",
+    "expires": "Mon, 07 Dec 2020 19:13:26 GMT",
+    "transfer-encoding": "chunked",
+    "cf-request-id": "06e001a10800001c8bbe93f000000001",
+    "connection": "keep-alive",
+    "nel": "{\"report_to\":\"cf-nel\",\"max_age\":604800}"
+  },
+  "url": "http://deno.land/x/node_buffer/index.ts"
+}

@@ -1,0 +1,1 @@
+export { dew } from "/npm:omggif@1.0.10/omggif.dew.js";

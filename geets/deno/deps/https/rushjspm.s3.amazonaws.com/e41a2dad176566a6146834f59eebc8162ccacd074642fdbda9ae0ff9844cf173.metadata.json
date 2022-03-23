@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "content-length": "389",
+    "x-amz-id-2": "PFco1ez3kkCfjc34gLwUBCPtGdPOsdD2nfc1qS1N67A4V4HKiPbm+WS4D7A73I69hXPyspgmDcE=",
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "server": "AmazonS3",
+    "etag": "\"5fa83c3173df0631735f18a07711f7fb\"",
+    "content-type": "application/javascript",
+    "x-amz-request-id": "619F85DC508E2AF6",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "accept-ranges": "bytes"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/HTMLLIElement-impl.dew.js"
+}

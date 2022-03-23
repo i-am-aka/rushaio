@@ -1,0 +1,117 @@
+var exports = {},
+    _dewExec = false;
+
+var _global = typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : global;
+
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  /*jslint browser: true, devel: true, bitwise: false, debug: true, eqeq: false, es5: true, evil: false, forin: false, newcap: false, nomen: true, plusplus: true, regexp: false, unparam: false, sloppy: true, stupid: false, sub: false, todo: true, vars: true, white: true */
+  function DOMBufferStream(arrayBuffer, offset, length, bigEndian, global, parentOffset) {
+    (this || _global).global = global;
+    offset = offset || 0;
+    length = length || arrayBuffer.byteLength - offset;
+    (this || _global).arrayBuffer = arrayBuffer.slice(offset, offset + length);
+    (this || _global).view = new global.DataView((this || _global).arrayBuffer, 0, (this || _global).arrayBuffer.byteLength);
+    this.setBigEndian(bigEndian);
+    (this || _global).offset = 0;
+    (this || _global).parentOffset = (parentOffset || 0) + offset;
+  }
+
+  DOMBufferStream.prototype = {
+    setBigEndian: function (bigEndian) {
+      (this || _global).littleEndian = !bigEndian;
+    },
+    nextUInt8: function () {
+      var value = (this || _global).view.getUint8((this || _global).offset);
+
+      (this || _global).offset += 1;
+      return value;
+    },
+    nextInt8: function () {
+      var value = (this || _global).view.getInt8((this || _global).offset);
+
+      (this || _global).offset += 1;
+      return value;
+    },
+    nextUInt16: function () {
+      var value = (this || _global).view.getUint16((this || _global).offset, (this || _global).littleEndian);
+
+      (this || _global).offset += 2;
+      return value;
+    },
+    nextUInt32: function () {
+      var value = (this || _global).view.getUint32((this || _global).offset, (this || _global).littleEndian);
+
+      (this || _global).offset += 4;
+      return value;
+    },
+    nextInt16: function () {
+      var value = (this || _global).view.getInt16((this || _global).offset, (this || _global).littleEndian);
+
+      (this || _global).offset += 2;
+      return value;
+    },
+    nextInt32: function () {
+      var value = (this || _global).view.getInt32((this || _global).offset, (this || _global).littleEndian);
+
+      (this || _global).offset += 4;
+      return value;
+    },
+    nextFloat: function () {
+      var value = (this || _global).view.getFloat32((this || _global).offset, (this || _global).littleEndian);
+
+      (this || _global).offset += 4;
+      return value;
+    },
+    nextDouble: function () {
+      var value = (this || _global).view.getFloat64((this || _global).offset, (this || _global).littleEndian);
+
+      (this || _global).offset += 8;
+      return value;
+    },
+    nextBuffer: function (length) {
+      //this won't work in IE10
+      var value = (this || _global).arrayBuffer.slice((this || _global).offset, (this || _global).offset + length);
+
+      (this || _global).offset += length;
+      return value;
+    },
+    remainingLength: function () {
+      return (this || _global).arrayBuffer.byteLength - (this || _global).offset;
+    },
+    nextString: function (length) {
+      var value = (this || _global).arrayBuffer.slice((this || _global).offset, (this || _global).offset + length);
+
+      value = String.fromCharCode.apply(null, new (this || _global).global.Uint8Array(value));
+      (this || _global).offset += length;
+      return value;
+    },
+    mark: function () {
+      var self = this || _global;
+      return {
+        openWithOffset: function (offset) {
+          offset = (offset || 0) + (this || _global).offset;
+          return new DOMBufferStream(self.arrayBuffer, offset, self.arrayBuffer.byteLength - offset, !self.littleEndian, self.global, self.parentOffset);
+        },
+        offset: (this || _global).offset,
+        getParentOffset: function () {
+          return self.parentOffset;
+        }
+      };
+    },
+    offsetFrom: function (marker) {
+      return (this || _global).parentOffset + (this || _global).offset - (marker.offset + marker.getParentOffset());
+    },
+    skip: function (amount) {
+      (this || _global).offset += amount;
+    },
+    branch: function (offset, length) {
+      length = typeof length === 'number' ? length : (this || _global).arrayBuffer.byteLength - ((this || _global).offset + offset);
+      return new DOMBufferStream((this || _global).arrayBuffer, (this || _global).offset + offset, length, !(this || _global).littleEndian, (this || _global).global, (this || _global).parentOffset);
+    }
+  };
+  exports = DOMBufferStream;
+  return exports;
+}

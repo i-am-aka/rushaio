@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-id-2": "EF4OI61NkAeh9TDMgi+lfXfia9RwSlfp+dUnh+pGwQ/rH2UEogPlNiMsbo/wUwZ9XTG5gYYS4PY=",
+    "content-length": "384",
+    "accept-ranges": "bytes",
+    "content-type": "application/javascript",
+    "etag": "\"9c32c8ce4d3c5d059d155820ae3d8b97\"",
+    "last-modified": "Mon, 07 Dec 2020 15:03:47 GMT",
+    "server": "AmazonS3",
+    "x-amz-request-id": "E4328B7F6FE6BF6A",
+    "connection": "keep-alive",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:tr46@2.0.2/lib/statusMapping.dew.js"
+}

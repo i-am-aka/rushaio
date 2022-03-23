@@ -1,0 +1,5 @@
+export { dew } from "/npm:xhr@2.6.0/index.dew.js";
+import "/npm:global@4.4/window?dew";
+import "/npm:is-function@1?dew";
+import "/npm:parse-headers@2?dew";
+import "/npm:xtend@4?dew";

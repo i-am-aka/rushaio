@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-request-id": "B21B316716E9F3B8",
+    "content-type": "application/javascript",
+    "etag": "\"963b96a7c08c2b51c7385c3dfeeb9652\"",
+    "content-length": "5295",
+    "server": "AmazonS3",
+    "x-amz-id-2": "loVxknVl/e/3RLmkrBBptlnJb83raEhIuBUzFRa9SVU1uiBPpAhEMlOMx7GLml8r4+OTenX9ShM=",
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "connection": "keep-alive",
+    "accept-ranges": "bytes",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/traversal/TreeWalker-impl.dew.js"
+}

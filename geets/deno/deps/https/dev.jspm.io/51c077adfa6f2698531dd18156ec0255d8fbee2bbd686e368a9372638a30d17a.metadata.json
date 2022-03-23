@@ -1,0 +1,19 @@
+{
+  "headers": {
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "date": "Mon, 07 Dec 2020 19:51:05 GMT",
+    "cache-control": "max-age=200, public",
+    "age": "47",
+    "content-type": "application/javascript",
+    "access-control-allow-origin": "*",
+    "cf-cache-status": "HIT",
+    "cf-request-id": "06e05b0753000092f237b38000000001",
+    "nel": "{\"report_to\":\"cf-nel\",\"max_age\":604800}",
+    "vary": "Accept-Encoding",
+    "set-cookie": "__cfduid=db67d4f45dfa71831e0f5222e56587c7d1607370665; expires=Wed, 06-Jan-21 19:51:05 GMT; path=/; domain=.jspm.io; HttpOnly; SameSite=Lax",
+    "server": "cloudflare",
+    "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report?s=Dwk7jMKxTLjhqtzkauG0hAMxY54CQ8UZubWbR0bCUB2hhVaJDcoDJev%2B7PyJ%2B7hsIEdFM4WGUkliAc4ZtuZ0DrtZubJE9yHjExbwJg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+    "cf-ray": "5fe0c78549df92f2-SJC"
+  },
+  "url": "https://dev.jspm.io/npm:@jimp/plugin-dither@0.16?dew"
+}

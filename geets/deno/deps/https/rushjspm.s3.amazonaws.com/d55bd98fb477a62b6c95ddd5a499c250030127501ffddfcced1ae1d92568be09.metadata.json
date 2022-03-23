@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "content-length": "6846",
+    "x-amz-request-id": "F17532E37860BC4B",
+    "content-type": "application/javascript",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "accept-ranges": "bytes",
+    "x-amz-id-2": "RfExcEhxmkwdsy5P27xcFVn3INvArgK16c3o0D7XGfbaHRGRbF1TqQcRQYUUldawPUz14kgxXUI=",
+    "etag": "\"9a7925588fb4c51142859e79f588b762\"",
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/Blob.dew.js"
+}

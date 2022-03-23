@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-id-2": "wzeCqEzNg7GE9dFGC03u060yp6BUsn8YIBrIeQBsHNFRZzkUtgOqU5UXjdJl2csBqDy432VXZVE=",
+    "x-amz-request-id": "A1A43DDCF81AC148",
+    "content-type": "application/javascript",
+    "content-length": "2581",
+    "accept-ranges": "bytes",
+    "connection": "keep-alive",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "server": "AmazonS3",
+    "etag": "\"6dd645b01a7d6f6cdbc661494642caff\"",
+    "last-modified": "Mon, 07 Dec 2020 15:03:38 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:@jspm/core@1.1.1/nodelibs/chunk-0c2d1322.js"
+}

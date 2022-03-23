@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "accept-ranges": "bytes",
+    "content-type": "application/javascript",
+    "content-length": "2166",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "x-amz-id-2": "BOh+A9ehxw3MuuvE+1nqrVB8ekzvpj97h6mRPUqlKDcsXC1KBSliQp14wllXrNNwViJ9lisZCdM=",
+    "server": "AmazonS3",
+    "x-amz-request-id": "EMAWAVBH5Z8P6V8M",
+    "etag": "\"85e8ccdc52bd5454bce5ab72e6704809\"",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/domparsing/parse5-adapter-serialization.dew.js"
+}

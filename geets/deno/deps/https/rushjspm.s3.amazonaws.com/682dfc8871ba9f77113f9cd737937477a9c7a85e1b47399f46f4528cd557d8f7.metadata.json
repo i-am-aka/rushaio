@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "etag": "\"ee219f9dde9d1e2c0eed2d95b046dcd8\"",
+    "accept-ranges": "bytes",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "server": "AmazonS3",
+    "x-amz-request-id": "E04AA56576123808",
+    "x-amz-id-2": "U6RvuRmw+ptSNkVhn8UWOv8eTVqdqzUm1SWi/rxCJdPqAEVx1wyv7Ly0PjalzrusbNzv4XrfhKQ=",
+    "content-type": "application/javascript",
+    "content-length": "132867",
+    "last-modified": "Mon, 07 Dec 2020 15:03:47 GMT",
+    "connection": "keep-alive"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:tr46@2.0.2/lib/mappingTable.json.dew.js"
+}

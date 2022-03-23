@@ -1,0 +1,43 @@
+import { dew as _npmWhatwgUrl8DewDew } from "/npm:whatwg-url@8_dew.js";
+import { dew as _HTMLElementImplDewDew } from "./HTMLElement-impl.dew.js";
+import { dew as _documentBaseUrlDewDew } from "../helpers/document-base-url.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const whatwgURL = _npmWhatwgUrl8DewDew();
+
+  const HTMLElementImpl = _HTMLElementImplDewDew().implementation;
+
+  const {
+    fallbackBaseURL
+  } = _documentBaseUrlDewDew();
+
+  class HTMLBaseElementImpl extends HTMLElementImpl {
+    get href() {
+      const document = this._ownerDocument;
+      const url = this.hasAttributeNS(null, "href") ? this.getAttributeNS(null, "href") : "";
+      const parsed = whatwgURL.parseURL(url, {
+        baseURL: fallbackBaseURL(document)
+      });
+
+      if (parsed === null) {
+        return url;
+      }
+
+      return whatwgURL.serializeURL(parsed);
+    }
+
+    set href(value) {
+      this.setAttributeNS(null, "href", value);
+    }
+
+  }
+
+  exports = {
+    implementation: HTMLBaseElementImpl
+  };
+  return exports;
+}

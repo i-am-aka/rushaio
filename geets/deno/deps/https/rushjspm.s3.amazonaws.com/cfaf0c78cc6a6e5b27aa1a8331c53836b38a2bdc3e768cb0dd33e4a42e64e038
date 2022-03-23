@@ -1,0 +1,66 @@
+import { dew as _npmW3cXmlserializer2DewDew } from "/npm:w3c-xmlserializer@2_dew.js";
+import { dew as _npmParseDew } from "/npm:parse5@5.1.1_dew.js";
+import { dew as _webidl2jsWrapperDewDew } from "/npm:domexception@2/webidl2js-wrapper_dew.js";
+import { dew as _utilsDewDew } from "../generated/utils.dew.js";
+import { dew as _parse5AdapterSerializationDewDew } from "./parse5-adapter-serialization.dew.js";
+import { dew as _nodeTypeDewDew } from "../node-type.dew.js";
+import { dew as _namespacesDewDew } from "../helpers/namespaces.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const produceXMLSerialization = _npmW3cXmlserializer2DewDew();
+
+  const parse5 = _npmParseDew();
+
+  const DOMException = _webidl2jsWrapperDewDew();
+
+  const utils = _utilsDewDew();
+
+  const treeAdapter = _parse5AdapterSerializationDewDew();
+
+  const NODE_TYPE = _nodeTypeDewDew();
+
+  const NAMESPACES = _namespacesDewDew();
+
+  function htmlSerialization(node) {
+    if (node.nodeType === NODE_TYPE.ELEMENT_NODE && node.namespaceURI === NAMESPACES.HTML_NS && node.tagName === "TEMPLATE") {
+      node = node.content;
+    }
+
+    return parse5.serialize(node, {
+      treeAdapter
+    });
+  }
+
+  exports.fragmentSerialization = (node, {
+    requireWellFormed,
+    globalObject
+  }) => {
+    const contextDocument = node.nodeType === NODE_TYPE.DOCUMENT_NODE ? node : node._ownerDocument;
+
+    if (contextDocument._parsingMode === "html") {
+      return htmlSerialization(node);
+    }
+
+    const childNodes = node.childNodesForSerializing || node.childNodes;
+
+    try {
+      let serialized = "";
+
+      for (let i = 0; i < childNodes.length; ++i) {
+        serialized += produceXMLSerialization(utils.wrapperForImpl(childNodes[i] || childNodes.item(i)), {
+          requireWellFormed
+        });
+      }
+
+      return serialized;
+    } catch (e) {
+      throw DOMException.create(globalObject, [e.message, "InvalidStateError"]);
+    }
+  };
+
+  return exports;
+}

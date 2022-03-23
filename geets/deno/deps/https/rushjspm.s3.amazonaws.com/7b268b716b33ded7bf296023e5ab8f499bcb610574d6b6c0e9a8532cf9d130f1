@@ -1,0 +1,25 @@
+import { dew as _internalDewDew } from "./internal.dew.js";
+import { dew as _utf16DewDew } from "./utf16.dew.js";
+import { dew as _utf7DewDew } from "./utf7.dew.js";
+import { dew as _sbcsCodecDewDew } from "./sbcs-codec.dew.js";
+import { dew as _sbcsDataDewDew } from "./sbcs-data.dew.js";
+import { dew as _sbcsDataGeneratedDewDew } from "./sbcs-data-generated.dew.js";
+import { dew as _dbcsCodecDewDew } from "./dbcs-codec.dew.js";
+import { dew as _dbcsDataDewDew } from "./dbcs-data.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  // Update this array if you add/rename/remove files in this directory.
+  // We support Browserify by skipping automatic module discovery and requiring modules directly.
+  var modules = [_internalDewDew(), _utf16DewDew(), _utf7DewDew(), _sbcsCodecDewDew(), _sbcsDataDewDew(), _sbcsDataGeneratedDewDew(), _dbcsCodecDewDew(), _dbcsDataDewDew()]; // Put all encoding/alias/codec definitions to single object and export it. 
+
+  for (var i = 0; i < modules.length; i++) {
+    var module = modules[i];
+
+    for (var enc in module) if (Object.prototype.hasOwnProperty.call(module, enc)) exports[enc] = module[enc];
+  }
+
+  return exports;
+}

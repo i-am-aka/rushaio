@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "last-modified": "Mon, 07 Dec 2020 15:03:46 GMT",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "accept-ranges": "bytes",
+    "content-type": "application/javascript",
+    "x-amz-id-2": "d/ZcQ5L6AKeekbxIZfjcOFJk1h2WR1BEbntuf/rnNXNWlqjpmEZS7Cwbtb6LGeN+JXhlT+Fa2vo=",
+    "x-amz-request-id": "F0FF51854AAAE794",
+    "content-length": "972",
+    "server": "AmazonS3",
+    "etag": "\"63f442a1d41ec35fa64e1d64563984ed\""
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/virtual-console.dew.js"
+}

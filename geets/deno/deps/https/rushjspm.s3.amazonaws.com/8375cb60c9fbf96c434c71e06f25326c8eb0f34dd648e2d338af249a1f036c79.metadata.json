@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "content-type": "application/javascript",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "content-length": "4361",
+    "x-amz-request-id": "40DE388768B03256",
+    "x-amz-id-2": "AEUqB8PHDNlrYIfF5PmJaRN8WIZwTXeNy1b5mhmYdGw4JghgU74ZrUZrPNgnedjbKU5LjUd/yiY=",
+    "connection": "keep-alive",
+    "accept-ranges": "bytes",
+    "last-modified": "Mon, 07 Dec 2020 15:03:46 GMT",
+    "server": "AmazonS3",
+    "etag": "\"81da6cca45a0c0fe24117da70ecfbce2\""
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:parse5@5.1.1/lib/common/error-codes.dew.js"
+}

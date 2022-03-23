@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "etag": "\"e7a35d02f26bf5f7c6274d6780ea59e8\"",
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "x-amz-request-id": "2N3W5JAG8H1G5P0T",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "content-type": "application/javascript",
+    "content-length": "2901",
+    "accept-ranges": "bytes",
+    "last-modified": "Mon, 07 Dec 2020 15:03:47 GMT",
+    "x-amz-id-2": "2JHNZHK+7IaHgnqI/VkxT0A8MHNrryyyeGGp7oqUx+FdYA6w2UxXE7VqwOaTPsvf1X4YS0yad6c="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:source-map@0.6.1/lib/mapping-list.dew.js"
+}

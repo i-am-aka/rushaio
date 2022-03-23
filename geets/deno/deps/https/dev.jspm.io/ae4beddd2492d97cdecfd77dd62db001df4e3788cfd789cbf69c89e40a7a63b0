@@ -1,0 +1,61 @@
+import { dew as _interopRequireDefaultDewDew } from "/npm:@babel/runtime@7/helpers/interopRequireDefault?dew";
+import { dew as _definePropertyDewDew } from "/npm:@babel/runtime@7/helpers/defineProperty?dew";
+import { dew as _npmOmggif1DewDew } from "/npm:omggif@1?dew";
+import { dew as _npmGifwrapDew } from "/npm:gifwrap@0.9?dew";
+import _buffer from "/npm:@jspm/core@1/nodelibs/buffer.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  var Buffer = _buffer.Buffer;
+
+  var _interopRequireDefault = _interopRequireDefaultDewDew();
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports["default"] = void 0;
+
+  var _defineProperty2 = _interopRequireDefault(_definePropertyDewDew());
+
+  var _omggif = _interopRequireDefault(_npmOmggif1DewDew());
+
+  var _gifwrap = _npmGifwrapDew();
+
+  var MIME_TYPE = 'image/gif';
+
+  var _default = function _default() {
+    return {
+      mime: (0, _defineProperty2["default"])({}, MIME_TYPE, ['gif']),
+      constants: {
+        MIME_GIF: MIME_TYPE
+      },
+      decoders: (0, _defineProperty2["default"])({}, MIME_TYPE, function (data) {
+        var gifObj = new _omggif["default"].GifReader(data);
+        var gifData = Buffer.alloc(gifObj.width * gifObj.height * 4);
+        gifObj.decodeAndBlitFrameRGBA(0, gifData);
+        return {
+          data: gifData,
+          width: gifObj.width,
+          height: gifObj.height
+        };
+      }),
+      encoders: (0, _defineProperty2["default"])({}, MIME_TYPE, function (data) {
+        var bitmap = new _gifwrap.BitmapImage(data.bitmap);
+
+        _gifwrap.GifUtil.quantizeDekker(bitmap, 256);
+
+        var newFrame = new _gifwrap.GifFrame(bitmap);
+        var gifCodec = new _gifwrap.GifCodec();
+        return gifCodec.encodeGif([newFrame], {}).then(function (newGif) {
+          return newGif.buffer;
+        });
+      })
+    };
+  };
+
+  exports["default"] = _default;
+  exports = exports.default;
+  return exports;
+}

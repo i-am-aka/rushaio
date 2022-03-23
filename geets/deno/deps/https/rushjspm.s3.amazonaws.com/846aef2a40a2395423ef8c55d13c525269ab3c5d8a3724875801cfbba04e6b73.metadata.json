@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "server": "AmazonS3",
+    "accept-ranges": "bytes",
+    "x-amz-request-id": "193959C5D108D258",
+    "content-length": "5771",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "connection": "keep-alive",
+    "etag": "\"978248947656eb6b4cbfa33a32aa0ce8\"",
+    "content-type": "application/javascript",
+    "x-amz-id-2": "2z5PQNKc+oyKbuUGniqFdzhvpSK2oEn5N3U4wyCpjm+GtXdQ0krjzCGsy899M1rWG/ba2Qny6Ko="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/CloseEvent.dew.js"
+}

@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "content-length": "802",
+    "accept-ranges": "bytes",
+    "x-amz-id-2": "cwDX3QQ5RK5Gzd3TZ1IvJB96MKr44WRjGG0cYmSueXb+hvUCXqQx8vjBzX+QMFFCYBw7oL/DJw4=",
+    "etag": "\"a30c313841d93f28f7299ab1c1106b64\"",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "content-type": "application/javascript",
+    "server": "AmazonS3",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "x-amz-request-id": "50729002ADF1EDA1"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/ElementCSSInlineStyle-impl.dew.js"
+}

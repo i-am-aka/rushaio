@@ -1,0 +1,42 @@
+import { dew as _npmWhatwgUrl8DewDew } from "/npm:whatwg-url@8_dew.js";
+import { dew as _npmAbab2DewDew } from "/npm:abab@2_dew.js";
+import _buffer from "/npm:@jspm/core@1/nodelibs/buffer.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  var Buffer = _buffer.Buffer;
+
+  const {
+    percentDecode
+  } = _npmWhatwgUrl8DewDew();
+
+  const {
+    atob
+  } = _npmAbab2DewDew();
+
+  exports.stripLeadingAndTrailingASCIIWhitespace = string => {
+    return string.replace(/^[ \t\n\f\r]+/, "").replace(/[ \t\n\f\r]+$/, "");
+  };
+
+  exports.stringPercentDecode = input => {
+    return percentDecode(Buffer.from(input, "utf-8"));
+  };
+
+  exports.isomorphicDecode = input => {
+    return input.toString("binary");
+  };
+
+  exports.forgivingBase64Decode = data => {
+    const asString = atob(data);
+
+    if (asString === null) {
+      return null;
+    }
+
+    return Buffer.from(asString, "binary");
+  };
+
+  return exports;
+}

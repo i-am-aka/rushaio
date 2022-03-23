@@ -1,0 +1,50 @@
+import { dew as _xmlDewDew } from "./xml.dew.js";
+import { dew as _htmlDewDew } from "./html.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const xmlParser = _xmlDewDew();
+
+  const htmlParser = _htmlDewDew(); // https://w3c.github.io/DOM-Parsing/#dfn-fragment-parsing-algorithm
+
+
+  function parseFragment(markup, contextElement) {
+    const {
+      _parsingMode
+    } = contextElement._ownerDocument;
+    let parseAlgorithm;
+
+    if (_parsingMode === "html") {
+      parseAlgorithm = htmlParser.parseFragment;
+    } else if (_parsingMode === "xml") {
+      parseAlgorithm = xmlParser.parseFragment;
+    } // Note: HTML and XML fragment parsing algorithm already return a document fragments; no need to do steps 3 and 4
+
+
+    return parseAlgorithm(markup, contextElement);
+  }
+
+  function parseIntoDocument(markup, ownerDocument) {
+    const {
+      _parsingMode
+    } = ownerDocument;
+    let parseAlgorithm;
+
+    if (_parsingMode === "html") {
+      parseAlgorithm = htmlParser.parseIntoDocument;
+    } else if (_parsingMode === "xml") {
+      parseAlgorithm = xmlParser.parseIntoDocument;
+    }
+
+    return parseAlgorithm(markup, ownerDocument);
+  }
+
+  exports = {
+    parseFragment,
+    parseIntoDocument
+  };
+  return exports;
+}

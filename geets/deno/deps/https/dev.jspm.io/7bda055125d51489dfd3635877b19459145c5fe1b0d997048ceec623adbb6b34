@@ -1,0 +1,1 @@
+export { dew } from "/npm:global@4.4.0/window.dew.js";

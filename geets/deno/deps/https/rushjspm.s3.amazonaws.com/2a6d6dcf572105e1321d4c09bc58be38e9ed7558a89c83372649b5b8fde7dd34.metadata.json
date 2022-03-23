@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "server": "AmazonS3",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "content-type": "application/javascript",
+    "etag": "\"7e88639d5d66548f41c84440b1c56844\"",
+    "x-amz-request-id": "A4045029C0D662D5",
+    "content-length": "1342",
+    "accept-ranges": "bytes",
+    "x-amz-id-2": "uUVc5uFWHS+S8W2bQtSbaHKyqHptCZUWNt/w0RYYKVJlxqkiKHzooHboxOTJrrvrEw8ufowj9sY="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/CompositionEventInit.dew.js"
+}

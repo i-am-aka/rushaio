@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "etag": "\"872a68b041f3e5f53be2ed726565dd9c\"",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "x-amz-id-2": "dYBfskwEsXO0LOY3dbA/7YKLWkR0QvNdlNVlIVaj158kZDzjA/5moiN4q8FMh0ftcs45axxb/mA=",
+    "connection": "keep-alive",
+    "accept-ranges": "bytes",
+    "server": "AmazonS3",
+    "last-modified": "Mon, 07 Dec 2020 15:03:39 GMT",
+    "content-type": "application/javascript",
+    "content-length": "4070",
+    "x-amz-request-id": "1C0F05E19820F717"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:cssom@0.3.8/lib/CSSImportRule.dew.js"
+}

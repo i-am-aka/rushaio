@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-request-id": "9DF1C8EE4557C63D",
+    "last-modified": "Mon, 07 Dec 2020 15:03:46 GMT",
+    "etag": "\"57b6cf07ea07ab744e7c88010765b78a\"",
+    "accept-ranges": "bytes",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "content-type": "application/javascript",
+    "content-length": "1077",
+    "x-amz-id-2": "BzWIUz/fvBfZKnQZ6+fbJF1QoVHy2ORpOEQ66+PCzD5IJgPEoi2sSgiPRNdEUJ/1HZcAtEgGRE4=",
+    "server": "AmazonS3",
+    "connection": "keep-alive"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:parse5@5.1.1/lib/extensions/error-reporting/mixin-base.dew.js"
+}

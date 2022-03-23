@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-id-2": "fs/89dq/fahR5CFED2VphoEqp5x3lsqIr/GCwzx/ruBkVbxuJQ9Uoj2jiSRhfESUh056yT4QULc=",
+    "server": "AmazonS3",
+    "etag": "\"a91457ac09ae9fd95142344e993d5f46\"",
+    "connection": "keep-alive",
+    "x-amz-request-id": "454064205A9EC4A5",
+    "accept-ranges": "bytes",
+    "last-modified": "Mon, 07 Dec 2020 15:03:46 GMT",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "content-type": "application/javascript",
+    "content-length": "5184"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:parse5@5.1.1/lib/extensions/location-info/tokenizer-mixin.dew.js"
+}

@@ -1,0 +1,104 @@
+import { dew as _ValidityStateDewDew } from "../generated/ValidityState.dew.js";
+import { dew as _formControlsDewDew } from "../helpers/form-controls.dew.js";
+import { dew as _traversalDewDew } from "../helpers/traversal.dew.js";
+import { dew as _eventsDewDew } from "../helpers/events.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const ValidityState = _ValidityStateDewDew();
+
+  const {
+    isDisabled
+  } = _formControlsDewDew();
+
+  const {
+    closest
+  } = _traversalDewDew();
+
+  const {
+    fireAnEvent
+  } = _eventsDewDew();
+
+  exports.implementation = class DefaultConstraintValidationImpl {
+    // https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-willvalidate
+    get willValidate() {
+      return this._isCandidateForConstraintValidation();
+    }
+
+    get validity() {
+      if (!this._validity) {
+        this._validity = ValidityState.createImpl(this._globalObject, [], {
+          element: this
+        });
+      }
+
+      return this._validity;
+    } // https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-checkvalidity
+
+
+    checkValidity() {
+      if (!this._isCandidateForConstraintValidation()) {
+        return true;
+      }
+
+      if (this._satisfiesConstraints()) {
+        return true;
+      }
+
+      fireAnEvent("invalid", this, undefined, {
+        cancelable: true
+      });
+      return false;
+    } // https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-setcustomvalidity
+
+
+    setCustomValidity(message) {
+      this._customValidityErrorMessage = message;
+    } // https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-reportvalidity
+    // Since jsdom has no user interaction, it's the same as #checkValidity
+
+
+    reportValidity() {
+      return this.checkValidity();
+    } // https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-validationmessage
+
+
+    get validationMessage() {
+      const {
+        validity
+      } = this;
+
+      if (!this._isCandidateForConstraintValidation() || this._satisfiesConstraints()) {
+        return "";
+      }
+
+      const isSufferingFromCustomError = validity.customError;
+
+      if (isSufferingFromCustomError) {
+        return this._customValidityErrorMessage;
+      }
+
+      return "Constraints not satisfied";
+    }
+
+    _isCandidateForConstraintValidation() {
+      // https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-disabled
+      return !isDisabled(this) && // If an element has a datalist element ancestor,
+      // it is barred from constraint validation.
+      closest(this, "datalist") === null && !this._barredFromConstraintValidationSpecialization();
+    }
+
+    _isBarredFromConstraintValidation() {
+      return !this._isCandidateForConstraintValidation();
+    }
+
+    _satisfiesConstraints() {
+      return this.validity.valid;
+    }
+
+  };
+  return exports;
+}

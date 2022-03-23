@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-id-2": "MMFWDze2bL6rhO3d3k1Z2wA4ZI8HXUlkL5g9YV49eBL2c1OfsDsx0OXJPMt7k6w/BHtkr+BM9ug=",
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "accept-ranges": "bytes",
+    "x-amz-request-id": "BY1VFXEZ0Q9WAP4M",
+    "content-length": "28771",
+    "content-type": "application/javascript",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "etag": "\"69c6d766ceac1211043ab477fd5e79c4\"",
+    "connection": "keep-alive",
+    "server": "AmazonS3"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/range/Range-impl.dew.js"
+}

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "date": "Mon, 07 Dec 2020 19:50:44 GMT",
+    "x-amz-request-id": "068FB51041FC99D1",
+    "etag": "\"d47e84439302eddc3588f53028deabba\"",
+    "content-length": "10307",
+    "content-type": "application/javascript",
+    "accept-ranges": "bytes",
+    "x-amz-id-2": "b/qYuInHt5NDK9MoBWR/Nkyi8uJn3oDWRY0yRf3kTmTtpQB4vJFVbYUx4Cbd+JtekP0oUEXBGM4=",
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "last-modified": "Mon, 07 Dec 2020 15:03:47 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:sshpk@1.16.1/lib/formats/openssh-cert.dew.js"
+}

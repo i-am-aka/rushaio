@@ -1,0 +1,2 @@
+export { dew } from "/npm:canvas@2.6.1/browser.dew.js";
+import "/npm:canvas@2.6.1/lib/parse-font.dew.js";

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-id-2": "uLYwoBjPPNUs0DO+WNJHkN/j7QlQhZFTU4J7Xe45JOGgD6EPiBM85VAHOCgxoZKq326NbPxaiTs=",
+    "content-type": "application/javascript",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "connection": "keep-alive",
+    "x-amz-request-id": "9C8F33CEDFEF2DA1",
+    "accept-ranges": "bytes",
+    "etag": "\"2a735c8802c04547917e9cc2a9caa832\"",
+    "content-length": "1822",
+    "last-modified": "Mon, 07 Dec 2020 15:03:47 GMT",
+    "server": "AmazonS3"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:w3c-hr-time@1.0.2/lib/calculate-clock-offset.dew.js"
+}

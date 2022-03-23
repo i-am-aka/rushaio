@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "x-amz-id-2": "K0OGktAvuoDgkEqcqbllDWhIBzt3nbmCE6FiGuUGtv4kVX8a/9qxOqfp9ImbX4VtHUZ5XZaclNw=",
+    "x-amz-request-id": "C271BD1F54871433",
+    "server": "AmazonS3",
+    "content-type": "application/javascript",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "etag": "\"58dfc4bb3ff8556facd4b1f02e7e684d\"",
+    "content-length": "2579",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "accept-ranges": "bytes"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/HTMLButtonElement-impl.dew.js"
+}

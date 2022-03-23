@@ -1,0 +1,55 @@
+import _zlib from "/npm:@jspm/core@1/nodelibs/zlib.js";
+import { dew as _constantsDewDew } from "./constants.dew.js";
+import { dew as _packerDewDew } from "./packer.dew.js";
+import _buffer from "/npm:@jspm/core@1/nodelibs/buffer.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  var Buffer = _buffer.Buffer;
+  var hasSyncZlib = true;
+  var zlib = _zlib;
+
+  if (!zlib.deflateSync) {
+    hasSyncZlib = false;
+  }
+
+  var constants = _constantsDewDew();
+
+  var Packer = _packerDewDew();
+
+  exports = function (metaData, opt) {
+    if (!hasSyncZlib) {
+      throw new Error('To use the sync capability of this library in old node versions, please pin pngjs to v2.3.0');
+    }
+
+    var options = opt || {};
+    var packer = new Packer(options);
+    var chunks = []; // Signature
+
+    chunks.push(new Buffer(constants.PNG_SIGNATURE)); // Header
+
+    chunks.push(packer.packIHDR(metaData.width, metaData.height));
+
+    if (metaData.gamma) {
+      chunks.push(packer.packGAMA(metaData.gamma));
+    }
+
+    var filteredData = packer.filterData(metaData.data, metaData.width, metaData.height); // compress it
+
+    var compressedData = zlib.deflateSync(filteredData, packer.getDeflateOptions());
+    filteredData = null;
+
+    if (!compressedData || !compressedData.length) {
+      throw new Error('bad png - invalid compressed data response');
+    }
+
+    chunks.push(packer.packIDAT(compressedData)); // End
+
+    chunks.push(packer.packIEND());
+    return Buffer.concat(chunks);
+  };
+
+  return exports;
+}

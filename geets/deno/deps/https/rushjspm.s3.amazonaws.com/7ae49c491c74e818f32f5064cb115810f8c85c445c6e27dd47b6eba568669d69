@@ -1,0 +1,97 @@
+// polyfill MessagePort and MessageChannel
+export class MessagePort {
+    onmessage = null;
+    onmessageerror = null;
+
+    otherPort = null;
+    onmessageListeners = [];
+
+    buf = [];
+
+    constructor() {
+        this.id = parseInt(Math.random()*10000);
+    }
+
+    dispatchEvent(event) {
+        // debugger;
+        // console.log(`MSGCHAN#${this.id} dispatchEvent`, event, this.onmessage != null, this.onmessageListeners.length);
+        if (this.onmessage) {
+            this.onmessage(event);
+        }
+        this.onmessageListeners.forEach(listener => listener(event));
+        if (!this.onmessage && this.onmessageListeners.length === 0) {
+            // console.log(`MSGCHAN#${this.id}  dispatchEvent.adding_to_buffer`, event);
+            this.buf.push(event);
+        }
+        return true;
+    }
+
+    postMessage(message) {
+        // debugger;
+        // console.log(`MSGCHAN#${this.id}  postMessage`, message);
+        if (!this.otherPort) {
+            return;
+        }
+        this.otherPort.dispatchEvent({ data: message });
+    }
+
+    addEventListener(type, listener) {
+        // debugger;
+        // console.log(`MSGCHAN#${this.id} addEventListener`, type, listener, this.onmessageListeners.length);
+        if (type !== 'message') {
+            return;
+        }
+        if (typeof listener !== 'function' ||
+            this.onmessageListeners.indexOf(listener) !== -1) {
+            return;
+        }
+        this.onmessageListeners.push(listener);
+        if (this.onmessageListeners.length === 1 && this.buf.length > 0) {
+            // console.log(`MSGCHAN#${this.id}  flush buf`);
+            var buff = [...this.buf];
+            this.buf = [];
+            buff.forEach(event => this.dispatchEvent(event));
+        }
+    }
+
+    removeEventListener(type, listener) {
+        // console.log(`MSGCHAN#${this.id}  removeEventListener`, type, listener);
+        if (type !== 'message') {
+            return;
+        }
+        const index = this.onmessageListeners.indexOf(listener);
+        if (index === -1) {
+            return;
+        }
+
+        this.onmessageListeners.splice(index, 1);
+    }
+
+    start() {
+        // do nothing at this moment
+    }
+
+    close() {
+        // do nothing at this moment
+    }
+}
+
+export function CreateMessageChannel(window_) {
+     class MessageChannel {
+        port1
+        port2
+        constructor() {
+            this.id = parseInt(Math.random()*10000);
+            this.port1 = new MessagePort();
+            this.port2 = new MessagePort();
+            this.port1.otherPort = this.port2;
+            this.port2.otherPort = this.port1;
+            this.port1.chan = this;
+            this.port2.chan = this;
+        }
+    }
+    MessageChannel.window_ = window_;
+    return MessageChannel;
+}
+
+

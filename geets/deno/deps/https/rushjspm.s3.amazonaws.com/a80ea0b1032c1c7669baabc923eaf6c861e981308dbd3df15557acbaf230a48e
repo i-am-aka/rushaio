@@ -1,0 +1,6 @@
+export { dew } from "/npm:domexception@2.0.1/webidl2js-wrapper.dew.js";
+import "/npm:domexception@2.0.1/lib/DOMException.dew.js";
+import "/npm:webidl-conversions@5_dew.js";
+import "/npm:domexception@2.0.1/lib/utils.dew.js";
+import "/npm:domexception@2.0.1/lib/DOMException-impl.dew.js";
+import "/npm:domexception@2.0.1/lib/legacy-error-codes.json.dew.js";

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "content-length": "3863",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "x-amz-request-id": "5130CA06116A7390",
+    "accept-ranges": "bytes",
+    "server": "AmazonS3",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "content-type": "application/javascript",
+    "etag": "\"3852d2788ef1376a49fcaee8859cdce6\"",
+    "connection": "keep-alive",
+    "x-amz-id-2": "j8vPaSuZTiHQ/GZiCzzOA54YJUpOFSz+RtNFd6FYT04wKRNPxZIgr6SxB5UeU8MBRs0y7Ht/xps="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/mutation-observer/MutationObserver-impl.dew.js"
+}

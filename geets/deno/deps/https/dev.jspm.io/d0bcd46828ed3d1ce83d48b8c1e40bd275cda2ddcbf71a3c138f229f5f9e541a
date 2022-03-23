@@ -1,0 +1,38 @@
+import { dew as _bitmapimageDewDew } from "./bitmapimage.dew.js";
+import { dew as _gifDewDew } from "./gif.dew.js";
+import { dew as _gifcodecDewDew } from "./gifcodec.dew.js";
+import { dew as _gifframeDewDew } from "./gifframe.dew.js";
+import { dew as _gifutilDewDew } from "./gifutil.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const BitmapImage = _bitmapimageDewDew();
+
+  const {
+    Gif,
+    GifError
+  } = _gifDewDew();
+
+  const {
+    GifCodec
+  } = _gifcodecDewDew();
+
+  const {
+    GifFrame
+  } = _gifframeDewDew();
+
+  const GifUtil = _gifutilDewDew();
+
+  exports = {
+    BitmapImage,
+    Gif,
+    GifCodec,
+    GifFrame,
+    GifUtil,
+    GifError
+  };
+  return exports;
+}

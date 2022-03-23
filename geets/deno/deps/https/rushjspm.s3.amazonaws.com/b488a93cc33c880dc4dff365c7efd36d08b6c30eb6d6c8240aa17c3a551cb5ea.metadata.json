@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "etag": "\"31fc23b6c30a09aacaa81a30e24a912e\"",
+    "accept-ranges": "bytes",
+    "content-type": "application/javascript",
+    "x-amz-request-id": "3622D41499C65E7A",
+    "x-amz-id-2": "BInzMJJJWvjA2RdkK0JLGAfMcO0vtfZLlL1jLp9C5UJOVtIwWwML9QrFLEnghgE0zHSxDLTOcS0=",
+    "last-modified": "Mon, 07 Dec 2020 15:03:43 GMT",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "content-length": "6645"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/WheelEvent.dew.js"
+}

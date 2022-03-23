@@ -1,0 +1,19 @@
+{
+  "headers": {
+    "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report?s=3muzn05J1rJK9J%2FcTmAuD5leN67Rx9Vr8IGYESyqIhNPsX3OwUKEzr0OX42%2FV9J%2FSon4l1jmg5FMZL98qen4SeWXCo5OZX9AY7T4sA%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+    "cf-cache-status": "HIT",
+    "age": "64535",
+    "content-type": "application/javascript",
+    "nel": "{\"report_to\":\"cf-nel\",\"max_age\":604800}",
+    "cf-request-id": "06e05b07ce000092f24a9fd000000001",
+    "vary": "Accept-Encoding",
+    "set-cookie": "__cfduid=db67d4f45dfa71831e0f5222e56587c7d1607370665; expires=Wed, 06-Jan-21 19:51:05 GMT; path=/; domain=.jspm.io; HttpOnly; SameSite=Lax",
+    "server": "cloudflare",
+    "cf-ray": "5fe0c7860a9e92f2-SJC",
+    "access-control-allow-origin": "*",
+    "date": "Mon, 07 Dec 2020 19:51:05 GMT",
+    "cache-control": "max-age=31536000, public, immutable",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+  },
+  "url": "https://dev.jspm.io/npm:@jimp/core@0.16.1/dist/utils/promisify.dew.js"
+}

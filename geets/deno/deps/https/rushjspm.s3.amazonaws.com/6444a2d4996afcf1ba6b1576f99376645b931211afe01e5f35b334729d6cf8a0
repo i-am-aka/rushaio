@@ -1,0 +1,69 @@
+var exports = {},
+    _dewExec = false;
+
+var _global = typeof self !== "undefined" ? self : global;
+
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  //.CommonJS
+  var CSSOM = {}; ///CommonJS
+
+  /**
+   * @constructor
+   * @see https://developer.mozilla.org/en/CSS/@-moz-document
+   */
+
+  CSSOM.MatcherList = function MatcherList() {
+    (this || _global).length = 0;
+  };
+
+  CSSOM.MatcherList.prototype = {
+    constructor: CSSOM.MatcherList,
+
+    /**
+     * @return {string}
+     */
+    get matcherText() {
+      return Array.prototype.join.call(this || _global, ", ");
+    },
+
+    /**
+     * @param {string} value
+     */
+    set matcherText(value) {
+      // just a temporary solution, actually it may be wrong by just split the value with ',', because a url can include ','.
+      var values = value.split(",");
+      var length = (this || _global).length = values.length;
+
+      for (var i = 0; i < length; i++) {
+        (this || _global)[i] = values[i].trim();
+      }
+    },
+
+    /**
+     * @param {string} matcher
+     */
+    appendMatcher: function (matcher) {
+      if (Array.prototype.indexOf.call(this || _global, matcher) === -1) {
+        (this || _global)[(this || _global).length] = matcher;
+        (this || _global).length++;
+      }
+    },
+
+    /**
+     * @param {string} matcher
+     */
+    deleteMatcher: function (matcher) {
+      var index = Array.prototype.indexOf.call(this || _global, matcher);
+
+      if (index !== -1) {
+        Array.prototype.splice.call(this || _global, index, 1);
+      }
+    }
+  }; //.CommonJS
+
+  exports.MatcherList = CSSOM.MatcherList; ///CommonJS
+
+  return exports;
+}

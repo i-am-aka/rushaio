@@ -1,0 +1,2 @@
+export * from 'https://deno.land/x/fetchbase64@1.0.0/mod.ts';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIjxodHRwczovL2Rlbm8ubGFuZC94L2NhbnZhc0B2MS4wLjQvZGVwcy50cz4iXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0ICogZnJvbSAnaHR0cHM6Ly9kZW5vLmxhbmQveC9mZXRjaGJhc2U2NEAxLjAuMC9tb2QudHMnIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJlQUFBLDRDQUFBIn0=

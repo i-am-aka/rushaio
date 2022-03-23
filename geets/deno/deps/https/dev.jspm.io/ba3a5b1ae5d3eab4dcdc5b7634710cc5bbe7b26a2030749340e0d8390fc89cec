@@ -1,0 +1,36 @@
+import _util from "/npm:@jspm/core@1/nodelibs/util.js";
+import { dew as _chunkstreamDewDew } from "./chunkstream.dew.js";
+import { dew as _filterParseDewDew } from "./filter-parse.dew.js";
+import _buffer from "/npm:@jspm/core@1/nodelibs/buffer.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  var Buffer = _buffer.Buffer;
+  var util = _util;
+
+  var ChunkStream = _chunkstreamDewDew();
+
+  var Filter = _filterParseDewDew();
+
+  var FilterAsync = exports = function (bitmapInfo) {
+    ChunkStream.call(this);
+    var buffers = [];
+    var that = this;
+    this._filter = new Filter(bitmapInfo, {
+      read: this.read.bind(this),
+      write: function (buffer) {
+        buffers.push(buffer);
+      },
+      complete: function () {
+        that.emit('complete', Buffer.concat(buffers));
+      }
+    });
+
+    this._filter.start();
+  };
+
+  util.inherits(FilterAsync, ChunkStream);
+  return exports;
+}

@@ -1,0 +1,25 @@
+import { dew as _AbortSignalDewDew } from "../generated/AbortSignal.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const AbortSignal = _AbortSignalDewDew();
+
+  class AbortControllerImpl {
+    constructor(globalObject) {
+      this.signal = AbortSignal.createImpl(globalObject, []);
+    }
+
+    abort() {
+      this.signal._signalAbort();
+    }
+
+  }
+
+  exports = {
+    implementation: AbortControllerImpl
+  };
+  return exports;
+}

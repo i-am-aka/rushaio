@@ -1,0 +1,28 @@
+import { dew as _PluginArrayDewDew } from "../generated/PluginArray.dew.js";
+import { dew as _MimeTypeArrayDewDew } from "../generated/MimeTypeArray.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const PluginArray = _PluginArrayDewDew();
+
+  const MimeTypeArray = _MimeTypeArrayDewDew();
+
+  exports.implementation = class NavigatorPluginsImpl {
+    // get plugins() {
+    //   return PluginArray.create(this._globalObject);
+    // }
+
+    // get mimeTypes() {
+    //   return MimeTypeArray.create(this._globalObject);
+    // }
+
+    // javaEnabled() {
+    //   return false;
+    // }
+
+  };
+  return exports;
+}

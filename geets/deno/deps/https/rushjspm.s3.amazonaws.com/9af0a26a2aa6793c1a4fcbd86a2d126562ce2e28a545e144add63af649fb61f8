@@ -1,0 +1,57 @@
+import { dew as _npmWebidlConversions6DewDew } from "/npm:webidl-conversions@6_dew.js";
+import { dew as _utilsDewDew } from "./utils.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const conversions = _npmWebidlConversions6DewDew();
+
+  const utils = _utilsDewDew();
+
+  exports.convert = (value, {
+    context = "The provided value"
+  } = {}) => {
+    if (typeof value !== "function") {
+      throw new TypeError(context + " is not a function");
+    }
+
+    function invokeTheCallbackFunction(...args) {
+      if (new.target !== undefined) {
+        throw new Error("Internal error: invokeTheCallbackFunction is not a constructor");
+      }
+
+      const thisArg = utils.tryWrapperForImpl(this);
+      let callResult;
+
+      for (let i = 0; i < args.length; i++) {
+        args[i] = utils.tryWrapperForImpl(args[i]);
+      }
+
+      callResult = Reflect.apply(value, thisArg, args);
+      callResult = conversions["any"](callResult, {
+        context: context
+      });
+      return callResult;
+    }
+
+    invokeTheCallbackFunction.construct = (...args) => {
+      for (let i = 0; i < args.length; i++) {
+        args[i] = utils.tryWrapperForImpl(args[i]);
+      }
+
+      let callResult = Reflect.construct(value, args);
+      callResult = conversions["any"](callResult, {
+        context: context
+      });
+      return callResult;
+    };
+
+    invokeTheCallbackFunction[utils.wrapperSymbol] = value;
+    invokeTheCallbackFunction.objectReference = value;
+    return invokeTheCallbackFunction;
+  };
+
+  return exports;
+}

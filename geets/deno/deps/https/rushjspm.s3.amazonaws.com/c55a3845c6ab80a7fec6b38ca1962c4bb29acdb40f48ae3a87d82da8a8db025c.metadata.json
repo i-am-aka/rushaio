@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "etag": "\"f4547d95dc967c312ad87dda9d12b8e3\"",
+    "x-amz-id-2": "l4pUiPzQfmkR7JvCHgZTkYDH0yyYg0BzfVr9IEGligSl5p9RRaycfky0X4P5spTiaFGB9VVnr78=",
+    "content-type": "application/javascript",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "x-amz-request-id": "BEE55DDFE6290985",
+    "last-modified": "Mon, 07 Dec 2020 15:03:43 GMT",
+    "accept-ranges": "bytes",
+    "content-length": "14064"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/WebSocket.dew.js"
+}

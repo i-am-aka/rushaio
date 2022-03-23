@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "content-type": "application/javascript",
+    "etag": "\"22235fcd315a60ed3f1301ff4f9395cc\"",
+    "accept-ranges": "bytes",
+    "x-amz-id-2": "Omfj0IUJvpwdPJotKuYCWnLPzo5EgWSI75EWQxXcSZTSo9N1e4MDDhm1q4bbrmexP7HWWeGTKNw=",
+    "x-amz-request-id": "B24F16C84B7F6CDF",
+    "content-length": "395",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "server": "AmazonS3",
+    "connection": "keep-alive"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/HTMLQuoteElement-impl.dew.js"
+}

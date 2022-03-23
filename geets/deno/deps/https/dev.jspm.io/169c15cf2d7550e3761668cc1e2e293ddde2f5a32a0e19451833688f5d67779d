@@ -1,0 +1,16 @@
+import { dew as _arrayLikeToArrayDewDew } from "./arrayLikeToArray.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  var arrayLikeToArray = _arrayLikeToArrayDewDew();
+
+  function _arrayWithoutHoles(arr) {
+    if (Array.isArray(arr)) return arrayLikeToArray(arr);
+  }
+
+  exports = _arrayWithoutHoles;
+  return exports;
+}

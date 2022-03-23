@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "accept-ranges": "bytes",
+    "x-amz-id-2": "3NGBkrVnPgNKdM41z3BM+v5xfIJwOlmGdm+sgoR9bdmwiBDh6+GQMptBCX/0/VVl7DoT8S5rcY0=",
+    "x-amz-request-id": "DT6K7VCRFNDWDY2J",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:43 GMT",
+    "server": "AmazonS3",
+    "content-type": "application/javascript",
+    "etag": "\"77311d1fee467b5d861c8a0fa1cfd4ca\"",
+    "content-length": "18280",
+    "connection": "keep-alive"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/SVGSVGElement.dew.js"
+}

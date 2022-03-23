@@ -1,0 +1,1 @@
+export { dew } from "/npm:decimal.js@10.2.0/decimal.dew.js";

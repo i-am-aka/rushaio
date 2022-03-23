@@ -1,0 +1,363 @@
+import { dew as _styleDewDew } from "../level2/style.dew.js";
+import { dew as _xpathDewDew } from "../level3/xpath.dew.js";
+import { dew as _webidl2jsWrapperDewDew } from "/npm:domexception@2/webidl2js-wrapper_dew.js";
+import { dew as _webidl2jsWrapperDew2Dew } from "/npm:whatwg-url@8/webidl2js-wrapper_dew.js";
+import { dew as _EventTargetDewDew } from "./generated/EventTarget.dew.js";
+import { dew as _NamedNodeMapDewDew } from "./generated/NamedNodeMap.dew.js";
+import { dew as _NodeDewDew } from "./generated/Node.dew.js";
+import { dew as _AttrDewDew } from "./generated/Attr.dew.js";
+import { dew as _ElementDewDew } from "./generated/Element.dew.js";
+import { dew as _DocumentFragmentDewDew } from "./generated/DocumentFragment.dew.js";
+import { dew as _DOMImplementationDewDew } from "./generated/DOMImplementation.dew.js";
+import { dew as _DocumentDewDew } from "./generated/Document.dew.js";
+import { dew as _XMLDocumentDewDew } from "./generated/XMLDocument.dew.js";
+import { dew as _CharacterDataDewDew } from "./generated/CharacterData.dew.js";
+import { dew as _TextDewDew } from "./generated/Text.dew.js";
+import { dew as _CDATASectionDewDew } from "./generated/CDATASection.dew.js";
+import { dew as _ProcessingInstructionDewDew } from "./generated/ProcessingInstruction.dew.js";
+import { dew as _CommentDewDew } from "./generated/Comment.dew.js";
+import { dew as _DocumentTypeDewDew } from "./generated/DocumentType.dew.js";
+import { dew as _NodeListDewDew } from "./generated/NodeList.dew.js";
+import { dew as _HTMLCollectionDewDew } from "./generated/HTMLCollection.dew.js";
+import { dew as _HTMLOptionsCollectionDewDew } from "./generated/HTMLOptionsCollection.dew.js";
+import { dew as _DOMStringMapDewDew } from "./generated/DOMStringMap.dew.js";
+import { dew as _DOMTokenListDewDew } from "./generated/DOMTokenList.dew.js";
+import { dew as _StyleSheetListDewDew } from "./generated/StyleSheetList.dew.js";
+import { dew as _HTMLElementDewDew } from "./generated/HTMLElement.dew.js";
+import { dew as _HTMLHeadElementDewDew } from "./generated/HTMLHeadElement.dew.js";
+import { dew as _HTMLTitleElementDewDew } from "./generated/HTMLTitleElement.dew.js";
+import { dew as _HTMLBaseElementDewDew } from "./generated/HTMLBaseElement.dew.js";
+import { dew as _HTMLLinkElementDewDew } from "./generated/HTMLLinkElement.dew.js";
+import { dew as _HTMLMetaElementDewDew } from "./generated/HTMLMetaElement.dew.js";
+import { dew as _HTMLStyleElementDewDew } from "./generated/HTMLStyleElement.dew.js";
+import { dew as _HTMLBodyElementDewDew } from "./generated/HTMLBodyElement.dew.js";
+import { dew as _HTMLHeadingElementDewDew } from "./generated/HTMLHeadingElement.dew.js";
+import { dew as _HTMLParagraphElementDewDew } from "./generated/HTMLParagraphElement.dew.js";
+import { dew as _HTMLHRElementDewDew } from "./generated/HTMLHRElement.dew.js";
+import { dew as _HTMLPreElementDewDew } from "./generated/HTMLPreElement.dew.js";
+import { dew as _HTMLUListElementDewDew } from "./generated/HTMLUListElement.dew.js";
+import { dew as _HTMLOListElementDewDew } from "./generated/HTMLOListElement.dew.js";
+import { dew as _HTMLLIElementDewDew } from "./generated/HTMLLIElement.dew.js";
+import { dew as _HTMLMenuElementDewDew } from "./generated/HTMLMenuElement.dew.js";
+import { dew as _HTMLDListElementDewDew } from "./generated/HTMLDListElement.dew.js";
+import { dew as _HTMLDivElementDewDew } from "./generated/HTMLDivElement.dew.js";
+import { dew as _HTMLAnchorElementDewDew } from "./generated/HTMLAnchorElement.dew.js";
+import { dew as _HTMLAreaElementDewDew } from "./generated/HTMLAreaElement.dew.js";
+import { dew as _HTMLBRElementDewDew } from "./generated/HTMLBRElement.dew.js";
+import { dew as _HTMLButtonElementDewDew } from "./generated/HTMLButtonElement.dew.js";
+import { dew as _HTMLCanvasElementDewDew } from "./generated/HTMLCanvasElement.dew.js";
+import { dew as _HTMLDataElementDewDew } from "./generated/HTMLDataElement.dew.js";
+import { dew as _HTMLDataListElementDewDew } from "./generated/HTMLDataListElement.dew.js";
+import { dew as _HTMLDetailsElementDewDew } from "./generated/HTMLDetailsElement.dew.js";
+import { dew as _HTMLDialogElementDewDew } from "./generated/HTMLDialogElement.dew.js";
+import { dew as _HTMLDirectoryElementDewDew } from "./generated/HTMLDirectoryElement.dew.js";
+import { dew as _HTMLFieldSetElementDewDew } from "./generated/HTMLFieldSetElement.dew.js";
+import { dew as _HTMLFontElementDewDew } from "./generated/HTMLFontElement.dew.js";
+import { dew as _HTMLFormElementDewDew } from "./generated/HTMLFormElement.dew.js";
+import { dew as _HTMLHtmlElementDewDew } from "./generated/HTMLHtmlElement.dew.js";
+import { dew as _HTMLImageElementDewDew } from "./generated/HTMLImageElement.dew.js";
+import { dew as _HTMLInputElementDewDew } from "./generated/HTMLInputElement.dew.js";
+import { dew as _HTMLLabelElementDewDew } from "./generated/HTMLLabelElement.dew.js";
+import { dew as _HTMLLegendElementDewDew } from "./generated/HTMLLegendElement.dew.js";
+import { dew as _HTMLMapElementDewDew } from "./generated/HTMLMapElement.dew.js";
+import { dew as _HTMLMarqueeElementDewDew } from "./generated/HTMLMarqueeElement.dew.js";
+import { dew as _HTMLMediaElementDewDew } from "./generated/HTMLMediaElement.dew.js";
+import { dew as _HTMLMeterElementDewDew } from "./generated/HTMLMeterElement.dew.js";
+import { dew as _HTMLModElementDewDew } from "./generated/HTMLModElement.dew.js";
+import { dew as _HTMLOptGroupElementDewDew } from "./generated/HTMLOptGroupElement.dew.js";
+import { dew as _HTMLOptionElementDewDew } from "./generated/HTMLOptionElement.dew.js";
+import { dew as _HTMLOutputElementDewDew } from "./generated/HTMLOutputElement.dew.js";
+import { dew as _HTMLPictureElementDewDew } from "./generated/HTMLPictureElement.dew.js";
+import { dew as _HTMLProgressElementDewDew } from "./generated/HTMLProgressElement.dew.js";
+import { dew as _HTMLQuoteElementDewDew } from "./generated/HTMLQuoteElement.dew.js";
+import { dew as _HTMLScriptElementDewDew } from "./generated/HTMLScriptElement.dew.js";
+import { dew as _HTMLSelectElementDewDew } from "./generated/HTMLSelectElement.dew.js";
+import { dew as _HTMLSlotElementDewDew } from "./generated/HTMLSlotElement.dew.js";
+import { dew as _HTMLSourceElementDewDew } from "./generated/HTMLSourceElement.dew.js";
+import { dew as _HTMLSpanElementDewDew } from "./generated/HTMLSpanElement.dew.js";
+import { dew as _HTMLTableCaptionElementDewDew } from "./generated/HTMLTableCaptionElement.dew.js";
+import { dew as _HTMLTableCellElementDewDew } from "./generated/HTMLTableCellElement.dew.js";
+import { dew as _HTMLTableColElementDewDew } from "./generated/HTMLTableColElement.dew.js";
+import { dew as _HTMLTableElementDewDew } from "./generated/HTMLTableElement.dew.js";
+import { dew as _HTMLTimeElementDewDew } from "./generated/HTMLTimeElement.dew.js";
+import { dew as _HTMLTableRowElementDewDew } from "./generated/HTMLTableRowElement.dew.js";
+import { dew as _HTMLTableSectionElementDewDew } from "./generated/HTMLTableSectionElement.dew.js";
+import { dew as _HTMLTemplateElementDewDew } from "./generated/HTMLTemplateElement.dew.js";
+import { dew as _HTMLTextAreaElementDewDew } from "./generated/HTMLTextAreaElement.dew.js";
+import { dew as _HTMLUnknownElementDewDew } from "./generated/HTMLUnknownElement.dew.js";
+import { dew as _HTMLFrameElementDewDew } from "./generated/HTMLFrameElement.dew.js";
+import { dew as _HTMLFrameSetElementDewDew } from "./generated/HTMLFrameSetElement.dew.js";
+import { dew as _HTMLIFrameElementDewDew } from "./generated/HTMLIFrameElement.dew.js";
+import { dew as _HTMLEmbedElementDewDew } from "./generated/HTMLEmbedElement.dew.js";
+import { dew as _HTMLObjectElementDewDew } from "./generated/HTMLObjectElement.dew.js";
+import { dew as _HTMLParamElementDewDew } from "./generated/HTMLParamElement.dew.js";
+import { dew as _HTMLVideoElementDewDew } from "./generated/HTMLVideoElement.dew.js";
+import { dew as _HTMLAudioElementDewDew } from "./generated/HTMLAudioElement.dew.js";
+import { dew as _HTMLTrackElementDewDew } from "./generated/HTMLTrackElement.dew.js";
+import { dew as _SVGElementDewDew } from "./generated/SVGElement.dew.js";
+import { dew as _SVGGraphicsElementDewDew } from "./generated/SVGGraphicsElement.dew.js";
+import { dew as _SVGSVGElementDewDew } from "./generated/SVGSVGElement.dew.js";
+import { dew as _SVGTitleElementDewDew } from "./generated/SVGTitleElement.dew.js";
+import { dew as _SVGAnimatedStringDewDew } from "./generated/SVGAnimatedString.dew.js";
+import { dew as _SVGNumberDewDew } from "./generated/SVGNumber.dew.js";
+import { dew as _SVGStringListDewDew } from "./generated/SVGStringList.dew.js";
+import { dew as _EventDewDew } from "./generated/Event.dew.js";
+import { dew as _CloseEventDewDew } from "./generated/CloseEvent.dew.js";
+import { dew as _CustomEventDewDew } from "./generated/CustomEvent.dew.js";
+import { dew as _MessageEventDewDew } from "./generated/MessageEvent.dew.js";
+import { dew as _ErrorEventDewDew } from "./generated/ErrorEvent.dew.js";
+import { dew as _HashChangeEventDewDew } from "./generated/HashChangeEvent.dew.js";
+import { dew as _PopStateEventDewDew } from "./generated/PopStateEvent.dew.js";
+import { dew as _StorageEventDewDew } from "./generated/StorageEvent.dew.js";
+import { dew as _ProgressEventDewDew } from "./generated/ProgressEvent.dew.js";
+import { dew as _PageTransitionEventDewDew } from "./generated/PageTransitionEvent.dew.js";
+import { dew as _UIEventDewDew } from "./generated/UIEvent.dew.js";
+import { dew as _FocusEventDewDew } from "./generated/FocusEvent.dew.js";
+import { dew as _InputEventDewDew } from "./generated/InputEvent.dew.js";
+import { dew as _MouseEventDewDew } from "./generated/MouseEvent.dew.js";
+import { dew as _KeyboardEventDewDew } from "./generated/KeyboardEvent.dew.js";
+import { dew as _TouchEventDewDew } from "./generated/TouchEvent.dew.js";
+import { dew as _CompositionEventDewDew } from "./generated/CompositionEvent.dew.js";
+import { dew as _WheelEventDewDew } from "./generated/WheelEvent.dew.js";
+import { dew as _BarPropDewDew } from "./generated/BarProp.dew.js";
+import { dew as _ExternalDewDew } from "./generated/External.dew.js";
+import { dew as _LocationDewDew } from "./generated/Location.dew.js";
+import { dew as _HistoryDewDew } from "./generated/History.dew.js";
+import { dew as _ScreenDewDew } from "./generated/Screen.dew.js";
+import { dew as _PerformanceDewDew } from "./generated/Performance.dew.js";
+import { dew as _NavigatorDewDew } from "./generated/Navigator.dew.js";
+import { dew as _PluginArrayDewDew } from "./generated/PluginArray.dew.js";
+import { dew as _MimeTypeArrayDewDew } from "./generated/MimeTypeArray.dew.js";
+import { dew as _PluginDewDew } from "./generated/Plugin.dew.js";
+import { dew as _MimeTypeDewDew } from "./generated/MimeType.dew.js";
+import { dew as _FileReaderDewDew } from "./generated/FileReader.dew.js";
+import { dew as _BlobDewDew } from "./generated/Blob.dew.js";
+import { dew as _FileDewDew } from "./generated/File.dew.js";
+import { dew as _FileListDewDew } from "./generated/FileList.dew.js";
+import { dew as _ValidityStateDewDew } from "./generated/ValidityState.dew.js";
+import { dew as _DOMParserDewDew } from "./generated/DOMParser.dew.js";
+import { dew as _XMLSerializerDewDew } from "./generated/XMLSerializer.dew.js";
+import { dew as _FormDataDewDew } from "./generated/FormData.dew.js";
+import { dew as _XMLHttpRequestEventTargetDewDew } from "./generated/XMLHttpRequestEventTarget.dew.js";
+import { dew as _XMLHttpRequestUploadDewDew } from "./generated/XMLHttpRequestUpload.dew.js";
+import { dew as _XMLHttpRequestDewDew } from "./generated/XMLHttpRequest.dew.js";
+import { dew as _WebSocketDewDew } from "./generated/WebSocket.dew.js";
+import { dew as _NodeFilterDewDew } from "./generated/NodeFilter.dew.js";
+import { dew as _NodeIteratorDewDew } from "./generated/NodeIterator.dew.js";
+import { dew as _TreeWalkerDewDew } from "./generated/TreeWalker.dew.js";
+import { dew as _AbstractRangeDewDew } from "./generated/AbstractRange.dew.js";
+import { dew as _RangeDewDew } from "./generated/Range.dew.js";
+import { dew as _StaticRangeDewDew } from "./generated/StaticRange.dew.js";
+import { dew as _SelectionDewDew } from "./generated/Selection.dew.js";
+import { dew as _StorageDewDew } from "./generated/Storage.dew.js";
+import { dew as _CustomElementRegistryDewDew } from "./generated/CustomElementRegistry.dew.js";
+import { dew as _ShadowRootDewDew } from "./generated/ShadowRoot.dew.js";
+import { dew as _MutationObserverDewDew } from "./generated/MutationObserver.dew.js";
+import { dew as _MutationRecordDewDew } from "./generated/MutationRecord.dew.js";
+import { dew as _HeadersDewDew } from "./generated/Headers.dew.js";
+import { dew as _AbortControllerDewDew } from "./generated/AbortController.dew.js";
+import { dew as _AbortSignalDewDew } from "./generated/AbortSignal.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const style = _styleDewDew();
+
+  const xpath = _xpathDewDew(); // This object defines the mapping between the interface name and the generated interface wrapper code.
+  // Note: The mapping needs to stay as-is in order due to interface evaluation.
+  // We cannot "refactor" this to something less duplicative because that would break bundlers which depend on static
+  // analysis of require()s.
+
+
+  const generatedInterfaces = {
+    DOMException: _webidl2jsWrapperDewDew(),
+    URL: _webidl2jsWrapperDew2Dew().URL,
+    URLSearchParams: _webidl2jsWrapperDew2Dew().URLSearchParams,
+    EventTarget: _EventTargetDewDew(),
+    NamedNodeMap: _NamedNodeMapDewDew(),
+    Node: _NodeDewDew(),
+    Attr: _AttrDewDew(),
+    Element: _ElementDewDew(),
+    DocumentFragment: _DocumentFragmentDewDew(),
+    DOMImplementation: _DOMImplementationDewDew(),
+    Document: _DocumentDewDew(),
+    XMLDocument: _XMLDocumentDewDew(),
+    CharacterData: _CharacterDataDewDew(),
+    Text: _TextDewDew(),
+    CDATASection: _CDATASectionDewDew(),
+    ProcessingInstruction: _ProcessingInstructionDewDew(),
+    Comment: _CommentDewDew(),
+    DocumentType: _DocumentTypeDewDew(),
+    NodeList: _NodeListDewDew(),
+    HTMLCollection: _HTMLCollectionDewDew(),
+    HTMLOptionsCollection: _HTMLOptionsCollectionDewDew(),
+    DOMStringMap: _DOMStringMapDewDew(),
+    DOMTokenList: _DOMTokenListDewDew(),
+    StyleSheetList: _StyleSheetListDewDew(),
+    HTMLElement: _HTMLElementDewDew(),
+    HTMLHeadElement: _HTMLHeadElementDewDew(),
+    HTMLTitleElement: _HTMLTitleElementDewDew(),
+    HTMLBaseElement: _HTMLBaseElementDewDew(),
+    HTMLLinkElement: _HTMLLinkElementDewDew(),
+    HTMLMetaElement: _HTMLMetaElementDewDew(),
+    HTMLStyleElement: _HTMLStyleElementDewDew(),
+    HTMLBodyElement: _HTMLBodyElementDewDew(),
+    HTMLHeadingElement: _HTMLHeadingElementDewDew(),
+    HTMLParagraphElement: _HTMLParagraphElementDewDew(),
+    HTMLHRElement: _HTMLHRElementDewDew(),
+    HTMLPreElement: _HTMLPreElementDewDew(),
+    HTMLUListElement: _HTMLUListElementDewDew(),
+    HTMLOListElement: _HTMLOListElementDewDew(),
+    HTMLLIElement: _HTMLLIElementDewDew(),
+    HTMLMenuElement: _HTMLMenuElementDewDew(),
+    HTMLDListElement: _HTMLDListElementDewDew(),
+    HTMLDivElement: _HTMLDivElementDewDew(),
+    HTMLAnchorElement: _HTMLAnchorElementDewDew(),
+    HTMLAreaElement: _HTMLAreaElementDewDew(),
+    HTMLBRElement: _HTMLBRElementDewDew(),
+    HTMLButtonElement: _HTMLButtonElementDewDew(),
+    HTMLCanvasElement: _HTMLCanvasElementDewDew(),
+    HTMLDataElement: _HTMLDataElementDewDew(),
+    HTMLDataListElement: _HTMLDataListElementDewDew(),
+    HTMLDetailsElement: _HTMLDetailsElementDewDew(),
+    HTMLDialogElement: _HTMLDialogElementDewDew(),
+    HTMLDirectoryElement: _HTMLDirectoryElementDewDew(),
+    HTMLFieldSetElement: _HTMLFieldSetElementDewDew(),
+    HTMLFontElement: _HTMLFontElementDewDew(),
+    HTMLFormElement: _HTMLFormElementDewDew(),
+    HTMLHtmlElement: _HTMLHtmlElementDewDew(),
+    HTMLImageElement: _HTMLImageElementDewDew(),
+    HTMLInputElement: _HTMLInputElementDewDew(),
+    HTMLLabelElement: _HTMLLabelElementDewDew(),
+    HTMLLegendElement: _HTMLLegendElementDewDew(),
+    HTMLMapElement: _HTMLMapElementDewDew(),
+    HTMLMarqueeElement: _HTMLMarqueeElementDewDew(),
+    HTMLMediaElement: _HTMLMediaElementDewDew(),
+    HTMLMeterElement: _HTMLMeterElementDewDew(),
+    HTMLModElement: _HTMLModElementDewDew(),
+    HTMLOptGroupElement: _HTMLOptGroupElementDewDew(),
+    HTMLOptionElement: _HTMLOptionElementDewDew(),
+    HTMLOutputElement: _HTMLOutputElementDewDew(),
+    HTMLPictureElement: _HTMLPictureElementDewDew(),
+    HTMLProgressElement: _HTMLProgressElementDewDew(),
+    HTMLQuoteElement: _HTMLQuoteElementDewDew(),
+    HTMLScriptElement: _HTMLScriptElementDewDew(),
+    HTMLSelectElement: _HTMLSelectElementDewDew(),
+    HTMLSlotElement: _HTMLSlotElementDewDew(),
+    HTMLSourceElement: _HTMLSourceElementDewDew(),
+    HTMLSpanElement: _HTMLSpanElementDewDew(),
+    HTMLTableCaptionElement: _HTMLTableCaptionElementDewDew(),
+    HTMLTableCellElement: _HTMLTableCellElementDewDew(),
+    HTMLTableColElement: _HTMLTableColElementDewDew(),
+    HTMLTableElement: _HTMLTableElementDewDew(),
+    HTMLTimeElement: _HTMLTimeElementDewDew(),
+    HTMLTableRowElement: _HTMLTableRowElementDewDew(),
+    HTMLTableSectionElement: _HTMLTableSectionElementDewDew(),
+    HTMLTemplateElement: _HTMLTemplateElementDewDew(),
+    HTMLTextAreaElement: _HTMLTextAreaElementDewDew(),
+    HTMLUnknownElement: _HTMLUnknownElementDewDew(),
+    HTMLFrameElement: _HTMLFrameElementDewDew(),
+    HTMLFrameSetElement: _HTMLFrameSetElementDewDew(),
+    HTMLIFrameElement: _HTMLIFrameElementDewDew(),
+    HTMLEmbedElement: _HTMLEmbedElementDewDew(),
+    HTMLObjectElement: _HTMLObjectElementDewDew(),
+    HTMLParamElement: _HTMLParamElementDewDew(),
+    HTMLVideoElement: _HTMLVideoElementDewDew(),
+    HTMLAudioElement: _HTMLAudioElementDewDew(),
+    HTMLTrackElement: _HTMLTrackElementDewDew(),
+    SVGElement: _SVGElementDewDew(),
+    SVGGraphicsElement: _SVGGraphicsElementDewDew(),
+    SVGSVGElement: _SVGSVGElementDewDew(),
+    SVGTitleElement: _SVGTitleElementDewDew(),
+    SVGAnimatedString: _SVGAnimatedStringDewDew(),
+    SVGNumber: _SVGNumberDewDew(),
+    SVGStringList: _SVGStringListDewDew(),
+    Event: _EventDewDew(),
+    CloseEvent: _CloseEventDewDew(),
+    CustomEvent: _CustomEventDewDew(),
+    MessageEvent: _MessageEventDewDew(),
+    ErrorEvent: _ErrorEventDewDew(),
+    HashChangeEvent: _HashChangeEventDewDew(),
+    PopStateEvent: _PopStateEventDewDew(),
+    StorageEvent: _StorageEventDewDew(),
+    ProgressEvent: _ProgressEventDewDew(),
+    PageTransitionEvent: _PageTransitionEventDewDew(),
+    UIEvent: _UIEventDewDew(),
+    FocusEvent: _FocusEventDewDew(),
+    InputEvent: _InputEventDewDew(),
+    MouseEvent: _MouseEventDewDew(),
+    KeyboardEvent: _KeyboardEventDewDew(),
+    TouchEvent: _TouchEventDewDew(),
+    CompositionEvent: _CompositionEventDewDew(),
+    WheelEvent: _WheelEventDewDew(),
+    BarProp: _BarPropDewDew(),
+    External: _ExternalDewDew(),
+    Location: _LocationDewDew(),
+    History: _HistoryDewDew(),
+    Screen: _ScreenDewDew(),
+    Performance: _PerformanceDewDew(),
+    Navigator: _NavigatorDewDew(),
+    PluginArray: _PluginArrayDewDew(),
+    MimeTypeArray: _MimeTypeArrayDewDew(),
+    Plugin: _PluginDewDew(),
+    MimeType: _MimeTypeDewDew(),
+    FileReader: _FileReaderDewDew(),
+    Blob: _BlobDewDew(),
+    File: _FileDewDew(),
+    FileList: _FileListDewDew(),
+    ValidityState: _ValidityStateDewDew(),
+    DOMParser: _DOMParserDewDew(),
+    XMLSerializer: _XMLSerializerDewDew(),
+    FormData: _FormDataDewDew(),
+    XMLHttpRequestEventTarget: _XMLHttpRequestEventTargetDewDew(),
+    XMLHttpRequestUpload: _XMLHttpRequestUploadDewDew(),
+    XMLHttpRequest: _XMLHttpRequestDewDew(),
+    WebSocket: _WebSocketDewDew(),
+    NodeFilter: _NodeFilterDewDew(),
+    NodeIterator: _NodeIteratorDewDew(),
+    TreeWalker: _TreeWalkerDewDew(),
+    AbstractRange: _AbstractRangeDewDew(),
+    Range: _RangeDewDew(),
+    StaticRange: _StaticRangeDewDew(),
+    Selection: _SelectionDewDew(),
+    Storage: _StorageDewDew(),
+    CustomElementRegistry: _CustomElementRegistryDewDew(),
+    ShadowRoot: _ShadowRootDewDew(),
+    MutationObserver: _MutationObserverDewDew(),
+    MutationRecord: _MutationRecordDewDew(),
+    Headers: _HeadersDewDew(),
+    AbortController: _AbortControllerDewDew(),
+    AbortSignal: _AbortSignalDewDew()
+  };
+
+  function install(window, name, interfaceConstructor) {
+    Object.defineProperty(window, name, {
+      configurable: true,
+      writable: true,
+      value: interfaceConstructor
+    });
+  }
+
+  exports.installInterfaces = (window, globalNames) => {
+    // Install generated interface.
+    for (const generatedInterface of Object.values(generatedInterfaces)) {
+      generatedInterface.install(window, globalNames);
+    } // Install legacy HTMLDocument interface
+    // https://html.spec.whatwg.org/#htmldocument
+
+
+    install(window, "HTMLDocument", window.Document); // These need to be cleaned up...
+
+    style.addToCore(window);
+    xpath(window);
+  }; // Returns an interface webidl2js wrapper given its an interface name.
+
+
+  exports.getInterfaceWrapper = name => {
+    return generatedInterfaces[name];
+  };
+
+  return exports;
+}

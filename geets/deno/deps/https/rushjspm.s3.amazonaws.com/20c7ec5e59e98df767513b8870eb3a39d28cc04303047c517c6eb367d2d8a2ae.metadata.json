@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "accept-ranges": "bytes",
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "content-type": "application/javascript",
+    "etag": "\"7de8c7be47b89a7dd3a2be753fbcff7b\"",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:40 GMT",
+    "content-length": "245",
+    "x-amz-request-id": "8CEB0747D49D80BE",
+    "x-amz-id-2": "ZN7t3TGivnxbxHbu3iE2MvNpbZPsOmnP3nmq+TZ+69KlYzYwHh9hp2C1MtKnLEnE6+Rmlb9Q1ZM="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:har-validator@5.1_dew.js"
+}

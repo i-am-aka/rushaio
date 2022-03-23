@@ -1,0 +1,1 @@
+export { dew } from "/npm:xml-parse-from-string@1.0.1/index.dew.js";

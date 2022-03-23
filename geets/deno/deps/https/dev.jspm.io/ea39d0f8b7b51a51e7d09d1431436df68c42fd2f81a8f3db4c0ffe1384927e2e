@@ -1,0 +1,245 @@
+import { dew as _jpegDewDew } from "./jpeg.dew.js";
+import { dew as _exifDewDew } from "./exif.dew.js";
+import { dew as _simplifyDewDew } from "./simplify.dew.js";
+import { dew as _exifTagsDewDew } from "./exif-tags.dew.js";
+var exports = {},
+    _dewExec = false;
+
+var _global = typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : global;
+
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  /*jslint browser: true, devel: true, bitwise: false, debug: true, eqeq: false, es5: true, evil: false, forin: false, newcap: false, nomen: true, plusplus: true, regexp: false, unparam: false, sloppy: true, stupid: false, sub: false, todo: true, vars: true, white: true */
+  var jpeg = _jpegDewDew(),
+      exif = _exifDewDew(),
+      simplify = _simplifyDewDew();
+
+  function ExifResult(startMarker, tags, imageSize, thumbnailOffset, thumbnailLength, thumbnailType, app1Offset) {
+    (this || _global).startMarker = startMarker;
+    (this || _global).tags = tags;
+    (this || _global).imageSize = imageSize;
+    (this || _global).thumbnailOffset = thumbnailOffset;
+    (this || _global).thumbnailLength = thumbnailLength;
+    (this || _global).thumbnailType = thumbnailType;
+    (this || _global).app1Offset = app1Offset;
+  }
+
+  ExifResult.prototype = {
+    hasThumbnail: function (mime) {
+      if (!(this || _global).thumbnailOffset || !(this || _global).thumbnailLength) {
+        return false;
+      }
+
+      if (typeof mime !== 'string') {
+        return true;
+      }
+
+      if (mime.toLowerCase().trim() === 'image/jpeg') {
+        return (this || _global).thumbnailType === 6;
+      }
+
+      if (mime.toLowerCase().trim() === 'image/tiff') {
+        return (this || _global).thumbnailType === 1;
+      }
+
+      return false;
+    },
+    getThumbnailOffset: function () {
+      return (this || _global).app1Offset + 6 + (this || _global).thumbnailOffset;
+    },
+    getThumbnailLength: function () {
+      return (this || _global).thumbnailLength;
+    },
+    getThumbnailBuffer: function () {
+      return this._getThumbnailStream().nextBuffer((this || _global).thumbnailLength);
+    },
+    _getThumbnailStream: function () {
+      return (this || _global).startMarker.openWithOffset(this.getThumbnailOffset());
+    },
+    getImageSize: function () {
+      return (this || _global).imageSize;
+    },
+    getThumbnailSize: function () {
+      var stream = this._getThumbnailStream(),
+          size;
+
+      jpeg.parseSections(stream, function (sectionType, sectionStream) {
+        if (jpeg.getSectionName(sectionType).name === 'SOF') {
+          size = jpeg.getSizeFromSOFSection(sectionStream);
+        }
+      });
+      return size;
+    }
+  };
+
+  function Parser(stream) {
+    (this || _global).stream = stream;
+    (this || _global).flags = {
+      readBinaryTags: false,
+      resolveTagNames: true,
+      simplifyValues: true,
+      imageSize: true,
+      hidePointers: true,
+      returnTags: true
+    };
+  }
+
+  Parser.prototype = {
+    enableBinaryFields: function (enable) {
+      (this || _global).flags.readBinaryTags = !!enable;
+      return this || _global;
+    },
+    enablePointers: function (enable) {
+      (this || _global).flags.hidePointers = !enable;
+      return this || _global;
+    },
+    enableTagNames: function (enable) {
+      (this || _global).flags.resolveTagNames = !!enable;
+      return this || _global;
+    },
+    enableImageSize: function (enable) {
+      (this || _global).flags.imageSize = !!enable;
+      return this || _global;
+    },
+    enableReturnTags: function (enable) {
+      (this || _global).flags.returnTags = !!enable;
+      return this || _global;
+    },
+    enableSimpleValues: function (enable) {
+      (this || _global).flags.simplifyValues = !!enable;
+      return this || _global;
+    },
+    parse: function () {
+      var start = (this || _global).stream.mark(),
+          stream = start.openWithOffset(0),
+          flags = (this || _global).flags,
+          tags,
+          imageSize,
+          thumbnailOffset,
+          thumbnailLength,
+          thumbnailType,
+          app1Offset,
+          tagNames,
+          getTagValue,
+          setTagValue;
+
+      if (flags.resolveTagNames) {
+        tagNames = _exifTagsDewDew();
+      }
+
+      if (flags.resolveTagNames) {
+        tags = {};
+
+        getTagValue = function (t) {
+          return tags[t.name];
+        };
+
+        setTagValue = function (t, value) {
+          tags[t.name] = value;
+        };
+      } else {
+        tags = [];
+
+        getTagValue = function (t) {
+          var i;
+
+          for (i = 0; i < tags.length; ++i) {
+            if (tags[i].type === t.type && tags[i].section === t.section) {
+              return tags.value;
+            }
+          }
+        };
+
+        setTagValue = function (t, value) {
+          var i;
+
+          for (i = 0; i < tags.length; ++i) {
+            if (tags[i].type === t.type && tags[i].section === t.section) {
+              tags.value = value;
+              return;
+            }
+          }
+        };
+      }
+
+      jpeg.parseSections(stream, function (sectionType, sectionStream) {
+        var validExifHeaders,
+            sectionOffset = sectionStream.offsetFrom(start);
+
+        if (sectionType === 0xE1) {
+          validExifHeaders = exif.parseTags(sectionStream, function (ifdSection, tagType, value, format) {
+            //ignore binary fields if disabled
+            if (!flags.readBinaryTags && format === 7) {
+              return;
+            }
+
+            if (tagType === 0x0201) {
+              thumbnailOffset = value[0];
+
+              if (flags.hidePointers) {
+                return;
+              }
+            } else if (tagType === 0x0202) {
+              thumbnailLength = value[0];
+
+              if (flags.hidePointers) {
+                return;
+              }
+            } else if (tagType === 0x0103) {
+              thumbnailType = value[0];
+
+              if (flags.hidePointers) {
+                return;
+              }
+            } //if flag is set to not store tags, return here after storing pointers
+
+
+            if (!flags.returnTags) {
+              return;
+            }
+
+            if (flags.simplifyValues) {
+              value = simplify.simplifyValue(value, format);
+            }
+
+            if (flags.resolveTagNames) {
+              var sectionTagNames = ifdSection === exif.GPSIFD ? tagNames.gps : tagNames.exif;
+              var name = sectionTagNames[tagType];
+
+              if (!name) {
+                name = tagNames.exif[tagType];
+              }
+
+              if (!tags.hasOwnProperty(name)) {
+                tags[name] = value;
+              }
+            } else {
+              tags.push({
+                section: ifdSection,
+                type: tagType,
+                value: value
+              });
+            }
+          });
+
+          if (validExifHeaders) {
+            app1Offset = sectionOffset;
+          }
+        } else if (flags.imageSize && jpeg.getSectionName(sectionType).name === 'SOF') {
+          imageSize = jpeg.getSizeFromSOFSection(sectionStream);
+        }
+      });
+
+      if (flags.simplifyValues) {
+        simplify.castDegreeValues(getTagValue, setTagValue);
+        simplify.castDateValues(getTagValue, setTagValue);
+      }
+
+      return new ExifResult(start, tags, imageSize, thumbnailOffset, thumbnailLength, thumbnailType, app1Offset);
+    }
+  };
+  exports = Parser;
+  return exports;
+}

@@ -1,0 +1,33 @@
+import { dew as _HTMLMediaElementImplDewDew } from "./HTMLMediaElement-impl.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  // TODO collect+seed
+  var SUPPORTED_CODECS = {
+    'audio/mpeg;': 1,
+    'audio/webm; codecs="vorbis"':1,
+    'audio/ogg; codecs="vorbis"':1,
+    'audio/wav; codecs="1"':1,
+    'audio/ogg; codecs="flac"':1,
+  };
+
+  const HTMLMediaElementImpl = _HTMLMediaElementImplDewDew().implementation;
+
+  class HTMLAudioElementImpl extends HTMLMediaElementImpl {
+    canPlayType(typ) {
+      if (SUPPORTED_CODECS[typ]) {
+        return "probably";
+      } else {
+        return "";
+      }
+    }
+  }
+
+  exports = {
+    implementation: HTMLAudioElementImpl
+  };
+  return exports;
+}

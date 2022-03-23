@@ -1,0 +1,8 @@
+export { dew } from "/npm:request-promise-core@1.1.4/configure/request2.dew.js";
+import "../lib/plumbing.dew.js";
+import "/npm:lodash@4/isArray_dew.js";
+import "/npm:lodash@4/isFunction_dew.js";
+import "/npm:lodash@4/isObjectLike_dew.js";
+import "../lib/errors.dew.js";
+import "/npm:lodash@4/isString_dew.js";
+import "/npm:lodash@4/isUndefined_dew.js";

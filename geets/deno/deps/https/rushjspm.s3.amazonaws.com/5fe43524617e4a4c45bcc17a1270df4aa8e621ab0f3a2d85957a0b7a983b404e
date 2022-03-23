@@ -1,0 +1,94 @@
+import { dew as _utilsDewDew } from "../generated/utils.dew.js";
+import { dew as _attributesDewDew } from "../attributes.dew.js";
+import { dew as _validateNamesDewDew } from "../helpers/validate-names.dew.js";
+import { dew as _webidl2jsWrapperDewDew } from "/npm:domexception@2/webidl2js-wrapper_dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const idlUtils = _utilsDewDew();
+
+  const {
+    setAttributeValue,
+    removeAttributeByName
+  } = _attributesDewDew();
+
+  const validateName = _validateNamesDewDew().name;
+
+  const DOMException = _webidl2jsWrapperDewDew();
+
+  const dataAttrRe = /^data-([^A-Z]*)$/;
+
+  function attrCamelCase(name) {
+    return name.replace(/-([a-z])/g, (match, alpha) => alpha.toUpperCase());
+  }
+
+  function attrSnakeCase(name) {
+    return name.replace(/[A-Z]/g, match => `-${match.toLowerCase()}`);
+  }
+
+  exports.implementation = class DOMStringMapImpl {
+    constructor(globalObject, args, privateData) {
+      this._globalObject = globalObject;
+      this._element = privateData.element;
+    }
+
+    get [idlUtils.supportedPropertyNames]() {
+      const result = new Set();
+      const {
+        attributes
+      } = this._element;
+
+      for (let i = 0; i < attributes.length; i++) {
+        const attr = attributes.item(i);
+        const matches = dataAttrRe.exec(attr.localName);
+
+        if (matches) {
+          result.add(attrCamelCase(matches[1]));
+        }
+      }
+
+      return result;
+    }
+
+    [idlUtils.namedGet](name) {
+      const {
+        attributes
+      } = this._element;
+
+      for (let i = 0; i < attributes.length; i++) {
+        const attr = attributes.item(i);
+        const matches = dataAttrRe.exec(attr.localName);
+
+        if (matches && attrCamelCase(matches[1]) === name) {
+          return attr.value;
+        }
+      }
+
+      return undefined;
+    }
+
+    [idlUtils.namedSetNew](name, value) {
+      if (/-[a-z]/.test(name)) {
+        throw DOMException.create(this._globalObject, [`'${name}' is not a valid property name`, "SyntaxError"]);
+      }
+
+      name = `data-${attrSnakeCase(name)}`;
+      validateName(this._globalObject, name);
+      setAttributeValue(this._element, name, value);
+    }
+
+    [idlUtils.namedSetExisting](name, value) {
+      this[idlUtils.namedSetNew](name, value);
+    }
+
+    [idlUtils.namedDelete](name) {
+      name = `data-${attrSnakeCase(name)}`;
+      removeAttributeByName(this._element, name);
+    }
+
+  };
+  return exports;
+}

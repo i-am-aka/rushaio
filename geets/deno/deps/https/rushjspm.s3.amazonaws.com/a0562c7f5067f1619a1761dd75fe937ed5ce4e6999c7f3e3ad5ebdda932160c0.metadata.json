@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "x-amz-id-2": "HGffwEuRJJCDFF9f+VXqH8X8XBHMIsMU+Ohno1pgS/n94cWlIfHAZyKQLgvXV/sO9UC4s+nAkf0=",
+    "x-amz-request-id": "6BF284E0839298DA",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:43 GMT",
+    "content-length": "5929",
+    "accept-ranges": "bytes",
+    "content-type": "application/javascript",
+    "etag": "\"ff03c53dae5864151e48f1b520850799\""
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/HTMLTableCaptionElement.dew.js"
+}

@@ -1,0 +1,528 @@
+import _buffer from "/npm:@jspm/core@1/nodelibs/buffer.js";
+var exports = {},
+    _dewExec = false;
+
+var _global = typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : global;
+
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  var Buffer = _buffer.Buffer;
+
+  /**
+   * @author shaozilee
+   *
+   * Bmp format decoder,support 1bit 4bit 8bit 24bit bmp
+   *
+   */
+  function BmpDecoder(buffer, is_with_alpha) {
+    (this || _global).pos = 0;
+    (this || _global).buffer = buffer;
+    (this || _global).is_with_alpha = !!is_with_alpha;
+    (this || _global).bottom_up = true;
+    (this || _global).flag = (this || _global).buffer.toString("utf-8", 0, (this || _global).pos += 2);
+    if ((this || _global).flag != "BM") throw new Error("Invalid BMP File");
+    this.parseHeader();
+    this.parseRGBA();
+  }
+
+  BmpDecoder.prototype.parseHeader = function () {
+    (this || _global).fileSize = (this || _global).buffer.readUInt32LE((this || _global).pos);
+    (this || _global).pos += 4;
+    (this || _global).reserved = (this || _global).buffer.readUInt32LE((this || _global).pos);
+    (this || _global).pos += 4;
+    (this || _global).offset = (this || _global).buffer.readUInt32LE((this || _global).pos);
+    (this || _global).pos += 4;
+    (this || _global).headerSize = (this || _global).buffer.readUInt32LE((this || _global).pos);
+    (this || _global).pos += 4;
+    (this || _global).width = (this || _global).buffer.readUInt32LE((this || _global).pos);
+    (this || _global).pos += 4;
+    (this || _global).height = (this || _global).buffer.readInt32LE((this || _global).pos);
+    (this || _global).pos += 4;
+    (this || _global).planes = (this || _global).buffer.readUInt16LE((this || _global).pos);
+    (this || _global).pos += 2;
+    (this || _global).bitPP = (this || _global).buffer.readUInt16LE((this || _global).pos);
+    (this || _global).pos += 2;
+    (this || _global).compress = (this || _global).buffer.readUInt32LE((this || _global).pos);
+    (this || _global).pos += 4;
+    (this || _global).rawSize = (this || _global).buffer.readUInt32LE((this || _global).pos);
+    (this || _global).pos += 4;
+    (this || _global).hr = (this || _global).buffer.readUInt32LE((this || _global).pos);
+    (this || _global).pos += 4;
+    (this || _global).vr = (this || _global).buffer.readUInt32LE((this || _global).pos);
+    (this || _global).pos += 4;
+    (this || _global).colors = (this || _global).buffer.readUInt32LE((this || _global).pos);
+    (this || _global).pos += 4;
+    (this || _global).importantColors = (this || _global).buffer.readUInt32LE((this || _global).pos);
+    (this || _global).pos += 4;
+
+    if ((this || _global).bitPP === 16 && (this || _global).is_with_alpha) {
+      (this || _global).bitPP = 15;
+    }
+
+    if ((this || _global).bitPP < 15) {
+      var len = (this || _global).colors === 0 ? 1 << (this || _global).bitPP : (this || _global).colors;
+      (this || _global).palette = new Array(len);
+
+      for (var i = 0; i < len; i++) {
+        var blue = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+        var green = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+        var red = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+        var quad = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+        (this || _global).palette[i] = {
+          red: red,
+          green: green,
+          blue: blue,
+          quad: quad
+        };
+      }
+    }
+
+    if ((this || _global).height < 0) {
+      (this || _global).height *= -1;
+      (this || _global).bottom_up = false;
+    }
+  };
+
+  BmpDecoder.prototype.parseRGBA = function () {
+    var bitn = "bit" + (this || _global).bitPP;
+    var len = (this || _global).width * (this || _global).height * 4;
+    (this || _global).data = new Buffer(len);
+    this[bitn]();
+  };
+
+  BmpDecoder.prototype.bit1 = function () {
+    var xlen = Math.ceil((this || _global).width / 8);
+    var mode = xlen % 4;
+    var y = (this || _global).height >= 0 ? (this || _global).height - 1 : -(this || _global).height;
+
+    for (var y = (this || _global).height - 1; y >= 0; y--) {
+      var line = (this || _global).bottom_up ? y : (this || _global).height - 1 - y;
+
+      for (var x = 0; x < xlen; x++) {
+        var b = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+        var location = line * (this || _global).width * 4 + x * 8 * 4;
+
+        for (var i = 0; i < 8; i++) {
+          if (x * 8 + i < (this || _global).width) {
+            var rgb = (this || _global).palette[b >> 7 - i & 0x1];
+            (this || _global).data[location + i * 4] = 0;
+            (this || _global).data[location + i * 4 + 1] = rgb.blue;
+            (this || _global).data[location + i * 4 + 2] = rgb.green;
+            (this || _global).data[location + i * 4 + 3] = rgb.red;
+          } else {
+            break;
+          }
+        }
+      }
+
+      if (mode != 0) {
+        (this || _global).pos += 4 - mode;
+      }
+    }
+  };
+
+  BmpDecoder.prototype.bit4 = function () {
+    //RLE-4
+    if ((this || _global).compress == 2) {
+      (this || _global).data.fill(0xff);
+
+      var location = 0;
+      var lines = (this || _global).bottom_up ? (this || _global).height - 1 : 0;
+      var low_nibble = false; //for all count of pixel
+
+      while (location < (this || _global).data.length) {
+        var a = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+        var b = (this || _global).buffer.readUInt8((this || _global).pos++); //absolute mode
+
+
+        if (a == 0) {
+          if (b == 0) {
+            //line end
+            if ((this || _global).bottom_up) {
+              lines--;
+            } else {
+              lines++;
+            }
+
+            location = lines * (this || _global).width * 4;
+            low_nibble = false;
+            continue;
+          } else if (b == 1) {
+            //image end
+            break;
+          } else if (b == 2) {
+            //offset x,y
+            var x = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+            var y = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+            if ((this || _global).bottom_up) {
+              lines -= y;
+            } else {
+              lines += y;
+            }
+
+            location += y * (this || _global).width * 4 + x * 4;
+          } else {
+            var c = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+            for (var i = 0; i < b; i++) {
+              if (low_nibble) {
+                setPixelData.call(this || _global, c & 0x0f);
+              } else {
+                setPixelData.call(this || _global, (c & 0xf0) >> 4);
+              }
+
+              if (i & 1 && i + 1 < b) {
+                c = (this || _global).buffer.readUInt8((this || _global).pos++);
+              }
+
+              low_nibble = !low_nibble;
+            }
+
+            if ((b + 1 >> 1 & 1) == 1) {
+              (this || _global).pos++;
+            }
+          }
+        } else {
+          //encoded mode
+          for (var i = 0; i < a; i++) {
+            if (low_nibble) {
+              setPixelData.call(this || _global, b & 0x0f);
+            } else {
+              setPixelData.call(this || _global, (b & 0xf0) >> 4);
+            }
+
+            low_nibble = !low_nibble;
+          }
+        }
+      }
+
+      function setPixelData(rgbIndex) {
+        var rgb = (this || _global).palette[rgbIndex];
+        (this || _global).data[location] = 0;
+        (this || _global).data[location + 1] = rgb.blue;
+        (this || _global).data[location + 2] = rgb.green;
+        (this || _global).data[location + 3] = rgb.red;
+        location += 4;
+      }
+    } else {
+      var xlen = Math.ceil((this || _global).width / 2);
+      var mode = xlen % 4;
+
+      for (var y = (this || _global).height - 1; y >= 0; y--) {
+        var line = (this || _global).bottom_up ? y : (this || _global).height - 1 - y;
+
+        for (var x = 0; x < xlen; x++) {
+          var b = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+          var location = line * (this || _global).width * 4 + x * 2 * 4;
+          var before = b >> 4;
+          var after = b & 0x0F;
+          var rgb = (this || _global).palette[before];
+          (this || _global).data[location] = 0;
+          (this || _global).data[location + 1] = rgb.blue;
+          (this || _global).data[location + 2] = rgb.green;
+          (this || _global).data[location + 3] = rgb.red;
+          if (x * 2 + 1 >= (this || _global).width) break;
+          rgb = (this || _global).palette[after];
+          (this || _global).data[location + 4] = 0;
+          (this || _global).data[location + 4 + 1] = rgb.blue;
+          (this || _global).data[location + 4 + 2] = rgb.green;
+          (this || _global).data[location + 4 + 3] = rgb.red;
+        }
+
+        if (mode != 0) {
+          (this || _global).pos += 4 - mode;
+        }
+      }
+    }
+  };
+
+  BmpDecoder.prototype.bit8 = function () {
+    //RLE-8
+    if ((this || _global).compress == 1) {
+      (this || _global).data.fill(0xff);
+
+      var location = 0;
+      var lines = (this || _global).bottom_up ? (this || _global).height - 1 : 0;
+
+      while (location < (this || _global).data.length) {
+        var a = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+        var b = (this || _global).buffer.readUInt8((this || _global).pos++); //absolute mode
+
+
+        if (a == 0) {
+          if (b == 0) {
+            //line end
+            if ((this || _global).bottom_up) {
+              lines--;
+            } else {
+              lines++;
+            }
+
+            location = lines * (this || _global).width * 4;
+            continue;
+          } else if (b == 1) {
+            //image end
+            break;
+          } else if (b == 2) {
+            //offset x,y
+            var x = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+            var y = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+            if ((this || _global).bottom_up) {
+              lines -= y;
+            } else {
+              lines += y;
+            }
+
+            location += y * (this || _global).width * 4 + x * 4;
+          } else {
+            for (var i = 0; i < b; i++) {
+              var c = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+              setPixelData.call(this || _global, c);
+            }
+
+            if (b & 1 == 1) {
+              (this || _global).pos++;
+            }
+          }
+        } else {
+          //encoded mode
+          for (var i = 0; i < a; i++) {
+            setPixelData.call(this || _global, b);
+          }
+        }
+      }
+
+      function setPixelData(rgbIndex) {
+        var rgb = (this || _global).palette[rgbIndex];
+        (this || _global).data[location] = 0;
+        (this || _global).data[location + 1] = rgb.blue;
+        (this || _global).data[location + 2] = rgb.green;
+        (this || _global).data[location + 3] = rgb.red;
+        location += 4;
+      }
+    } else {
+      var mode = (this || _global).width % 4;
+
+      for (var y = (this || _global).height - 1; y >= 0; y--) {
+        var line = (this || _global).bottom_up ? y : (this || _global).height - 1 - y;
+
+        for (var x = 0; x < (this || _global).width; x++) {
+          var b = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+          var location = line * (this || _global).width * 4 + x * 4;
+
+          if (b < (this || _global).palette.length) {
+            var rgb = (this || _global).palette[b];
+            (this || _global).data[location] = 0;
+            (this || _global).data[location + 1] = rgb.blue;
+            (this || _global).data[location + 2] = rgb.green;
+            (this || _global).data[location + 3] = rgb.red;
+          } else {
+            (this || _global).data[location] = 0;
+            (this || _global).data[location + 1] = 0xFF;
+            (this || _global).data[location + 2] = 0xFF;
+            (this || _global).data[location + 3] = 0xFF;
+          }
+        }
+
+        if (mode != 0) {
+          (this || _global).pos += 4 - mode;
+        }
+      }
+    }
+  };
+
+  BmpDecoder.prototype.bit15 = function () {
+    var dif_w = (this || _global).width % 3;
+
+    var _11111 = parseInt("11111", 2),
+        _1_5 = _11111;
+
+    for (var y = (this || _global).height - 1; y >= 0; y--) {
+      var line = (this || _global).bottom_up ? y : (this || _global).height - 1 - y;
+
+      for (var x = 0; x < (this || _global).width; x++) {
+        var B = (this || _global).buffer.readUInt16LE((this || _global).pos);
+
+        (this || _global).pos += 2;
+        var blue = (B & _1_5) / _1_5 * 255 | 0;
+        var green = (B >> 5 & _1_5) / _1_5 * 255 | 0;
+        var red = (B >> 10 & _1_5) / _1_5 * 255 | 0;
+        var alpha = B >> 15 ? 0xFF : 0x00;
+        var location = line * (this || _global).width * 4 + x * 4;
+        (this || _global).data[location] = alpha;
+        (this || _global).data[location + 1] = blue;
+        (this || _global).data[location + 2] = green;
+        (this || _global).data[location + 3] = red;
+      } //skip extra bytes
+
+
+      (this || _global).pos += dif_w;
+    }
+  };
+
+  BmpDecoder.prototype.bit16 = function () {
+    var dif_w = (this || _global).width % 2 * 2; //default xrgb555
+
+    (this || _global).maskRed = 0x7C00;
+    (this || _global).maskGreen = 0x3E0;
+    (this || _global).maskBlue = 0x1F;
+    (this || _global).mask0 = 0;
+
+    if ((this || _global).compress == 3) {
+      (this || _global).maskRed = (this || _global).buffer.readUInt32LE((this || _global).pos);
+      (this || _global).pos += 4;
+      (this || _global).maskGreen = (this || _global).buffer.readUInt32LE((this || _global).pos);
+      (this || _global).pos += 4;
+      (this || _global).maskBlue = (this || _global).buffer.readUInt32LE((this || _global).pos);
+      (this || _global).pos += 4;
+      (this || _global).mask0 = (this || _global).buffer.readUInt32LE((this || _global).pos);
+      (this || _global).pos += 4;
+    }
+
+    var ns = [0, 0, 0];
+
+    for (var i = 0; i < 16; i++) {
+      if ((this || _global).maskRed >> i & 0x01) ns[0]++;
+      if ((this || _global).maskGreen >> i & 0x01) ns[1]++;
+      if ((this || _global).maskBlue >> i & 0x01) ns[2]++;
+    }
+
+    ns[1] += ns[0];
+    ns[2] += ns[1];
+    ns[0] = 8 - ns[0];
+    ns[1] -= 8;
+    ns[2] -= 8;
+
+    for (var y = (this || _global).height - 1; y >= 0; y--) {
+      var line = (this || _global).bottom_up ? y : (this || _global).height - 1 - y;
+
+      for (var x = 0; x < (this || _global).width; x++) {
+        var B = (this || _global).buffer.readUInt16LE((this || _global).pos);
+
+        (this || _global).pos += 2;
+        var blue = (B & (this || _global).maskBlue) << ns[0];
+        var green = (B & (this || _global).maskGreen) >> ns[1];
+        var red = (B & (this || _global).maskRed) >> ns[2];
+        var location = line * (this || _global).width * 4 + x * 4;
+        (this || _global).data[location] = 0;
+        (this || _global).data[location + 1] = blue;
+        (this || _global).data[location + 2] = green;
+        (this || _global).data[location + 3] = red;
+      } //skip extra bytes
+
+
+      (this || _global).pos += dif_w;
+    }
+  };
+
+  BmpDecoder.prototype.bit24 = function () {
+    for (var y = (this || _global).height - 1; y >= 0; y--) {
+      var line = (this || _global).bottom_up ? y : (this || _global).height - 1 - y;
+
+      for (var x = 0; x < (this || _global).width; x++) {
+        //Little Endian rgb
+        var blue = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+        var green = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+        var red = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+        var location = line * (this || _global).width * 4 + x * 4;
+        (this || _global).data[location] = 0;
+        (this || _global).data[location + 1] = blue;
+        (this || _global).data[location + 2] = green;
+        (this || _global).data[location + 3] = red;
+      } //skip extra bytes
+
+
+      (this || _global).pos += (this || _global).width % 4;
+    }
+  };
+  /**
+   * add 32bit decode func
+   * @author soubok
+   */
+
+
+  BmpDecoder.prototype.bit32 = function () {
+    //BI_BITFIELDS
+    if ((this || _global).compress == 3) {
+      (this || _global).maskRed = (this || _global).buffer.readUInt32LE((this || _global).pos);
+      (this || _global).pos += 4;
+      (this || _global).maskGreen = (this || _global).buffer.readUInt32LE((this || _global).pos);
+      (this || _global).pos += 4;
+      (this || _global).maskBlue = (this || _global).buffer.readUInt32LE((this || _global).pos);
+      (this || _global).pos += 4;
+      (this || _global).mask0 = (this || _global).buffer.readUInt32LE((this || _global).pos);
+      (this || _global).pos += 4;
+
+      for (var y = (this || _global).height - 1; y >= 0; y--) {
+        var line = (this || _global).bottom_up ? y : (this || _global).height - 1 - y;
+
+        for (var x = 0; x < (this || _global).width; x++) {
+          //Little Endian rgba
+          var alpha = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+          var blue = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+          var green = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+          var red = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+          var location = line * (this || _global).width * 4 + x * 4;
+          (this || _global).data[location] = alpha;
+          (this || _global).data[location + 1] = blue;
+          (this || _global).data[location + 2] = green;
+          (this || _global).data[location + 3] = red;
+        }
+      }
+    } else {
+      for (var y = (this || _global).height - 1; y >= 0; y--) {
+        var line = (this || _global).bottom_up ? y : (this || _global).height - 1 - y;
+
+        for (var x = 0; x < (this || _global).width; x++) {
+          //Little Endian argb
+          var blue = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+          var green = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+          var red = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+          var alpha = (this || _global).buffer.readUInt8((this || _global).pos++);
+
+          var location = line * (this || _global).width * 4 + x * 4;
+          (this || _global).data[location] = alpha;
+          (this || _global).data[location + 1] = blue;
+          (this || _global).data[location + 2] = green;
+          (this || _global).data[location + 3] = red;
+        }
+      }
+    }
+  };
+
+  BmpDecoder.prototype.getData = function () {
+    return (this || _global).data;
+  };
+
+  exports = function (bmpData) {
+    var decoder = new BmpDecoder(bmpData);
+    return decoder;
+  };
+
+  return exports;
+}

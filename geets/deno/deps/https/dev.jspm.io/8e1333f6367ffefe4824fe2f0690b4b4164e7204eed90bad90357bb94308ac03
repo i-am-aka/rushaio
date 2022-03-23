@@ -1,0 +1,105 @@
+import { dew as _interopRequireDefaultDewDew } from "/npm:@babel/runtime@7/helpers/interopRequireDefault?dew";
+import { dew as _toConsumableArrayDewDew } from "/npm:@babel/runtime@7/helpers/toConsumableArray?dew";
+import { dew as _npmTimm1DewDew } from "/npm:timm@1?dew";
+import { dew as _pluginBlit2Dew } from "/npm:@jimp/plugin-blit@0.16?dew";
+import { dew as _pluginBlur2Dew } from "/npm:@jimp/plugin-blur@0.16?dew";
+import { dew as _pluginCircle2Dew } from "/npm:@jimp/plugin-circle@0.16?dew";
+import { dew as _pluginColor2Dew } from "/npm:@jimp/plugin-color@0.16?dew";
+import { dew as _pluginContain2Dew } from "/npm:@jimp/plugin-contain@0.16?dew";
+import { dew as _pluginCover2Dew } from "/npm:@jimp/plugin-cover@0.16?dew";
+import { dew as _pluginCrop2Dew } from "/npm:@jimp/plugin-crop@0.16?dew";
+import { dew as _pluginDisplace2Dew } from "/npm:@jimp/plugin-displace@0.16?dew";
+import { dew as _pluginDither2Dew } from "/npm:@jimp/plugin-dither@0.16?dew";
+import { dew as _pluginFisheye2Dew } from "/npm:@jimp/plugin-fisheye@0.16?dew";
+import { dew as _pluginFlip2Dew } from "/npm:@jimp/plugin-flip@0.16?dew";
+import { dew as _pluginGaussian2Dew } from "/npm:@jimp/plugin-gaussian@0.16?dew";
+import { dew as _pluginInvert2Dew } from "/npm:@jimp/plugin-invert@0.16?dew";
+import { dew as _pluginMask2Dew } from "/npm:@jimp/plugin-mask@0.16?dew";
+import { dew as _pluginNormalize2Dew } from "/npm:@jimp/plugin-normalize@0.16?dew";
+import { dew as _pluginPrint2Dew } from "/npm:@jimp/plugin-print@0.16?dew";
+import { dew as _pluginResize2Dew } from "/npm:@jimp/plugin-resize@0.16?dew";
+import { dew as _pluginRotate2Dew } from "/npm:@jimp/plugin-rotate@0.16?dew";
+import { dew as _pluginScale2Dew } from "/npm:@jimp/plugin-scale@0.16?dew";
+import { dew as _pluginShadow2Dew } from "/npm:@jimp/plugin-shadow@0.16?dew";
+import { dew as _pluginThreshold2Dew } from "/npm:@jimp/plugin-threshold@0.16?dew";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  var _interopRequireDefault = _interopRequireDefaultDewDew();
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports["default"] = void 0;
+
+  var _toConsumableArray2 = _interopRequireDefault(_toConsumableArrayDewDew());
+
+  var _timm = _npmTimm1DewDew();
+
+  var _pluginBlit = _interopRequireDefault(_pluginBlit2Dew());
+
+  var _pluginBlur = _interopRequireDefault(_pluginBlur2Dew());
+
+  var _pluginCircle = _interopRequireDefault(_pluginCircle2Dew());
+
+  var _pluginColor = _interopRequireDefault(_pluginColor2Dew());
+
+  var _pluginContain = _interopRequireDefault(_pluginContain2Dew());
+
+  var _pluginCover = _interopRequireDefault(_pluginCover2Dew());
+
+  var _pluginCrop = _interopRequireDefault(_pluginCrop2Dew());
+
+  var _pluginDisplace = _interopRequireDefault(_pluginDisplace2Dew());
+
+  var _pluginDither = _interopRequireDefault(_pluginDither2Dew());
+
+  var _pluginFisheye = _interopRequireDefault(_pluginFisheye2Dew());
+
+  var _pluginFlip = _interopRequireDefault(_pluginFlip2Dew());
+
+  var _pluginGaussian = _interopRequireDefault(_pluginGaussian2Dew());
+
+  var _pluginInvert = _interopRequireDefault(_pluginInvert2Dew());
+
+  var _pluginMask = _interopRequireDefault(_pluginMask2Dew());
+
+  var _pluginNormalize = _interopRequireDefault(_pluginNormalize2Dew());
+
+  var _pluginPrint = _interopRequireDefault(_pluginPrint2Dew());
+
+  var _pluginResize = _interopRequireDefault(_pluginResize2Dew());
+
+  var _pluginRotate = _interopRequireDefault(_pluginRotate2Dew());
+
+  var _pluginScale = _interopRequireDefault(_pluginScale2Dew());
+
+  var _pluginShadow = _interopRequireDefault(_pluginShadow2Dew());
+
+  var _pluginThreshold = _interopRequireDefault(_pluginThreshold2Dew());
+
+  var plugins = [_pluginBlit["default"], _pluginBlur["default"], _pluginCircle["default"], _pluginColor["default"], _pluginContain["default"], _pluginCover["default"], _pluginCrop["default"], _pluginDisplace["default"], _pluginDither["default"], _pluginFisheye["default"], _pluginFlip["default"], _pluginGaussian["default"], _pluginInvert["default"], _pluginMask["default"], _pluginNormalize["default"], _pluginPrint["default"], _pluginResize["default"], _pluginRotate["default"], _pluginScale["default"], _pluginShadow["default"], _pluginThreshold["default"]];
+
+  var _default = function _default(jimpEvChange) {
+    var initializedPlugins = plugins.map(function (pluginModule) {
+      var plugin = pluginModule(jimpEvChange) || {};
+
+      if (!plugin["class"] && !plugin.constants) {
+        // Default to class function
+        plugin = {
+          "class": plugin
+        };
+      }
+
+      return plugin;
+    });
+    return _timm.mergeDeep.apply(void 0, (0, _toConsumableArray2["default"])(initializedPlugins));
+  };
+
+  exports["default"] = _default;
+  exports = exports.default;
+  return exports;
+}

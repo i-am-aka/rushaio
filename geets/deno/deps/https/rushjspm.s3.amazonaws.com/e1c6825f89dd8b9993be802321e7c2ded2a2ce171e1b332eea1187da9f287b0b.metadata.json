@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "content-type": "application/javascript",
+    "x-amz-request-id": "50A2D7DE8AB879B5",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "x-amz-id-2": "20o7o3ir9D4JoE6zUtS6OohT6v6k/+BE0I2Z1SlIcMGfUOm8tpn9Dhc4o2uKlF7uY+N3gBOrSc4=",
+    "content-length": "563",
+    "server": "AmazonS3",
+    "etag": "\"29b73e14872a0932dc53be7f416d85fd\"",
+    "accept-ranges": "bytes"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/events/TouchEvent-impl.dew.js"
+}

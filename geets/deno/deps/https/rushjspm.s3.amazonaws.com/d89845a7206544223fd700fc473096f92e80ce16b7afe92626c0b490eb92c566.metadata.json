@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "server": "AmazonS3",
+    "content-length": "1330",
+    "content-type": "application/javascript",
+    "last-modified": "Mon, 07 Dec 2020 15:03:43 GMT",
+    "etag": "\"546caa7e97b3acc5fcf6c30a283b1d5e\"",
+    "x-amz-request-id": "5158EAA881AAD41A",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "x-amz-id-2": "3n/uJTX71SkSfQYCS953UkkNI9AwQI7dDDeCkhIlhWPPp2d+AwpU3Z6T78SL6Cv9nh00MaxDi3s=",
+    "accept-ranges": "bytes"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/PopStateEventInit.dew.js"
+}

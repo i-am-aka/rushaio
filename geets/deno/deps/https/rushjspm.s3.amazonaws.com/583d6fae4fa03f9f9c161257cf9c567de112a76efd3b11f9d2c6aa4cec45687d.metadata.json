@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "content-type": "application/javascript",
+    "server": "AmazonS3",
+    "x-amz-request-id": "15C62A0008EBCB78",
+    "last-modified": "Mon, 07 Dec 2020 15:03:43 GMT",
+    "etag": "\"2401eac29c57ccd8322f23d0aca5f82a\"",
+    "x-amz-id-2": "OXpcfdx1yFlEit1PpadJVrcAhlBXkq+aqacHba0jZVahbsRZymcMscSzcQEe16tzQ5eu3fjJP7g=",
+    "accept-ranges": "bytes",
+    "content-length": "591"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/TextTrackKind.dew.js"
+}

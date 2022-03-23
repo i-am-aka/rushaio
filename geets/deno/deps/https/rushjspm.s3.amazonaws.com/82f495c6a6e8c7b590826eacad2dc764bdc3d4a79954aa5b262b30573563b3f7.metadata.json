@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "content-length": "2790",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "content-type": "application/javascript",
+    "etag": "\"413c3bce3a56422aae54e5f653b07bb5\"",
+    "server": "AmazonS3",
+    "x-amz-id-2": "fMjH59GfAnoDDU/uYV/Rf4h1uEDdDmuSuZJJuz/LhkEpvwUcDkGo8tncH2BRc4JoWGBrZAK5J5k=",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "accept-ranges": "bytes",
+    "x-amz-request-id": "0E72C2A3775D9682"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/helpers/runtime-script-errors.dew.js"
+}

@@ -1,0 +1,18 @@
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  exports.STATUS_MAPPING = {
+    mapped: 1,
+    valid: 2,
+    disallowed: 3,
+    disallowed_STD3_valid: 4,
+    // eslint-disable-line camelcase
+    disallowed_STD3_mapped: 5,
+    // eslint-disable-line camelcase
+    deviation: 6,
+    ignored: 7
+  };
+  return exports;
+}

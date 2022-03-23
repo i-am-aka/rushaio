@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "etag": "\"ee8cf13c42ba5a5f5d73e9e722308e86\"",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "server": "AmazonS3",
+    "last-modified": "Mon, 07 Dec 2020 15:03:47 GMT",
+    "x-amz-id-2": "PUB5l8tnBIW2Ch+wtdibg7Nqnnqszj6Xmxe9gIBMeqDp30+Z0QXyJzHwXd+ld6qdoShZwslnrmk=",
+    "content-type": "application/javascript",
+    "x-amz-request-id": "3838A788223380A5",
+    "accept-ranges": "bytes",
+    "content-length": "930",
+    "connection": "keep-alive"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:tough-cookie@3.0.1/lib/permuteDomain.dew.js"
+}

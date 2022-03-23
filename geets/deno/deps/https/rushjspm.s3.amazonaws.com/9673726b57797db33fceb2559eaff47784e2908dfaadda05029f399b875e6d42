@@ -1,0 +1,68 @@
+import { dew as _npmWebidlConversions6DewDew } from "/npm:webidl-conversions@6_dew.js";
+import { dew as _utilsDewDew } from "./utils.dew.js";
+import { dew as _EventListenerOptionsDewDew } from "./EventListenerOptions.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const conversions = _npmWebidlConversions6DewDew();
+
+  const utils = _utilsDewDew();
+
+  const EventListenerOptions = _EventListenerOptionsDewDew();
+
+  exports._convertInherit = (obj, ret, {
+    context = "The provided value"
+  } = {}) => {
+    EventListenerOptions._convertInherit(obj, ret, {
+      context
+    });
+
+    {
+      const key = "once";
+      let value = obj === undefined || obj === null ? undefined : obj[key];
+
+      if (value !== undefined) {
+        value = conversions["boolean"](value, {
+          context: context + " has member 'once' that"
+        });
+        ret[key] = value;
+      } else {
+        ret[key] = false;
+      }
+    }
+    {
+      const key = "passive";
+      let value = obj === undefined || obj === null ? undefined : obj[key];
+
+      if (value !== undefined) {
+        value = conversions["boolean"](value, {
+          context: context + " has member 'passive' that"
+        });
+        ret[key] = value;
+      } else {
+        ret[key] = false;
+      }
+    }
+  };
+
+  exports.convert = function convert(obj, {
+    context = "The provided value"
+  } = {}) {
+    if (obj !== undefined && typeof obj !== "object" && typeof obj !== "function") {
+      throw new TypeError(`${context} is not an object.`);
+    }
+
+    const ret = Object.create(null);
+
+    exports._convertInherit(obj, ret, {
+      context
+    });
+
+    return ret;
+  };
+
+  return exports;
+}

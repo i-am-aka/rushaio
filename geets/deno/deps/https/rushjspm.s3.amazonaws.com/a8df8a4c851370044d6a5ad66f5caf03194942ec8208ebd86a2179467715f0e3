@@ -1,0 +1,89 @@
+import { dew as _npmAssertPlus1DewDew } from "/npm:assert-plus@1_dew.js";
+import _util from "/npm:@jspm/core@1/nodelibs/util.js";
+var exports = {},
+    _dewExec = false;
+
+var _global = typeof self !== "undefined" ? self : global;
+
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  // Copyright 2015 Joyent, Inc.
+  var assert = _npmAssertPlus1DewDew();
+
+  var util = _util;
+
+  function FingerprintFormatError(fp, format) {
+    if (Error.captureStackTrace) Error.captureStackTrace(this || _global, FingerprintFormatError);
+    (this || _global).name = 'FingerprintFormatError';
+    (this || _global).fingerprint = fp;
+    (this || _global).format = format;
+    (this || _global).message = 'Fingerprint format is not supported, or is invalid: ';
+    if (fp !== undefined) (this || _global).message += ' fingerprint = ' + fp;
+    if (format !== undefined) (this || _global).message += ' format = ' + format;
+  }
+
+  util.inherits(FingerprintFormatError, Error);
+
+  function InvalidAlgorithmError(alg) {
+    if (Error.captureStackTrace) Error.captureStackTrace(this || _global, InvalidAlgorithmError);
+    (this || _global).name = 'InvalidAlgorithmError';
+    (this || _global).algorithm = alg;
+    (this || _global).message = 'Algorithm "' + alg + '" is not supported';
+  }
+
+  util.inherits(InvalidAlgorithmError, Error);
+
+  function KeyParseError(name, format, innerErr) {
+    if (Error.captureStackTrace) Error.captureStackTrace(this || _global, KeyParseError);
+    (this || _global).name = 'KeyParseError';
+    (this || _global).format = format;
+    (this || _global).keyName = name;
+    (this || _global).innerErr = innerErr;
+    (this || _global).message = 'Failed to parse ' + name + ' as a valid ' + format + ' format key: ' + innerErr.message;
+  }
+
+  util.inherits(KeyParseError, Error);
+
+  function SignatureParseError(type, format, innerErr) {
+    if (Error.captureStackTrace) Error.captureStackTrace(this || _global, SignatureParseError);
+    (this || _global).name = 'SignatureParseError';
+    (this || _global).type = type;
+    (this || _global).format = format;
+    (this || _global).innerErr = innerErr;
+    (this || _global).message = 'Failed to parse the given data as a ' + type + ' signature in ' + format + ' format: ' + innerErr.message;
+  }
+
+  util.inherits(SignatureParseError, Error);
+
+  function CertificateParseError(name, format, innerErr) {
+    if (Error.captureStackTrace) Error.captureStackTrace(this || _global, CertificateParseError);
+    (this || _global).name = 'CertificateParseError';
+    (this || _global).format = format;
+    (this || _global).certName = name;
+    (this || _global).innerErr = innerErr;
+    (this || _global).message = 'Failed to parse ' + name + ' as a valid ' + format + ' format certificate: ' + innerErr.message;
+  }
+
+  util.inherits(CertificateParseError, Error);
+
+  function KeyEncryptedError(name, format) {
+    if (Error.captureStackTrace) Error.captureStackTrace(this || _global, KeyEncryptedError);
+    (this || _global).name = 'KeyEncryptedError';
+    (this || _global).format = format;
+    (this || _global).keyName = name;
+    (this || _global).message = 'The ' + format + ' format key ' + name + ' is ' + 'encrypted (password-protected), and no passphrase was ' + 'provided in `options`';
+  }
+
+  util.inherits(KeyEncryptedError, Error);
+  exports = {
+    FingerprintFormatError: FingerprintFormatError,
+    InvalidAlgorithmError: InvalidAlgorithmError,
+    KeyParseError: KeyParseError,
+    SignatureParseError: SignatureParseError,
+    KeyEncryptedError: KeyEncryptedError,
+    CertificateParseError: CertificateParseError
+  };
+  return exports;
+}

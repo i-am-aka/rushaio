@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-request-id": "FDFD1A203C18C1D6",
+    "etag": "\"fe08461459d46dc3844935a0ed7ad29a\"",
+    "server": "AmazonS3",
+    "last-modified": "Mon, 07 Dec 2020 15:03:38 GMT",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "x-amz-id-2": "MbqrWQ8dRK0NizFA4zNJew5fIx3uxAHfFelmgH6MAvnVp5vYpDPuUfn3PakgHu0O2fngTZ3drCU=",
+    "connection": "keep-alive",
+    "accept-ranges": "bytes",
+    "content-length": "2462",
+    "content-type": "application/javascript"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:@jspm/core@1.1.1/nodelibs/punycode.js"
+}

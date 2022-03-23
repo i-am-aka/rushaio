@@ -1,0 +1,111 @@
+import _buffer from "/npm:@jspm/core@1/nodelibs/buffer.js";
+var exports = {},
+    _dewExec = false;
+
+var _global = typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : global;
+
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  var Buffer = _buffer.Buffer;
+
+  /**
+   * @author shaozilee
+   *
+   * BMP format encoder,encode 24bit BMP
+   * Not support quality compression
+   *
+   */
+  function BmpEncoder(imgData) {
+    (this || _global).buffer = imgData.data;
+    (this || _global).width = imgData.width;
+    (this || _global).height = imgData.height;
+    (this || _global).extraBytes = (this || _global).width % 4;
+    (this || _global).rgbSize = (this || _global).height * (3 * (this || _global).width + (this || _global).extraBytes);
+    (this || _global).headerInfoSize = 40;
+    (this || _global).data = [];
+    /******************header***********************/
+
+    (this || _global).flag = "BM";
+    (this || _global).reserved = 0;
+    (this || _global).offset = 54;
+    (this || _global).fileSize = (this || _global).rgbSize + (this || _global).offset;
+    (this || _global).planes = 1;
+    (this || _global).bitPP = 24;
+    (this || _global).compress = 0;
+    (this || _global).hr = 0;
+    (this || _global).vr = 0;
+    (this || _global).colors = 0;
+    (this || _global).importantColors = 0;
+  }
+
+  BmpEncoder.prototype.encode = function () {
+    var tempBuffer = new Buffer((this || _global).offset + (this || _global).rgbSize);
+    (this || _global).pos = 0;
+    tempBuffer.write((this || _global).flag, (this || _global).pos, 2);
+    (this || _global).pos += 2;
+    tempBuffer.writeUInt32LE((this || _global).fileSize, (this || _global).pos);
+    (this || _global).pos += 4;
+    tempBuffer.writeUInt32LE((this || _global).reserved, (this || _global).pos);
+    (this || _global).pos += 4;
+    tempBuffer.writeUInt32LE((this || _global).offset, (this || _global).pos);
+    (this || _global).pos += 4;
+    tempBuffer.writeUInt32LE((this || _global).headerInfoSize, (this || _global).pos);
+    (this || _global).pos += 4;
+    tempBuffer.writeUInt32LE((this || _global).width, (this || _global).pos);
+    (this || _global).pos += 4;
+    tempBuffer.writeInt32LE(-(this || _global).height, (this || _global).pos);
+    (this || _global).pos += 4;
+    tempBuffer.writeUInt16LE((this || _global).planes, (this || _global).pos);
+    (this || _global).pos += 2;
+    tempBuffer.writeUInt16LE((this || _global).bitPP, (this || _global).pos);
+    (this || _global).pos += 2;
+    tempBuffer.writeUInt32LE((this || _global).compress, (this || _global).pos);
+    (this || _global).pos += 4;
+    tempBuffer.writeUInt32LE((this || _global).rgbSize, (this || _global).pos);
+    (this || _global).pos += 4;
+    tempBuffer.writeUInt32LE((this || _global).hr, (this || _global).pos);
+    (this || _global).pos += 4;
+    tempBuffer.writeUInt32LE((this || _global).vr, (this || _global).pos);
+    (this || _global).pos += 4;
+    tempBuffer.writeUInt32LE((this || _global).colors, (this || _global).pos);
+    (this || _global).pos += 4;
+    tempBuffer.writeUInt32LE((this || _global).importantColors, (this || _global).pos);
+    (this || _global).pos += 4;
+    var i = 0;
+    var rowBytes = 3 * (this || _global).width + (this || _global).extraBytes;
+
+    for (var y = 0; y < (this || _global).height; y++) {
+      for (var x = 0; x < (this || _global).width; x++) {
+        var p = (this || _global).pos + y * rowBytes + x * 3;
+        i++; //a
+
+        tempBuffer[p] = (this || _global).buffer[i++]; //b
+
+        tempBuffer[p + 1] = (this || _global).buffer[i++]; //g
+
+        tempBuffer[p + 2] = (this || _global).buffer[i++]; //r
+      }
+
+      if ((this || _global).extraBytes > 0) {
+        var fillOffset = (this || _global).pos + y * rowBytes + (this || _global).width * 3;
+        tempBuffer.fill(0, fillOffset, fillOffset + (this || _global).extraBytes);
+      }
+    }
+
+    return tempBuffer;
+  };
+
+  exports = function (imgData, quality) {
+    if (typeof quality === 'undefined') quality = 100;
+    var encoder = new BmpEncoder(imgData);
+    var data = encoder.encode();
+    return {
+      data: data,
+      width: imgData.width,
+      height: imgData.height
+    };
+  };
+
+  return exports;
+}

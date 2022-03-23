@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "connection": "keep-alive",
+    "accept-ranges": "bytes",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "x-amz-request-id": "1CE611E3F61122C8",
+    "server": "AmazonS3",
+    "last-modified": "Mon, 07 Dec 2020 15:03:39 GMT",
+    "x-amz-id-2": "Qq31XsE+0/Z+BF+ZxJe56Wd8H01pV7TqgmQFQJA4SwL5Ae7g7w8j4AoYoU6xeL6gz8lSmNCFL9g=",
+    "content-length": "718",
+    "content-type": "application/javascript",
+    "etag": "\"7db605338ea9c81c1be4c009140a8c68\""
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:domexception@2.0.1/lib/legacy-error-codes.json.dew.js"
+}

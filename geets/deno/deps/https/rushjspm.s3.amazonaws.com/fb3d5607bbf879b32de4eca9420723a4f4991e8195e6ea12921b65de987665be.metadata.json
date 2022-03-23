@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "x-amz-request-id": "A59DEB396EE77B19",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "server": "AmazonS3",
+    "x-amz-id-2": "saOCjlj2vOL5F4bOTgzYxchagc7DEJpvOCU5UOIXqMPNH9fZBuD7t+9yGpmHDmps+4muO1k3TKo=",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "content-type": "application/javascript",
+    "accept-ranges": "bytes",
+    "content-length": "2573",
+    "etag": "\"b2f990b5c7822e8b149f888a17064741\""
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/fetch/header-types.dew.js"
+}

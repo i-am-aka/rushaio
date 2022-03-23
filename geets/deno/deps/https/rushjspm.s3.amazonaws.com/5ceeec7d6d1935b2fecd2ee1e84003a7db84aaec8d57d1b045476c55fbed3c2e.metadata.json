@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "x-amz-request-id": "2DAAFF5552F5368F",
+    "content-length": "2365",
+    "etag": "\"9c4fbd792f7eface0873304983ab9e82\"",
+    "content-type": "application/javascript",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "x-amz-id-2": "cRY2EyTlpSQ9wrcL5+as01ovBgDfAZWfzk4wfYiA0GwK1fKG1vzOEVNdLN04s83vnVV3ZNLOWxA=",
+    "accept-ranges": "bytes",
+    "server": "AmazonS3",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/helpers/ordered-set.dew.js"
+}

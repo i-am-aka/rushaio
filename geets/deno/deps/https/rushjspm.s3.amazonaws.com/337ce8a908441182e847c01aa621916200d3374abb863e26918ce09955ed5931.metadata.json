@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "content-length": "401",
+    "x-amz-id-2": "AGHH3K2D57M1fOFV0fhXxvBt9+FOwEVBkTLmOE6u7fNSJ1iIpCSn6YCD1gM5xuu5gICy6gxOIhk=",
+    "accept-ranges": "bytes",
+    "etag": "\"7eec46f8df69e4194d1efe767ca6d8ec\"",
+    "x-amz-request-id": "F4815F0DB4A0D1F8",
+    "content-type": "application/javascript",
+    "server": "AmazonS3",
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/HTMLOptGroupElement-impl.dew.js"
+}

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "connection": "keep-alive",
+    "server": "AmazonS3",
+    "accept-ranges": "bytes",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "etag": "\"b2f763f462b48af1d9cef93d8495250d\"",
+    "x-amz-request-id": "EJ9RBQ8S5X6Z7VCY",
+    "last-modified": "Mon, 07 Dec 2020 15:03:47 GMT",
+    "x-amz-id-2": "pHVftGMEVYqJXkm5+5F/GgyjSDfYGLR3DKr04QRAlRMnh1dpvZMC4YJxXgzjHzqkWYfMOwSC5oU=",
+    "content-type": "application/javascript",
+    "content-length": "5886"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:whatwg-encoding@1.0.5/lib/labels-to-names.json.dew.js"
+}

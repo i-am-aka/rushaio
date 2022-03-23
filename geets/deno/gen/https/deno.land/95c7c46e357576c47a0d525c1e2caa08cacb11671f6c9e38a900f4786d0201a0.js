@@ -1,0 +1,17 @@
+/** Creates a Promise with the `reject` and `resolve` functions
+ * placed as methods on the promise object itself. It allows you to do:
+ *
+ *     const p = deferred<number>();
+ *     // ...
+ *     p.resolve(42);
+ */ export function deferred() {
+    let methods;
+    const promise = new Promise((resolve, reject)=>{
+        methods = {
+            resolve,
+            reject
+        };
+    });
+    return Object.assign(promise, methods);
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIjxodHRwczovL2Rlbm8ubGFuZC9zdGRAMC43NS4wL2FzeW5jL2RlZmVycmVkLnRzPiJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBDb3B5cmlnaHQgMjAxOC0yMDIwIHRoZSBEZW5vIGF1dGhvcnMuIEFsbCByaWdodHMgcmVzZXJ2ZWQuIE1JVCBsaWNlbnNlLlxuLy8gVE9ETyhyeSkgSXQnZCBiZSBiZXR0ZXIgdG8gbWFrZSBEZWZlcnJlZCBhIGNsYXNzIHRoYXQgaW5oZXJpdHMgZnJvbVxuLy8gUHJvbWlzZSwgcmF0aGVyIHRoYW4gYW4gaW50ZXJmYWNlLiBUaGlzIGlzIHBvc3NpYmxlIGluIEVTMjAxNiwgaG93ZXZlclxuLy8gdHlwZXNjcmlwdCBwcm9kdWNlcyBicm9rZW4gY29kZSB3aGVuIHRhcmdldGluZyBFUzUgY29kZS5cbi8vIFNlZSBodHRwczovL2dpdGh1Yi5jb20vTWljcm9zb2Z0L1R5cGVTY3JpcHQvaXNzdWVzLzE1MjAyXG4vLyBBdCB0aGUgdGltZSBvZiB3cml0aW5nLCB0aGUgZ2l0aHViIGlzc3VlIGlzIGNsb3NlZCBidXQgdGhlIHByb2JsZW0gcmVtYWlucy5cbmV4cG9ydCBpbnRlcmZhY2UgRGVmZXJyZWQ8VD4gZXh0ZW5kcyBQcm9taXNlPFQ+IHtcbiAgcmVzb2x2ZTogKHZhbHVlPzogVCB8IFByb21pc2VMaWtlPFQ+KSA9PiB2b2lkO1xuICAvLyBlc2xpbnQtZGlzYWJsZS1uZXh0LWxpbmUgQHR5cGVzY3JpcHQtZXNsaW50L25vLWV4cGxpY2l0LWFueVxuICByZWplY3Q6IChyZWFzb24/OiBhbnkpID0+IHZvaWQ7XG59XG5cbi8qKiBDcmVhdGVzIGEgUHJvbWlzZSB3aXRoIHRoZSBgcmVqZWN0YCBhbmQgYHJlc29sdmVgIGZ1bmN0aW9uc1xuICogcGxhY2VkIGFzIG1ldGhvZHMgb24gdGhlIHByb21pc2Ugb2JqZWN0IGl0c2VsZi4gSXQgYWxsb3dzIHlvdSB0byBkbzpcbiAqXG4gKiAgICAgY29uc3QgcCA9IGRlZmVycmVkPG51bWJlcj4oKTtcbiAqICAgICAvLyAuLi5cbiAqICAgICBwLnJlc29sdmUoNDIpO1xuICovXG5leHBvcnQgZnVuY3Rpb24gZGVmZXJyZWQ8VD4oKTogRGVmZXJyZWQ8VD4ge1xuICBsZXQgbWV0aG9kcztcbiAgY29uc3QgcHJvbWlzZSA9IG5ldyBQcm9taXNlPFQ+KChyZXNvbHZlLCByZWplY3QpOiB2b2lkID0+IHtcbiAgICBtZXRob2RzID0geyByZXNvbHZlLCByZWplY3QgfTtcbiAgfSk7XG4gIHJldHVybiBPYmplY3QuYXNzaWduKHByb21pc2UsIG1ldGhvZHMpIGFzIERlZmVycmVkPFQ+O1xufVxuIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVlBLEVBTUEsQUFOQSxtTkFNQSxBQU5BLEVBTUEsaUJBQ0EsUUFBQTtRQUNBLE9BQUE7VUFDQSxPQUFBLE9BQUEsT0FBQSxFQUFBLE9BQUEsRUFBQSxNQUFBO0FBQ0EsZUFBQTtBQUFBLG1CQUFBO0FBQUEsa0JBQUE7OztXQUVBLE1BQUEsQ0FBQSxNQUFBLENBQUEsT0FBQSxFQUFBLE9BQUEifQ==

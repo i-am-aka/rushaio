@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "last-modified": "Mon, 07 Dec 2020 15:03:43 GMT",
+    "accept-ranges": "bytes",
+    "x-amz-id-2": "PJ2apJ9X09kUh7wGeCHiUv2AZrTq0pLCRD/Mv4Ik+/dxr8Dp3X9IJKptTKIQgPomALl2jojU+DM=",
+    "content-type": "application/javascript",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "content-length": "7046",
+    "connection": "keep-alive",
+    "x-amz-request-id": "5C4A7E1301CABBD8",
+    "etag": "\"ac13e2bc36839023d101dd699acdf7c6\"",
+    "server": "AmazonS3"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/MutationRecord.dew.js"
+}

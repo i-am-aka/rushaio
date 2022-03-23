@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:43 GMT",
+    "etag": "\"fb8aad882f02cfac49e5ee1784752bcd\"",
+    "accept-ranges": "bytes",
+    "content-type": "application/javascript",
+    "content-length": "3244",
+    "x-amz-request-id": "587F887420471B9D",
+    "connection": "keep-alive",
+    "server": "AmazonS3",
+    "x-amz-id-2": "syfW/TfigUQ4I50SAz75FsAxIhVfHgikYj1kcvNMcDVvvhc0fxy/BtXBOl+Ji6dEvGAnxSadJqk="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/StorageEventInit.dew.js"
+}

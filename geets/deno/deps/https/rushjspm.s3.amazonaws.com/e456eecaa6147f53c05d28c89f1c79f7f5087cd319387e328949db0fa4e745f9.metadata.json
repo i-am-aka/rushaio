@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "server": "AmazonS3",
+    "etag": "\"888f8e786e7c2036ca67976e2bfe6910\"",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "content-length": "1619",
+    "content-type": "application/javascript",
+    "x-amz-request-id": "14F07E5B3F471266",
+    "accept-ranges": "bytes",
+    "x-amz-id-2": "Bx2IJNWEOinW8yiCa/roYU/am/WvdH4+sJOu7fDsddlouc5ybFyh5tk7nN/XHatpsz9OW8LQtn4=",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/BlobPropertyBag.dew.js"
+}

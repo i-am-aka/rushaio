@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "etag": "\"ce9ddaae910ed91c9457d834b3a5c0db\"",
+    "accept-ranges": "bytes",
+    "content-length": "2226",
+    "server": "AmazonS3",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "x-amz-id-2": "sNIoszxXzPAin1O0f73YVARDWMoyHleeqmzcSOClUoUtRHLxnOgi2gLDgiZdet1e7a0Snf24H9Y=",
+    "content-type": "application/javascript",
+    "x-amz-request-id": "784B1EAB71098AE8"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/HTMLProgressElement-impl.dew.js"
+}

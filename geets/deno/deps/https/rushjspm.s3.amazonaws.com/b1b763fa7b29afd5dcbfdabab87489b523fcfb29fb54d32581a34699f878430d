@@ -1,0 +1,62 @@
+import { dew as _refDewDew } from "./ref.dew.js";
+import { dew as _allOfDewDew } from "./allOf.dew.js";
+import { dew as _anyOfDewDew } from "./anyOf.dew.js";
+import { dew as _commentDewDew } from "./comment.dew.js";
+import { dew as _constDewDew } from "./const.dew.js";
+import { dew as _containsDewDew } from "./contains.dew.js";
+import { dew as _dependenciesDewDew } from "./dependencies.dew.js";
+import { dew as _enumDewDew } from "./enum.dew.js";
+import { dew as _formatDewDew } from "./format.dew.js";
+import { dew as _ifDewDew } from "./if.dew.js";
+import { dew as _itemsDewDew } from "./items.dew.js";
+import { dew as _limitDewDew } from "./_limit.dew.js";
+import { dew as _limitItemsDewDew } from "./_limitItems.dew.js";
+import { dew as _limitLengthDewDew } from "./_limitLength.dew.js";
+import { dew as _limitPropertiesDewDew } from "./_limitProperties.dew.js";
+import { dew as _multipleOfDewDew } from "./multipleOf.dew.js";
+import { dew as _notDewDew } from "./not.dew.js";
+import { dew as _oneOfDewDew } from "./oneOf.dew.js";
+import { dew as _patternDewDew } from "./pattern.dew.js";
+import { dew as _propertiesDewDew } from "./properties.dew.js";
+import { dew as _propertyNamesDewDew } from "./propertyNames.dew.js";
+import { dew as _requiredDewDew } from "./required.dew.js";
+import { dew as _uniqueItemsDewDew } from "./uniqueItems.dew.js";
+import { dew as _validateDewDew } from "./validate.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  //all requires must be explicit because browserify won't work with dynamic requires
+  exports = {
+    '$ref': _refDewDew(),
+    allOf: _allOfDewDew(),
+    anyOf: _anyOfDewDew(),
+    '$comment': _commentDewDew(),
+    const: _constDewDew(),
+    contains: _containsDewDew(),
+    dependencies: _dependenciesDewDew(),
+    'enum': _enumDewDew(),
+    format: _formatDewDew(),
+    'if': _ifDewDew(),
+    items: _itemsDewDew(),
+    maximum: _limitDewDew(),
+    minimum: _limitDewDew(),
+    maxItems: _limitItemsDewDew(),
+    minItems: _limitItemsDewDew(),
+    maxLength: _limitLengthDewDew(),
+    minLength: _limitLengthDewDew(),
+    maxProperties: _limitPropertiesDewDew(),
+    minProperties: _limitPropertiesDewDew(),
+    multipleOf: _multipleOfDewDew(),
+    not: _notDewDew(),
+    oneOf: _oneOfDewDew(),
+    pattern: _patternDewDew(),
+    properties: _propertiesDewDew(),
+    propertyNames: _propertyNamesDewDew(),
+    required: _requiredDewDew(),
+    uniqueItems: _uniqueItemsDewDew(),
+    validate: _validateDewDew()
+  };
+  return exports;
+}

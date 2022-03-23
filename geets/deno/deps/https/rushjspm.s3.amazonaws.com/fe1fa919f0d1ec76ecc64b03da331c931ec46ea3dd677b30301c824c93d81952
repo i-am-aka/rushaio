@@ -1,0 +1,6 @@
+export { dew } from "/npm:data-urls@2.0.0/lib/parser.dew.js";
+import "/npm:whatwg-mimetype@2_dew.js";
+import "/npm:whatwg-url@8_dew.js";
+import "/npm:data-urls@2.0.0/lib/utils.dew.js";
+import "/npm:abab@2_dew.js";
+import "/npm:@jspm/core@1/nodelibs/buffer.js";

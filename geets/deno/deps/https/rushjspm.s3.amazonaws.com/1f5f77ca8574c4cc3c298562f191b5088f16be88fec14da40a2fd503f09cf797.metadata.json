@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "content-type": "application/javascript",
+    "content-length": "5045",
+    "x-amz-request-id": "3N9S0W6K7T4M6V7Y",
+    "x-amz-id-2": "05vMA08LJsaJUQCJ6k1lRLA2SlR4l09ed8Ojp9C3/7HCb8LZVvKeiFWJCSO4fq3MNQv/y1zk0OE=",
+    "server": "AmazonS3",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "etag": "\"76bd21502a967741609072d9f753c9a8\"",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "accept-ranges": "bytes"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/AbortSignal.dew.js"
+}

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "etag": "\"3c88a3bd680c3435b70d04479331b2b7\"",
+    "x-amz-request-id": "781FB6BD9441BD12",
+    "content-length": "4252",
+    "server": "AmazonS3",
+    "x-amz-id-2": "3oVM8YrxqcqMgWhm/fnqIocjJ0IAcRlH8nFethpPRDZb7DJiG7lZh1fX3y7AP+4sNMTBVi8PZL0=",
+    "accept-ranges": "bytes",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "connection": "keep-alive",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "content-type": "application/javascript"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/CharacterData-impl.dew.js"
+}

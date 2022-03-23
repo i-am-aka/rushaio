@@ -1,0 +1,198 @@
+import { dew as _utilsDewDew } from "../../utils.dew.js";
+import { dew as _NavigatorIDImplDewDew } from "./NavigatorID-impl.dew.js";
+import { dew as _NavigatorLanguageImplDewDew } from "./NavigatorLanguage-impl.dew.js";
+import { dew as _NavigatorOnLineImplDewDew } from "./NavigatorOnLine-impl.dew.js";
+import { dew as _NavigatorCookiesImplDewDew } from "./NavigatorCookies-impl.dew.js";
+import { dew as _NavigatorPluginsImplDewDew } from "./NavigatorPlugins-impl.dew.js";
+import { dew as _NavigatorConcurrentHardwareImplDewDew } from "./NavigatorConcurrentHardware-impl.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const {
+    mixin
+  } = _utilsDewDew();
+
+  const NavigatorIDImpl = _NavigatorIDImplDewDew().implementation;
+
+  const NavigatorLanguageImpl = _NavigatorLanguageImplDewDew().implementation;
+
+  const NavigatorOnLineImpl = _NavigatorOnLineImplDewDew().implementation;
+
+  const NavigatorCookiesImpl = _NavigatorCookiesImplDewDew().implementation;
+
+  const NavigatorPluginsImpl = _NavigatorPluginsImplDewDew().implementation;
+
+  const NavigatorConcurrentHardwareImpl = _NavigatorConcurrentHardwareImplDewDew().implementation;
+  /*
+
+
+  window.navigator = navFp;
+  // for (var x in navFp)  {
+  */
+  class NavigatorImpl {
+    constructor(globalObject, args, privateData) {
+      this._globalObject = globalObject;
+      this.userAgent = privateData.userAgent;
+      this.languages = Object.freeze(["en-US", "en"]);
+      var navFp = {
+        "vendorSub": "",
+        "productSub": "20030107",
+        "vendor": "Google Inc.",
+        "maxTouchPoints": 0,
+        "doNotTrack": true,
+        "hardwareConcurrency": [4,6,8,12,16][Math.floor(Math.random() * 5)],
+        "cookieEnabled": true,
+        "appCodeName": "Mozilla",
+        "appName": "Netscape",
+        "appVersion": "5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36",// userAgent.replace('Mozilla/', ''), // todo this is mayb crhome only
+        "platform": "MacIntel",
+        "product": "Gecko",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36",
+        "language": "en-US",
+        "languages": [
+          "en-US",
+          "en"
+        ],
+        "onLine": true,
+        "connection": {
+          "effectiveType": "4g",
+          "rtt": 90,
+          "downlink": (1 + Math.random(10)).toFixed(1),
+          "saveData": false
+        },
+        "plugins": {
+          "0": {
+            "0": {
+              "type": "application/x-google-chrome-pdf",
+              "suffixes": "pdf",
+              "description": "Portable Document Format"
+            },
+            "name": "Chrome PDF Plugin",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format",
+            "length": 1
+          },
+          "1": {
+            "0": {
+              "type": "application/pdf",
+              "suffixes": "pdf",
+              "description": ""
+            },
+            "name": "Chrome PDF Viewer",
+            "filename": "mhjfbmdgcfjbbpaeojofohoefgiehjai",
+            "description": "",
+            "length": 1
+          },
+          "2": {
+            "0": {
+              "type": "application/x-nacl",
+              "suffixes": "",
+              "description": "Native Client Executable"
+            },
+            "1": {
+              "type": "application/x-pnacl",
+              "suffixes": "",
+              "description": "Portable Native Client Executable"
+            },
+            "name": "Native Client",
+            "filename": "internal-nacl-plugin",
+            "description": "",
+            "length": 2
+          },
+          "length": 3,
+          "toString": function() { return "[object PluginArray]"; },
+        },
+        "mimeTypes": {
+          "0": {
+            "type": "application/pdf",
+            "suffixes": "pdf",
+            "description": ""
+          },
+          "1": {
+            "type": "application/x-google-chrome-pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          },
+          "2": {
+            "type": "application/x-nacl",
+            "suffixes": "",
+            "description": "Native Client Executable"
+          },
+          "3": {
+            "type": "application/x-pnacl",
+            "suffixes": "",
+            "description": "Portable Native Client Executable"
+          },
+          "toString": function() { return "[object MimeTypeArray]" },
+          "length": 4
+        },
+        "userActivation": {
+          "hasBeenActive": true,
+          "isActive": true
+        },
+        "mediaSession": {
+          "playbackState": "none"
+        },
+        "deviceMemory": 8,
+        "geolocation": "[object Geolocation]",
+        "getBattery": function() {
+
+        },
+      };
+      var stringFields = {
+        clipboard: "[object Clipboard]",
+        credentials: "[object CredentialsContainer]",
+        keyboard: "[object Keyboard]",
+        locks: "[object LockManager]",
+        mediaDevices: "[object MediaDevices]",
+        serviceWorker: "[object ServiceWorkerContainer]",
+        storage: "[object StorageManager]",
+        presentation: "[object Presentation]",
+        bluetooth: "[object Bluetooth]",
+        usb: "[object USB]",
+        xr: "[object XRSystem]",
+        "setAppBadge": "function () { [native code] }",
+        "clearAppBadge": "function () { [native code] }",
+        "getInstalledRelatedApps":"function () { [native code] }",
+        "getUserMedia": "function () { [native code] }",
+        "webkitGetUserMedia": "function () { [native code] }",
+        "requestMIDIAccess": "function () { [native code] }",
+        wakeLock: "[object WakeLock]"
+      };
+      for (var field in stringFields) {
+        navFp[field] = {};
+        navFp[field].toString = function(f) { return stringFields[f] }.bind(null, field);
+      }
+      // var origHasOP = navFp.hasOwnProperty;
+      navFp.hasOwnProperty = function() {
+        return false;
+      }
+      // navFp.toString = function() {
+      //   return "[object Object]function Object() { [native code] }loadTimesfunction () { [native code] }csifunction () { [native code] }app[object Object]runtime[object Object]";
+      // }
+      navFp.getBattery.toString = function() {
+        return "{ [native code] }";
+      }
+
+      Object.assign(this, navFp);
+      for(var field in navFp) {
+        // console.log(field)
+        Object.defineProperty(this, field, {enumerable: true, configurable: true, writable: true, value: navFp[field] });
+        // this[field] = navFp[field];
+      }
+    }
+
+  }
+
+  mixin(NavigatorImpl.prototype, NavigatorIDImpl.prototype);
+  mixin(NavigatorImpl.prototype, NavigatorLanguageImpl.prototype);
+  mixin(NavigatorImpl.prototype, NavigatorOnLineImpl.prototype);
+  mixin(NavigatorImpl.prototype, NavigatorCookiesImpl.prototype);
+  mixin(NavigatorImpl.prototype, NavigatorPluginsImpl.prototype);
+  mixin(NavigatorImpl.prototype, NavigatorConcurrentHardwareImpl.prototype);
+  exports.implementation = NavigatorImpl;
+  return exports;
+}

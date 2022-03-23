@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "server": "AmazonS3",
+    "content-length": "7690",
+    "content-type": "application/javascript",
+    "x-amz-request-id": "932C38758DE5C161",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "accept-ranges": "bytes",
+    "etag": "\"a02b944a17b0f504d0095016b9dd2ddf\"",
+    "x-amz-id-2": "ceI3VbHnxhKI5EEZs/9OthXm3Mqv5lxL9UFHPlOsB4+HkOX27blKuv5/dKDyaEGFvJUa3/r5ahY="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/HTMLTextAreaElement-impl.dew.js"
+}

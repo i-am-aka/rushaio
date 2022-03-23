@@ -1,0 +1,3 @@
+export { dew } from "/npm:@jimp/plugin-rotate@0.16.1/dist/index.dew.js";
+import "/npm:@jimp/utils@0.16?dew";
+import "/npm:@jspm/core@1/nodelibs/buffer.js";

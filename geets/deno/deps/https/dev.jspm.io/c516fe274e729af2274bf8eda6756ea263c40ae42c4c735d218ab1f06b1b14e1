@@ -1,0 +1,25 @@
+import { dew as _arrayWithoutHolesDewDew } from "./arrayWithoutHoles.dew.js";
+import { dew as _iterableToArrayDewDew } from "./iterableToArray.dew.js";
+import { dew as _unsupportedIterableToArrayDewDew } from "./unsupportedIterableToArray.dew.js";
+import { dew as _nonIterableSpreadDewDew } from "./nonIterableSpread.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  var arrayWithoutHoles = _arrayWithoutHolesDewDew();
+
+  var iterableToArray = _iterableToArrayDewDew();
+
+  var unsupportedIterableToArray = _unsupportedIterableToArrayDewDew();
+
+  var nonIterableSpread = _nonIterableSpreadDewDew();
+
+  function _toConsumableArray(arr) {
+    return arrayWithoutHoles(arr) || iterableToArray(arr) || unsupportedIterableToArray(arr) || nonIterableSpread();
+  }
+
+  exports = _toConsumableArray;
+  return exports;
+}

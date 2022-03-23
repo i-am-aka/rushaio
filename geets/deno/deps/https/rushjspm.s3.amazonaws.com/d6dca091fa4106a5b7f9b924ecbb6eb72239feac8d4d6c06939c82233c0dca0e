@@ -1,0 +1,26 @@
+import { dew as _generatedParserDewDew } from "./generated-parser.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const parser = _generatedParserDewDew();
+
+  exports.name = function (potentialName) {
+    return mapResult(parser.startWith("Name").exec(potentialName));
+  };
+
+  exports.qname = function (potentialQname) {
+    return mapResult(parser.startWith("QName").exec(potentialQname));
+  };
+
+  function mapResult(result) {
+    return {
+      success: result.success,
+      error: result.error && parser.getTrace(result.error.message)
+    };
+  }
+
+  return exports;
+}

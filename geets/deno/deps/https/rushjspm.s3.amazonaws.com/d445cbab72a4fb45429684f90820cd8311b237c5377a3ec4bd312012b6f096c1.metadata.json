@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-id-2": "7CBCvFqFXj/Bt2ucAL4lbDaWo3ZjXQcEb5LnkaRpLQNny5+Op179I/iXcGBEplU8nAWtwUNLDyY=",
+    "accept-ranges": "bytes",
+    "content-type": "application/javascript",
+    "x-amz-request-id": "1N1SDX6KCYEWFYBW",
+    "last-modified": "Mon, 07 Dec 2020 15:03:47 GMT",
+    "etag": "\"d7a8389ea80e90a3919544f464003481\"",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "content-length": "1709",
+    "server": "AmazonS3",
+    "connection": "keep-alive"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:symbol-tree@3.2.4/lib/TreeIterator.dew.js"
+}

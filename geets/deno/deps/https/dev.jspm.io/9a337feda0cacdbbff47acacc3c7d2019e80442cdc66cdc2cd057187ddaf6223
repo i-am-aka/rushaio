@@ -1,0 +1,32 @@
+import { dew as _setPrototypeOfDewDew } from "./setPrototypeOf.dew.js";
+import { dew as _isNativeReflectConstructDewDew } from "./isNativeReflectConstruct.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  var setPrototypeOf = _setPrototypeOfDewDew();
+
+  var isNativeReflectConstruct = _isNativeReflectConstructDewDew();
+
+  function _construct(Parent, args, Class) {
+    if (isNativeReflectConstruct()) {
+      exports = _construct = Reflect.construct;
+    } else {
+      exports = _construct = function _construct(Parent, args, Class) {
+        var a = [null];
+        a.push.apply(a, args);
+        var Constructor = Function.bind.apply(Parent, a);
+        var instance = new Constructor();
+        if (Class) setPrototypeOf(instance, Class.prototype);
+        return instance;
+      };
+    }
+
+    return _construct.apply(null, arguments);
+  }
+
+  exports = _construct;
+  return exports;
+}

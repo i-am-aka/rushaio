@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "connection": "keep-alive",
+    "x-amz-request-id": "0AAE2761D881DCAE",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "accept-ranges": "bytes",
+    "x-amz-id-2": "ycYX1lE/Bhx3oySwZhiHTfxQR79uiCzbJgB34NvbYPlbY+xFWGnUv9MqzEOx6B/05H30WTXxCFw=",
+    "etag": "\"33f95cf74466165f52087fb3d800533e\"",
+    "content-length": "2529",
+    "last-modified": "Mon, 07 Dec 2020 15:03:46 GMT",
+    "server": "AmazonS3",
+    "content-type": "application/javascript"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:request@2.88.2/lib/getProxyFromURI.dew.js"
+}

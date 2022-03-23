@@ -1,0 +1,45 @@
+import { dew as _afterRequestJsonDewDew } from "./afterRequest.json.dew.js";
+import { dew as _beforeRequestJsonDewDew } from "./beforeRequest.json.dew.js";
+import { dew as _browserJsonDewDew } from "./browser.json.dew.js";
+import { dew as _cacheJsonDewDew } from "./cache.json.dew.js";
+import { dew as _contentJsonDewDew } from "./content.json.dew.js";
+import { dew as _cookieJsonDewDew } from "./cookie.json.dew.js";
+import { dew as _creatorJsonDewDew } from "./creator.json.dew.js";
+import { dew as _entryJsonDewDew } from "./entry.json.dew.js";
+import { dew as _harJsonDewDew } from "./har.json.dew.js";
+import { dew as _headerJsonDewDew } from "./header.json.dew.js";
+import { dew as _logJsonDewDew } from "./log.json.dew.js";
+import { dew as _pageJsonDewDew } from "./page.json.dew.js";
+import { dew as _pageTimingsJsonDewDew } from "./pageTimings.json.dew.js";
+import { dew as _postDataJsonDewDew } from "./postData.json.dew.js";
+import { dew as _queryJsonDewDew } from "./query.json.dew.js";
+import { dew as _requestJsonDewDew } from "./request.json.dew.js";
+import { dew as _responseJsonDewDew } from "./response.json.dew.js";
+import { dew as _timingsJsonDewDew } from "./timings.json.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  exports = {
+    afterRequest: _afterRequestJsonDewDew(),
+    beforeRequest: _beforeRequestJsonDewDew(),
+    browser: _browserJsonDewDew(),
+    cache: _cacheJsonDewDew(),
+    content: _contentJsonDewDew(),
+    cookie: _cookieJsonDewDew(),
+    creator: _creatorJsonDewDew(),
+    entry: _entryJsonDewDew(),
+    har: _harJsonDewDew(),
+    header: _headerJsonDewDew(),
+    log: _logJsonDewDew(),
+    page: _pageJsonDewDew(),
+    pageTimings: _pageTimingsJsonDewDew(),
+    postData: _postDataJsonDewDew(),
+    query: _queryJsonDewDew(),
+    request: _requestJsonDewDew(),
+    response: _responseJsonDewDew(),
+    timings: _timingsJsonDewDew()
+  };
+  return exports;
+}

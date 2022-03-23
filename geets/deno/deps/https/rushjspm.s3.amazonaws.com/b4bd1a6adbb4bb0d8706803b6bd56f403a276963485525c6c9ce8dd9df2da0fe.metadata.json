@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "x-amz-id-2": "jCnuRAiLpCwxK6vtBkR3jLn5GaccVwpu9lXYIa6oPPAIBDBbLnnGC0142gvL+p9Y6C/AbLM1BXM=",
+    "server": "AmazonS3",
+    "x-amz-request-id": "8C241C2E7B5ABC4B",
+    "accept-ranges": "bytes",
+    "last-modified": "Mon, 07 Dec 2020 15:03:47 GMT",
+    "content-type": "application/javascript",
+    "connection": "keep-alive",
+    "etag": "\"9d8962a4a5113b5c62a280e6951531e9\"",
+    "content-length": "8007"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:tunnel-agent@0.6.0/index.dew.js"
+}

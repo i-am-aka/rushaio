@@ -1,0 +1,48 @@
+import { dew as _utilsDewDew } from "../../utils.dew.js";
+import { dew as _EventModifierMixinImplDewDew } from "./EventModifierMixin-impl.dew.js";
+import { dew as _UIEventImplDewDew } from "./UIEvent-impl.dew.js";
+import { dew as _MouseEventInitDewDew } from "../generated/MouseEventInit.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const {
+    mixin
+  } = _utilsDewDew();
+
+  const EventModifierMixinImpl = _EventModifierMixinImplDewDew().implementation;
+
+  const UIEventImpl = _UIEventImplDewDew().implementation;
+
+  const MouseEventInit = _MouseEventInitDewDew();
+
+  class MouseEventImpl extends UIEventImpl {
+    initMouseEvent(type, bubbles, cancelable, view, detail, screenX, screenY, clientX, clientY, ctrlKey, altKey, shiftKey, metaKey, button, relatedTarget) {
+      if (this._dispatchFlag) {
+        return;
+      }
+
+      this.initUIEvent(type, bubbles, cancelable, view, detail);
+      this.screenX = screenX;
+      this.screenY = screenY;
+      this.clientX = clientX;
+      this.clientY = clientY;
+      this.ctrlKey = ctrlKey;
+      this.altKey = altKey;
+      this.shiftKey = shiftKey;
+      this.metaKey = metaKey;
+      this.button = button;
+      this.relatedTarget = relatedTarget;
+    }
+
+  }
+
+  mixin(MouseEventImpl.prototype, EventModifierMixinImpl.prototype);
+  MouseEventImpl.defaultInit = MouseEventInit.convert(undefined);
+  exports = {
+    implementation: MouseEventImpl
+  };
+  return exports;
+}

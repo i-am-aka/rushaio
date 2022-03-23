@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "accept-ranges": "bytes",
+    "connection": "keep-alive",
+    "content-length": "1574",
+    "content-type": "application/javascript",
+    "x-amz-request-id": "018F9BC2635BE962",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "server": "AmazonS3",
+    "etag": "\"b02173521f6fb57d50dbb00e5e1e944e\"",
+    "last-modified": "Mon, 07 Dec 2020 15:03:39 GMT",
+    "x-amz-id-2": "7vi7m7OeoHNhNwMoFThPJS/7IGpx7+G87TupUld6F4mCvLHw7SLTneCWa+LBCAJfpWO9D8Q5XOc="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:cssom@0.4.4/lib/CSSKeyframeRule.dew.js"
+}

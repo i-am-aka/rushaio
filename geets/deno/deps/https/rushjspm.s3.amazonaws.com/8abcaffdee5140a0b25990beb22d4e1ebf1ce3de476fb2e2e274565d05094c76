@@ -1,0 +1,387 @@
+import { dew as _npmWebidlConversions6DewDew } from "/npm:webidl-conversions@6_dew.js";
+import { dew as _utilsDewDew } from "./utils.dew.js";
+import { dew as _NavigatorImplDewDew } from "../navigator/Navigator-impl.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const conversions = _npmWebidlConversions6DewDew();
+
+  const utils = _utilsDewDew();
+
+  const implSymbol = utils.implSymbol;
+  const ctorRegistrySymbol = utils.ctorRegistrySymbol;
+  const interfaceName = "Navigator";
+
+  exports.is = value => {
+    return utils.isObject(value) && utils.hasOwn(value, implSymbol) && value[implSymbol] instanceof Impl.implementation;
+  };
+
+  exports.isImpl = value => {
+    return utils.isObject(value) && value instanceof Impl.implementation;
+  };
+
+  exports.convert = (value, {
+    context = "The provided value"
+  } = {}) => {
+    if (exports.is(value)) {
+      return utils.implForWrapper(value);
+    }
+
+    throw new TypeError(`${context} is not of type 'Navigator'.`);
+  };
+
+  function makeWrapper(globalObject) {
+    if (globalObject[ctorRegistrySymbol] === undefined) {
+      throw new Error("Internal error: invalid global object");
+    }
+
+    const ctor = globalObject[ctorRegistrySymbol]["Navigator"];
+
+    if (ctor === undefined) {
+      throw new Error("Internal error: constructor Navigator is not installed on the passed global object");
+    }
+
+    return Object.create(ctor.prototype);
+  }
+
+  exports.create = (globalObject, constructorArgs, privateData) => {
+    const wrapper = makeWrapper(globalObject);
+    return exports.setup(wrapper, globalObject, constructorArgs, privateData);
+  };
+
+  exports.createImpl = (globalObject, constructorArgs, privateData) => {
+    const wrapper = exports.create(globalObject, constructorArgs, privateData);
+    return utils.implForWrapper(wrapper);
+  };
+
+  exports._internalSetup = (wrapper, globalObject) => {};
+
+  exports.setup = (wrapper, globalObject, constructorArgs = [], privateData = {}) => {
+    privateData.wrapper = wrapper;
+
+    exports._internalSetup(wrapper, globalObject);
+
+    Object.defineProperty(wrapper, implSymbol, {
+      value: new Impl.implementation(globalObject, constructorArgs, privateData),
+      configurable: true
+    });
+    wrapper[implSymbol][utils.wrapperSymbol] = wrapper;
+
+    if (Impl.init) {
+      Impl.init(wrapper[implSymbol]);
+    }
+
+    return wrapper;
+  };
+
+  exports.new = globalObject => {
+    const wrapper = makeWrapper(globalObject);
+
+    exports._internalSetup(wrapper, globalObject);
+
+    Object.defineProperty(wrapper, implSymbol, {
+      value: Object.create(Impl.implementation.prototype),
+      configurable: true
+    });
+    wrapper[implSymbol][utils.wrapperSymbol] = wrapper;
+
+    if (Impl.init) {
+      Impl.init(wrapper[implSymbol]);
+    }
+
+    return wrapper[implSymbol];
+  };
+
+  const exposed = new Set(["Window"]);
+
+  exports.install = (globalObject, globalNames) => {
+    if (!globalNames.some(globalName => exposed.has(globalName))) {
+      return;
+    }
+
+    // var Navigator = new Proxy({}, {
+    //   get: function() {
+    //     return function() {
+    //       console.log('navigator.get())
+    //       return esValue[implSymbol][arguments[0]];
+    //     }
+    //     //Reflect.get(...arguments);
+    //   },
+    // })
+    class Navigator {
+      constructor() {
+        throw new TypeError("Illegal constructor");
+      }
+
+      javaEnabled() {
+        const esValue = this !== null && this !== undefined ? this : globalObject;
+
+        if (!exports.is(esValue)) {
+          throw new TypeError("Illegal invocation");
+        }
+
+        return esValue[implSymbol].javaEnabled();
+      }
+
+      get appCodeName() {
+        const esValue = this !== null && this !== undefined ? this : globalObject;
+
+        if (!exports.is(esValue)) {
+          throw new TypeError("Illegal invocation");
+        }
+
+        return esValue[implSymbol]["appCodeName"];
+      }
+
+      get appName() {
+        const esValue = this !== null && this !== undefined ? this : globalObject;
+
+        if (!exports.is(esValue)) {
+          throw new TypeError("Illegal invocation");
+        }
+
+        return esValue[implSymbol]["appName"];
+      }
+
+      get appVersion() {
+        const esValue = this !== null && this !== undefined ? this : globalObject;
+
+        if (!exports.is(esValue)) {
+          throw new TypeError("Illegal invocation");
+        }
+
+        return esValue[implSymbol]["appVersion"];
+      }
+
+      get platform() {
+        const esValue = this !== null && this !== undefined ? this : globalObject;
+
+        if (!exports.is(esValue)) {
+          throw new TypeError("Illegal invocation");
+        }
+
+        return esValue[implSymbol]["platform"];
+      }
+
+      get product() {
+        const esValue = this !== null && this !== undefined ? this : globalObject;
+
+        if (!exports.is(esValue)) {
+          throw new TypeError("Illegal invocation");
+        }
+
+        return esValue[implSymbol]["product"];
+      }
+
+      get productSub() {
+        const esValue = this !== null && this !== undefined ? this : globalObject;
+
+        if (!exports.is(esValue)) {
+          throw new TypeError("Illegal invocation");
+        }
+
+        return esValue[implSymbol]["productSub"];
+      }
+
+      get userAgent() {
+        const esValue = this !== null && this !== undefined ? this : globalObject;
+
+        if (!exports.is(esValue)) {
+          throw new TypeError("Illegal invocation");
+        }
+
+        return esValue[implSymbol]["userAgent"];
+      }
+
+      get vendor() {
+        const esValue = this !== null && this !== undefined ? this : globalObject;
+
+        if (!exports.is(esValue)) {
+          throw new TypeError("Illegal invocation");
+        }
+
+        return esValue[implSymbol]["vendor"];
+      }
+
+      get vendorSub() {
+        const esValue = this !== null && this !== undefined ? this : globalObject;
+
+        if (!exports.is(esValue)) {
+          throw new TypeError("Illegal invocation");
+        }
+
+        return esValue[implSymbol]["vendorSub"];
+      }
+
+      get language() {
+        const esValue = this !== null && this !== undefined ? this : globalObject;
+
+        if (!exports.is(esValue)) {
+          throw new TypeError("Illegal invocation");
+        }
+
+        return esValue[implSymbol]["language"];
+      }
+
+      get languages() {
+        const esValue = this !== null && this !== undefined ? this : globalObject;
+
+        if (!exports.is(esValue)) {
+          throw new TypeError("Illegal invocation");
+        }
+
+        return utils.tryWrapperForImpl(esValue[implSymbol]["languages"]);
+      }
+
+      get onLine() {
+        const esValue = this !== null && this !== undefined ? this : globalObject;
+
+        if (!exports.is(esValue)) {
+          throw new TypeError("Illegal invocation");
+        }
+
+        return esValue[implSymbol]["onLine"];
+      }
+
+      get cookieEnabled() {
+        const esValue = this !== null && this !== undefined ? this : globalObject;
+
+        if (!exports.is(esValue)) {
+          throw new TypeError("Illegal invocation");
+        }
+
+        return esValue[implSymbol]["cookieEnabled"];
+      }
+
+      get plugins() {
+        const esValue = this !== null && this !== undefined ? this : globalObject;
+
+        if (!exports.is(esValue)) {
+          throw new TypeError("Illegal invocation");
+        }
+
+        return utils.getSameObject(this, "plugins", () => {
+          return utils.tryWrapperForImpl(esValue[implSymbol]["plugins"]);
+        });
+      }
+
+      get mimeTypes() {
+        const esValue = this !== null && this !== undefined ? this : globalObject;
+
+        if (!exports.is(esValue)) {
+          throw new TypeError("Illegal invocation");
+        }
+
+        return utils.getSameObject(this, "mimeTypes", () => {
+          return utils.tryWrapperForImpl(esValue[implSymbol]["mimeTypes"]);
+        });
+      }
+
+      get hardwareConcurrency() {
+        const esValue = this !== null && this !== undefined ? this : globalObject;
+
+        if (!exports.is(esValue)) {
+          throw new TypeError("Illegal invocation");
+        }
+
+        return esValue[implSymbol]["hardwareConcurrency"];
+      }
+
+    }
+
+    Object.defineProperties(Navigator.prototype, {
+      javaEnabled: {
+        enumerable: true,
+        writable: true, configurable: true,
+      },
+      appCodeName: {
+        enumerable: true,
+        writable: true, configurable: true,
+      },
+      appName: {
+        enumerable: true,
+        writable: true, configurable: true,
+      },
+      appVersion: {
+        enumerable: true,
+        writable: true, configurable: true,
+      },
+      platform: {
+        enumerable: true,
+        writable: true, configurable: true,
+      },
+      product: {
+        enumerable: true,
+        writable: true, configurable: true,
+      },
+      productSub: {
+        enumerable: true,
+        writable: true, configurable: true,
+      },
+      userAgent: {
+        enumerable: true,
+        writable: true, configurable: true,
+      },
+      vendor: {
+        enumerable: true,
+        writable: true, configurable: true,
+      },
+      vendorSub: {
+        enumerable: true,
+        writable: true, configurable: true,
+      },
+      language: {
+        enumerable: true,
+        writable: true, configurable: true,
+      },
+      languages: {
+        enumerable: true,
+        writable: true, configurable: true,
+      },
+      onLine: {
+        enumerable: true,
+        writable: true, configurable: true,
+      },
+      cookieEnabled: {
+        enumerable: true,
+        writable: true, configurable: true,
+      },
+      plugins: {
+        enumerable: true,
+        writable: true, configurable: true,
+      },
+      mimeTypes: {
+        enumerable: true,
+        writable: true, configurable: true,
+      },
+      hardwareConcurrency: {
+        enumerable: true,
+        writable: true, configurable: true,
+      },
+      [Symbol.toStringTag]: {
+        value: "Navigator",
+        configurable: true
+      }
+    });
+
+    if (globalObject[ctorRegistrySymbol] === undefined) {
+      globalObject[ctorRegistrySymbol] = Object.create(null);
+    }
+
+    globalObject[ctorRegistrySymbol][interfaceName] = Navigator;
+    Object.defineProperty(globalObject, interfaceName, {
+      configurable: true,
+     enumerable: true,
+       enumerable: true,
+        writable: true, configurable: true,
+      value: Navigator
+    });
+  };
+
+  const Impl = _NavigatorImplDewDew();
+
+  return exports;
+}

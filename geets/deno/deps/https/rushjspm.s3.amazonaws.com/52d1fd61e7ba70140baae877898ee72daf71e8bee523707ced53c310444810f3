@@ -1,0 +1,36 @@
+import { dew as _indexDewDew } from "./parser/index.dew.js";
+import { dew as _indexDew2Dew } from "./serializer/index.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const Parser = _indexDewDew();
+
+  const Serializer = _indexDew2Dew(); // Shorthands
+
+
+  exports.parse = function parse(html, options) {
+    const parser = new Parser(options);
+    return parser.parse(html);
+  };
+
+  exports.parseFragment = function parseFragment(fragmentContext, html, options) {
+    if (typeof fragmentContext === 'string') {
+      options = html;
+      html = fragmentContext;
+      fragmentContext = null;
+    }
+
+    const parser = new Parser(options);
+    return parser.parseFragment(html, fragmentContext);
+  };
+
+  exports.serialize = function (node, options) {
+    const serializer = new Serializer(node, options);
+    return serializer.serialize();
+  };
+
+  return exports;
+}

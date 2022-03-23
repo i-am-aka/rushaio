@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "content-length": "557",
+    "accept-ranges": "bytes",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "connection": "keep-alive",
+    "x-amz-id-2": "v9BCGKU77BZKzCeb1KqzjzKHvzqWyKE7dLdJm2iVbHKCkBncZormP3KTgSTl762OPMGdSLZELAk=",
+    "x-amz-request-id": "42F77590F670D7FD",
+    "server": "AmazonS3",
+    "content-type": "application/javascript",
+    "etag": "\"f20c6cc9dcd5f02ef438597bd4d63acb\""
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/navigator/MimeTypeArray-impl.dew.js"
+}

@@ -1,0 +1,27 @@
+import { dew as _utilsDewDew } from "../../utils.dew.js";
+import { dew as _SVGListBaseDewDew } from "./SVGListBase.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const {
+    mixin
+  } = _utilsDewDew();
+
+  const SVGListBase = _SVGListBaseDewDew();
+
+  class SVGStringListImpl {
+    constructor(globalObject, args, privateData) {
+      this._globalObject = globalObject;
+
+      this._initList(privateData);
+    }
+
+  }
+
+  mixin(SVGStringListImpl.prototype, SVGListBase.prototype);
+  exports.implementation = SVGStringListImpl;
+  return exports;
+}

@@ -1,0 +1,4 @@
+export * from './src/local.ts';
+export * from './src/remote.ts';
+export * from './src/auto.ts';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIjxodHRwczovL2Rlbm8ubGFuZC94L2ZldGNoYmFzZTY0QDEuMC4wL21vZC50cz4iXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0ICogZnJvbSAnLi9zcmMvbG9jYWwudHMnXG5leHBvcnQgKiBmcm9tICcuL3NyYy9yZW1vdGUudHMnXG5leHBvcnQgKiBmcm9tICcuL3NyYy9hdXRvLnRzJyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiZUFBQSxjQUFBO2VBQ0EsZUFBQTtlQUNBLGFBQUEifQ==

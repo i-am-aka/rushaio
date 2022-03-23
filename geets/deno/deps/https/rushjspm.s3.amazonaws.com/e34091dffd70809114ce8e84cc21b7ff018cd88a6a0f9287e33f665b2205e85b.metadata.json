@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "accept-ranges": "bytes",
+    "etag": "\"5fe5382578c1d3fc5f547a85d83b29f9\"",
+    "last-modified": "Mon, 07 Dec 2020 15:03:47 GMT",
+    "content-length": "241",
+    "content-type": "application/javascript",
+    "server": "AmazonS3",
+    "x-amz-id-2": "vuWf/rtNrSgpSFuwHKXCO/A0QnTk04BOncsh7jmk7lpHHtM8SIDg40qegMsxr+QRe3fxlPof5Gs=",
+    "x-amz-request-id": "F58062A47586B1F7",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:symbol-tree@3_dew.js"
+}

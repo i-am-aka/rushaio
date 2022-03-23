@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "etag": "\"cf77d4289b9f98b4277b503ede1fcbf3\"",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "x-amz-request-id": "3SDP9W0XFMAR6S7P",
+    "accept-ranges": "bytes",
+    "server": "AmazonS3",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "x-amz-id-2": "OliWv75jBdsU6FJfI9ZUp2ryfaEafB0+7iBBblQMvkRiuTKbknweByJpYIZODUa5ALBeEr4NpOs=",
+    "content-type": "application/javascript",
+    "content-length": "2947",
+    "connection": "keep-alive"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/file-api/Blob-impl.dew.js"
+}

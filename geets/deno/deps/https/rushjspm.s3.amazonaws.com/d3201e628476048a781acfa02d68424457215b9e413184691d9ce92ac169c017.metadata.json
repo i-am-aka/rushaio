@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "accept-ranges": "bytes",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "server": "AmazonS3",
+    "x-amz-request-id": "EE2FE9EA3B531E76",
+    "etag": "\"0081cfc1c2dcc57bfc6ba100c9d2edde\"",
+    "x-amz-id-2": "8JjnXRgYyKu8Vwf+AJ4rwKH6peV0kbkv1Jot9agFK6xqt1mRXeAmlDru1d0Nw2KV+CdQ7d27VB4=",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "content-length": "10492",
+    "content-type": "application/javascript"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/DocumentFragment.dew.js"
+}

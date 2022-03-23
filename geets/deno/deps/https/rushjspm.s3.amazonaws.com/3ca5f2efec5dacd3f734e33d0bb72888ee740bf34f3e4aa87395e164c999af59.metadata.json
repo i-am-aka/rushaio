@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "server": "AmazonS3",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "etag": "\"995e1017aceb43c02ddba6df16d29df7\"",
+    "accept-ranges": "bytes",
+    "x-amz-request-id": "3T3JEP1QEXBQ4S1G",
+    "connection": "keep-alive",
+    "x-amz-id-2": "9T3mbc0gU4DcJSHe8e3TzfXJ2zb4Qynd7aCB15uQ5yQBdfrP91RoQ73sW1f0MY5/QyX7j2RjAS4=",
+    "content-type": "application/javascript",
+    "content-length": "1843",
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/SVGSVGElement-impl.dew.js"
+}

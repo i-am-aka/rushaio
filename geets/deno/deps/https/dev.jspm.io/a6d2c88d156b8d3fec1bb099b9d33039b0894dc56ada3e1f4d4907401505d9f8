@@ -1,0 +1,9 @@
+export { dew } from "/npm:@jimp/plugin-print@0.16.1/dist/index.dew.js";
+import "/npm:@babel/runtime@7/helpers/interopRequireDefault?dew";
+import "/npm:@babel/runtime@7/helpers/typeof?dew";
+import "/npm:@babel/runtime@7/helpers/toConsumableArray?dew";
+import "/npm:@jspm/core@1/nodelibs/path.js";
+import "/npm:load-bmfont@1?dew";
+import "/npm:@jimp/utils@0.16?dew";
+import "/npm:@jimp/plugin-print@0.16.1/dist/measure-text.dew.js";
+import "/npm:@jspm/core@1/nodelibs/process.js";

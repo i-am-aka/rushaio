@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "x-amz-request-id": "FF11E98929FD6BEA",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "etag": "\"f9c84ff96fc5b4b1cd7b74ed85e459a8\"",
+    "accept-ranges": "bytes",
+    "server": "AmazonS3",
+    "content-length": "3158",
+    "x-amz-id-2": "A+UCjkYxo58btDKAIJBTEbpPscyXGALb6s0vD3GMgGJf/2XQ99BLKMoH0yIn0a2HY5f1ZWuRgJU=",
+    "content-type": "application/javascript"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/HTMLTableRowElement-impl.dew.js"
+}

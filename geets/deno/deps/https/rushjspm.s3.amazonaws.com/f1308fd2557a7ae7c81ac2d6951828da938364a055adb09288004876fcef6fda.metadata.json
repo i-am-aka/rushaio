@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "content-type": "application/javascript",
+    "connection": "keep-alive",
+    "content-length": "1132",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "etag": "\"9d7544ad4c6b228db5af254ec6a70605\"",
+    "x-amz-request-id": "2REN7RDJ4J0GAGFT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "accept-ranges": "bytes",
+    "server": "AmazonS3",
+    "x-amz-id-2": "Jt49jzG7Y2s4QCba8XsqtPaDlUm3sI2XIWFBOCvHTjsYcdHQntQJhtQaqsGdzn2zyqlhipoFlyc="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/ElementDefinitionOptions.dew.js"
+}

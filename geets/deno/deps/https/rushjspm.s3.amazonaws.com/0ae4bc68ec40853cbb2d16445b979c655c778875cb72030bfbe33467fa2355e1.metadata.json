@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "server": "AmazonS3",
+    "x-amz-request-id": "814B43D7C51C3BCA",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "connection": "keep-alive",
+    "content-length": "1239",
+    "x-amz-id-2": "jKSw3cgXM05frMEXF9sSUxY4ioF+XuG2EnWSziNF/DlLwhyyHqoEBVjO6I4sjQOmXIEXS3KBDHQ=",
+    "last-modified": "Mon, 07 Dec 2020 15:03:40 GMT",
+    "content-type": "application/javascript",
+    "etag": "\"cf5eb4e55cf31bf8cf8a665b9c7bfdce\"",
+    "accept-ranges": "bytes"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:iconv-lite@0.4.24/lib/bom-handling.dew.js"
+}

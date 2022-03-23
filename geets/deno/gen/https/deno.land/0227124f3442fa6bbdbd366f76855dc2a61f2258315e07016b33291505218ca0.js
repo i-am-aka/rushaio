@@ -1,0 +1,23 @@
+import * as lib from "./lib.js";
+import { fetchAuto } from './deps.ts';
+const Canvas = await lib.CanvasKitInit({
+});
+export function dataURLtoFile(dataurl) {
+    let arr = dataurl.split(',');
+    let bstr = atob(arr[1]);
+    let n = bstr.length;
+    let data = new Uint8Array(n);
+    while(n--){
+        data[n] = bstr.charCodeAt(n);
+    }
+    return data;
+}
+export async function loadImage(url) {
+    const base64 = await fetchAuto(url);
+    const img = Canvas.MakeImageFromEncoded(dataURLtoFile(base64));
+    if (!img) throw new Error("Invalid Image");
+    return img;
+}
+export * from "./types.ts";
+export default Canvas;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIjxodHRwczovL2Rlbm8ubGFuZC94L2NhbnZhc0B2MS4wLjQvbW9kLnRzPiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBsaWIgZnJvbSBcIi4vbGliLmpzXCI7XG5pbXBvcnQgeyBDYW52YXNLaXQgfSBmcm9tIFwiLi90eXBlcy50c1wiO1xuaW1wb3J0IHsgZmV0Y2hBdXRvIH0gZnJvbSAnLi9kZXBzLnRzJ1xuXG5jb25zdCBDYW52YXMgPSBhd2FpdCBsaWIuQ2FudmFzS2l0SW5pdCh7fSkgYXMgQ2FudmFzS2l0O1xuXG5leHBvcnQgZnVuY3Rpb24gZGF0YVVSTHRvRmlsZShkYXRhdXJsOiBzdHJpbmcpIHtcbiAgICBsZXQgYXJyOiBzdHJpbmdbXSA9IGRhdGF1cmwuc3BsaXQoJywnKTtcbiAgICBsZXQgYnN0ciA9IGF0b2IoYXJyWzFdKTtcbiAgICBsZXQgbiA9IGJzdHIubGVuZ3RoO1xuICAgIGxldCBkYXRhID0gbmV3IFVpbnQ4QXJyYXkobik7XG4gICAgd2hpbGUobi0tKXtcbiAgICAgICAgZGF0YVtuXSA9IGJzdHIuY2hhckNvZGVBdChuKTtcbiAgICB9XG4gICAgcmV0dXJuIGRhdGE7XG59XG5cbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBsb2FkSW1hZ2UodXJsOiBzdHJpbmcpIHtcbiAgICBjb25zdCBiYXNlNjQgPSBhd2FpdCBmZXRjaEF1dG8odXJsKTtcbiAgICBjb25zdCBpbWcgPSBDYW52YXMuTWFrZUltYWdlRnJvbUVuY29kZWQoZGF0YVVSTHRvRmlsZShiYXNlNjQpKTtcbiAgICBpZighaW1nKSB0aHJvdyBuZXcgRXJyb3IoXCJJbnZhbGlkIEltYWdlXCIpO1xuICAgIHJldHVybiBpbWc7XG59XG5cbmV4cG9ydCAqIGZyb20gXCIuL3R5cGVzLnRzXCJcbmV4cG9ydCBkZWZhdWx0IENhbnZhcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiWUFBQSxHQUFBLE9BQUEsUUFBQTtTQUVBLFNBQUEsU0FBQSxTQUFBO01BRUEsTUFBQSxTQUFBLEdBQUEsQ0FBQSxhQUFBOztnQkFFQSxhQUFBLENBQUEsT0FBQTtRQUNBLEdBQUEsR0FBQSxPQUFBLENBQUEsS0FBQSxFQUFBLENBQUE7UUFDQSxJQUFBLEdBQUEsSUFBQSxDQUFBLEdBQUEsQ0FBQSxDQUFBO1FBQ0EsQ0FBQSxHQUFBLElBQUEsQ0FBQSxNQUFBO1FBQ0EsSUFBQSxPQUFBLFVBQUEsQ0FBQSxDQUFBO1VBQ0EsQ0FBQTtBQUNBLFlBQUEsQ0FBQSxDQUFBLElBQUEsSUFBQSxDQUFBLFVBQUEsQ0FBQSxDQUFBOztXQUVBLElBQUE7O3NCQUdBLFNBQUEsQ0FBQSxHQUFBO1VBQ0EsTUFBQSxTQUFBLFNBQUEsQ0FBQSxHQUFBO1VBQ0EsR0FBQSxHQUFBLE1BQUEsQ0FBQSxvQkFBQSxDQUFBLGFBQUEsQ0FBQSxNQUFBO1NBQ0EsR0FBQSxZQUFBLEtBQUEsRUFBQSxhQUFBO1dBQ0EsR0FBQTs7ZUFHQSxVQUFBO2VBQ0EsTUFBQSJ9

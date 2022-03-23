@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "accept-ranges": "bytes",
+    "x-amz-request-id": "B2B8E8066A4198CF",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "etag": "\"874c129982db7ee4a5bb7ee7371af559\"",
+    "content-type": "application/javascript",
+    "server": "AmazonS3",
+    "last-modified": "Mon, 07 Dec 2020 15:03:47 GMT",
+    "content-length": "4880",
+    "x-amz-id-2": "RlcPKaSSxSuDtUZ6BWjj8sXqyhcsNF31tcFTP3kmHEq8tfhzhAy6dZ9HLrCwWhBZPehJZ2STcbk=",
+    "connection": "keep-alive"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:tough-cookie@3.0.1/lib/memstore.dew.js"
+}

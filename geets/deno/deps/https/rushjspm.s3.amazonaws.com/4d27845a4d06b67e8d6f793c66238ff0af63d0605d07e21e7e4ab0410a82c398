@@ -1,0 +1,104 @@
+import { dew as _webidl2jsWrapperDewDew } from "/npm:domexception@2/webidl2js-wrapper_dew.js";
+import { dew as _utilsDewDew } from "../generated/utils.dew.js";
+import { dew as _attributesDewDew } from "../attributes.dew.js";
+import { dew as _namespacesDewDew } from "../helpers/namespaces.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const DOMException = _webidl2jsWrapperDewDew();
+
+  const idlUtils = _utilsDewDew();
+
+  const attributes = _attributesDewDew();
+
+  const {
+    HTML_NS
+  } = _namespacesDewDew();
+
+  exports.implementation = class NamedNodeMapImpl {
+    constructor(globalObject, args, privateData) {
+      this._element = privateData.element;
+      this._globalObject = globalObject;
+    }
+
+    get _attributeList() {
+      return this._element._attributeList;
+    }
+
+    get [idlUtils.supportedPropertyIndices]() {
+      return this._attributeList.keys();
+    }
+
+    get length() {
+      return this._attributeList.length;
+    }
+
+    item(index) {
+      if (index >= this._attributeList.length) {
+        return null;
+      }
+
+      return this._attributeList[index];
+    }
+
+    get [idlUtils.supportedPropertyNames]() {
+      const names = new Set(this._attributeList.map(a => a._qualifiedName));
+      const el = this._element;
+
+      if (el._namespaceURI === HTML_NS && el._ownerDocument._parsingMode === "html") {
+        for (const name of names) {
+          const lowercaseName = name.toLowerCase();
+
+          if (lowercaseName !== name) {
+            names.delete(name);
+          }
+        }
+      }
+
+      return names;
+    }
+
+    getNamedItem(qualifiedName) {
+      return attributes.getAttributeByName(this._element, qualifiedName);
+    }
+
+    getNamedItemNS(namespace, localName) {
+      return attributes.getAttributeByNameNS(this._element, namespace, localName);
+    }
+
+    setNamedItem(attr) {
+      // eslint-disable-next-line no-restricted-properties
+      return attributes.setAttribute(this._element, attr);
+    }
+
+    setNamedItemNS(attr) {
+      // eslint-disable-next-line no-restricted-properties
+      return attributes.setAttribute(this._element, attr);
+    }
+
+    removeNamedItem(qualifiedName) {
+      const attr = attributes.removeAttributeByName(this._element, qualifiedName);
+
+      if (attr === null) {
+        throw DOMException.create(this._globalObject, ["Tried to remove an attribute that was not present", "NotFoundError"]);
+      }
+
+      return attr;
+    }
+
+    removeNamedItemNS(namespace, localName) {
+      const attr = attributes.removeAttributeByNameNS(this._element, namespace, localName);
+
+      if (attr === null) {
+        throw DOMException.create(this._globalObject, ["Tried to remove an attribute that was not present", "NotFoundError"]);
+      }
+
+      return attr;
+    }
+
+  };
+  return exports;
+}

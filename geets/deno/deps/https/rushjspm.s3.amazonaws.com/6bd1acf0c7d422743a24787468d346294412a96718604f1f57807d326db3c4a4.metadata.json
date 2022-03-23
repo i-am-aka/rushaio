@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "last-modified": "Mon, 07 Dec 2020 15:03:42 GMT",
+    "content-length": "7234",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "accept-ranges": "bytes",
+    "etag": "\"ba14f5b85b5311ef0f9f7def34b28432\"",
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "x-amz-id-2": "cSFv/pNtiOYouyvOjt283FsRnkw6SysyLfRkk5FLyXSN5P5RlaHWM5HjTqGgbrB2KZCCq/uakpI=",
+    "x-amz-request-id": "6FC508632EFBEDAF",
+    "content-type": "application/javascript"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/HTMLSlotElement.dew.js"
+}

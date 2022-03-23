@@ -1,0 +1,184 @@
+import { dew as _HTMLElementImplDewDew } from "./HTMLElement-impl.dew.js";
+import { dew as _notImplementedDewDew } from "../../browser/not-implemented.dew.js";
+import { dew as _utilsDewDew } from "../generated/utils.dew.js";
+import { dew as _utilsDew2Dew } from "../../utils.dew.js";
+// import Trace from '../../browser/trace.js';
+
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const HTMLElementImpl = _HTMLElementImplDewDew().implementation;
+
+  const notImplemented = _notImplementedDewDew();
+
+  const idlUtils = _utilsDewDew();
+
+  const {
+    Canvas
+  } = _utilsDew2Dew();
+
+  class HTMLCanvasElementImpl extends HTMLElementImpl {
+    _attrModified(name, value) {
+      if (this._canvas && (name === "width" || name === "height")) {
+        this._canvas[name] = parseInt(value);
+      }
+
+      super._attrModified.apply(this, arguments);
+    }
+
+    _getCanvas() {
+      if (Canvas && !this._canvas) {
+        this._canvas = Canvas.createCanvas(this.width, this.height);
+        this._canvasId = parseInt(Math.random()*10000);
+      }
+
+      return this._canvas;
+    }
+
+    getContext(contextId) {
+      // console.trace();
+      const canvas = this._getCanvas();
+      // console.log(this._canvasId, {cwidth: this.width, cheight: this.height})
+
+      if (canvas) {
+        if (!this._context) {
+          this._context = canvas.getContext(contextId) || null;
+
+          if (this._context) {
+            // Override the native canvas reference with our wrapper. This is the
+            // reason why we need to locally cache _context, since each call to
+            // canvas.getContext(contextId) would replace this reference again.
+            // Perhaps in the longer term, a better solution would be to create a
+            // full wrapper for the Context object as well.
+
+            // this._context.canvas = idlUtils.wrapperForImpl(this);
+
+            wrapNodeCanvasMethod(this._context, "createPattern");
+            wrapNodeCanvasMethod(this._context, "drawImage");
+          }
+        }
+        // console.log(this._context);
+        return new Proxy(this._context, {
+          get: function(target, prop) {
+            // console.trace();
+            // console.log(this._canvasId, 'context.get(' + prop.toString() + ')');
+            return Reflect.get(...arguments);
+          }
+        });
+      }
+
+      notImplemented("HTMLCanvasElement.prototype.getContext (without installing the canvas npm package)", this._ownerDocument._defaultView);
+      return null;
+    }
+
+    toDataURL() {
+      const canvas = this._getCanvas();
+
+      if (canvas) {
+        return canvas.toDataURL.apply(this._canvas, arguments);
+      }
+
+      notImplemented("HTMLCanvasElement.prototype.toDataURL (without installing the canvas npm package)", this._ownerDocument._defaultView);
+      return null;
+    }
+
+    toBlob(callback, type, qualityArgument) {
+      const window = this._ownerDocument._defaultView;
+
+      const canvas = this._getCanvas();
+
+      if (canvas) {
+        const options = {};
+
+        switch (type) {
+          case "image/jpg":
+          case "image/jpeg":
+            type = "image/jpeg";
+            options.quality = qualityArgument;
+            break;
+
+          default:
+            type = "image/png";
+        }
+
+        canvas.toBuffer((err, buff) => {
+          if (err) {
+            throw err;
+          }
+
+          callback(new window.Blob([buff], {
+            type
+          }));
+        }, type, options);
+      } else {
+        notImplemented("HTMLCanvasElement.prototype.toBlob (without installing the canvas npm package)", window);
+      }
+    }
+
+    get width() {
+      const parsed = parseInt(this.getAttributeNS(null, "width"));
+      return isNaN(parsed) || parsed < 0 || parsed > 2147483647 ? 300 : parsed;
+    }
+
+    set width(v) {
+      v = v > 2147483647 ? 300 : v;
+      this.setAttributeNS(null, "width", String(v));
+    }
+
+    get height() {
+      const parsed = parseInt(this.getAttributeNS(null, "height"));
+      return isNaN(parsed) || parsed < 0 || parsed > 2147483647 ? 150 : parsed;
+    }
+
+    set height(v) {
+      v = v > 2147483647 ? 150 : v;
+      this.setAttributeNS(null, "height", String(v));
+    }
+
+  } // We need to wrap the methods that receive an image or canvas object
+  // (luckily, always as the first argument), so that these objects can be
+  // unwrapped an the expected types passed.
+
+
+  function wrapNodeCanvasMethod(ctx, name) {
+    const prev = ctx[name];
+
+    ctx[name] = function (image) {
+      // console.trace();
+      const impl = idlUtils.implForWrapper(image);
+
+      if (impl) {
+        if (impl instanceof HTMLCanvasElementImpl && !impl._canvas) {
+          impl._getCanvas();
+        }
+
+        arguments[0] = impl._image || impl._canvas;
+      }
+      // console.log();
+      // console.log(arguments[0].width(), arguments[0].height(), impl._canvasId, 'CALL', name, arguments);
+      var ret = prev.apply(ctx, arguments);
+      // console.log('RET', name, ret);
+      var im = ctx.getImageData(0,0,arguments[0].width(),arguments[0].height());
+      try{
+        // for(var x in ctx) {
+        //   console.log('ctx.'+x.toString());
+        // }
+        // console.log(im.width, im.height, im.data);
+        // console.log();
+        // console.log(impl._canvasId);
+      }catch(err) {
+        console.error(err);
+      }
+      // debugger;
+      return ret;
+    };
+  }
+
+  exports = {
+    implementation: HTMLCanvasElementImpl
+  };
+  return exports;
+}

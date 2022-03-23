@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "x-amz-id-2": "OuVPA8+3AYDgOJdCrtJZO5iGHtRKQKFOsEqxzT2WJLh6MMlmq76eTtYn9o4L7i8jpkCS2zCK67s=",
+    "x-amz-request-id": "2F5F6E5A84AC5BBF",
+    "content-type": "application/javascript",
+    "etag": "\"c74ad1ee575359e7bd6b129872c8ac88\"",
+    "content-length": "596",
+    "server": "AmazonS3",
+    "accept-ranges": "bytes",
+    "connection": "keep-alive"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/helpers/internal-constants.dew.js"
+}

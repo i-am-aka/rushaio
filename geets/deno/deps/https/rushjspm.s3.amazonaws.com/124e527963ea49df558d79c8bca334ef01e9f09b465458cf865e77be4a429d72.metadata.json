@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-request-id": "FF3E82D858B9CC3C",
+    "last-modified": "Mon, 07 Dec 2020 15:03:39 GMT",
+    "accept-ranges": "bytes",
+    "server": "AmazonS3",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "x-amz-id-2": "Bl8guRqXESXJD6bOc2D0MuwwjCx5r4r7nZv3UPd8pLONw+1EToU0m0XW1oG3iklW5kTdyjLJgTY=",
+    "etag": "\"1362ff6595d0549a31394efbfc8de9f3\"",
+    "content-type": "application/javascript",
+    "connection": "keep-alive",
+    "content-length": "2306"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:cssstyle@2.3.0/lib/named_colors.json.dew.js"
+}

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "etag": "\"ffddaa9c82d4e18bd4e3c8e9c8f1477d\"",
+    "server": "AmazonS3",
+    "last-modified": "Mon, 07 Dec 2020 15:03:43 GMT",
+    "x-amz-request-id": "717FE36A46984450",
+    "content-type": "application/javascript",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "connection": "keep-alive",
+    "x-amz-id-2": "pdy8EDHUlilm9GEtkzX4eRCfoHxzE5AME1v5bVjRTg2gbNKSM2avpIz4O1F5hCHfAebjFhptP/A=",
+    "content-length": "35441",
+    "accept-ranges": "bytes"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/HTMLTextAreaElement.dew.js"
+}

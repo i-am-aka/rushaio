@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "content-length": "5813",
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "content-type": "application/javascript",
+    "etag": "\"c9dfffb8fba90391d538605edfc51cee\"",
+    "last-modified": "Mon, 07 Dec 2020 15:03:46 GMT",
+    "x-amz-id-2": "DbiEP8rw7zdFI/x9oZGRE0lNtXwawkI61XtAU+JvpHVxSsfojRb3kum/Pa7mQLXnZOV6v4KsOhg=",
+    "accept-ranges": "bytes",
+    "x-amz-request-id": "1488CA29309BF8CA"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:request-promise-core@1.1.4/lib/plumbing.dew.js"
+}

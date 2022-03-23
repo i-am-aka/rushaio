@@ -1,0 +1,12 @@
+export { dew } from "/npm:cssstyle@2.3.0/lib/CSSStyleDeclaration.dew.js";
+import "/npm:cssom@0.3_dew.js";
+import "/npm:cssstyle@2.3.0/lib/allProperties.dew.js";
+import "/npm:cssstyle@2.3.0/lib/allExtraProperties.dew.js";
+import "/npm:cssstyle@2.3.0/lib/implementedProperties.dew.js";
+import "/npm:cssstyle@2.3.0/lib/parsers.dew.js";
+import "/npm:cssstyle@2.3.0/lib/utils/getBasicPropertyDescriptor.dew.js";
+import "/npm:cssstyle@2.3.0/lib/properties.dew.js";
+import "/npm:cssstyle@2.3.0/lib/allWebkitProperties.dew.js";
+import "/npm:cssstyle@2.3.0/lib/named_colors.json.dew.js";
+import "/npm:cssstyle@2.3.0/lib/utils/colorSpace.dew.js";
+import "/npm:cssstyle@2.3.0/lib/constants.dew.js";

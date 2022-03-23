@@ -1,0 +1,24 @@
+import { dew as _encoderDewDew } from "./lib/encoder.dew.js";
+import { dew as _decoderDewDew } from "./lib/decoder.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  /**
+   * @author shaozilee
+   *
+   * support 1bit 4bit 8bit 24bit decode
+   * encode with 24bit
+   * 
+   */
+  var encode = _encoderDewDew(),
+      decode = _decoderDewDew();
+
+  exports = {
+    encode: encode,
+    decode: decode
+  };
+  return exports;
+}

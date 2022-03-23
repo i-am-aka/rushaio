@@ -1,0 +1,1 @@
+export { default } from "/npm:@jspm/core@1.1.1/nodelibs/@empty.js";

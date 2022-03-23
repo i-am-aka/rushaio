@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "content-type": "application/javascript",
+    "etag": "\"fd87870a57d4432bd4a99b1b21b44b48\"",
+    "content-length": "613",
+    "server": "AmazonS3",
+    "accept-ranges": "bytes",
+    "x-amz-request-id": "AC88755092A5DE9C",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "x-amz-id-2": "qQt/dT/vTyPnOnyx8og7wIjk2Qkfx6uI9SJ1Hp+ajAQggn4PmLVJX9ggX0dW/ibgEHSksJkuPHU="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/CDATASection-impl.dew.js"
+}

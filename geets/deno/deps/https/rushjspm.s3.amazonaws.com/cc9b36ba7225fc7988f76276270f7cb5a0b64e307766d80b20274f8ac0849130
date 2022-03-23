@@ -1,0 +1,175 @@
+import { dew as _npmAssertPlus1DewDew } from "/npm:assert-plus@1_dew.js";
+import { dew as _npmSaferBuffer2DewDew } from "/npm:safer-buffer@2_dew.js";
+var exports = {},
+    _dewExec = false;
+
+var _global = typeof self !== "undefined" ? self : global;
+
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  // Copyright 2015 Joyent, Inc.
+  exports = SSHBuffer;
+
+  var assert = _npmAssertPlus1DewDew();
+
+  var Buffer = _npmSaferBuffer2DewDew().Buffer;
+
+  function SSHBuffer(opts) {
+    assert.object(opts, 'options');
+    if (opts.buffer !== undefined) assert.buffer(opts.buffer, 'options.buffer');
+    (this || _global)._size = opts.buffer ? opts.buffer.length : 1024;
+    (this || _global)._buffer = opts.buffer || Buffer.alloc((this || _global)._size);
+    (this || _global)._offset = 0;
+  }
+
+  SSHBuffer.prototype.toBuffer = function () {
+    return (this || _global)._buffer.slice(0, (this || _global)._offset);
+  };
+
+  SSHBuffer.prototype.atEnd = function () {
+    return (this || _global)._offset >= (this || _global)._buffer.length;
+  };
+
+  SSHBuffer.prototype.remainder = function () {
+    return (this || _global)._buffer.slice((this || _global)._offset);
+  };
+
+  SSHBuffer.prototype.skip = function (n) {
+    (this || _global)._offset += n;
+  };
+
+  SSHBuffer.prototype.expand = function () {
+    (this || _global)._size *= 2;
+    var buf = Buffer.alloc((this || _global)._size);
+
+    (this || _global)._buffer.copy(buf, 0);
+
+    (this || _global)._buffer = buf;
+  };
+
+  SSHBuffer.prototype.readPart = function () {
+    return {
+      data: this.readBuffer()
+    };
+  };
+
+  SSHBuffer.prototype.readBuffer = function () {
+    var len = (this || _global)._buffer.readUInt32BE((this || _global)._offset);
+
+    (this || _global)._offset += 4;
+    assert.ok((this || _global)._offset + len <= (this || _global)._buffer.length, 'length out of bounds at +0x' + (this || _global)._offset.toString(16) + ' (data truncated?)');
+
+    var buf = (this || _global)._buffer.slice((this || _global)._offset, (this || _global)._offset + len);
+
+    (this || _global)._offset += len;
+    return buf;
+  };
+
+  SSHBuffer.prototype.readString = function () {
+    return this.readBuffer().toString();
+  };
+
+  SSHBuffer.prototype.readCString = function () {
+    var offset = (this || _global)._offset;
+
+    while (offset < (this || _global)._buffer.length && (this || _global)._buffer[offset] !== 0x00) offset++;
+
+    assert.ok(offset < (this || _global)._buffer.length, 'c string does not terminate');
+
+    var str = (this || _global)._buffer.slice((this || _global)._offset, offset).toString();
+
+    (this || _global)._offset = offset + 1;
+    return str;
+  };
+
+  SSHBuffer.prototype.readInt = function () {
+    var v = (this || _global)._buffer.readUInt32BE((this || _global)._offset);
+
+    (this || _global)._offset += 4;
+    return v;
+  };
+
+  SSHBuffer.prototype.readInt64 = function () {
+    assert.ok((this || _global)._offset + 8 < (this || _global)._buffer.length, 'buffer not long enough to read Int64');
+
+    var v = (this || _global)._buffer.slice((this || _global)._offset, (this || _global)._offset + 8);
+
+    (this || _global)._offset += 8;
+    return v;
+  };
+
+  SSHBuffer.prototype.readChar = function () {
+    var v = (this || _global)._buffer[(this || _global)._offset++];
+    return v;
+  };
+
+  SSHBuffer.prototype.writeBuffer = function (buf) {
+    while ((this || _global)._offset + 4 + buf.length > (this || _global)._size) this.expand();
+
+    (this || _global)._buffer.writeUInt32BE(buf.length, (this || _global)._offset);
+
+    (this || _global)._offset += 4;
+    buf.copy((this || _global)._buffer, (this || _global)._offset);
+    (this || _global)._offset += buf.length;
+  };
+
+  SSHBuffer.prototype.writeString = function (str) {
+    this.writeBuffer(Buffer.from(str, 'utf8'));
+  };
+
+  SSHBuffer.prototype.writeCString = function (str) {
+    while ((this || _global)._offset + 1 + str.length > (this || _global)._size) this.expand();
+
+    (this || _global)._buffer.write(str, (this || _global)._offset);
+
+    (this || _global)._offset += str.length;
+    (this || _global)._buffer[(this || _global)._offset++] = 0;
+  };
+
+  SSHBuffer.prototype.writeInt = function (v) {
+    while ((this || _global)._offset + 4 > (this || _global)._size) this.expand();
+
+    (this || _global)._buffer.writeUInt32BE(v, (this || _global)._offset);
+
+    (this || _global)._offset += 4;
+  };
+
+  SSHBuffer.prototype.writeInt64 = function (v) {
+    assert.buffer(v, 'value');
+
+    if (v.length > 8) {
+      var lead = v.slice(0, v.length - 8);
+
+      for (var i = 0; i < lead.length; ++i) {
+        assert.strictEqual(lead[i], 0, 'must fit in 64 bits of precision');
+      }
+
+      v = v.slice(v.length - 8, v.length);
+    }
+
+    while ((this || _global)._offset + 8 > (this || _global)._size) this.expand();
+
+    v.copy((this || _global)._buffer, (this || _global)._offset);
+    (this || _global)._offset += 8;
+  };
+
+  SSHBuffer.prototype.writeChar = function (v) {
+    while ((this || _global)._offset + 1 > (this || _global)._size) this.expand();
+
+    (this || _global)._buffer[(this || _global)._offset++] = v;
+  };
+
+  SSHBuffer.prototype.writePart = function (p) {
+    this.writeBuffer(p.data);
+  };
+
+  SSHBuffer.prototype.write = function (buf) {
+    while ((this || _global)._offset + buf.length > (this || _global)._size) this.expand();
+
+    buf.copy((this || _global)._buffer, (this || _global)._offset);
+    (this || _global)._offset += buf.length;
+  };
+
+  return exports;
+}

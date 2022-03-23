@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "server": "AmazonS3",
+    "x-amz-id-2": "MHBWUTgvBa9Y0T96EeLgLHFOymNXu42aTJVQswtVtAFF7IWHtVZ7nZHr9PaKyLh4Byn/PXaY/5A=",
+    "accept-ranges": "bytes",
+    "etag": "\"750ff65382bef24d8cdfbb7c7661ff05\"",
+    "x-amz-request-id": "2796488895EBFDFF",
+    "content-length": "2016",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "content-type": "application/javascript"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/domparsing/serialization.dew.js"
+}

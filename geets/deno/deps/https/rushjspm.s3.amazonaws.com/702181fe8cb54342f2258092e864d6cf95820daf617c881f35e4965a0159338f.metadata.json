@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "content-type": "application/javascript",
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "x-amz-request-id": "18646BA880FACE71",
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "etag": "\"6830b78ca6d41be819cbece2caadb434\"",
+    "accept-ranges": "bytes",
+    "x-amz-id-2": "esDdeRHkZZO368m2jWlvqJt0x+h7n+ZboXvaAFQJXyZRK3JOAqbAKkW1NyrrrWPkUuCcPDm4cEQ=",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "content-length": "6263"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/xhr/FormData-impl.dew.js"
+}

@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "accept-ranges": "bytes",
+    "content-type": "application/javascript",
+    "x-amz-request-id": "CDB2F4ED65A09450",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "x-amz-id-2": "QvK2gjn0yihPIKGAfIPgX4y3FZxMlyYGrpXJL2Qn6HtUs9gHkDy49JO78i2fGZsTJpQ2w8EzXcw=",
+    "content-length": "5556",
+    "etag": "\"4856816ca8929425ba1da8f41ba695dc\"",
+    "server": "AmazonS3",
+    "last-modified": "Mon, 07 Dec 2020 15:03:43 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/HashChangeEvent.dew.js"
+}

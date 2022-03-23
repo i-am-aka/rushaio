@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "x-amz-request-id": "214AC8B419A96B4E",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "accept-ranges": "bytes",
+    "x-amz-id-2": "Hg9tbNH05Yf5Dek4yUsxXrs0zCiw9lAPT280azcZOQCKfaM/jZ+LllKWt2wUvKbIPrncK0oxY5E=",
+    "server": "AmazonS3",
+    "content-type": "application/javascript",
+    "etag": "\"a32ed95acde6fd79495351e53c50e3e4\"",
+    "content-length": "1488"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/aborting/AbortSignal-impl.dew.js"
+}

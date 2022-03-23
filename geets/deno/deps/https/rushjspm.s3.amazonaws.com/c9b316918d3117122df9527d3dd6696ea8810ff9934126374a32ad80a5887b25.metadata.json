@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-id-2": "syQloa0srLHkA9FUAtwQRGA3nCxVnH0anxXLPNBAx3hghOq8+rXtpztu8OVUJyuT6IeExJ5A5BE=",
+    "content-type": "application/javascript",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "accept-ranges": "bytes",
+    "content-length": "1736",
+    "server": "AmazonS3",
+    "x-amz-request-id": "35D48B1A5326EA5C",
+    "connection": "keep-alive",
+    "etag": "\"982bc5227923b1f5d86a76f5539dc5e3\"",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/HTMLAnchorElement-impl.dew.js"
+}

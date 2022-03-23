@@ -1,0 +1,30 @@
+import { dew as _CharacterDataImplDewDew } from "./CharacterData-impl.dew.js";
+import { dew as _nodeTypeDewDew } from "../node-type.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const CharacterDataImpl = _CharacterDataImplDewDew().implementation;
+
+  const NODE_TYPE = _nodeTypeDewDew();
+
+  class ProcessingInstructionImpl extends CharacterDataImpl {
+    constructor(globalObject, args, privateData) {
+      super(globalObject, args, privateData);
+      this.nodeType = NODE_TYPE.PROCESSING_INSTRUCTION_NODE;
+      this._target = privateData.target;
+    }
+
+    get target() {
+      return this._target;
+    }
+
+  }
+
+  exports = {
+    implementation: ProcessingInstructionImpl
+  };
+  return exports;
+}

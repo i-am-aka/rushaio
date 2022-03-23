@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "etag": "\"ae9e7c81a1e445a401018ee06be6e1cf\"",
+    "accept-ranges": "bytes",
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "x-amz-id-2": "ZjoAUA2SihFsgDLiyMluIk+8oVR/4ai6U1D/aJkRxlNLdRl5OQhzTjbgjKHi5qqie5iUtNOt6eY=",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "x-amz-request-id": "F700DA5D866815EF",
+    "content-type": "application/javascript",
+    "content-length": "552"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/events/FocusEvent-impl.dew.js"
+}

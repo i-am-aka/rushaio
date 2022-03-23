@@ -1,0 +1,1 @@
+export { dew } from "/npm:ieee754@1.2.1/index.dew.js";

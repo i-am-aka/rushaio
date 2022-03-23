@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "etag": "\"65f6892b43670c3ae3ea97191f5a2a8a\"",
+    "content-length": "399",
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "connection": "keep-alive",
+    "server": "AmazonS3",
+    "x-amz-id-2": "JcWGk4yZ+cSmtQFzem0g46YdaW5TJ9qJk3kuA2v7l8Vu9SDr7NtKNIKkcD6d8HJgpcSU92NATjk=",
+    "x-amz-request-id": "755632C95FD97362",
+    "accept-ranges": "bytes",
+    "content-type": "application/javascript"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/HTMLPictureElement-impl.dew.js"
+}

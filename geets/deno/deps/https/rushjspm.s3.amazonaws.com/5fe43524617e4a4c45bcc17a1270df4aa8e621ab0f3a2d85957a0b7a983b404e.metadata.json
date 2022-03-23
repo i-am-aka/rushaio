@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-request-id": "EB8378A41754BE70",
+    "server": "AmazonS3",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "connection": "keep-alive",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "etag": "\"69eb6ba8fb1766e68a20983b0cd9fe8f\"",
+    "content-length": "2506",
+    "x-amz-id-2": "IXo5wD+BxIzGDcKxvdZyj2BdyxEqPAvTQKCqKcjnolzJgHhTHOAy2IE7fnZX8uyP3rRZZXjEg6c=",
+    "content-type": "application/javascript",
+    "accept-ranges": "bytes"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/DOMStringMap-impl.dew.js"
+}

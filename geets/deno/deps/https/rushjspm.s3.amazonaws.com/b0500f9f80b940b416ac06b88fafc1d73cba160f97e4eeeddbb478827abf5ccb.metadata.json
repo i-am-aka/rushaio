@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "server": "AmazonS3",
+    "x-amz-id-2": "ONHx/+ry1lqebefUITL3SHrGVGexkKh1of7S86vv238UZeO76jKA3Btllx0in/yrYvJGoRsBe+c=",
+    "x-amz-request-id": "C662A1C29985440B",
+    "last-modified": "Mon, 07 Dec 2020 15:03:43 GMT",
+    "content-type": "application/javascript",
+    "etag": "\"3f63ebd06bb49b9852587e3d5d9a3d08\"",
+    "accept-ranges": "bytes",
+    "content-length": "2387",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "connection": "keep-alive"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/WheelEventInit.dew.js"
+}

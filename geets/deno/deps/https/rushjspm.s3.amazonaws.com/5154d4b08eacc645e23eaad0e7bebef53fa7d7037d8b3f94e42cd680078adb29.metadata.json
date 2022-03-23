@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "x-amz-id-2": "7WChqU1YscGQ8o6q8BcHpxBrMVeA5xhPrSACtqlUP3o7i/+7fZdQ2qg2dIMUT2fFpNXHcRS848E=",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:42 GMT",
+    "accept-ranges": "bytes",
+    "x-amz-request-id": "1C6E6245044E6B55",
+    "etag": "\"bc3aa190188cb0358cb0000a0c551ca8\"",
+    "content-type": "application/javascript",
+    "server": "AmazonS3",
+    "content-length": "9419"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/FileList.dew.js"
+}

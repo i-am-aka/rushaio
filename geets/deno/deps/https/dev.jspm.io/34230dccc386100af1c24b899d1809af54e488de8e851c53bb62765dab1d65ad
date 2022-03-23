@@ -1,0 +1,57 @@
+import { dew as _interopRequireDefaultDewDew } from "/npm:@babel/runtime@7/helpers/interopRequireDefault?dew";
+import { dew as _definePropertyDewDew } from "/npm:@babel/runtime@7/helpers/defineProperty?dew";
+import { dew as _npmUtif2DewDew } from "/npm:utif@2?dew";
+import _buffer from "/npm:@jspm/core@1/nodelibs/buffer.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  var Buffer = _buffer.Buffer;
+
+  var _interopRequireDefault = _interopRequireDefaultDewDew();
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports["default"] = void 0;
+
+  var _defineProperty2 = _interopRequireDefault(_definePropertyDewDew());
+
+  var _utif = _interopRequireDefault(_npmUtif2DewDew());
+
+  var MIME_TYPE = 'image/tiff';
+
+  var _default = function _default() {
+    return {
+      mime: (0, _defineProperty2["default"])({}, MIME_TYPE, ['tiff', 'tif']),
+      constants: {
+        MIME_TIFF: MIME_TYPE
+      },
+      decoders: (0, _defineProperty2["default"])({}, MIME_TYPE, function (data) {
+        var ifds = _utif["default"].decode(data);
+
+        var page = ifds[0];
+
+        _utif["default"].decodeImages(data, ifds);
+
+        var rgba = _utif["default"].toRGBA8(page);
+
+        return {
+          data: Buffer.from(rgba),
+          width: page.t256[0],
+          height: page.t257[0]
+        };
+      }),
+      encoders: (0, _defineProperty2["default"])({}, MIME_TYPE, function (image) {
+        var tiff = _utif["default"].encodeImage(image.bitmap.data, image.bitmap.width, image.bitmap.height);
+
+        return Buffer.from(tiff);
+      })
+    };
+  };
+
+  exports["default"] = _default;
+  exports = exports.default;
+  return exports;
+}

@@ -1,0 +1,857 @@
+import Trace from './trace.js';
+import TrustedTypes from './trusted_types.js';
+
+var FuncNativeCode = function(name) {
+  return "function " + (name || "") + "() { [native code] }";
+}
+
+export function spoofBrowser(window, userAgent) {
+  userAgent = userAgent || "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36";
+
+  // window.screen = {
+  //   width: 1440,
+  //   height: 900,
+  //   availWidth: 1440,
+  //   availHeight: 900-23,
+  //   colorDepth: 24,
+  //   pixelDepth: 24,
+  //   orientation: {
+  //     type: "landscape-primary",
+  //     angle: 0,
+  //     onchange: null,
+  //   },
+  // };
+  // window.outerHeight = window.screen.availHeight - 23 - parseInt(Math.random() * 300);
+  // window.outerWidth = window.screen.availWidth - parseInt(Math.random() * 500);
+  // window.innerHeight = window.outerHeight - 141;
+  // window.innerWidth = window.outerWidth;
+  window.PaymentInstruments = function(){}
+  Object.defineProperty(window.PaymentInstruments, "toString", {enumerable: false, writable: true});
+  window.PaymentInstruments.toString = FuncNativeCode.bind(null, "PaymentInstruments");
+
+  window.PaymentManager = function(){}
+  Object.defineProperty(window.PaymentManager, "toString", {enumerable: false, writable: true});
+  window.PaymentManager.toString = FuncNativeCode.bind(null, "PaymentManager");
+
+  window.PaymentRequest = function(){}
+  Object.defineProperty(window.PaymentRequest, "toString", {enumerable: false, writable: true});
+  window.PaymentRequest.toString = FuncNativeCode.bind(null, "PaymentRequest");
+
+  window.PaymentResponse = function(){}
+  Object.defineProperty(window.PaymentResponse, "toString", {enumerable: false, writable: true});
+  window.PaymentResponse.toString = FuncNativeCode.bind(null, "PaymentResponse");
+
+  window.PaymentAddress = function(){}
+  Object.defineProperty(window.PaymentAddress, "toString", {enumerable: false, writable: true});
+  window.PaymentAddress.toString = FuncNativeCode.bind(null, "PaymentAddress");
+
+  window.PaymentRequestUpdateEvent = function(){}
+  Object.defineProperty(window.PaymentRequestUpdateEvent, "toString", {enumerable: false, writable: true});
+  window.PaymentRequestUpdateEvent.toString = FuncNativeCode.bind(null, "PaymentRequestUpdateEvent");
+  window.PaymentRequestUpdateEvent.NONE = 0
+  window.PaymentRequestUpdateEvent.CAPTURING_PHASE = 1
+  window.PaymentRequestUpdateEvent.AT_TARGET = 2
+  window.PaymentRequestUpdateEvent.BUBBLING_PHASE = 3
+
+  window.Notification = function(){}
+  Object.defineProperty(window.Notification, "toString", {enumerable: false, writable: true});
+  window.Notification.permission = "default";
+  window.Notification.maxActions = 2;
+  window.Notification.requestPermission = FuncNativeCode();
+  window.Notification.toString = FuncNativeCode.bind(null, "Notification");
+
+  window.Worklet = {};
+  window.AudioWorklet = {};
+  window.AudioWorkletNode = {};
+  window.caches = {};
+  window.offscreenBuffering = true;
+  window.caches.toString = function() { return "[object CacheStorage]" }
+  window.applicationCache = {};
+  window.applicationCache.toString = function() { return "[object ApplicationCache]" }
+  window.BatteryManager = {};
+  window.BatteryManager.toString = function() {
+    return "{ [native code] }";
+  }
+  window.trustedTypes = {};
+  window.trustedTypes.toString = function() {
+    return "[object TrustedTypePolicyFactory]";
+  }
+  window.ondevicemotion = null;
+  window.ondeviceorientation = null;
+  window.ondragexit = undefined;
+  delete window.ondragexit;
+  window.document.ondragexit = undefined;
+  delete window.document.ondragexit;
+
+  window.document.location.ancestorOrigins = {length: 0};
+  window.document.location.ancestorOrigins.toString = function() { return "[object DOMStringList]" };
+  window.location.fragmentDirective = {};
+  window.location.fragmentDirective.toString = function() { return "[object FragmentDirective]" };
+  var origHasOP = window.location.hasOwnProperty.bind(window.location);
+  window.location.hasOwnProperty = function() {
+    if (arguments[0] === "fragmentDirective") {
+      return false;
+    } else {
+      return origHasOP(...arguments);
+    }
+  }
+  window.console.log = function() { }
+  window.console.log.toString = function() { return "function log() { [native code] }" }
+
+  // var now = Date.now();
+  var now = window.performance.timeOrigin;
+  var t0 = now - parseInt(Math.random() * 3000);
+  var respEnd = t0 + parseInt(Math.random()*300);
+  var domInteractive = respEnd + 500 + parseInt(Math.random() * 500);
+  var loadStart = t0 + 2000 + parseInt(Math.random()*3000);
+  var loadEnd = loadStart + parseInt(Math.random()*5000);
+  var loadAlmostEnd = loadEnd - parseInt(Math.random()*50);
+  var fetchStart = t0 + 1 + parseInt(Math.random() * 15);
+  var perfFp = {
+    // "timeOrigin": now - Math.random(),
+    "timing": {
+        "connectStart": parseInt(now + Math.random() * 5),
+        "navigationStart": t0,
+        "loadEventEnd": loadStart + parseInt(Math.random()*300),
+        "domLoading": 1596256167447,
+        "secureConnectionStart": 0,
+        "fetchStart": fetchStart,
+        "domContentLoadedEventStart": loadAlmostEnd + parseInt(Math.random()*100),
+        "responseStart": now,
+        "responseEnd": respEnd,
+        "domInteractive":  domInteractive,
+        "domainLookupEnd": fetchStart,
+        "redirectStart": 0,
+        "requestStart": respEnd - (300 + parseInt(Math.random() * 1000)),
+        "unloadEventEnd": 0,
+        "unloadEventStart": 0,
+        "domComplete": loadStart - parseInt(Math.random()*100),
+        "domainLookupStart": fetchStart,
+        "loadEventStart": loadStart,
+        "domContentLoadedEventEnd": loadAlmostEnd + parseInt(Math.random()*100),
+        "redirectEnd": 0,
+        "connectEnd": now
+      },
+
+    "navigation": {
+      "type": 0,
+      "redirectCount": 0
+    },
+    "memory": {"totalJSHeapSize":10966782,"usedJSHeapSize":9231994,"jsHeapSizeLimit":4294705152},
+  };
+  var js = perfFp;
+
+  for (var x in perfFp) {
+    try {
+      window.performance[x] = perfFp[x];
+    }catch(e) {
+    }
+  }
+
+  var origNav = window.navigator;
+  var navFp = {
+    "vendorSub": "",
+    "productSub": "20030107",
+    "vendor": "Google Inc.",
+    "maxTouchPoints": 0,
+    "doNotTrack": true,
+    "hardwareConcurrency": 8, //6,8,12,16][Math.floor(Math.random() * 5)],
+    "cookieEnabled": true,
+    "appCodeName": "Mozilla",
+    "appName": "Netscape",
+    "appVersion": userAgent.replace('Mozilla/', ''), // todo this is mayb crhome only
+    "product": "Gecko",
+    "userAgent": userAgent,
+    "language": "en-US",
+    "onLine": true,
+    "connection": {
+      "effectiveType": "4g",
+      "rtt": 90,
+      "downlink": (1 + Math.random(10)).toFixed(1),
+      "saveData": false
+    },
+
+    "mimeTypes": {
+      "0": {
+        "type": "application/pdf",
+        "suffixes": "pdf",
+        "description": ""
+      },
+      "1": {
+        "type": "application/x-google-chrome-pdf",
+        "suffixes": "pdf",
+        "description": "Portable Document Format"
+      },
+      "2": {
+        "type": "application/x-nacl",
+        "suffixes": "",
+        "description": "Native Client Executable"
+      },
+      "3": {
+        "type": "application/x-pnacl",
+        "suffixes": "",
+        "description": "Portable Native Client Executable"
+      },
+      "toString": function() { return "[object MimeTypeArray]" },
+      "length": 4
+    },
+    "userActivation": {
+      "hasBeenActive": true,
+      "isActive": true
+    },
+    "mediaSession": {
+      "playbackState": "none"
+    },
+    "deviceMemory": 8,
+    "geolocation": "[object Geolocation]",
+    "getBattery": function() {
+
+    },
+  };
+  var stringFields = {
+  clipboard: "[object Clipboard]",
+  credentials: "[object CredentialsContainer]",
+  keyboard: "[object Keyboard]",
+  locks: "[object LockManager]",
+  mediaDevices: "[object MediaDevices]",
+  serviceWorker: "[object ServiceWorkerContainer]",
+  storage: "[object StorageManager]",
+  presentation: "[object Presentation]",
+  bluetooth: "[object Bluetooth]",
+  usb: "[object USB]",
+  xr: "[object XRSystem]",
+  "setAppBadge": "function () { [native code] }",
+  "clearAppBadge": "function () { [native code] }",
+  "getInstalledRelatedApps":"function () { [native code] }",
+  "getUserMedia": "function () { [native code] }",
+  "webkitGetUserMedia": "function () { [native code] }",
+  "requestMIDIAccess": "function () { [native code] }",
+  wakeLock: "[object WakeLock]"
+  };
+  for (var field in stringFields) {
+    navFp[field] = {};
+    navFp[field].toString = function(f) { return stringFields[f] }.bind(null, field);
+  }
+  // var origHasOP = navFp.hasOwnProperty;
+  navFp.hasOwnProperty = function() {
+    return false;
+  }
+  // navFp.toString = function() {
+  //   return "[object Object]function Object() { [native code] }loadTimesfunction () { [native code] }csifunction () { [native code] }app[object Object]runtime[object Object]";
+  // }
+  navFp.getBattery.toString = function() {
+    return "{ [native code] }";
+  }
+
+  navFp.prototype = {};
+  navFp.prototype.languages = [
+    "en-US",
+    "en"
+  ];
+  navFp.prototype.platform = "MacIntel";
+  navFp.plugins = navFp.prototype.plugins = {
+    "0": {
+      "0": {
+        "type": "application/x-google-chrome-pdf",
+        "suffixes": "pdf",
+        "description": "Portable Document Format"
+      },
+      "name": "Chrome PDF Plugin",
+      "filename": "internal-pdf-viewer",
+      "description": "Portable Document Format",
+      "length": 1
+    },
+    "1": {
+      "0": {
+        "type": "application/pdf",
+        "suffixes": "pdf",
+        "description": ""
+      },
+      "name": "Chrome PDF Viewer",
+      "filename": "mhjfbmdgcfjbbpaeojofohoefgiehjai",
+      "description": "",
+      "length": 1
+    },
+    "2": {
+      "0": {
+        "type": "application/x-nacl",
+        "suffixes": "",
+        "description": "Native Client Executable"
+      },
+      "1": {
+        "type": "application/x-pnacl",
+        "suffixes": "",
+        "description": "Portable Native Client Executable"
+      },
+      "name": "Native Client",
+      "filename": "internal-nacl-plugin",
+      "description": "",
+      "length": 2
+    },
+    "length": 3,
+    "toString": function() { return "[object PluginArray]"; },
+  };
+  // navFp.__proto__ = navFp;
+
+  var obscuredNavProperties = ['plugins', 'platform', 'languages'];
+  navFp.prototype = new Proxy(navFp.prototype, {
+    getOwnPropertyDescriptor(target, prop) {
+      if (!obscuredNavProperties.some(p => p === prop)) {
+        return Reflect.getOwnPropertyDescriptor(...arguments);
+      }
+    }
+  });
+  window.navigator = new Proxy(navFp, {
+    getOwnPropertyDescriptor(target, prop) {
+      if (!obscuredNavProperties.some(p => p === prop)) {
+        return Reflect.getOwnPropertyDescriptor(...arguments);
+      }
+    }
+  });;
+  //console.log(Object.getOwnPropertyDescriptor(window.navigator, 'plugins'));
+  // for (var x in navFp)  {
+  //   try {
+  //     window.navigator[x] = navFp[x];
+  //   }catch(e) {
+  //     logDebug('cannot set navigator.'+x)
+  //   }
+  // }
+  // window.navigator.plugins = navFp.plugins;
+  // window.window = window;
+
+  window.isSecureContext = true;
+  // window.global = window.document;
+
+  // import * as Storage from './storage.ts';
+  // window.sessionStorage = new Storage.SessionStorage();
+  // window.sessionStorage = window.sessionStorage;
+  window.webkitURL = window.URL;
+  window.Element = window.Element;
+  window.HTMLIFrameElement = window.HTMLIFrameElement;
+  window.HTMLElement = window.HTMLElement;
+  window.HTMLDocument = window.HTMLDocument;
+  window.screen = window.screen;
+  window.Audio = function() {
+    this.addEventListener = function(){}
+  }
+  // window.location = window.location || window.document.location;
+
+  window.global = new Proxy({}, {
+    get: function() {
+      throw new ReferenceError("global is not defined");
+    }
+  });
+  // window.global = undefined;
+  window.WebGLRenderingContext = function(){}
+  window.WebAssembly = {};
+  window.WebAssembly = window.WebAssembly;
+
+
+  window.chrome = {
+    loadTimes: function(){},
+    csi: function(){},
+    "app": {
+      "isInstalled": false,
+      getDetails: function(){},
+      getIsInstalled: function(){},
+      installState: function(){},
+      runningState: function(){},
+      "InstallState": {
+        "DISABLED": "disabled",
+        "INSTALLED": "installed",
+        "NOT_INSTALLED": "not_installed"
+      },
+      "RunningState": {
+        "CANNOT_RUN": "cannot_run",
+        "READY_TO_RUN": "ready_to_run",
+        "RUNNING": "running"
+      },
+    },
+    "runtime": {
+      id: undefined,
+      connect: FuncNativeCode("connect"), // nativeProxy(function(){}, "connect"), // FuncNativeCode("connect"),
+      sendMessage: FuncNativeCode("sendMessage"), // nativeProxy(function(){}, "sendMessage"),
+      "OnInstalledReason": {
+        "CHROME_UPDATE": "chrome_update",
+        "INSTALL": "install",
+        "SHARED_MODULE_UPDATE": "shared_module_update",
+        "UPDATE": "update"
+      },
+      "OnRestartRequiredReason": {
+        "APP_UPDATE": "app_update",
+        "OS_UPDATE": "os_update",
+        "PERIODIC": "periodic"
+      },
+      "PlatformArch": {
+        "ARM": "arm",
+        "MIPS": "mips",
+        "MIPS64": "mips64",
+        "X86_32": "x86-32",
+        "X86_64": "x86-64"
+      },
+      "PlatformNaclArch": {
+        "ARM": "arm",
+        "MIPS": "mips",
+        "MIPS64": "mips64",
+        "X86_32": "x86-32",
+        "X86_64": "x86-64"
+      },
+      "PlatformOs": {
+        "ANDROID": "android",
+        "CROS": "cros",
+        "LINUX": "linux",
+        "MAC": "mac",
+        "OPENBSD": "openbsd",
+        "WIN": "win"
+      },
+      "RequestUpdateCheckStatus": {
+        "NO_UPDATE": "no_update",
+        "THROTTLED": "throttled",
+        "UPDATE_AVAILABLE": "update_available"
+      },
+    }
+  };
+
+  var setAllNativeFns = function(obj) {
+    for (var i in obj) {
+      if (typeof obj[i] === 'function') {
+        Object.defineProperty(obj[i], "toString", {enumerable: false, writable: true});
+        obj[i].toString = FuncNativeCode;
+        // obj[i] = nativeProxy(obj[i]);
+      } else if (typeof obj[i] === 'object') {
+        setAllNativeFns(obj[i]);
+      }
+    }
+  }
+
+  setAllNativeFns(window.chrome);
+  window.chrome.app.getDetails = FuncNativeCode("getDetails");
+  window.chrome.app.getIsInstalled = FuncNativeCode("getIsInstalled");
+  window.chrome.app.installState = FuncNativeCode("installState");
+  window.chrome.app.runningState = FuncNativeCode("runningState");
+  // window.chrome.app.getDetails = nativeProxy(function(){}, "getDetails");
+  // window.chrome.app.getIsInstalled = nativeProxy(function(){}, "getIsInstalled");
+  // window.chrome.app.installState = nativeProxy(function(){}, "installState");
+  // window.chrome.app.runningState = nativeProxy(function(){}, "runningState");
+
+
+
+  // window.chrome.loadTimes = nativeProxy(window.chrome.loadTimes);
+  // window.chrome.csi = nativeProxy(window.chrome.csi);
+
+
+  // window.setTimeout = function(x) {
+  //   x();
+  // }
+  window.setTimeout.toString = function() {
+    return "{ [native code] }";
+  }
+  window.chrome = window.chrome;
+
+  // import * as Storage from './storage.ts';
+  // window.sessionStorage = new Storage.SessionStorage();
+  // window.localStorage = new Storage.SessionStorage();
+
+  // window._globalObject.HTMLIFrameElement.prototype.getBoundingClientRect = new Proxy(window._globalObject.HTMLIFrameElement.prototype.getBoundingClientRect, {
+  //   apply() {
+  //     return {"x":8,"y":8,"width":310,"height":100,"top":8,"right":318,"bottom":108,"left":8};
+  //   }
+  // });
+
+  var origCr = window.document.createElement;
+  var SUPPORTED_CODECS = {
+    'audio/x-m4a;': 'maybe',
+    'audio/aac;': 'probably',
+    'audio/flac;': 'probably',
+    'audio/mpeg;': 'probably',
+    'audio/mp3;': 'probably',
+    'audio/mp4;': 'maybe',
+    'audio/webm;': 'maybe',
+    'audio/webm; codecs="vorbis"':'probably',
+    'audio/ogg; codecs="vorbis"':'probably',
+    'audio/wav; codecs="1"':'probably',
+    'audio/ogg; codecs="flac"':'probably',
+    'video/mp4; codecs="avc1.42E01E"': 'probably',
+    'video/mp4; codecs="avc1.42E01E, mp4a.40.2"': 'probably',
+    'video/mp4; codecs="avc1.58A01E"': 'probably',
+    'video/mp4; codecs="avc1.4D401E"': 'probably',
+    'video/mp4; codecs="avc1.64001E"': 'probably',
+    'video/mp4; codecs="av01.0.08M.08"': 'probably',
+    'video/mp4; codecs=\"av01.0.08M.08\"': 'probably',
+    'video/webm; codecs="vp8"': 'probably',
+    'video/webm; codecs="vp8, vorbis"': 'probably',
+    'video/webm; codecs=\"vp8, vorbis\"': 'probably',
+    'video/ogg; codecs="theora"': 'probably',
+    'video/3gpp;': 'maybe',
+  }
+  var MS_IS_TYPE_SUPPORTED = {
+    'audio/3gpp;': false,
+    'audio/ogg; codecs="vorbis"': false,
+    'audio/x-m4a;': false,
+    'audio/flac;': false,
+    "video/ogg; codecs=\"theora\"": false,
+    'video/quicktime;': false,
+    'audio/mp3;': false,
+    'audio/wav;':false,
+    'audio/wav; codecs="1"':false,
+    'audio/mp4;': false,
+    'audio/webm;': false,
+    'video/3gpp;': false,
+    'video/;mp4; codecs="av01.0.08M.08"': false,
+    'video/mp4; codecs="av01.0.08M.08"': false,
+    'video/mp4; codecs=\"av01.0.08M.08\"': false,
+    'video/;mp4; codecs=\"av01.0.08M.08\"': false,
+    'video/mpeg': false,
+  }
+  window.MediaSource = {
+    isTypeSupported: function(typ) { if (typ in MS_IS_TYPE_SUPPORTED) { return MS_IS_TYPE_SUPPORTED[typ] } else { return  true; } }
+  };
+  Object.defineProperty(window.document, 'createElement', {
+     writable: true,
+     value: new Proxy(origCr, {
+      apply: function(target, thisArg, argumentsArr) {
+        var tag = argumentsArr[0];
+        if (argumentsArr[0] === "audio" || argumentsArr[0] === "video") {
+          var o = {
+            canPlayType: function(e) {
+            //  console.log('canPlayType(' + e + ') = ' + SUPPORTED_CODECS[e])
+              if (SUPPORTED_CODECS[e]) {
+                return SUPPORTED_CODECS[e]
+              } else {
+                return ""
+              }
+            }
+          }
+          o.canPlayType.toString = function() { return "function canPlayType() { [native code] }" }
+          return o;
+        } else {
+          var ele = Reflect.apply(...arguments);
+          if (ele instanceof window.HTMLIFrameElement) {
+            // debugger;
+          }
+          // ele = new Proxy(ele, {
+          //   get: function(obj, property, value) {
+          //     return Reflect.get(...arguments);
+          //   },
+          // });
+          return ele;
+          // Trace.addLoggingToNamespace(ele);
+          // return Trace.accProxy(ele, argumentsArr[0]);
+        }
+      }
+    })
+  });
+
+  window.Worker = class Worker extends globalThis.Worker {
+    constructor(url, opts) {
+      if (url.indexOf("webworker.js") !== -1) {
+        debugger;
+        super("https://www.gstatic.com/recaptcha/releases/iSHzt4kCrNgSxGUYDFqaZAL9/recaptcha__en.js", {type: "module"})
+      } else {
+        super(url, opts);
+      }
+    }
+  }
+
+
+  // Trace.addLoggingToNamespace(window, 'window');
+  // Trace.addLoggingToNamespace(window.MutationObserver, 'window.mutationObserver');
+  // if (Deno.env.get('TRACE') === '1') {
+  //   Trace.addLoggingToNamespace(window.navigator);
+  //   // Trace.addLoggingToNamespace(window.document);
+  //   // Trace.addLoggingToNamespace(window.localStorage);
+  //   Trace.addLoggingToNamespace(window.performance);
+
+  //   // window = Trace.accProxy(window, "window");
+  //   Trace.addAccessLoggingToNamespace(window, 'window');
+  //   Trace.addAccessLoggingToNamespace(window.screen, 'window.screen');
+  //   Trace.addAccessLoggingToNamespace(window.Date, 'window.Date');
+  //   Trace.addAccessLoggingToNamespace(window.location, 'window.location');
+  //   Trace.addAccessLoggingToNamespace(window.navigator, 'navigator');
+  //   // Trace.addAccessLoggingToNamespace(window.document, 'document');
+  // }
+
+  TrustedTypes.call(window._globalProxy, window);
+  //console.log(window.trustedTypes);
+
+  var errSpoofs = [
+    {"message":"Function.prototype.toString requires that 'this' be a Function","stack":"TypeError: Function.prototype.toString requires that 'this' be a Function\n    at toString (<anonymous>)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:5293:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:5293:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:5293:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:5293:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:5293:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:5293:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:5293:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:5293:8998)\n    at szH.invoke (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:5293:13127)"},
+    {"message":"Illegal invocation","stack":"TypeError: Illegal invocation\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1340:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1340:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1340:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1340:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1340:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1340:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1340:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1340:8998)\n    at szH.invoke (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1340:13127)\n    at https://www.gstatic.com/recaptcha/releases/iSHzt4kCrNgSxGUYDFqaZAL9/recaptcha__en.js:6627:33"},
+    {"message":"Function.prototype.toString requires that 'this' be a Function","stack":"TypeError: Function.prototype.toString requires that 'this' be a Function\n    at toString (<anonymous>)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:8998)\n    at szH.invoke (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:13127)"},
+    {"message":"Cannot read property '_' of undefined","stack":"TypeError: Cannot read property '_' of undefined\n    at eval (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358)), <anonymous>:1:17)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:8998)\n    at szH.invoke (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:13127)"},
+    {"message":"Cannot use 'in' operator to search for 'function(w,q,x,t,R,l,G){if(q=(R=y((t=X(w),w)),\"\"),w.O[3])for(G=w.c(3),x=0,l=G.length;R--;)x=((x|0)+(y(w)|0))%l,...<omitted>...)}' in 350999239","stack":"TypeError: Cannot use 'in' operator to search for 'function(w,q,x,t,R,l,G){if(q=(R=y((t=X(w),w)),\"\"),w.O[3])for(G=w.c(3),x=0,l=G.length;R--;)x=((x|0)+(y(w)|0))%l,...<omitted>...)}' in 350999239\n    at eval (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358)), <anonymous>:1:76)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:8998)\n    at szH.invoke (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:13127)"},
+    {"message":"Function statements require a function name","stack":"SyntaxError: Function statements require a function name\n    at eval (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358)), <anonymous>:1:81)\n    at eval (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358)), <anonymous>:1:84)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:8998)"},
+    {"message":"iframe is not defined","stack":"ReferenceError: iframe is not defined\n    at eval (eval at <anonymous> (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358))), <anonymous>:1:1)\n    at eval (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358)), <anonymous>:1:76)\n    at eval (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358)), <anonymous>:1:84)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:4297:11761)"},
+    {"message":"Cannot read property 'push' of undefined","stack":"TypeError: Cannot read property 'push' of undefined\n    at eval (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358)), <anonymous>:1:19)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3841:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3841:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3841:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3841:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3841:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3841:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3841:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3841:8998)\n    at szH.invoke (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3841:13127)"},
+    {"message":"G[q] is not a constructor","stack":"TypeError: G[q] is not a constructor\n    at eval (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:671:4237)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:671:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:671:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:671:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:671:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:671:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:671:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:671:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:671:8998)\n    at szH.invoke (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:671:13127)"},
+    {"message":"D.c is not a function","stack":"TypeError: D.c is not a function\n    at X (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358)), <anonymous>:1:66)\n    at Number.eval (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:7137:4920)\n    at eval (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:7137:2888)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:7137:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:7137:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:7137:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:7137:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:7137:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:7137:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:7137:11761)"},
+    {"message":"String.prototype.replace called on null or undefined","stack":"TypeError: String.prototype.replace called on null or undefined\n    at replace (<anonymous>)\n    at l7 (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358)), <anonymous>:1:162)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6042:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6042:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6042:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6042:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6042:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6042:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6042:8998)\n    at szH.invoke (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6042:13127)"},
+    {"message":"this.$ is not a function","stack":"TypeError: this.$ is not a function\n    at P.dO (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6042:9722)\n    at l7 (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358)), <anonymous>:1:162)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6042:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6042:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6042:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6042:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6042:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6042:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6042:8998)\n    at szH.invoke (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6042:13127)"},
+    {"message":"Cannot read property 'removeEventListener' of undefined","stack":"TypeError: Cannot read property 'removeEventListener' of undefined\n    at eval (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2900:4498)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2900:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2900:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2900:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2900:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2900:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2900:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2900:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2900:8998)\n    at szH.invoke (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2900:13127)"},
+    {"message":"q.M.apply is not a function","stack":"TypeError: q.M.apply is not a function\n    at eval (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358)), <anonymous>:1:55)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3978:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3978:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3978:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3978:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3978:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3978:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3978:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3978:8998)\n    at szH.invoke (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3978:13127)"},
+    {"message":"Function statements require a function name","stack":"SyntaxError: Function statements require a function name\n    at eval (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358)), <anonymous>:1:81)\n    at eval (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358)), <anonymous>:1:84)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1112:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1112:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1112:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1112:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1112:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1112:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1112:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1112:8998)"},
+    {"message":"Cannot convert undefined or null to object","stack":"TypeError: Cannot convert undefined or null to object\n    at slice (<anonymous>)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1112:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1112:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1112:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1112:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1112:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1112:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1112:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1112:8998)\n    at szH.invoke (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1112:13127)"},
+    {"message":"Unexpected identifier","stack":"SyntaxError: Unexpected identifier\n    at eval (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358)), <anonymous>:1:81)\n    at eval (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358)), <anonymous>:1:84)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2640:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2640:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2640:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2640:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2640:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2640:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2640:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2640:8998)"},
+    {"message":"x.addEventListener is not a function","stack":"TypeError: x.addEventListener is not a function\n    at eval (eval at <anonymous> (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358))), <anonymous>:1:129)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2640:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2640:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2640:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2640:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2640:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2640:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2640:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2640:8998)\n    at szH.invoke (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2640:13127)"},
+    {"message":"Unexpected end of input","stack":"SyntaxError: Unexpected end of input\n    at eval (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:7548:5209)\n    at eval (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:7548:5212)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:7548:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:7548:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:7548:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:7548:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:7548:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:7548:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:7548:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:7548:8998)"},
+    {"message":"t.slice is not a function","stack":"TypeError: t.slice is not a function\n    at eval (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1849:3784)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1849:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1849:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1849:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1849:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1849:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1849:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1849:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1849:8998)\n    at szH.invoke (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1849:13127)"},
+    {"message":"Cannot use 'in' operator to search for '1600041942702' in %","stack":"TypeError: Cannot use 'in' operator to search for '1600041942702' in %\n    at eval (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358)), <anonymous>:1:76)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2523:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2523:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2523:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2523:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2523:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2523:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2523:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2523:8998)\n    at szH.invoke (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2523:13127)"},
+    {"message":"((intermediate value)(intermediate value) , w[0]).removeEventListener is not a function","stack":"TypeError: ((intermediate value)(intermediate value) , w[0]).removeEventListener is not a function\n    at eval (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358)), <anonymous>:1:42)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6279:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6279:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6279:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6279:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6279:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6279:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6279:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6279:8998)\n    at szH.invoke (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:6279:13127)"},
+    {"message":"Cannot use 'in' operator to search for '#<f>' in +","stack":"TypeError: Cannot use 'in' operator to search for '#<f>' in +\n    at eval (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358)), <anonymous>:1:76)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2997:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2997:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2997:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2997:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2997:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2997:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2997:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2997:8998)\n    at szH.invoke (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2997:13127)"},
+    {"message":"Cannot use 'in' operator to search for '0,' in 4","stack":"TypeError: Cannot use 'in' operator to search for '0,' in 4\n    at eval (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358)), <anonymous>:1:76)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2997:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2997:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2997:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2997:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2997:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2997:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2997:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2997:8998)\n    at szH.invoke (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:2997:13127)"},
+    {"message":"l is not a function","stack":"TypeError: l is not a function\n    at eval (eval at <anonymous> (eval at <anonymous> (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358))), <anonymous>:1:213)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3378:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3378:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3378:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3378:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3378:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3378:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3378:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3378:8998)\n    at szH.invoke (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:3378:13127)"},
+    {"message":"Cannot use 'in' operator to search for 'function(w,q,x,t,R){(t=(R=(x=(x=X((R=(q=X(w),X(w)),t=X(w),w)),w.c(x)),w.c(R)),w).c(t),d)(w,q,F$(x,R,t,w))}' in 1600042022890","stack":"TypeError: Cannot use 'in' operator to search for 'function(w,q,x,t,R){(t=(R=(x=(x=X((R=(q=X(w),X(w)),t=X(w),w)),w.c(x)),w.c(R)),w).c(t),d)(w,q,F$(x,R,t,w))}' in 1600042022890\n    at eval (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1687:4449)\n    at l7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1687:6716)\n    at r (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1687:6013)\n    at f.eval [as N] (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1687:11530)\n    at Gt (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1687:7418)\n    at i7 (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1687:12699)\n    at U (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1687:12291)\n    at $b (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1687:11761)\n    at f.cr (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1687:8998)\n    at szH.invoke (eval at <anonymous> (https://www.google.com/js/bg/dvDKLY21EpsggPpYe7mLhx2vZ59WAsI8UCV0Rb2v1fM.js:1:358), <anonymous>:1687:13127)"},
+  ];
+
+  // TODO can we override error.stack property accesses?
+  var rcpadding = (7824*Math.random()|0).toString();
+
+  window.RcErrorSpoof = function(e) {
+    if(!e || !e.message) return e;
+
+    // debugger;
+    // console.log('ERR', e.message, e.stack);
+    var sematch;
+    for(var i = 0; i < errSpoofs.length; i++) {
+      var se = errSpoofs[i];
+      if(se.message === e.message) {
+        sematch = {...se};
+        break;
+      }
+    }
+    // console.log('MATCH', sematch.stack);
+    if (sematch) {
+      var lines = sematch.stack.split('\n');
+      for (var j = 1; j < lines.length; j++) {
+        var ls = lines[j].split(':');
+        if (ls.length !== 6) {
+          console.log('INVALID LINE', ls)
+          continue;
+        }
+        if (ls[4] !== '1') {
+          ls[4] = rcpadding;
+          var col = parseInt(ls[5].substring(0,ls[5].length-1));
+          if (col > 6768) {
+            col -= 78;
+            ls[5] = col.toString() + ')';
+          }
+          lines[j] = ls.join(':');
+        } else {
+          // console.log('SKIPPING LINE', ls)
+        }
+      }
+      e.stack = lines.join('\n');
+      // debugger;
+      console.log('SPOOF', e.stack);
+    } else {
+      console.log('NO MATCH', e.message, e.stack);
+    }
+    return e;
+  }
+  if (!globalThis.RcErrorSpoof) {
+    globalThis.RcErrorSpoof = window.RcErrorSpoof;
+  }
+
+    window._spoof_ = {
+        GLFP: {
+          "ctx.getParameter(ctx.ALIASED_LINE_WIDTH_RANGE)": {
+            "0": 1,
+            "1": 1
+          },
+          "ctx.getParameter(ctx.ALIASED_POINT_SIZE_RANGE)": {
+            "0": 1,
+            "1": 8191
+          },
+          "ctx.getParameter(ctx.MAX_VIEWPORT_DIMS)": {
+            "0": 16384,
+            "1": 16384
+          },
+          "ctx.getParameter(ctx.ALPHA_BITS)": 8,
+          "ctx.getParameter(ctx.BLUE_BITS)": 8,
+          "ctx.getParameter(ctx.GREEN_BITS)": 8,
+          "ctx.getParameter(ctx.RED_BITS)": 8,
+          "ctx.getParameter(ctx.DEPTH_BITS)": 24,
+          "ctx.getParameter(ctx.MAX_COMBINED_TEXTURE_IMAGE_UNITS)": 80,
+          "ctx.getParameter(ctx.MAX_CUBE_MAP_TEXTURE_SIZE)": 16384,
+          "ctx.getParameter(ctx.MAX_FRAGMENT_UNIFORM_VECTORS)": 1024,
+          "ctx.getParameter(ctx.MAX_RENDERBUFFER_SIZE)": 16384,
+          "ctx.getParameter(ctx.MAX_TEXTURE_IMAGE_UNITS)": 16,
+          "ctx.getParameter(ctx.MAX_TEXTURE_SIZE)": 16384,
+          "ctx.getParameter(ctx.MAX_VARYING_VECTORS)": 32,
+          "ctx.getParameter(ctx.MAX_VERTEX_ATTRIBS)": 16,
+          "ctx.getParameter(34047)": 16,
+          "ctx.getParameter(ctx.MAX_VERTEX_TEXTURE_IMAGE_UNITS)": 16,
+          "ctx.getParameter(ctx.MAX_VERTEX_UNIFORM_VECTORS)": 1024,
+          "ctx.getParameter(ctx.RENDERER)": "WebKit WebGL",
+          "ctx.getParameter(ctx.SHADING_LANGUAGE_VERSION)": "WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)",
+          "ctx.getParameter(ctx.STENCIL_BITS)": 0,
+          "ctx.getParameter(ctx.VENDOR)": "WebKit",
+          "ctx.getParameter(ctx.VERSION)": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+          "ctx.getExtension(\"WEBGL_debug_renderer_info\")": {
+            "UNMASKED_VENDOR_WEBGL": 37445,
+            "UNMASKED_RENDERER_WEBGL": 37446
+          },
+          "ctx.getParameter(37445)": "ATI Technologies Inc.",
+          "ctx.getParameter(37446)": "AMD Radeon Pro 5500M OpenGL Engine",
+          "ctx.getContextAttributes()": {
+            "alpha": true,
+            "antialias": true,
+            "depth": true,
+            "failIfMajorPerformanceCaveat": false,
+            "powerPreference": "default",
+            "premultipliedAlpha": true,
+            "preserveDrawingBuffer": false,
+            "stencil": false,
+            "desynchronized": false,
+            "xrCompatible": false
+          },
+          "ctx.getExtension(\"EXT_texture_filter_anisotropic\")": {
+            "TEXTURE_MAX_ANISOTROPY_EXT": 34046,
+            "MAX_TEXTURE_MAX_ANISOTROPY_EXT": 34047
+          },
+          "ctx.getExtension(\"MOZ_EXT_texture_filter_anisotropic\")": null,
+          "ctx.getExtension(\"WEBKIT_EXT_texture_filter_anisotropic\")": {
+            "TEXTURE_MAX_ANISOTROPY_EXT": 34046,
+            "MAX_TEXTURE_MAX_ANISOTROPY_EXT": 34047
+          },
+          "ctx.getShaderPrecisionFormat(ctx.VERTEX_SHADER, ctx.HIGH_FLOAT)": {
+            "rangeMin": 127,
+            "rangeMax": 127,
+            "precision": 23
+          },
+          "ctx.getShaderPrecisionFormat(ctx.VERTEX_SHADER, ctx.MEDIUM_FLOAT)": {
+            "rangeMin": 127,
+            "rangeMax": 127,
+            "precision": 23
+          },
+          "ctx.getShaderPrecisionFormat(ctx.VERTEX_SHADER, ctx.LOW_FLOAT)": {
+            "rangeMin": 127,
+            "rangeMax": 127,
+            "precision": 23
+          },
+          "ctx.getShaderPrecisionFormat(ctx.FRAGMENT_SHADER, ctx.HIGH_FLOAT)": {
+            "rangeMin": 127,
+            "rangeMax": 127,
+            "precision": 23
+          },
+          "ctx.getShaderPrecisionFormat(ctx.FRAGMENT_SHADER, ctx.MEDIUM_FLOAT)": {
+            "rangeMin": 127,
+            "rangeMax": 127,
+            "precision": 23
+          },
+          "ctx.getShaderPrecisionFormat(ctx.FRAGMENT_SHADER, ctx.LOW_FLOAT)": {
+            "rangeMin": 127,
+            "rangeMax": 127,
+            "precision": 23
+          },
+          "ctx.getShaderPrecisionFormat(ctx.VERTEX_SHADER, ctx.HIGH_INT)": {
+            "rangeMin": 31,
+            "rangeMax": 30,
+            "precision": 0
+          },
+          "ctx.getShaderPrecisionFormat(ctx.VERTEX_SHADER, ctx.MEDIUM_INT)": {
+            "rangeMin": 31,
+            "rangeMax": 30,
+            "precision": 0
+          },
+          "ctx.getShaderPrecisionFormat(ctx.VERTEX_SHADER, ctx.LOW_INT)": {
+            "rangeMin": 31,
+            "rangeMax": 30,
+            "precision": 0
+          },
+          "ctx.getShaderPrecisionFormat(ctx.FRAGMENT_SHADER, ctx.HIGH_INT)": {
+            "rangeMin": 31,
+            "rangeMax": 30,
+            "precision": 0
+          },
+          "ctx.getShaderPrecisionFormat(ctx.FRAGMENT_SHADER, ctx.MEDIUM_INT)": {
+            "rangeMin": 31,
+            "rangeMax": 30,
+            "precision": 0
+          },
+          "ctx.getShaderPrecisionFormat(ctx.FRAGMENT_SHADER, ctx.LOW_INT)": {
+            "rangeMin": 31,
+            "rangeMax": 30,
+            "precision": 0
+          },
+          "ctx.getSupportedExtensions()": {
+            "0": "ANGLE_instanced_arrays",
+            "1": "EXT_blend_minmax",
+            "2": "EXT_color_buffer_half_float",
+            "3": "EXT_disjoint_timer_query",
+            "4": "EXT_float_blend",
+            "5": "EXT_frag_depth",
+            "6": "EXT_shader_texture_lod",
+            "7": "EXT_texture_filter_anisotropic",
+            "8": "WEBKIT_EXT_texture_filter_anisotropic",
+            "9": "EXT_sRGB",
+            "10": "OES_element_index_uint",
+            "11": "OES_fbo_render_mipmap",
+            "12": "OES_standard_derivatives",
+            "13": "OES_texture_float",
+            "14": "OES_texture_float_linear",
+            "15": "OES_texture_half_float",
+            "16": "OES_texture_half_float_linear",
+            "17": "OES_vertex_array_object",
+            "18": "WEBGL_color_buffer_float",
+            "19": "WEBGL_compressed_texture_s3tc",
+            "20": "WEBKIT_WEBGL_compressed_texture_s3tc",
+            "21": "WEBGL_compressed_texture_s3tc_srgb",
+            "22": "WEBGL_debug_renderer_info",
+            "23": "WEBGL_debug_shaders",
+            "24": "WEBGL_depth_texture",
+            "25": "WEBKIT_WEBGL_depth_texture",
+            "26": "WEBGL_draw_buffers",
+            "27": "WEBGL_lose_context",
+            "28": "WEBKIT_WEBGL_lose_context"
+          }
+        }
+      };
+
+
+  // window.document.hidden = Math.random() < 0.25;
+  window.BarcodeDetector = {};
+  window.Intl = {
+    DisplayNames: {},
+    DateTimeFormat: function(){
+      return {
+        resolvedOptions: function() {
+          return { timeZone: "America/Los_Angeles" };
+        }
+      };
+    },
+    Locale: {},
+    ListFormat: {},
+  };
+  window.Intl.DateTimeFormat.prototype = {formatRange: function() {
+
+  }, resolvedOptions: function() { return {
+    timeZone: 'America/Los_Angeles',
+  }}};
+  // console.log('tz', window.Intl.DateTimeFormat().resolvedOptions().timeZone)
+  window.Bluetooth = {};
+  window.Bluetooth.prototype = {
+    getAvailability: function(){}
+  };
+  window.Animation = {};
+  // window.CanvasRenderingContext2D = {
+  //   getContextAttributes: function() {}
+  // }
+  // // window.CanvasRenderingContext2D.__proto__ = window.CanvasRenderingContext2D;
+  // window.CanvasRenderingContext2D.prototype = window.CanvasRenderingContext2D;
+  window.TextEncoderStream = {};
+  window.SourceBuffer = {
+  };
+  window.SourceBuffer.prototype = {
+    changeType: function(){}
+  }
+  window.RTCPeerConnection = {};
+  window.RTCPeerConnection.prototype = {restartIce: function(){}};
+  window.RTCRtpSender = {};
+  window.RTCRtpSender.prototype = {
+    getParameters: function(){},
+  };
+  window.indexedDB = {};
+  window.openDatabase = function(){}
+  return window;
+}

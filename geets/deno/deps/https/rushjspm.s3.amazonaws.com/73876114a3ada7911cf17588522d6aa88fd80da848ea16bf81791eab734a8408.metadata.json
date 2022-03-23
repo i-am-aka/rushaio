@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-request-id": "83DC00286A8D4A21",
+    "etag": "\"221a3dd0ced9e06f2bd87bf279d37b8a\"",
+    "content-type": "application/javascript",
+    "content-length": "1511",
+    "connection": "keep-alive",
+    "server": "AmazonS3",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "x-amz-id-2": "1mX54B0ELIYkHS+luwIqkekKRSjgQcwxbO6OtYHdS3KSbHlL3nv6roCTXhV1WTUdcHdgeltEFoo=",
+    "last-modified": "Mon, 07 Dec 2020 15:03:39 GMT",
+    "accept-ranges": "bytes"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:cssom@0.3.8/lib/CSSFontFaceRule.dew.js"
+}

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "content-type": "application/javascript",
+    "etag": "\"d1e3657a67ade50d0a7941d1d7db835f\"",
+    "last-modified": "Mon, 07 Dec 2020 15:03:40 GMT",
+    "connection": "keep-alive",
+    "content-length": "1285",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "server": "AmazonS3",
+    "x-amz-request-id": "D59E9C4A2A658178",
+    "accept-ranges": "bytes",
+    "x-amz-id-2": "nq6TwTdo5WIoEyLO0v5Scei6KFZtrn/Bkuuit4eMc7Mdx2zDS/JYbk5UATi4VZO71s4QhTpQS7o="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:iconv-lite@0.4.24/encodings/tables/gbk-added.json.dew.js"
+}

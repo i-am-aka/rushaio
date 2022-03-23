@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "accept-ranges": "bytes",
+    "content-type": "application/javascript",
+    "server": "AmazonS3",
+    "x-amz-request-id": "C3B5242F5D789141",
+    "x-amz-id-2": "DCp9seM1CtHpESkH5JWod8zuZEZQlviMa+FTHU55ax4ojpIJzkVxJoTbvSccm4+FA8IybLHmhAA=",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "content-length": "11615",
+    "etag": "\"2dcacff1e981f0d925e76b335c2c1fda\""
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/helpers/form-controls.dew.js"
+}

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-id-2": "5eKwJBL1FJm7UGZK6k6LGi1qul2R0nwxVNORG0UoLHA6wTh+kUwLXGMi4d2mfTpeOEnf590CHkg=",
+    "server": "AmazonS3",
+    "content-type": "application/javascript",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "content-length": "1859",
+    "connection": "keep-alive",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "x-amz-request-id": "18C889BDF2D0D402",
+    "accept-ranges": "bytes",
+    "etag": "\"a327e9689e881b5a87cdfca7a0d151a8\""
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/HTMLFieldSetElement-impl.dew.js"
+}

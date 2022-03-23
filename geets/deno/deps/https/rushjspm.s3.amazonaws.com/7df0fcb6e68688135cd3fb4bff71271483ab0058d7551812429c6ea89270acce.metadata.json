@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:47 GMT",
+    "accept-ranges": "bytes",
+    "x-amz-request-id": "647E829409D0143A",
+    "etag": "\"df98d7c417cbcc421c2e2d53ea6e01d1\"",
+    "content-length": "1682",
+    "x-amz-id-2": "ji/3HGU40hU5BAUBT7EkGC1G0/Sm/oT7DsJa5eKpB6DNa35DT9oWKpz4ghrW5CwOxO/vBmtb2YI=",
+    "content-type": "application/javascript"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:w3c-hr-time@1.0.2/lib/clock-is-accurate.dew.js"
+}

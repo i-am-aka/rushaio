@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "content-length": "7614",
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "x-amz-id-2": "pEczQFerJkRf6zbJrAz7gl2+S57LSok5NBsuLfp8+Pr2u8CWSWYS0P7RI3vG5JUXT+6BbGbzEx8=",
+    "content-type": "application/javascript",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "etag": "\"751ef2644923dcd19fb6330931ab6c4f\"",
+    "accept-ranges": "bytes",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "x-amz-request-id": "33BBF4F1519FF251"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/helpers/number-and-date-inputs.dew.js"
+}

@@ -1,0 +1,31 @@
+import { dew as _syncReaderDewDew } from "./sync-reader.dew.js";
+import { dew as _filterParseDewDew } from "./filter-parse.dew.js";
+import _buffer from "/npm:@jspm/core@1/nodelibs/buffer.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  var Buffer = _buffer.Buffer;
+
+  var SyncReader = _syncReaderDewDew();
+
+  var Filter = _filterParseDewDew();
+
+  exports.process = function (inBuffer, bitmapInfo) {
+    var outBuffers = [];
+    var reader = new SyncReader(inBuffer);
+    var filter = new Filter(bitmapInfo, {
+      read: reader.read.bind(reader),
+      write: function (bufferPart) {
+        outBuffers.push(bufferPart);
+      },
+      complete: function () {}
+    });
+    filter.start();
+    reader.process();
+    return Buffer.concat(outBuffers);
+  };
+
+  return exports;
+}

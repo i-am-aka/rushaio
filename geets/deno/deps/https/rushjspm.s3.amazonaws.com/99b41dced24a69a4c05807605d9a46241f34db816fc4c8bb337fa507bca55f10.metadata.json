@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "x-amz-id-2": "WytWQZx8NyVwnnok8E5EC8/admEsRjMtXKuKl9b6bFXtY94uPEWi7ux9VMEywFvbGVSmmyBA3A4=",
+    "x-amz-request-id": "9AF871A5DC50A1F3",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "etag": "\"03cafdd0381773157f08307a0c3ef46c\"",
+    "content-type": "application/javascript",
+    "server": "AmazonS3",
+    "last-modified": "Mon, 07 Dec 2020 15:03:45 GMT",
+    "accept-ranges": "bytes",
+    "content-length": "3480"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/HTMLLabelElement-impl.dew.js"
+}

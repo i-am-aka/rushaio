@@ -1,0 +1,150 @@
+import { dew as _npmAcorn7DewDew } from "/npm:acorn@7_dew.js";
+import { dew as _npmAcornGlobals6DewDew } from "/npm:acorn-globals@6_dew.js";
+import { dew as _npmEscodegen1DewDew } from "/npm:escodegen@1_dew.js";
+import { dew as _jsGlobalsJsonDewDew } from "./browser/js-globals.json.dew.js";
+var exports = {},
+    _dewExec = false;
+
+var _global = typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : global;
+
+var cache = {};
+
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  /* eslint-disable no-new-func */
+  const acorn = _npmAcorn7DewDew();
+
+  const findGlobals = _npmAcornGlobals6DewDew();
+
+  const escodegen = _npmEscodegen1DewDew();
+
+  const jsGlobals = _jsGlobalsJsonDewDew(); // We can't use the default browserify vm shim because it doesn't work in a web worker.
+  // "eval" is skipped because it's set to a function that calls `runInContext`:
+
+
+  const jsGlobalEntriesToInstall = Object.entries(jsGlobals).filter(([name]) => name !== "eval" && name in _global);
+
+  exports.createContext = function (sandbox) {
+    // TODO: This should probably use a symbol
+    Object.defineProperty(sandbox, "__isVMShimContext", {
+      value: true,
+      writable: true,
+      configurable: true,
+      enumerable: false
+    });
+
+    for (const [globalName, globalPropDesc] of jsGlobalEntriesToInstall) {
+      const propDesc = { ...globalPropDesc,
+        value: _global[globalName]
+      };
+      Object.defineProperty(sandbox, globalName, propDesc);
+    }
+
+    Object.defineProperty(sandbox, "eval", {
+      value(code) {
+        return exports.runInContext(code, sandbox);
+      },
+
+      writable: true,
+      configurable: true,
+      enumerable: false
+    });
+  };
+
+  exports.isContext = function (sandbox) {
+    return sandbox.__isVMShimContext;
+  };
+
+  exports.runInContext = function (code, contextifiedSandbox, options) {
+    // console.log(code);
+    if (code === "this" || code.length === 0 || code.trim().length === 0) {
+      // Special case for during window creation.
+      return contextifiedSandbox;
+    }
+
+    if (options === undefined) {
+      options = {};
+    }
+    var chit = cache[options.filename];
+    // console.log(options.filename, chit)
+    if (chit && Date.now()-chit.time < 3e5) {
+      console.log('CACHE runInContext', options.filename);
+      const suffix = "\n//# sourceURL=" + options.filename;
+
+      return Function("window", chit.code + suffix).bind(contextifiedSandbox)(contextifiedSandbox);
+    }
+
+    const comments = [];
+    const tokens = [];
+    const ast = acorn.parse(code, {
+      allowReturnOutsideFunction: true,
+      ranges: true,
+      // collect comments in Esprima's format
+      onComment: comments,
+      // collect token ranges
+      onToken: tokens
+    }); // make sure we keep comments
+
+    escodegen.attachComments(ast, comments, tokens);
+    const globals = findGlobals(ast);
+
+    for (let i = 0; i < globals.length; ++i) {
+      if (globals[i].name === "window" || globals[i].name === "this") {
+        continue;
+      }
+
+      const {
+        nodes
+      } = globals[i];
+
+      for (let j = 0; j < nodes.length; ++j) {
+        const {
+          type,
+          name
+        } = nodes[j];
+        nodes[j].type = "MemberExpression";
+        nodes[j].property = {
+          name,
+          type
+        };
+        nodes[j].computed = false;
+        nodes[j].object = {
+          name: "window",
+          type: "Identifier"
+        };
+      }
+    }
+
+    const lastNode = ast.body[ast.body.length - 1];
+
+    if (lastNode.type === "ExpressionStatement") {
+      lastNode.type = "ReturnStatement";
+      lastNode.argument = lastNode.expression;
+      delete lastNode.expression;
+    }
+
+    const rewrittenCode = escodegen.generate(ast, {
+      comment: true
+    });
+    if (options.filename && options.filename.indexOf('.js') !== -1) {
+      cache[options.filename] = {code: rewrittenCode, time: Date.now()};
+    }
+    const suffix = options.filename !== undefined ? "\n//# sourceURL=" + options.filename : "";
+    return Function("window", rewrittenCode + suffix).bind(contextifiedSandbox)(contextifiedSandbox);
+  };
+
+  exports.Script = class VMShimScript {
+    constructor(code, options) {
+      this._code = code;
+      this._options = options;
+    }
+
+    runInContext(sandbox, options) {
+      return exports.runInContext(this._code, sandbox, Object.assign({}, this._options, options));
+    }
+
+  };
+  return exports;
+}

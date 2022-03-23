@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "etag": "\"a7daceb98d0660a88caeea646a6954a0\"",
+    "x-amz-id-2": "KAlBrqCQxuEdjHCFI0r+2eyGeM/wBtamztjJv6IIJzsUcMjxfunjvk/TvShKX+i7nLhGzhsksts=",
+    "server": "AmazonS3",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "accept-ranges": "bytes",
+    "content-length": "8640",
+    "content-type": "application/javascript",
+    "x-amz-request-id": "D3D00E92A6E9BF97"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/helpers/dates-and-times.dew.js"
+}

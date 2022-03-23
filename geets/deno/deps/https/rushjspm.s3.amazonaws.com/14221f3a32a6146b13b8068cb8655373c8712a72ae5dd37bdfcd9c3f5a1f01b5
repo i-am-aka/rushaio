@@ -1,0 +1,49 @@
+import { dew as _CSSRuleDewDew } from "./CSSRule.dew.js";
+import { dew as _MatcherListDewDew } from "./MatcherList.dew.js";
+var exports = {},
+    _dewExec = false;
+
+var _global = typeof self !== "undefined" ? self : global;
+
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  //.CommonJS
+  var CSSOM = {
+    CSSRule: _CSSRuleDewDew().CSSRule,
+    MatcherList: _MatcherListDewDew().MatcherList
+  }; ///CommonJS
+
+  /**
+   * @constructor
+   * @see https://developer.mozilla.org/en/CSS/@-moz-document
+   */
+
+  CSSOM.CSSDocumentRule = function CSSDocumentRule() {
+    CSSOM.CSSRule.call(this || _global);
+    (this || _global).matcher = new CSSOM.MatcherList();
+    (this || _global).cssRules = [];
+  };
+
+  CSSOM.CSSDocumentRule.prototype = new CSSOM.CSSRule();
+  CSSOM.CSSDocumentRule.prototype.constructor = CSSOM.CSSDocumentRule;
+  CSSOM.CSSDocumentRule.prototype.type = 10; //FIXME
+  //CSSOM.CSSDocumentRule.prototype.insertRule = CSSStyleSheet.prototype.insertRule;
+  //CSSOM.CSSDocumentRule.prototype.deleteRule = CSSStyleSheet.prototype.deleteRule;
+
+  Object.defineProperty(CSSOM.CSSDocumentRule.prototype, "cssText", {
+    get: function () {
+      var cssTexts = [];
+
+      for (var i = 0, length = (this || _global).cssRules.length; i < length; i++) {
+        cssTexts.push((this || _global).cssRules[i].cssText);
+      }
+
+      return "@-moz-document " + (this || _global).matcher.matcherText + " {" + cssTexts.join("") + "}";
+    }
+  }); //.CommonJS
+
+  exports.CSSDocumentRule = CSSOM.CSSDocumentRule; ///CommonJS
+
+  return exports;
+}

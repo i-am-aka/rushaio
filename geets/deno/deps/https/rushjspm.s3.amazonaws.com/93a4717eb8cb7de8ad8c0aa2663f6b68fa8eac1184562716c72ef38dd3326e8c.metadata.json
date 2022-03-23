@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-id-2": "mQVnKtkQevtrfTX+LYk1cMZvpFPXF+OUrE4c9dC/uREWTj/QvU6cg/foNh42pTQo4EFh7wE5En0=",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "content-length": "507",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "etag": "\"0bebae231aff22fef89c1854c4bf8409\"",
+    "content-type": "application/javascript",
+    "connection": "keep-alive",
+    "server": "AmazonS3",
+    "x-amz-request-id": "0811803C86D9DCAE",
+    "accept-ranges": "bytes"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/aborting/AbortController-impl.dew.js"
+}

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "content-type": "application/javascript",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:47 GMT",
+    "etag": "\"e744a55ab1095e95eebc7ac691b68514\"",
+    "x-amz-id-2": "8KgpMdcgpyXiS4EpnhHacdxsQNLoS+/CBNzkLBRoxiB9DJVtPrbB/fTrEjmp4smvndjKR9md5wE=",
+    "connection": "keep-alive",
+    "accept-ranges": "bytes",
+    "server": "AmazonS3",
+    "x-amz-request-id": "13B1F312F8696A67",
+    "content-length": "476"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:w3c-hr-time@1.0.2/lib/global-monotonic-clock.dew.js"
+}

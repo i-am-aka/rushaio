@@ -1,0 +1,25 @@
+import { dew as _arrayWithHolesDewDew } from "./arrayWithHoles.dew.js";
+import { dew as _iterableToArrayLimitDewDew } from "./iterableToArrayLimit.dew.js";
+import { dew as _unsupportedIterableToArrayDewDew } from "./unsupportedIterableToArray.dew.js";
+import { dew as _nonIterableRestDewDew } from "./nonIterableRest.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  var arrayWithHoles = _arrayWithHolesDewDew();
+
+  var iterableToArrayLimit = _iterableToArrayLimitDewDew();
+
+  var unsupportedIterableToArray = _unsupportedIterableToArrayDewDew();
+
+  var nonIterableRest = _nonIterableRestDewDew();
+
+  function _slicedToArray(arr, i) {
+    return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || unsupportedIterableToArray(arr, i) || nonIterableRest();
+  }
+
+  exports = _slicedToArray;
+  return exports;
+}

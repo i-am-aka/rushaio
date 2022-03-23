@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "x-amz-request-id": "BF17DC6EAB4B2101",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "x-amz-id-2": "XqN8KVLK4xMimq50nF2q3GTcITWnIncZUadlVltXX1YYCSgbYt2lbkybl7aTEGVSMrmF3c1sB8w=",
+    "content-length": "1503",
+    "etag": "\"059d623ec6f8a3122982b3dcdce6ba11\"",
+    "accept-ranges": "bytes",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "content-type": "application/javascript",
+    "server": "AmazonS3"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/events/MouseEvent-impl.dew.js"
+}

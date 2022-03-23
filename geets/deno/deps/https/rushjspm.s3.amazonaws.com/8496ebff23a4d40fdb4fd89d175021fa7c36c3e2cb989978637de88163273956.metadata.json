@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "accept-ranges": "bytes",
+    "content-type": "application/javascript",
+    "etag": "\"4d4e71325c1e0c47db53abeaacf21e76\"",
+    "x-amz-id-2": "0tZodckkX8MbBSZrPUgS5z7n+ddqXBzOKgnpgh9LkxVUWrooHzIuW2QDtKavdlds7qe1zYlyizk=",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "content-length": "1078",
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "x-amz-request-id": "8E07815D65AA5D46"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/DocumentOrShadowRoot-impl.dew.js"
+}

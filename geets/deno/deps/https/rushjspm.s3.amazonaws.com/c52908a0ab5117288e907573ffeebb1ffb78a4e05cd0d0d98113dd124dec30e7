@@ -1,0 +1,22 @@
+import { dew as _BlobImplDewDew } from "./Blob-impl.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const BlobImpl = _BlobImplDewDew().implementation;
+
+  exports.implementation = class FileImpl extends BlobImpl {
+    constructor(globalObject, args, privateData) {
+      const fileBits = args[0];
+      const fileName = args[1];
+      const options = args[2];
+      super(globalObject, [fileBits, options], privateData);
+      this.name = fileName.replace(/\//g, ":");
+      this.lastModified = "lastModified" in options ? options.lastModified : Date.now();
+    }
+
+  };
+  return exports;
+}

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "content-length": "928",
+    "x-amz-request-id": "970965902235FBF0",
+    "x-amz-id-2": "bmpXH3pSD+NLq0YU0Sst9G7EYFiUIbfIDeaZ9tO4FAJLambaDfVXvpd21DRX8iZ5npTvuUHJzGE=",
+    "accept-ranges": "bytes",
+    "etag": "\"a64abaf8b468c294b6aaa7c614f3c1d9\"",
+    "connection": "keep-alive",
+    "content-type": "application/javascript",
+    "last-modified": "Mon, 07 Dec 2020 15:03:46 GMT",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "server": "AmazonS3"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:parse5@5.1.1/lib/extensions/location-info/open-element-stack-mixin.dew.js"
+}

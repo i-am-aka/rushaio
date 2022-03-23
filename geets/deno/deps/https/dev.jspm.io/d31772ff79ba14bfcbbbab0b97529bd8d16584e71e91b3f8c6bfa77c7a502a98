@@ -1,0 +1,32 @@
+import { dew as _interopRequireDefaultDewDew } from "/npm:@babel/runtime@7/helpers/interopRequireDefault?dew";
+import { dew as _custom2Dew } from "/npm:@jimp/custom@0.16?dew";
+import { dew as _types2Dew } from "/npm:@jimp/types@0.16?dew";
+import { dew as _plugins2Dew } from "/npm:@jimp/plugins@0.16?dew";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  var _interopRequireDefault = _interopRequireDefaultDewDew();
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports["default"] = void 0;
+
+  var _custom = _interopRequireDefault(_custom2Dew());
+
+  var _types = _interopRequireDefault(_types2Dew());
+
+  var _plugins = _interopRequireDefault(_plugins2Dew());
+
+  var _default = (0, _custom["default"])({
+    types: [_types["default"]],
+    plugins: [_plugins["default"]]
+  });
+
+  exports["default"] = _default;
+  exports = exports.default;
+  return exports;
+}

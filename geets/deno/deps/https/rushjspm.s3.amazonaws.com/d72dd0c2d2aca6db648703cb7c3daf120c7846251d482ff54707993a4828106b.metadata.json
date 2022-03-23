@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:40 GMT",
+    "server": "AmazonS3",
+    "accept-ranges": "bytes",
+    "etag": "\"c9abb0db3349932b636325b957e2487d\"",
+    "x-amz-id-2": "JEnPGbb9/ehdfIxUiZTS8Y8QAhNwi27bWy14cdEIYV1Qur1vvKmooDWdoJ6J9ilVRC7c4AhvToI=",
+    "connection": "keep-alive",
+    "content-length": "14130",
+    "x-amz-request-id": "14FC743B03824E96",
+    "content-type": "application/javascript"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:http-signature@1.2.0/lib/signer.dew.js"
+}

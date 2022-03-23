@@ -1,0 +1,2 @@
+export { dew } from "/npm:buffer-equal@0.0.1/index.dew.js";
+import "/npm:@jspm/core@1/nodelibs/buffer.js";

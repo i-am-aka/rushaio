@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT",
+    "accept-ranges": "bytes",
+    "content-type": "application/javascript",
+    "content-length": "1732",
+    "etag": "\"cb38f8b3f149a2f61996a5e580dc49d8\"",
+    "x-amz-id-2": "gaa72vWT0lgYGQuVGUwBIvhuyXfaoJFiX21TqPNthKk+33yR46VavGiZKT7K1f2ZyOoA5V14qmI=",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "server": "AmazonS3",
+    "x-amz-request-id": "AF706CD68C2A8EE2"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/AddEventListenerOptions.dew.js"
+}

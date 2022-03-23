@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "server": "AmazonS3",
+    "content-type": "application/javascript",
+    "accept-ranges": "bytes",
+    "content-length": "2727",
+    "etag": "\"fb61f90abc8f37f04ff96d59eff538fc\"",
+    "x-amz-request-id": "490EA7A51A854FAD",
+    "connection": "keep-alive",
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "x-amz-id-2": "Clt9Bd2cwh2QIY5SOR3X5PA7WaZHHW0oy6PMbV1jge/5MVUZT44cWKo4DD7yK8eHuhLvIG9O3xM="
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/nodes/GlobalEventHandlers-impl.dew.js"
+}

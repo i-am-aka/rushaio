@@ -1,0 +1,5 @@
+export { dew } from "/npm:tr46@2.0.2/index.dew.js";
+import "/npm:punycode@2_dew.js";
+import "/npm:tr46@2.0.2/lib/regexes.dew.js";
+import "/npm:tr46@2.0.2/lib/mappingTable.json.dew.js";
+import "/npm:tr46@2.0.2/lib/statusMapping.dew.js";

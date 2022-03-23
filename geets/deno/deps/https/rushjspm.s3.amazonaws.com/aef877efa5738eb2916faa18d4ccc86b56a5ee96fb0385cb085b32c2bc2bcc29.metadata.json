@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "last-modified": "Mon, 07 Dec 2020 15:03:44 GMT",
+    "content-length": "178",
+    "etag": "\"95f2da67c7e03a1a46f5617552fcede8\"",
+    "x-amz-id-2": "CIP9wZP65a9kYvBB65ND9MVtDY71a7awmsyxucR3w2vmRd5uA6r8EtZo0tMuHDMiADmdwo8Sf0Q=",
+    "content-type": "application/javascript",
+    "x-amz-request-id": "0CB7AD6334F24469",
+    "accept-ranges": "bytes",
+    "server": "AmazonS3",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/navigator/Plugin-impl.dew.js"
+}

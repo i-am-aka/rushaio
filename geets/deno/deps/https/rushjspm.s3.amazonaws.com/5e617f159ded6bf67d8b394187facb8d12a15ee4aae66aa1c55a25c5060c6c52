@@ -1,0 +1,3 @@
+export { dew } from "/npm:aws-sign2@0.7.0/index.dew.js";
+import "/npm:@jspm/core@1/nodelibs/crypto.js";
+import "/npm:@jspm/core@1/nodelibs/url.js";

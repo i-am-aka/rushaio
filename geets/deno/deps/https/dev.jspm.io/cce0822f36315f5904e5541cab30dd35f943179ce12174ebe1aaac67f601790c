@@ -1,0 +1,3 @@
+export { dew } from "/npm:parse-bmfont-xml@1.1.4/lib/browser.dew.js";
+import "/npm:parse-bmfont-xml@1.1.4/lib/parse-attribs.dew.js";
+import "/npm:xml-parse-from-string@1?dew";

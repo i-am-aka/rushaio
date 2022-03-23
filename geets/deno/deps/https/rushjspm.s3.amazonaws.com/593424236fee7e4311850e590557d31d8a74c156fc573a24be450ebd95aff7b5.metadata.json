@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "etag": "\"66dfe069836e04d179f86850319f992c\"",
+    "content-type": "application/javascript",
+    "x-amz-id-2": "JepU00JTP6YxNkWSZjHpM8NoZdpt69JznSY2rUeibkQ2li9BV7yFtZ0XYXfsGE2VVQbbJEib+4I=",
+    "accept-ranges": "bytes",
+    "content-length": "2799",
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "x-amz-request-id": "523114EFB6D1888E",
+    "date": "Mon, 07 Dec 2020 19:50:44 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:38 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:ajv@6.12.4/lib/dotjs/enum.dew.js"
+}

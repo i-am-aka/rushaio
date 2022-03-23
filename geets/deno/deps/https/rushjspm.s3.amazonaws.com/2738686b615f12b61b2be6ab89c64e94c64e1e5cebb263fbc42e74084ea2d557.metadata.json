@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "server": "AmazonS3",
+    "accept-ranges": "bytes",
+    "etag": "\"1c12e8d7f7b9ab6f3c010b6e83d262e0\"",
+    "content-length": "3155",
+    "content-type": "application/javascript",
+    "connection": "keep-alive",
+    "x-amz-request-id": "179A7B245214FFD6",
+    "x-amz-id-2": "F3v4OKpAOcgAXm9G407HL4g+FnsRbnk4RbDJlf5dqxlFxZolPOECp5XxhuECIYe9zM/uG/S0/9Y=",
+    "last-modified": "Mon, 07 Dec 2020 15:03:39 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:canvas@2.6.1/lib/parse-font.dew.js"
+}

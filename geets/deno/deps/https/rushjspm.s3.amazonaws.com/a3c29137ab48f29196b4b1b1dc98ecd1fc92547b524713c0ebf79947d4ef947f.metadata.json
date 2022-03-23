@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-amz-id-2": "ZIufN/OCK7GajIfak1ya7pozbWvYKbpVbW3ZaXwyWsqAqXbDzPPeyez3nAGxYfd/ZpMyUj8wbuU=",
+    "x-amz-request-id": "9C5A9B2908CE75F7",
+    "content-type": "application/javascript",
+    "date": "Mon, 07 Dec 2020 19:50:43 GMT",
+    "content-length": "5499",
+    "last-modified": "Mon, 07 Dec 2020 15:03:48 GMT",
+    "accept-ranges": "bytes",
+    "etag": "\"8bcea087cf756d21eb346e34d0288a0c\"",
+    "connection": "keep-alive",
+    "server": "AmazonS3"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:whatwg-url@8.2.2/dist/percent-encoding.dew.js"
+}

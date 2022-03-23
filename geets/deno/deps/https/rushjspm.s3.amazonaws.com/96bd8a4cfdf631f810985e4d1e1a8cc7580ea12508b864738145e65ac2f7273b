@@ -1,0 +1,44 @@
+import { dew as _HTMLMediaElementImplDewDew } from "./HTMLMediaElement-impl.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const HTMLMediaElementImpl = _HTMLMediaElementImplDewDew().implementation;
+
+  const SUPPORTED_CODECS = {
+    'video/mp4; codecs="avc1.42E01E"': 1,
+    'video/mp4; codecs="avc1.42E01E, mp4a.40.2"': 1,
+    'video/mp4; codecs="avc1.58A01E"': 1,
+    'video/mp4; codecs="avc1.4D401E"': 1,
+    'video/mp4; codecs="avc1.64001E"': 1,
+    'video/webm; codecs="vp8"': 1,
+    'video/ogg; codecs="theora"': 1,
+  }
+  class HTMLVideoElementImpl extends HTMLMediaElementImpl {
+    canPlayType(typ) {
+      if (SUPPORTED_CODECS[typ]) {
+        return "probably";
+      } else {
+        return "";
+      }
+    }
+    get videoWidth() {
+      return 0;
+    }
+
+    get videoHeight() {
+      return 0;
+    }
+
+    getVideoPlaybackQuality() {
+
+    }
+  }
+
+  exports = {
+    implementation: HTMLVideoElementImpl
+  };
+  return exports;
+}

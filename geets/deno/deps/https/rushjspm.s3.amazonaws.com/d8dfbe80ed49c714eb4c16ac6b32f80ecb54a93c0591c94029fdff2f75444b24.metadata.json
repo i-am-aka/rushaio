@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "x-amz-request-id": "589CF13BBD6C3D5B",
+    "content-length": "917",
+    "x-amz-id-2": "Ikk8amWp26At+3O82qGKxEM0f6uK/7XshkcwKzoxj4yQaBVB1r9pUhW+9chQz1b+OTQKXmZ+A38=",
+    "etag": "\"f062e3a2e8c1ee6463cca36f2dec11f5\"",
+    "server": "AmazonS3",
+    "accept-ranges": "bytes",
+    "content-type": "application/javascript",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "date": "Mon, 07 Dec 2020 18:13:27 GMT"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/events/PageTransitionEvent-impl.dew.js"
+}

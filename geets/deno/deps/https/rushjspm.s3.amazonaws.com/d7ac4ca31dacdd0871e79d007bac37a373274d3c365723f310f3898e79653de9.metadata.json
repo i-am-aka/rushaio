@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "connection": "keep-alive",
+    "x-amz-request-id": "BB63B75CBC0298E6",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "last-modified": "Mon, 07 Dec 2020 15:03:41 GMT",
+    "etag": "\"262ed0f60b3a8040be84ab5845975975\"",
+    "x-amz-id-2": "GqMALqlJmS7mhVsumHjblH8c2EHHcUkHuGoANO75YDmKXh3MxJRnsXdGax3y1kOA3bkgfq7wrpA=",
+    "content-length": "762",
+    "accept-ranges": "bytes",
+    "server": "AmazonS3",
+    "content-type": "application/javascript"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/events/CustomEvent-impl.dew.js"
+}

@@ -1,0 +1,11 @@
+export { dew } from "/npm:gifwrap@0.9.2/src/index.dew.js";
+import "/npm:gifwrap@0.9.2/src/bitmapimage.dew.js";
+import "/npm:gifwrap@0.9.2/src/gif.dew.js";
+import "/npm:gifwrap@0.9.2/src/gifcodec.dew.js";
+import "/npm:gifwrap@0.9.2/src/gifframe.dew.js";
+import "/npm:gifwrap@0.9.2/src/gifutil.dew.js";
+import "/npm:@jspm/core@1/nodelibs/buffer.js";
+import "/npm:omggif@1?dew";
+import "/npm:@jspm/core@1/nodelibs/process.js";
+import "/npm:@jspm/core@1/nodelibs/fs.js";
+import "/npm:image-q@1?dew";

@@ -1,0 +1,14 @@
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  // https://infra.spec.whatwg.org/#parse-json-from-bytes
+  exports.parseJSONFromBytes = bytes => {
+    const jsonText = bytes.toString("utf-8");
+    return JSON.parse(jsonText);
+  };
+
+  return exports;
+}

@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "set-cookie": "__cfduid=db6218366c08bfdec33c820829566acf71607364790; expires=Wed, 06-Jan-21 18:13:10 GMT; path=/; domain=.deno.land; HttpOnly; SameSite=Lax; Secure",
+    "cf-request-id": "06e00160ba00003af7a721c000000001",
+    "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report?s=4whIyT39XlhafQ1AGshORohtVzAoweoapwLj9KbZWaXeoMa%2B68%2Biu5pzxm1qF32YIgbgw6BQsBRtLGPVRL8CZYOVrN7Djfs0s64%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+    "content-length": "0",
+    "nel": "{\"report_to\":\"cf-nel\",\"max_age\":604800}",
+    "vary": "Accept-Encoding",
+    "date": "Mon, 07 Dec 2020 18:13:10 GMT",
+    "cf-ray": "5fe038145aad3af7-SJC",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "location": "/x/num_cpus@v0.1.7/mod.ts",
+    "server": "cloudflare",
+    "x-deno-warning": "Implicitly using latest version (v0.1.7) for https://deno.land/x/num_cpus/mod.ts"
+  },
+  "url": "https://deno.land/x/num_cpus/mod.ts"
+}

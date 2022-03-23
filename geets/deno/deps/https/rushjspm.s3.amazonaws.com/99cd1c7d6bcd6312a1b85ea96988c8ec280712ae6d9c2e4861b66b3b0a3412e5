@@ -1,0 +1,68 @@
+var exports = {},
+    _dewExec = false;
+
+var _global = typeof self !== "undefined" ? self : global;
+
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  //.CommonJS
+  var CSSOM = {}; ///CommonJS
+
+  /**
+   * @constructor
+   * @see http://dev.w3.org/csswg/cssom/#the-medialist-interface
+   */
+
+  CSSOM.MediaList = function MediaList() {
+    (this || _global).length = 0;
+  };
+
+  CSSOM.MediaList.prototype = {
+    constructor: CSSOM.MediaList,
+
+    /**
+     * @return {string}
+     */
+    get mediaText() {
+      return Array.prototype.join.call(this || _global, ", ");
+    },
+
+    /**
+     * @param {string} value
+     */
+    set mediaText(value) {
+      var values = value.split(",");
+      var length = (this || _global).length = values.length;
+
+      for (var i = 0; i < length; i++) {
+        (this || _global)[i] = values[i].trim();
+      }
+    },
+
+    /**
+     * @param {string} medium
+     */
+    appendMedium: function (medium) {
+      if (Array.prototype.indexOf.call(this || _global, medium) === -1) {
+        (this || _global)[(this || _global).length] = medium;
+        (this || _global).length++;
+      }
+    },
+
+    /**
+     * @param {string} medium
+     */
+    deleteMedium: function (medium) {
+      var index = Array.prototype.indexOf.call(this || _global, medium);
+
+      if (index !== -1) {
+        Array.prototype.splice.call(this || _global, index, 1);
+      }
+    }
+  }; //.CommonJS
+
+  exports.MediaList = CSSOM.MediaList; ///CommonJS
+
+  return exports;
+}

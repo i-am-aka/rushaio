@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "last-modified": "Mon, 07 Dec 2020 15:03:42 GMT",
+    "x-amz-id-2": "y6lgIWemm6Y5kMwOTUUAtu3F6oBr/cSEqQYUjmE7qSek6nPxnVjXxyrfyOUmqpjEJxEvre1PVrk=",
+    "x-amz-request-id": "3BD1D884C5F07CC2",
+    "content-type": "application/javascript",
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "etag": "\"e86e5da28237b6b58dddeef8d83ae7dd\"",
+    "accept-ranges": "bytes",
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "content-length": "8197"
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/HTMLFontElement.dew.js"
+}

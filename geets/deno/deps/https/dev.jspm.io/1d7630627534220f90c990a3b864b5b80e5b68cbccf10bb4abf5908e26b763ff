@@ -1,0 +1,32 @@
+import { dew as _parserDewDew } from "./lib/parser.dew.js";
+import { dew as _domBufferstreamDewDew } from "./lib/dom-bufferstream.dew.js";
+import { dew as _bufferstreamDewDew } from "./lib/bufferstream.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  var Parser = _parserDewDew();
+
+  function getGlobal() {
+    return (1, eval)('this');
+  }
+
+  exports = {
+    create: function (buffer, global) {
+      global = global || getGlobal();
+
+      if (buffer instanceof global.ArrayBuffer) {
+        var DOMBufferStream = _domBufferstreamDewDew();
+
+        return new Parser(new DOMBufferStream(buffer, 0, buffer.byteLength, true, global));
+      } else {
+        var NodeBufferStream = _bufferstreamDewDew();
+
+        return new Parser(new NodeBufferStream(buffer, 0, buffer.length, true));
+      }
+    }
+  };
+  return exports;
+}

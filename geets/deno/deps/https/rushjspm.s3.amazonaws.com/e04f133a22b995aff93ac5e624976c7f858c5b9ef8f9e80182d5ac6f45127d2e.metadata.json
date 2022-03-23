@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "date": "Mon, 07 Dec 2020 19:50:42 GMT",
+    "accept-ranges": "bytes",
+    "content-length": "1340",
+    "last-modified": "Mon, 07 Dec 2020 15:03:42 GMT",
+    "x-amz-request-id": "4777A586FB94AC6C",
+    "content-type": "application/javascript",
+    "server": "AmazonS3",
+    "connection": "keep-alive",
+    "x-amz-id-2": "k6n1dZ83+L3CkvTaMua+xkbo6PWtXax/s29Fb3d4F0GlOKeVz/sUm+8UbKIDcSkx2YnxFY67v7I=",
+    "etag": "\"237f12f2c1a4fb611628c18a029cba5c\""
+  },
+  "url": "https://rushjspm.s3.amazonaws.com/npm:jsdom@16.4.0/lib/jsdom/living/generated/FilePropertyBag.dew.js"
+}

@@ -1,0 +1,10 @@
+import { encode } from '../deps.ts';
+export const fetchRemote = async (url, onlyData)=>{
+    const resp = await fetch(url);
+    if (resp.status !== 200) throw new Error(`Request Failed. Server responsed with code ${resp.status}`);
+    const contentType = resp.headers.get('content-type') ?? 'application/octet-stream';
+    const buff = await resp.arrayBuffer();
+    const data = encode(buff);
+    return onlyData ? data : `data:${contentType};base64,${data}`;
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIjxodHRwczovL2Rlbm8ubGFuZC94L2ZldGNoYmFzZTY0QDEuMC4wL3NyYy9yZW1vdGUudHM+Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGVuY29kZSB9IGZyb20gJy4uL2RlcHMudHMnXG5cbmV4cG9ydCBjb25zdCBmZXRjaFJlbW90ZSA9IGFzeW5jICh1cmw6IHN0cmluZywgb25seURhdGE/OiBib29sZWFuKSA9PiB7XG4gICAgY29uc3QgcmVzcCA9IGF3YWl0IGZldGNoKHVybClcbiAgICBpZihyZXNwLnN0YXR1cyAhPT0gMjAwKSB0aHJvdyBuZXcgRXJyb3IoYFJlcXVlc3QgRmFpbGVkLiBTZXJ2ZXIgcmVzcG9uc2VkIHdpdGggY29kZSAke3Jlc3Auc3RhdHVzfWApXG4gICAgY29uc3QgY29udGVudFR5cGUgPSByZXNwLmhlYWRlcnMuZ2V0KCdjb250ZW50LXR5cGUnKSA/PyAnYXBwbGljYXRpb24vb2N0ZXQtc3RyZWFtJztcbiAgICBjb25zdCBidWZmID0gYXdhaXQgcmVzcC5hcnJheUJ1ZmZlcigpXG4gICAgY29uc3QgZGF0YSA9IGVuY29kZShidWZmKVxuICAgIHJldHVybiBvbmx5RGF0YSA/IGRhdGEgOiBgZGF0YToke2NvbnRlbnRUeXBlfTtiYXNlNjQsJHtkYXRhfWBcbn0iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IlNBQUEsTUFBQSxTQUFBLFVBQUE7YUFFQSxXQUFBLFVBQUEsR0FBQSxFQUFBLFFBQUE7VUFDQSxJQUFBLFNBQUEsS0FBQSxDQUFBLEdBQUE7UUFDQSxJQUFBLENBQUEsTUFBQSxLQUFBLEdBQUEsWUFBQSxLQUFBLEVBQUEsMkNBQUEsRUFBQSxJQUFBLENBQUEsTUFBQTtVQUNBLFdBQUEsR0FBQSxJQUFBLENBQUEsT0FBQSxDQUFBLEdBQUEsRUFBQSxZQUFBLE9BQUEsd0JBQUE7VUFDQSxJQUFBLFNBQUEsSUFBQSxDQUFBLFdBQUE7VUFDQSxJQUFBLEdBQUEsTUFBQSxDQUFBLElBQUE7V0FDQSxRQUFBLEdBQUEsSUFBQSxJQUFBLEtBQUEsRUFBQSxXQUFBLENBQUEsUUFBQSxFQUFBLElBQUEifQ==

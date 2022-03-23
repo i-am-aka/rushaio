@@ -1,0 +1,9 @@
+export { dew } from "/npm:exif-parser@0.1.12/index.dew.js";
+import "/npm:exif-parser@0.1.12/lib/parser.dew.js";
+import "/npm:exif-parser@0.1.12/lib/dom-bufferstream.dew.js";
+import "/npm:exif-parser@0.1.12/lib/bufferstream.dew.js";
+import "/npm:exif-parser@0.1.12/lib/jpeg.dew.js";
+import "/npm:exif-parser@0.1.12/lib/exif.dew.js";
+import "/npm:exif-parser@0.1.12/lib/simplify.dew.js";
+import "/npm:exif-parser@0.1.12/lib/exif-tags.dew.js";
+import "/npm:exif-parser@0.1.12/lib/date.dew.js";

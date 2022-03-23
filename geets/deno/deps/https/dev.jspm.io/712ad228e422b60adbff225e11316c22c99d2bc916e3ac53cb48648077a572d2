@@ -1,0 +1,2 @@
+export { dew } from "/npm:@babel/runtime@7.12.5/helpers/inherits.dew.js";
+import "/npm:@babel/runtime@7.12.5/helpers/setPrototypeOf.dew.js";

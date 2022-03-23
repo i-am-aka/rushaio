@@ -1,0 +1,29 @@
+import { dew as _EventImplDewDew } from "./Event-impl.dew.js";
+import { dew as _PageTransitionEventInitDewDew } from "../generated/PageTransitionEventInit.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const EventImpl = _EventImplDewDew().implementation;
+
+  const PageTransitionEventInit = _PageTransitionEventInitDewDew(); // https://html.spec.whatwg.org/multipage/browsing-the-web.html#pagetransitionevent
+
+
+  class PageTransitionEventImpl extends EventImpl {
+    initPageTransitionEvent(type, bubbles, cancelable, persisted) {
+      if (this._dispatchFlag) {
+        return;
+      }
+
+      this.initEvent(type, bubbles, cancelable);
+      this.persisted = persisted;
+    }
+
+  }
+
+  PageTransitionEventImpl.defaultInit = PageTransitionEventInit.convert(undefined);
+  exports.implementation = PageTransitionEventImpl;
+  return exports;
+}
