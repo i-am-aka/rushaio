@@ -1,0 +1,2765 @@
+NETWORK 200
+log.looper.10119.Airship Service.slow
+HTTP/1.1 200 OK
+[text/html]
+android/icu/impl/data/icudt60b/curr/en_US.res
+{"_is_enabled":"true","battery_saver":"true","dispatch_expiration":"-1","enable_collect":"false","enable_s2s_legacy":"false","enable_tag_management":"true","event_batch_size":"1","minutes_between_refresh":"15.0","offline_dispatch_limit":"100","override_log":"prod","wifi_only_sending":"false"}
+android/icu/impl/data/icudt60b/curr/en_US.res#0#en_US
+Currencies/USD
+
+%
+-
+
+
+-
+rgba(255, 255, 255, 1)
+
+
+-
+rgba(0, 0, 0, 1)
+
+
+-
+rgba(0, 0, 0, 1)
+
+android.os.BinderProxy@33ff8e7
+com.WinnersCircle/com.urbanairship.job.AirshipService
+Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }
+ServiceArgsData{token=android.os.BinderProxy@33ff8e7 startId=1 args=Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }}
+serviceStart: ServiceArgsData{token=android.os.BinderProxy@33ff8e7 startId=1 args=Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }}
+com.WinnersCircle/com.urbanairship.job.AirshipService
+Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }
+AirshipService - Received intent: Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }
+pool-28-thread-
+android.os.BinderProxy@33ff8e7
+com.WinnersCircle/com.urbanairship.job.AirshipService
+Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }
+{}
+ServiceArgsData{token=android.os.BinderProxy@33ff8e7 startId=2 args=Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }}
+log.looper.10119.VizCompositorThread.slow
+/system/etc/security/cacerts
+JobInfo{action=ACTION_RICH_PUSH_MESSAGES_UPDATE, id=-1, extras='{}', airshipComponentName='com.urbanairship.richpush.RichPushInbox', isNetworkAccessRequired=false, initialDelay=0, persistent=false}
+serviceStart: ServiceArgsData{token=android.os.BinderProxy@33ff8e7 startId=2 args=Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }}
+AirshipService - Running job: JobInfo{action=ACTION_RICH_PUSH_MESSAGES_UPDATE, id=-1, extras='{}', airshipComponentName='com.urbanairship.richpush.RichPushInbox', isNetworkAccessRequired=false, initialDelay=0, persistent=false}
+pool-28-thread-1
+feature-adaptive-playback
+feature-secure-playback
+feature-tunneled-playback
+*.tiqcdn.com
+CN=*.tiqcdn.com
+pool-11-thread-1
+feature-partial-frame
+Verizon Digital Media Services\, Inc.
+O=Verizon Digital Media Services\, Inc.
+com.WinnersCircle/com.urbanairship.job.AirshipService
+feature-adaptive-playback
+feature-secure-playback
+Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }
+AirshipService - Received intent: Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }
+{}
+content://com.WinnersCircle.urbanairship.provider/richpush
+feature-tunneled-playback
+feature-partial-frame
+JobInfo{action=ACTION_REFRESH, id=10, extras='{}', airshipComponentName='com.urbanairship.remotedata.RemoteData', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+feature-adaptive-playback
+feature-secure-playback
+feature-tunneled-playback
+feature-partial-frame
+DecorView@830de00[SplashScreenActivity]
+en-US
+AirshipService - Running job: JobInfo{action=ACTION_REFRESH, id=10, extras='{}', airshipComponentName='com.urbanairship.remotedata.RemoteData', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+onWindowFocusChangedFromViewRoot hasFocus: true, DecorView@830de00[SplashScreenActivity]
+content://com.WinnersCircle.urbanairship.provider/preferences
+/preferences/airshipComponent.enable_com.urbanairship.remotedata.RemoteData
+Los Angeles
+L=Los Angeles
+feature-adaptive-playback
+https://device-api.urbanairship.com/api/user/%s/messages/
+California
+feature-secure-playback
+ST=California
+feature-tunneled-playback
+com.WinnersCircle.urbanairship.provider
+en-US
+https://device-api.urbanairship.com/api/user/qBztjbPlQ4qoxVpTHoXE0Q/messages/
+feature-partial-frame
+en-US
+pool-21-thread-1
+US
+feature-adaptive-playback
+feature-secure-playback
+feature-tunneled-playback
+feature-partial-frame
+C=US
+en_US
+com.WinnersCircle (ONEPLUS A5010; 9; UrbanAirshipLib-android/9.4.1; QICQT4PBRvasmxdWkzK3-w; en_US)
+URL:null
+qBztjbPlQ4qoxVpTHoXE0Q:NEJKiDdYQB-qAgZdZ-a9AQ
+Basic cUJ6dGpiUGxRNHFveFZwVEhvWEUwUTpORUpLaURkWVFCLXFBZ1pkWi1hOUFR
+https://device-api.urbanairship.com/api/user/qBztjbPlQ4qoxVpTHoXE0Q/messages/
+https://app.link/_strong_match?os=Android
+https://app.link/_strong_match?os=Android&hardware_id=60b4488c57919beb
+{"token":"c3uMj4LMzBk:APA91bEMDE-VbsYxG02N9sT8joswVgZVQdOnmI7BrB1joN44wBCItFhQqVXXG5kxc1fkFLBHmMLdMxORPzQkvYjdmunoxDXFEikUsrtvMBGVWrNKdbjfLMFeOKi8aAXJ26k23zmowbY7","appVersion":"46","timestamp":1592533730035}
+Must be called on GoogleApiHandler thread, but got GoogleApiHandler.
+cn=*.tiqcdn.com,o=verizon digital media services\, inc.,l=los angeles,st=california,c=us
+api/remote-data/app/QICQT4PBRvasmxdWkzK3-w/android
+https://device-api.urbanairship.com/api/user/qBztjbPlQ4qoxVpTHoXE0Q/messages/
+feature-adaptive-playback
+|T|156274640316|*
+https://device-api.urbanairship.com/
+feature-secure-playback
+feature-tunneled-playback
+feature-partial-frame
+Must be called on GoogleApiHandler thread, but got GoogleApiHandler.
+https://app.link/_strong_match?os=Android&hardware_id=60b4488c57919beb&hardware_id_type=vendor_id
+https://remote-data.urbanairship.com/api/remote-data/app/QICQT4PBRvasmxdWkzK3-w/android
+feature-adaptive-playback
+feature-secure-playback
+feature-tunneled-playback
+feature-partial-frame
+en_US
+com.WinnersCircle (ONEPLUS A5010; 9; UrbanAirshipLib-android/9.4.1; QICQT4PBRvasmxdWkzK3-w; en_US)
+feature-adaptive-playback
+feature-secure-playback
+feature-tunneled-playback
+feature-partial-frame
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+*.tiqcdn.com
+URL:null
+feature-adaptive-playback
+https://device-api.urbanairship.com/
+s:https://device-api.urbanairship.com/
+https://app.link/_strong_match?os=Android&hardware_id=60b4488c57919beb&hardware_id_type=vendor_id&google_advertising_id=c4163680-e3f1-464d-8f16-48049d9e4ad2
+QICQT4PBRvasmxdWkzK3-w:jvabntEnRkqntDQmMtgMag
+https.proxyHost
+https.proxyPort
+https://app.link/_strong_match?os=Android&hardware_id=60b4488c57919beb&hardware_id_type=vendor_id&google_advertising_id=c4163680-e3f1-464d-8f16-48049d9e4ad2&app_version=2.6.1
+https://app.link/_strong_match?os=Android&hardware_id=60b4488c57919beb&hardware_id_type=vendor_id&google_advertising_id=c4163680-e3f1-464d-8f16-48049d9e4ad2&app_version=2.6.1&branch_key=key_live_adIdSsyAFvvZ02YSv00fyeeiuEoaUk0I
+https://app.link/_strong_match?os=Android&hardware_id=60b4488c57919beb&hardware_id_type=vendor_id&google_advertising_id=c4163680-e3f1-464d-8f16-48049d9e4ad2&app_version=2.6.1&branch_key=key_live_adIdSsyAFvvZ02YSv00fyeeiuEoaUk0I&sdk=android3.0.4
+CN=*.tiqcdn.com
+feature-secure-playback
+Basic UUlDUVQ0UEJSdmFzbXhkV2t6SzMtdzpqdmFibnRFblJrcW50RFFtTXRnTWFn
+device-api.urbanairship.com:443
+device-api.urbanairship.com:443
+feature-tunneled-playback
+feature-partial-frame
+Verizon Digital Media Services\, Inc.
+feature-adaptive-playback
+feature-secure-playback
+feature-tunneled-playback
+https://remote-data.urbanairship.com/api/remote-data/app/QICQT4PBRvasmxdWkzK3-w/android
+feature-partial-frame
+class android.content.Context
+class java.lang.String
+O=Verizon Digital Media Services\, Inc.
+https://remote-data.urbanairship.com/api/remote-data/app/QICQT4PBRvasmxdWkzK3-w/android
+https://remote-data.urbanairship.com/
+https://remote-data.urbanairship.com/
+feature-adaptive-playback
+CONNECT device-api.urbanairship.com:443 HTTP/1.1
+Los Angeles
+s:https://remote-data.urbanairship.com/
+class c.c.a.k
+feature-secure-playback
+L=Los Angeles
+feature-tunneled-playback
+feature-partial-frame
+https.proxyHost
+feature-intra-refresh
+[class android.content.Context, class java.lang.String, class c.c.a.k]
+California
+bindCustomTabsService [class android.content.Context, class java.lang.String, class c.c.a.k]
+ST=California
+{}
+JobInfo{action=ACTION_UPDATE_NAMED_USER, id=2, extras='{}', airshipComponentName='com.urbanairship.push.NamedUser', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+US
+AndroidJobService - Running job: JobInfo{action=ACTION_UPDATE_NAMED_USER, id=2, extras='{}', airshipComponentName='com.urbanairship.push.NamedUser', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+C=US
+cn=*.tiqcdn.com,o=verizon digital media services\, inc.,l=los angeles,st=california,c=us
+*.tiqcdn.com
+CN=*.tiqcdn.com
+Verizon Digital Media Services\, Inc.
+O=Verizon Digital Media Services\, Inc.
+Los Angeles
+L=Los Angeles
+California
+en-US
+en-US
+en-US
+https.proxyPort
+ST=California
+pool-16-thread-1
+{}
+JobInfo{action=ACTION_UPDATE_TAG_GROUPS, id=6, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+AndroidJobService - Running job: JobInfo{action=ACTION_UPDATE_TAG_GROUPS, id=6, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+US
+C=US
+feature-intra-refresh
+remote-data.urbanairship.com:443
+feature-intra-refresh
+cn=*.tiqcdn.com,o=verizon digital media services\, inc.,l=los angeles,st=california,c=us
+remote-data.urbanairship.com:443
+result = {"versionNumber":"2.6.0","crmFlag":true,"walletFlag":true,"reflektionEnabled":true,"flLoyaltyProgram":1,"jdLoyaltyProgram":0}
+9bf720a7.0
+/system/etc/security/cacerts/9bf720a7.0
+CONNECT remote-data.urbanairship.com:443 HTTP/1.1
+feature-intra-refresh
+mitmproxy
+O=mitmproxy
+result code = 200
+mitmproxy
+<init> []
+content://com.WinnersCircle.urbanairship.provider/preferences
+/preferences/com.urbanairship.nameduser.CHANGE_TOKEN_KEY
+com.WinnersCircle.urbanairship.provider
+[application/json; charset=utf-8]
+[Kestrel]
+[2.0, 3.0]
+CN=mitmproxy
+[ASP.NET]
+o=mitmproxy,cn=mitmproxy
+pool-14-thread-1
+[125]
+[max-age=3600]
+[Fri, 19 Jun 2020 03:28:50 GMT]
+mitmproxy
+content://com.WinnersCircle.urbanairship.provider/preferences
+O=mitmproxy
+*.urbanairship.com
+/preferences/com.urbanairship.nameduser.LAST_UPDATED_TOKEN_KEY
+feature-adaptive-playback
+mitmproxy
+com.WinnersCircle.urbanairship.provider
+CN=mitmproxy
+{}
+JobInfo{action=ACTION_UPDATE_NAMED_USER, id=2, extras='{}', airshipComponentName='com.urbanairship.push.NamedUser', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+feature-secure-playback
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+content://com.WinnersCircle.urbanairship.provider/preferences
+Job - Finished: JobInfo{action=ACTION_UPDATE_NAMED_USER, id=2, extras='{}', airshipComponentName='com.urbanairship.push.NamedUser', isNetworkAccessRequired=true, initialDelay=0, persistent=false} with result: 0
+O=mitmproxy
+[Fri, 19 Jun 2020 02:28:50 GMT]
+mitmproxy
+feature-tunneled-playback
+feature-partial-frame
+CN=*.urbanairship.com
+Operations
+feature-adaptive-playback
+feature-secure-playback
+feature-tunneled-playback
+feature-partial-frame
+feature-adaptive-playback
+OU=Operations
+feature-secure-playback
+[ak_bmsc=AB2E753BD36C9FDB0358978CF5FF76216863EF3EFE440000E222EC5EBECE981A~pliU0hsp/GJG1WM8XXJ/cm419NcCUqNKWMvbdPyeJm2Gc4ixUaakN5balvU/zSEvIjf7MktZuiPRzuMWudZSw4M8j2NG6CEUB8h0BV/CXu7KdpOWCVLF1qK3cNjj1KtaiFeVT7Ldu37ct3IIOIVUEs8X+xIvJfxXJ9LpPnQ0wBtBgkcX+XGnKliSyh2P/77Iton1eCKQlpvhuWfTOnxF+hQWQE4ssPgcqeGXa/oQ96ABA=; expires=Fri, 19 Jun 2020 04:28:50 GMT; max-age=7200; path=/; domain=.finishline.com; HttpOnly, akavpau_FL-MobApp=1592534030~id=df36a75bec303709bafd774a16897d71; Path=/; Secure; SameSite=None]
+CN=mitmproxy
+[keep-alive]
+{content-type=[application/json; charset=utf-8], server=[Kestrel], api-supported-versions=[2.0, 3.0], x-powered-by=[ASP.NET], content-length=[125], cache-control=[max-age=3600], expires=[Fri, 19 Jun 2020 03:28:50 GMT], date=[Fri, 19 Jun 2020 02:28:50 GMT], set-cookie=[ak_bmsc=AB2E753BD36C9FDB0358978CF5FF76216863EF3EFE440000E222EC5EBECE981A~pliU0hsp/GJG1WM8XXJ/cm419NcCUqNKWMvbdPyeJm2Gc4ixUaakN5balvU/zSEvIjf7MktZuiPRzuMWudZSw4M8j2NG6CEUB8h0BV/CXu7KdpOWCVLF1qK3cNjj1KtaiFeVT7Ldu37ct3IIOIVUEs8X+xIvJfxXJ9LpPnQ0wBtBgkcX+XGnKliSyh2P/77Iton1eCKQlpvhuWfTOnxF+hQWQE4ssPgcqeGXa/oQ96ABA=; expires=Fri, 19 Jun 2020 04:28:50 GMT; max-age=7200; path=/; domain=.finishline.com; HttpOnly, akavpau_FL-MobApp=1592534030~id=df36a75bec303709bafd774a16897d71; Path=/; Secure; SameSite=None], connection=[keep-alive]}
+/preferences/com.urbanairship.push.PENDING_TAG_GROUP_MUTATIONS
+com.WinnersCircle.urbanairship.provider
+feature-tunneled-playback
+Urban Airship\, Inc.
+O=Urban Airship\, Inc.
+o=mitmproxy,cn=mitmproxy
+Portland
+L=Portland
+feature-partial-frame
+https://prodmobloy2.finishline.com/api/config: responseHeaders: {content-type=[application/json; charset=utf-8], server=[Kestrel], api-supported-versions=[2.0, 3.0], x-powered-by=[ASP.NET], content-length=[125], cache-control=[max-age=3600], expires=[Fri, 19 Jun 2020 03:28:50 GMT], date=[Fri, 19 Jun 2020 02:28:50 GMT], set-cookie=[ak_bmsc=AB2E753BD36C9FDB0358978CF5FF76216863EF3EFE440000E222EC5EBECE981A~pliU0hsp/GJG1WM8XXJ/cm419NcCUqNKWMvbdPyeJm2Gc4ixUaakN5balvU/zSEvIjf7MktZuiPRzuMWudZSw4M8j2NG6CEUB8h0BV/CXu7KdpOWCVLF1qK3cNjj1KtaiFeVT7Ldu37ct3IIOIVUEs8X+xIvJfxXJ9LpPnQ0wBtBgkcX+XGnKliSyh2P/77Iton1eCKQlpvhuWfTOnxF+hQWQE4ssPgcqeGXa/oQ96ABA=; expires=Fri, 19 Jun 2020 04:28:50 GMT; max-age=7200; path=/; domain=.finishline.com; HttpOnly, akavpau_FL-MobApp=1592534030~id=df36a75bec303709bafd774a16897d71; Path=/; Secure; SameSite=None], connection=[keep-alive]}
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+Oregon
+Unsupported mime video/divx
+mitmproxy
+ST=Oregon
+feature-adaptive-playback
+US
+C=US
+cn=*.urbanairship.com,ou=operations,o=urban airship\, inc.,l=portland,st=oregon,c=us
+{}
+JobInfo{action=ACTION_UPDATE_TAG_GROUPS, id=6, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+Job - Finished: JobInfo{action=ACTION_UPDATE_TAG_GROUPS, id=6, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=true, initialDelay=0, persistent=false} with result: 0
+feature-secure-playback
+feature-tunneled-playback
+feature-partial-frame
+O=mitmproxy
+Unsupported mime video/divx311
+*.urbanairship.com
+CN=*.urbanairship.com
+Operations
+*.urbanairship.com
+CN=*.urbanairship.com
+OU=Operations
+feature-adaptive-playback
+Operations
+OU=Operations
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+feature-secure-playback
+feature-tunneled-playback
+feature-partial-frame
+Urban Airship\, Inc.
+O=Urban Airship\, Inc.
+Portland
+L=Portland
+Unsupported mime video/divx4
+Urban Airship\, Inc.
+O=Urban Airship\, Inc.
+Portland
+mitmproxy
+L=Portland
+Oregon
+ST=Oregon
+Oregon
+ST=Oregon
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+feature-adaptive-playback
+feature-secure-playback
+feature-tunneled-playback
+US
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+feature-partial-frame
+US
+mitmproxy
+O=mitmproxy
+mitmproxy
+C=US
+CN=mitmproxy
+feature-adaptive-playback
+feature-secure-playback
+feature-tunneled-playback
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+cn=*.urbanairship.com,ou=operations,o=urban airship\, inc.,l=portland,st=oregon,c=us
+feature-partial-frame
+o=mitmproxy,cn=mitmproxy
+C=US
+cn=*.urbanairship.com,ou=operations,o=urban airship\, inc.,l=portland,st=oregon,c=us
+feature-adaptive-playback
+feature-secure-playback
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+feature-tunneled-playback
+*.urbanairship.com
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+*.urbanairship.com
+CN=*.urbanairship.com
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+Operations
+OU=Operations
+CN=*.urbanairship.com
+Operations
+mitmproxy
+feature-partial-frame
+OU=Operations
+Urban Airship\, Inc.
+Urban Airship\, Inc.
+O=Urban Airship\, Inc.
+Portland
+L=Portland
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+Oregon
+feature-adaptive-playback
+feature-secure-playback
+ST=Oregon
+O=Urban Airship\, Inc.
+mitmproxy
+Installed Version: 2.6.1
+Release Version: 2.6.0
+US
+feature-tunneled-playback
+C=US
+Portland
+L=Portland
+O=mitmproxy
+cn=*.urbanairship.com,ou=operations,o=urban airship\, inc.,l=portland,st=oregon,c=us
+Oregon
+mitmproxy
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+feature-partial-frame
+fad3d71f.0
+/system/etc/security/cacerts/fad3d71f.0
+feature-adaptive-playback
+ST=Oregon
+US
+C=US
+feature-secure-playback
+mitmproxy
+loginSession sessionType: 
+Lcom/google/gson/reflect/TypeToken<Ljava/lang/String;>;
+com
+google
+gson
+reflect
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+cn=*.urbanairship.com,ou=operations,o=urban airship\, inc.,l=portland,st=oregon,c=us
+feature-tunneled-playback
+feature-partial-frame
+O=mitmproxy
+*.urbanairship.com
+c8750f0d.0
+/system/etc/security/cacerts/c8750f0d.0
+system:c8750f0d.0
+/system/etc/security/cacerts/c8750f0d.0
+c8750f0d.0
+/data/misc/user/0/cacerts-removed/c8750f0d.0
+mitmproxy
+Unrecognized profile 4 for video/hevc
+CN=*.urbanairship.com
+feature-adaptive-playback
+mitmproxy
+O=mitmproxy
+feature-secure-playback
+feature-tunneled-playback
+Operations
+CN=mitmproxy
+TypeToken
+java
+lang
+o=mitmproxy,cn=mitmproxy
+feature-partial-frame
+String
+java.lang.String
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+com.google.gson.reflect.TypeToken
+https://prodmobloy2.finishline.com/api/account/guest
+OU=Operations
+Unrecognized profile/level 0/3 for video/mpeg2
+AsyncTask #4
+mitmproxy
+{}
+JobInfo{action=ACTION_UPDATE_CHANNEL_REGISTRATION, id=5, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+AndroidJobService - Running job: JobInfo{action=ACTION_UPDATE_CHANNEL_REGISTRATION, id=5, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+Urban Airship\, Inc.
+O=Urban Airship\, Inc.
+Portland
+L=Portland
+Oregon
+ST=Oregon
+US
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+feature-adaptive-playback
+feature-secure-playback
+/data/user/0/com.WinnersCircle/cache/wc-cache
+O=mitmproxy
+mitmproxy
+feature-tunneled-playback
+feature-partial-frame
+1592533730354
+C=US
+content://com.WinnersCircle.urbanairship.provider/preferences
+cn=*.urbanairship.com,ou=operations,o=urban airship\, inc.,l=portland,st=oregon,c=us
+fad3d71f.0
+Unrecognized profile/level 0/3 for video/mpeg2
+/preferences/com.urbanairship.push.ALIAS
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+pool-29-thread-
+com.WinnersCircle.urbanairship.provider
+pool-29-thread-1
+/system/etc/security/cacerts/fad3d71f.0
+mitmproxy
+O=mitmproxy
+feature-adaptive-playback
+feature-secure-playback
+feature-tunneled-playback
+mitmproxy
+java.security.AlgorithmParametersSpi
+CN=mitmproxy
+/data/user/0/com.WinnersCircle/databases/google_app_measurement_local.db
+o=mitmproxy,cn=mitmproxy
+/data/user/0/com.WinnersCircle/cache/WebView
+feature-partial-frame
+content://com.WinnersCircle.urbanairship.provider/preferences
+/preferences/com.urbanairship.push.TAGS
+com.WinnersCircle.urbanairship.provider
+1.2.840.10045.2.1 AlgorithmParameters not available
+/data/user/0/com.WinnersCircle/databases/google_app_measurement_local.db
+/data/user/0/com.WinnersCircle/cache/wc-cache/men
+/data/user/0/com.WinnersCircle/cache/wc-cache/women
+PRAGMA synchronous=NORMAL
+PRAGMA journal_size_limit=524288
+PRAGMA wal_autocheckpoint=100
+en_US
+17,1293,59,3389,176700,1775,50100,500,9178
+feature-adaptive-playback
+getDirSize!! 7153
+feature-secure-playback
+feature-tunneled-playback
+content://com.WinnersCircle.urbanairship.provider/preferences
+/preferences/com.urbanairship.push.PUSH_TOKEN_REGISTRATION_ENABLED
+SELECT name FROM SQLITE_MASTER WHERE name=?
+mitmproxy
+-1,uaend,-1,2034,1080,1,100,1,en,9,1,ONEPLUS%20A5010,unknown,qcom,-1,com.WinnersCircle,-1,-1,60b4488c57919beb,-1,0,1,REL,1910081948,28,OnePlus,OnePlus5T,release-keys,user,OnePlus,ONEPLUS%20A5010_43_191008,msm8998,OnePlus,OnePlus5T,OnePlus/OnePlus5T/OnePlus5T:9/PKQ1.180716.001/1910081948:user/release-keys,rd-build-193,PKQ1.180716.001,24799,1981801195,796266864765
+192.54
+192.54
+/data/user/0/com.WinnersCircle/cache/WebView/Crashpad
+requiredPos cannot be negative, but was 0
+O=mitmproxy
+mitmproxy
+O=mitmproxy
+mitmproxy
+mitmproxy
+/data/user/0/com.WinnersCircle/cache/WebView/Crash Reports
+SELECT * FROM messages LIMIT 0
+com.WinnersCircle.urbanairship.provider
+/data/user/0/com.WinnersCircle/cache/WebView/Crash Reports
+SELECT rowid, type, entry FROM messages ORDER BY rowid asc LIMIT 100
+/data/user/0/com.WinnersCircle/cache/WebView/Crash Reports
+content://com.WinnersCircle.urbanairship.provider/preferences
+184.80
+184.80
+feature-partial-frame
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+/preferences/com.urbanairship.push.APID
+mitmproxy
+requiredPos cannot be negative, but was 0
+(192.54,184.80)
+}A
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+com.WinnersCircle.urbanairship.provider
+}A
+ WHERE rowid <= ?
+184.80
+O=mitmproxy
+feature-adaptive-playback
+feature-secure-playback
+DELETE FROM messages WHERE rowid <= ?
+mitmproxy
+America/New_York
+mitmproxy
+feature-tunneled-playback
+feature-partial-frame
+{}
+JobInfo{action=ACTION_UPDATE_CHANNEL_REGISTRATION, id=5, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+O=mitmproxy
+Unsupported mime video/x-ms-wmv
+mitmproxy
+192.54
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+CN=mitmproxy
+Job - Finished: JobInfo{action=ACTION_UPDATE_CHANNEL_REGISTRATION, id=5, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=true, initialDelay=0, persistent=false} with result: 0
+mitmproxy
+O=mitmproxy
+o=mitmproxy,cn=mitmproxy
+feature-adaptive-playback
+3667092546
+2;184.80;192.54;3667092546;}A
+feature-secure-playback
+mitmproxy
+feature-tunneled-playback
+feature-partial-frame
+192.54
+192.54
+184.80
+CN=mitmproxy
+/data/user/0/com.WinnersCircle/databases/google_app_measurement_local.db
+184.80
+mitmproxy
+O=mitmproxy
+Unsupported mime video/x-ms-wmv
+mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+(192.54,184.80)
+feature-adaptive-playback
+feature-secure-playback
+O=mitmproxy
+377.34
+CN=mitmproxy
+377.34
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+o=mitmproxy,cn=mitmproxy
+feature-tunneled-playback
+/data/user/0/com.WinnersCircle/databases/google_app_measurement_local.db
+5.47
+5.47
+(377.34,5.47)
+device-api.urbanairship.com.
+PRAGMA synchronous=NORMAL
+feature-partial-frame
+PRAGMA journal_size_limit=524288
+O=mitmproxy
+PRAGMA wal_autocheckpoint=100
+mitmproxy
+feature-adaptive-playback
+feature-secure-playback
+en_US
+feature-tunneled-playback
+377.34
+SELECT name FROM SQLITE_MASTER WHERE name=?
+CN=mitmproxy
+377.34
+5.47
+5.47
+(377.34,5.47)
+feature-partial-frame
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+feature-adaptive-playback
+}
+*.urbanairship.com.
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+}
+GET /api/user/qBztjbPlQ4qoxVpTHoXE0Q/messages/ HTTP/1.1
+requiredPos cannot be negative, but was 0
+mitmproxy
+O=mitmproxy
+mitmproxy
+5.47
+feature-secure-playback
+feature-tunneled-playback
+5.47
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+SELECT * FROM messages LIMIT 0
+feature-partial-frame
+377.34
+4239843852
+1;5.47;5.47;377.34;4239843852;}
+feature-adaptive-playback
+feature-secure-playback
+feature-tunneled-playback
+2.75
+2.75
+SELECT rowid, type, entry FROM messages ORDER BY rowid asc LIMIT 100
+remote-data.urbanairship.com.
+requiredPos cannot be negative, but was 0
+*.urbanairship.com.
+ WHERE rowid <= ?
+DELETE FROM messages WHERE rowid <= ?
+1.33
+feature-partial-frame
+feature-adaptive-playback
+feature-secure-playback
+feature-tunneled-playback
+1.33
+GET /api/remote-data/app/QICQT4PBRvasmxdWkzK3-w/android HTTP/1.1
+(2.75,1.33)
+feature-partial-frame
+}A
+}A
+1.33
+feature-adaptive-playback
+feature-secure-playback
+2.75
+feature-tunneled-playback
+3667092546
+2;1.33;2.75;3667092546;}A
+feature-partial-frame
+2.75
+2.75
+1.33
+1.33
+feature-intra-refresh
+(2.75,1.33)
+4.08
+4.08
+1.00
+1.00
+feature-intra-refresh
+(4.08,1.00)
+4.08
+4.08
+1.00
+1.00
+feature-intra-refresh
+(4.08,1.00)
+}
+}
+feature-intra-refresh
+1.00
+1.00
+4.08
+feature-intra-refresh
+4239843852
+1;1.00;1.00;4.08;4239843852;}
+10.05
+10.05
+2.23
+2.23
+(10.05,2.23)
+}A
+feature-intra-refresh
+}A
+2.23
+Unsupported profile 4 for video/mp4v-es
+10.05
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+3667092546
+feature-intra-refresh
+2;2.23;10.05;3667092546;}A
+10.05
+10.05
+feature-intra-refresh
+2.23
+2.23
+(10.05,2.23)
+feature-intra-refresh
+12.28
+12.28
+feature-intra-refresh
+5.53
+5.53
+(12.28,5.53)
+12.28
+12.28
+5.53
+5.53
+(12.28,5.53)
+}
+}
+5.53
+5.53
+12.28
+4239843852
+1;5.53;5.53;12.28;4239843852;}
+491.00
+491.00
+323.00
+323.00
+(491.00,323.00)
+}A
+}A
+323.00
+491.00
+3667092546
+2;323.00;491.00;3667092546;}A
+491.00
+491.00
+323.00
+323.00
+(491.00,323.00)
+814.00
+814.00
+118.79
+118.79
+(814.00,118.79)
+814.00
+814.00
+118.79
+118.79
+(814.00,118.79)
+}
+}
+NETWORK 200
+118.79
+118.79
+814.00
+4239843852
+1;118.79;118.79;814.00;4239843852;}
+HTTP/1.1 200 OK
+2;184.80;192.54;3667092546;}A:2;1.33;2.75;3667092546;}A:2;2.23;10.05;3667092546;}A
+
+
+-
+
+
+-
+491,192.54,2.75,10.05,1;
+491,192.54,2.75,10.05,1;
+323,184.8,1.33,2.23,1;
+491,192.54,2.75,10.05,1;323,184.8,1.33,2.23,1;
+Orientation Count SDCalc-Time: 2/2
+Orientation SDCalc-Time: 204ms
+0.68
+NETWORK 304
+0.68
+-0.15
+-0.15
+(0.68,-0.15)
+}A
+}A
+HTTP/1.1 304 Not Modified
+-0.15
+0.68
+
+3667092546
+{}
+2;-0.15;0.68;3667092546;}A
+PreferenceDataStore - Saving preference: com.urbanairship.remotedata.LAST_REFRESH_TIME value: 1592533730634
+content://com.WinnersCircle.urbanairship.provider/preferences
+uri, content://com.WinnersCircle.urbanairship.provider/preferences
+com.WinnersCircle.urbanairship.provider
+preferences
+INSERT OR REPLACE  INTO preferences(_id,value) VALUES (?,?)
+/preferences/com.urbanairship.remotedata.LAST_REFRESH_TIME
+0.68
+JobInfo{action=ACTION_REFRESH, id=10, extras='{}', airshipComponentName='com.urbanairship.remotedata.RemoteData', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+Job - Finished: JobInfo{action=ACTION_REFRESH, id=10, extras='{}', airshipComponentName='com.urbanairship.remotedata.RemoteData', isNetworkAccessRequired=true, initialDelay=0, persistent=false} with result: 0
+0.68
+AirshipService - Component finished job with startId: 2
+-0.15
+-0.15
+(0.68,-0.15)
+0.54
+0.54
+0.59
+0.59
+(0.54,0.59)
+0.54
+0.54
+0.59
+0.59
+{
+  "messages" : [ ],
+  "badge" : 0
+}
+
+(0.54,0.59)
+}
+}
+0.59
+[HTTP/1.1 200 OK]
+[clear]
+0.59
+[no-cache, no-store, must revalidate]
+0.54
+4239843852
+[keep-alive]
+[application/json;charset=utf-8]
+1;0.59;0.59;0.54;4239843852;}
+-0.19
+-0.19
+[Fri, 19 Jun 2020 02:28:51 GMT]
+[chunked]
+[Accept-Encoding]
+[1.1 google]
+[1592533730609]
+-0.09
+-0.09
+[NETWORK 200]
+[http/1.1]
+[1592533730511]
+(-0.19,-0.09)
+{null=[HTTP/1.1 200 OK], Alt-Svc=[clear], Cache-Control=[no-cache, no-store, must revalidate], Connection=[keep-alive], Content-Type=[application/json;charset=utf-8], Date=[Fri, 19 Jun 2020 02:28:51 GMT], Transfer-Encoding=[chunked], Vary=[Accept-Encoding], Via=[1.1 google], X-Android-Received-Millis=[1592533730609], X-Android-Response-Source=[NETWORK 200], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1592533730511]}
+A}
+A}
+-0.19
+-0.09
+Response: ResponseBody: {
+  "messages" : [ ],
+  "badge" : 0
+}
+ ResponseHeaders: {null=[HTTP/1.1 200 OK], Alt-Svc=[clear], Cache-Control=[no-cache, no-store, must revalidate], Connection=[keep-alive], Content-Type=[application/json;charset=utf-8], Date=[Fri, 19 Jun 2020 02:28:51 GMT], Transfer-Encoding=[chunked], Vary=[Accept-Encoding], Via=[1.1 google], X-Android-Received-Millis=[1592533730609], X-Android-Response-Source=[NETWORK 200], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1592533730511]} ResponseMessage: OK Status: 200
+2249154874
+InboxJobHandler - Fetch inbox messages response: Response: ResponseBody: {
+  "messages" : [ ],
+  "badge" : 0
+}
+ ResponseHeaders: {null=[HTTP/1.1 200 OK], Alt-Svc=[clear], Cache-Control=[no-cache, no-store, must revalidate], Connection=[keep-alive], Content-Type=[application/json;charset=utf-8], Date=[Fri, 19 Jun 2020 02:28:51 GMT], Transfer-Encoding=[chunked], Vary=[Accept-Encoding], Via=[1.1 google], X-Android-Received-Millis=[1592533730609], X-Android-Response-Source=[NETWORK 200], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1592533730511]} ResponseMessage: OK Status: 200
+2;-0.19;-0.09;2249154874;A}
+Received 0 inbox messages.
+-0.19
+-0.19
+-0.09
+-0.09
+(-0.19,-0.09)
+uri, content://com.WinnersCircle.urbanairship.provider/richpush
+-0.28
+uri, content://com.WinnersCircle.urbanairship.provider/richpush
+com.WinnersCircle.urbanairship.provider
+-0.28
+richpush
+SELECT * FROM richpush
+-0.07
+-0.07
+(-0.28,-0.07)
+requiredPos cannot be negative, but was 0
+-0.28
+-0.28
+-0.07
+
+-0.07
+message_id IN (  )
+(-0.28,-0.07)
+ WHERE message_id IN (  )
+DELETE FROM richpush WHERE message_id IN (  )
+uri, content://com.WinnersCircle.urbanairship.provider/richpush
+}
+uri, content://com.WinnersCircle.urbanairship.provider/richpush
+}
+SELECT * FROM richpush
+-0.07
+-0.07
+requiredPos cannot be negative, but was 0
+-0.28
+4239843852
+uri, content://com.WinnersCircle.urbanairship.provider/richpush
+1;-0.07;-0.07;-0.28;4239843852;}
+uri, content://com.WinnersCircle.urbanairship.provider/richpush
+SELECT * FROM richpush WHERE unread = ? AND unread <> unread_orig
+-3.85
+-3.85
+-1.35
+-1.35
+(-3.85,-1.35)
+A}
+requiredPos cannot be negative, but was 0
+A}
+uri, content://com.WinnersCircle.urbanairship.provider/richpush
+uri, content://com.WinnersCircle.urbanairship.provider/richpush
+-3.85
+-1.35
+2249154874
+SELECT * FROM richpush WHERE deleted = ?
+2;-3.85;-1.35;2249154874;A}
+-3.85
+requiredPos cannot be negative, but was 0
+-3.85
+-1.35
+-1.35
+{}
+(-3.85,-1.35)
+JobInfo{action=ACTION_RICH_PUSH_MESSAGES_UPDATE, id=-1, extras='{}', airshipComponentName='com.urbanairship.richpush.RichPushInbox', isNetworkAccessRequired=false, initialDelay=0, persistent=false}
+-5.20
+-5.20
+Job - Finished: JobInfo{action=ACTION_RICH_PUSH_MESSAGES_UPDATE, id=-1, extras='{}', airshipComponentName='com.urbanairship.richpush.RichPushInbox', isNetworkAccessRequired=false, initialDelay=0, persistent=false} with result: 0
+-1.77
+-1.77
+(-5.20,-1.77)
+AirshipService - Component finished job with startId: 1
+AirshipService - All jobs finished, stopping with last startId: 2
+-5.20
+-5.20
+-1.77
+-1.77
+(-5.20,-1.77)
+}
+}
+-1.77
+-1.77
+-5.20
+4239843852
+1;-1.77;-1.77;-5.20;4239843852;}
+1.73
+1.73
+0.63
+0.63
+(1.73,0.63)
+}A
+}A
+0.63
+1.73
+3667092546
+2;0.63;1.73;3667092546;}A
+1.73
+1.73
+0.63
+0.63
+(1.73,0.63)
+2.36
+2.36
+0.77
+0.77
+(2.36,0.77)
+2.36
+2.36
+0.77
+0.77
+(2.36,0.77)
+}
+}
+0.77
+0.77
+2.36
+4239843852
+1;0.77;0.77;2.36;4239843852;}
+-0.48
+-0.48
+-0.54
+-0.54
+(-0.48,-0.54)
+}A
+}A
+-0.54
+-0.48
+3667092546
+2;-0.54;-0.48;3667092546;}A
+-0.48
+-0.48
+-0.54
+-0.54
+(-0.48,-0.54)
+-1.01
+-1.01
+0.04
+0.04
+(-1.01,0.04)
+-1.01
+-1.01
+0.04
+0.04
+(-1.01,0.04)
+}
+}
+0.04
+0.04
+-1.01
+4239843852
+1;0.04;0.04;-1.01;4239843852;}
+-9.75
+-9.75
+-9.71
+-9.71
+(-9.75,-9.71)
+A}
+A}
+-9.75
+-9.71
+2249154874
+2;-9.75;-9.71;2249154874;A}
+-9.75
+-9.75
+-9.71
+-9.71
+(-9.75,-9.71)
+-19.46
+-19.46
+-0.03
+-0.03
+(-19.46,-0.03)
+-19.46
+-19.46
+-0.03
+-0.03
+(-19.46,-0.03)
+}
+}
+-0.03
+-0.03
+-19.46
+4239843852
+1;-0.03;-0.03;-19.46;4239843852;}
+4.36
+4.36
+-25.80
+-25.80
+(4.36,-25.80)
+}A
+}A
+-25.80
+4.36
+3667092546
+2;-25.80;4.36;3667092546;}A
+4.36
+4.36
+-25.80
+-25.80
+(4.36,-25.80)
+-21.44
+-21.44
+21.33
+21.33
+(-21.44,21.33)
+-21.44
+-21.44
+21.33
+21.33
+(-21.44,21.33)
+}
+}
+21.33
+21.33
+-21.44
+4239843852
+1;21.33;21.33;-21.44;4239843852;}
+-18.75
+-18.75
+-82.74
+-82.74
+(-18.75,-82.74)
+}A
+}A
+-82.74
+-18.75
+3667092546
+2;-82.74;-18.75;3667092546;}A
+-18.75
+-18.75
+-82.74
+-82.74
+(-18.75,-82.74)
+-101.49
+-101.49
+45.25
+45.25
+(-101.49,45.25)
+-101.49
+-101.49
+45.25
+45.25
+(-101.49,45.25)
+}
+}
+45.25
+45.25
+-101.49
+4239843852
+1;45.25;45.25;-101.49;4239843852;}
+25.36
+25.36
+-33.66
+-33.66
+(25.36,-33.66)
+}A
+}A
+-33.66
+25.36
+3667092546
+2;-33.66;25.36;3667092546;}A
+25.36
+25.36
+-33.66
+-33.66
+(25.36,-33.66)
+-8.30
+-8.30
+41.74
+41.74
+(-8.30,41.74)
+-8.30
+-8.30
+41.74
+41.74
+(-8.30,41.74)
+}
+}
+41.74
+41.74
+-8.30
+4239843852
+1;41.74;41.74;-8.30;4239843852;}
+500.00
+500.00
+323.00
+323.00
+(500.00,323.00)
+}A
+}A
+323.00
+500.00
+3667092546
+2;323.00;500.00;3667092546;}A
+500.00
+500.00
+323.00
+323.00
+(500.00,323.00)
+823.00
+823.00
+125.16
+125.16
+(823.00,125.16)
+823.00
+823.00
+125.16
+125.16
+(823.00,125.16)
+}
+}
+125.16
+125.16
+823.00
+4239843852
+1;125.16;125.16;823.00;4239843852;}
+2;-0.15;0.68;3667092546;}A:2;-0.19;-0.09;2249154874;A}:2;-3.85;-1.35;2249154874;A}:2;0.63;1.73;3667092546;}A:2;-0.54;-0.48;3667092546;}A:2;-9.75;-9.71;2249154874;A}:2;-25.80;4.36;3667092546;}A:2;-82.74;-18.75;3667092546;}A:2;-33.66;25.36;3667092546;}A
+
+
+-
+
+
+-
+500,0.68,-0.19,-3.85,1.73,-0.48,-9.75,4.36,-18.75,25.36,1;
+500,0.68,-0.19,-3.85,1.73,-0.48,-9.75,4.36,-18.75,25.36,1;
+323,-0.15,-0.09,-1.35,0.63,-0.54,-9.71,-25.8,-82.74,-33.66,1;
+500,0.68,-0.19,-3.85,1.73,-0.48,-9.75,4.36,-18.75,25.36,1;323,-0.15,-0.09,-1.35,0.63,-0.54,-9.71,-25.8,-82.74,-33.66,1;
+Motion Count SDCalc-Time: 2/2
+Motion SDCalc-Time: 255ms
+3,1592533729685;
+do_en,dm_en,t_en
+FeistelCipherEncode-Time: 0ms
+0,0,11001317008,28750004468,39751321476,1352,0,0,2,2,7000,489000,1,127066385235566248,1592533729530,0
+2.2.2-1,2,-94,-100,-1,uaend,-1,2034,1080,1,100,1,en,9,1,ONEPLUS%20A5010,unknown,qcom,-1,com.WinnersCircle,-1,-1,60b4488c57919beb,-1,0,1,REL,1910081948,28,OnePlus,OnePlus5T,release-keys,user,OnePlus,ONEPLUS%20A5010_43_191008,msm8998,OnePlus,OnePlus5T,OnePlus/OnePlus5T/OnePlus5T:9/PKQ1.180716.001/1910081948:user/release-keys,rd-build-193,PKQ1.180716.001,24799,1981801195,796266864765-1,2,-94,-101,do_en,dm_en,t_en-1,2,-94,-102,-1,2,-94,-108,-1,2,-94,-117,-1,2,-94,-111,491,192.54,2.75,10.05,1;323,184.8,1.33,2.23,1;-1,2,-94,-109,500,0.68,-0.19,-3.85,1.73,-0.48,-9.75,4.36,-18.75,25.36,1;323,-0.15,-0.09,-1.35,0.63,-0.54,-9.71,-25.8,-82.74,-33.66,1;-1,2,-94,-144,2;323.00;491.00;3667092546;}A-1,2,-94,-142,2;184.80;192.54;3667092546;}A:2;1.33;2.75;3667092546;}A:2;2.23;10.05;3667092546;}A-1,2,-94,-145,2;323.00;500.00;3667092546;}A-1,2,-94,-143,2;-0.15;0.68;3667092546;}A:2;-0.19;-0.09;2249154874;A}:2;-3.85;-1.35;2249154874;A}:2;0.63;1.73;3667092546;}A:2;-0.54;-0.48;3667092546;}A:2;-9.75;-9.71;2249154874;A}:2;-25.80;4.36;3667092546;}A:2;-82.74;-18.75;3667092546;}A:2;-33.66;25.36;3667092546;}A-1,2,-94,-115,0,0,11001317008,28750004468,39751321476,1352,0,0,2,2,7000,489000,1,127066385235566248,1592533729530,0-1,2,-94,-106,-1,0-1,2,-94,-120,-1,2,-94,-112,17,1293,59,3389,176700,1775,50100,500,9178-1,2,-94,-103,3,1592533729685;
+Plain-BuildSensorData-Time: 491ms
+Building sensor data, plain data size: 1328
+AES/CBC/PKCS5Padding
+AES/CBC
+AES//PKCS5Padding
+AES/CBC/PKCS5Padding
+AES/CBC
+AES//PKCS5Padding
+aes-128-cbc
+1,a,e4Wfdoy4NSebkhcUzgf3HFecp8H1vNFnZysSw7vdszo0xfPchUeuO/cufLsKN7AQ7pdRd41fFfOTu/uL0zuYHupxVVHAGGJl2/zLRN+Hov8B0ebywada0eju1rBnhC3ckTud7TSdYUCjdSsvieNGte00z4JTx9IlWlyVbXd2D8c=,a1e4PxjKFXb8tPFETn4SUxxZSnNs25ih2jGf3ezZJpo7oovzazH96CCcHlMRtaqvfql79oyRXmPntLh+Q9FN8Bl80MZ4dvrYlp3XkHWP3XTBpK7LnX/LeIk57NGKzPx4k9lvRC13rgX9NnM7mnVdxv5tPjlNpFlB5UtlLNrtq/Y=
+4000,0,0
+1,a,e4Wfdoy4NSebkhcUzgf3HFecp8H1vNFnZysSw7vdszo0xfPchUeuO/cufLsKN7AQ7pdRd41fFfOTu/uL0zuYHupxVVHAGGJl2/zLRN+Hov8B0ebywada0eju1rBnhC3ckTud7TSdYUCjdSsvieNGte00z4JTx9IlWlyVbXd2D8c=,a1e4PxjKFXb8tPFETn4SUxxZSnNs25ih2jGf3ezZJpo7oovzazH96CCcHlMRtaqvfql79oyRXmPntLh+Q9FN8Bl80MZ4dvrYlp3XkHWP3XTBpK7LnX/LeIk57NGKzPx4k9lvRC13rgX9NnM7mnVdxv5tPjlNpFlB5UtlLNrtq/Y=$L2RW9ykjz8ZwD9nqmRBYzFxeiYTlg1WkYawQv7g1rf/NNvqQS/ZGqnUgNLJ6iaRLKSj95PSVBka8ZpZ3rtYyic6BlGtDOxk1ix4NYGV/nnH5+sm0hM8uml6gtd96wYpgKbr8V2Llf2WDCz6X5hsfHdaxDegtedYZKNjLXAov1Z5ufSPWULOIMpBJ0YAO1cP97bIGmykBVhv9wAiRYTGTCgYn9uxymHVS5cAfxSlgLkbEeWawvHxVqIzbfz9iOVp7EwxVjQjrpCHPguYBGxTYYX2QOYvJunDKryuyhfXj8FZsbtYAGBzi1gW5ja9//VggIRdINsbFUDSwD7hI/i+lXbnxjU2YOs/p9hz4DV8tOhdbBTYAxlx1jMsFWGMUNmBoI3pcnzSDCXnhDt6tM1qEIKGs4avqfGhQOSlvb61eWKOQxX+61w3Bfx7E7/RYlAx8iCmOJUxlZSZzuJcB2M8lvxhfl64ws6Av5s1Zfdml5hcckniGPmREL5mfs+okVyRH+W0Lwdv9gnviX2IQdpkbnhrt0QJQe0H4BKC9JHvDsF06A+B8n/xON98LK/mCpO7l4NzlcejOPxwnmtEfP3vS2zlkHbtBXDW/RMZum2x4jj4lFcUv/JcCsp+trBMNvJ7Xpea9DOisHJXChvoywiyZ9kTZDVivP2JcbiUrC/uo2FALPDCZZIxujX4bsjSQZxUV1yQOw42tDsTjkTEWeT3Kft52198C7TpAW9MCvu0wmozNtTcb+9SNgonWCiG2LOouza4EvkgJ7tgjFRPazcBTpdZVfzIuHIp1x+ZNk0JPfDtJ+LGxomndKa7dl+6i0xWA8+wCY5uMYa7q/whNAuND9wrII3HCaRMf1By8Jdt72GlORThFtm/C/2inHWCy3q6AiBx1vsIpvskGVGFw23207glWRV1pbaFYHYga4enSuT6IylaJNiIQgfUYJV/x+/ps90A4N4OrpJM10znx5A49dRFMp5Hls0XMbnoMu/BPu/tjwub/CMse4zJ6Bqd1NU4l2oycQ7kMf3BzAdiaJwGPTtfUaeRv9QU0uPiZ57VIr9EavlyBhRx78yXakJx8ThHEnjyy5jfw2CewquuyRO+cQ8bZClVpqsWsTrm0sndroOfnWTPW8N/eDfGSM7zCbasZL1ZJKt5nRSNfImSx+gA1AiNyPqMnF6BdzcRB+s9DrXZHwgsmmyD7p5dzNZUapOfhW0YFXy5EQ/gC5gZAt//+inAGnssox7lc4AzYtJwgnMz0FuEIeyB+IDS66/Ho5PMN31uHxfCm/ZEExY1oUjQ41ttpE1nNRUJN+5075bfOKXex2BqyarQE5IaJaFV2gbhyf4rdKlp03OkuCZG/NYh4XyaKrZw0cqDiXWqfoNOcJ/VyCH/ieOQNlgekg9Ko/q1nwiPFBtDMZ4baKCyzT5U3KUmqBi2hlbRlyH9ijtzXEdCt3R3h22Xvc6WrEfH7I6rcBr/p1YJXI0D+vtQkKI4dR9pa4gb/ZO2Uy3UbnCVo/ghzvGDE03qMPppDR9O5AkItWwKPitUeZ9By8pVP0FSU97YrUtNTSWq0iF9peRbyJoAi1nqL4A5dFZ70PM3PAIaPwxqtqzDjHJMlpgsT1IwHqm2InQECEWqJ4GtLacAlD3Q8vKXsrqjiaXg5A9gHe2vt2RrJU7Xwe4DTO8MBDblHpBM0ovqx+Vn+3tfEYCWcuhl8hybuLK5CKxaRMInX8BsqWhp0bEVYtGJz3xANZV1T9R1ldpvWObl2oKZj6DjSPPIUknysazpsnGypoBPh8kWGw67BeuFUjNGEJrbKfG56SndTqbwN3Ev65dJHRFrLB3qSVJpSGS8eFxbvvCRVJe6D$4000,0,0
+Cipher-BuildSensorData-Time: 7ms
+sensor=4
+unregisterListenerImpl sensorName:BMI160 Gyroscope,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+sensor=1
+unregisterListenerImpl sensorName:BMI160 Accelerometer,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+sensor=2
+unregisterListenerImpl sensorName:AK09911 Magnetometer,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+sensor=9
+unregisterListenerImpl sensorName:Gravity,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+sensor=1,rate=200000
+registerListenerImpl sensorName:BMI160 Accelerometer,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+sensor=4,rate=200000
+registerListenerImpl sensorName:BMI160 Gyroscope,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+GyroScope status true and Accelerometer status true
+sensor=1,rate=200000
+registerListenerImpl sensorName:BMI160 Accelerometer,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+sensor=2,rate=200000
+registerListenerImpl sensorName:AK09911 Magnetometer,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+sensor=9,rate=200000
+registerListenerImpl sensorName:Gravity,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+sensor=1
+unregisterListenerImpl sensorName:BMI160 Accelerometer,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+android.os.BinderProxy@237c730
+CreateServiceData{token=android.os.BinderProxy@237c730 className=com.urbanairship.push.fcm.AirshipFirebaseInstanceIdService packageName=com.WinnersCircle intent=null}
+serviceCreate: CreateServiceData{token=android.os.BinderProxy@237c730 className=com.urbanairship.push.fcm.AirshipFirebaseInstanceIdService packageName=com.WinnersCircle intent=null}
+pool-30-thread-
+Skipped 32 frames!  The application may be doing too much work on its main thread.
+[5, 4, 3, 15]
+GoogleApiClient is not configured to use SafetyNet.API required for this call.
+Thu Jun 18 22:28:50 EDT 2020
+GET https://prodmobloy2.finishline.com/api/account/guest Hour: Thu Jun 18 22:28:50 EDT 2020
+[1,a,e4Wfdoy4NSebkhcUzgf3HFecp8H1vNFnZysSw7vdszo0xfPchUeuO/cufLsKN7AQ7pdRd41fFfOTu/uL0zuYHupxVVHAGGJl2/zLRN+Hov8B0ebywada0eju1rBnhC3ckTud7TSdYUCjdSsvieNGte00z4JTx9IlWlyVbXd2D8c=,a1e4PxjKFXb8tPFETn4SUxxZSnNs25ih2jGf3ezZJpo7oovzazH96CCcHlMRtaqvfql79oyRXmPntLh+Q9FN8Bl80MZ4dvrYlp3XkHWP3XTBpK7LnX/LeIk57NGKzPx4k9lvRC13rgX9NnM7mnVdxv5tPjlNpFlB5UtlLNrtq/Y=$L2RW9ykjz8ZwD9nqmRBYzFxeiYTlg1WkYawQv7g1rf/NNvqQS/ZGqnUgNLJ6iaRLKSj95PSVBka8ZpZ3rtYyic6BlGtDOxk1ix4NYGV/nnH5+sm0hM8uml6gtd96wYpgKbr8V2Llf2WDCz6X5hsfHdaxDegtedYZKNjLXAov1Z5ufSPWULOIMpBJ0YAO1cP97bIGmykBVhv9wAiRYTGTCgYn9uxymHVS5cAfxSlgLkbEeWawvHxVqIzbfz9iOVp7EwxVjQjrpCHPguYBGxTYYX2QOYvJunDKryuyhfXj8FZsbtYAGBzi1gW5ja9//VggIRdINsbFUDSwD7hI/i+lXbnxjU2YOs/p9hz4DV8tOhdbBTYAxlx1jMsFWGMUNmBoI3pcnzSDCXnhDt6tM1qEIKGs4avqfGhQOSlvb61eWKOQxX+61w3Bfx7E7/RYlAx8iCmOJUxlZSZzuJcB2M8lvxhfl64ws6Av5s1Zfdml5hcckniGPmREL5mfs+okVyRH+W0Lwdv9gnviX2IQdpkbnhrt0QJQe0H4BKC9JHvDsF06A+B8n/xON98LK/mCpO7l4NzlcejOPxwnmtEfP3vS2zlkHbtBXDW/RMZum2x4jj4lFcUv/JcCsp+trBMNvJ7Xpea9DOisHJXChvoywiyZ9kTZDVivP2JcbiUrC/uo2FALPDCZZIxujX4bsjSQZxUV1yQOw42tDsTjkTEWeT3Kft52198C7TpAW9MCvu0wmozNtTcb+9SNgonWCiG2LOouza4EvkgJ7tgjFRPazcBTpdZVfzIuHIp1x+ZNk0JPfDtJ+LGxomndKa7dl+6i0xWA8+wCY5uMYa7q/whNAuND9wrII3HCaRMf1By8Jdt72GlORThFtm/C/2inHWCy3q6AiBx1vsIpvskGVGFw23207glWRV1pbaFYHYga4enSuT6IylaJNiIQgfUYJV/x+/ps90A4N4OrpJM10znx5A49dRFMp5Hls0XMbnoMu/BPu/tjwub/CMse4zJ6Bqd1NU4l2oycQ7kMf3BzAdiaJwGPTtfUaeRv9QU0uPiZ57VIr9EavlyBhRx78yXakJx8ThHEnjyy5jfw2CewquuyRO+cQ8bZClVpqsWsTrm0sndroOfnWTPW8N/eDfGSM7zCbasZL1ZJKt5nRSNfImSx+gA1AiNyPqMnF6BdzcRB+s9DrXZHwgsmmyD7p5dzNZUapOfhW0YFXy5EQ/gC5gZAt//+inAGnssox7lc4AzYtJwgnMz0FuEIeyB+IDS66/Ho5PMN31uHxfCm/ZEExY1oUjQ41ttpE1nNRUJN+5075bfOKXex2BqyarQE5IaJaFV2gbhyf4rdKlp03OkuCZG/NYh4XyaKrZw0cqDiXWqfoNOcJ/VyCH/ieOQNlgekg9Ko/q1nwiPFBtDMZ4baKCyzT5U3KUmqBi2hlbRlyH9ijtzXEdCt3R3h22Xvc6WrEfH7I6rcBr/p1YJXI0D+vtQkKI4dR9pa4gb/ZO2Uy3UbnCVo/ghzvGDE03qMPppDR9O5AkItWwKPitUeZ9By8pVP0FSU97YrUtNTSWq0iF9peRbyJoAi1nqL4A5dFZ70PM3PAIaPwxqtqzDjHJMlpgsT1IwHqm2InQECEWqJ4GtLacAlD3Q8vKXsrqjiaXg5A9gHe2vt2RrJU7Xwe4DTO8MBDblHpBM0ovqx+Vn+3tfEYCWcuhl8hybuLK5CKxaRMInX8BsqWhp0bEVYtGJz3xANZV1T9R1ldpvWObl2oKZj6DjSPPIUknysazpsnGypoBPh8kWGw67BeuFUjNGEJrbKfG56SndTqbwN3Ev65dJHRFrLB3qSVJpSGS8eFxbvvCRVJe6D$4000,0,0]
+[3.0]
+[Finish Line/2.6.1 (Android 9; Build/PKQ1.180716.001)]
+[maltliquor]
+[application/json; charset=utf-8]
+[0]
+[1592533730354]
+[Dalvik/2.1.0 (Linux; U; Android 9; ONEPLUS A5010 Build/PKQ1.180716.001)]
+{X-acf-sensor-data=[1,a,e4Wfdoy4NSebkhcUzgf3HFecp8H1vNFnZysSw7vdszo0xfPchUeuO/cufLsKN7AQ7pdRd41fFfOTu/uL0zuYHupxVVHAGGJl2/zLRN+Hov8B0ebywada0eju1rBnhC3ckTud7TSdYUCjdSsvieNGte00z4JTx9IlWlyVbXd2D8c=,a1e4PxjKFXb8tPFETn4SUxxZSnNs25ih2jGf3ezZJpo7oovzazH96CCcHlMRtaqvfql79oyRXmPntLh+Q9FN8Bl80MZ4dvrYlp3XkHWP3XTBpK7LnX/LeIk57NGKzPx4k9lvRC13rgX9NnM7mnVdxv5tPjlNpFlB5UtlLNrtq/Y=$L2RW9ykjz8ZwD9nqmRBYzFxeiYTlg1WkYawQv7g1rf/NNvqQS/ZGqnUgNLJ6iaRLKSj95PSVBka8ZpZ3rtYyic6BlGtDOxk1ix4NYGV/nnH5+sm0hM8uml6gtd96wYpgKbr8V2Llf2WDCz6X5hsfHdaxDegtedYZKNjLXAov1Z5ufSPWULOIMpBJ0YAO1cP97bIGmykBVhv9wAiRYTGTCgYn9uxymHVS5cAfxSlgLkbEeWawvHxVqIzbfz9iOVp7EwxVjQjrpCHPguYBGxTYYX2QOYvJunDKryuyhfXj8FZsbtYAGBzi1gW5ja9//VggIRdINsbFUDSwD7hI/i+lXbnxjU2YOs/p9hz4DV8tOhdbBTYAxlx1jMsFWGMUNmBoI3pcnzSDCXnhDt6tM1qEIKGs4avqfGhQOSlvb61eWKOQxX+61w3Bfx7E7/RYlAx8iCmOJUxlZSZzuJcB2M8lvxhfl64ws6Av5s1Zfdml5hcckniGPmREL5mfs+okVyRH+W0Lwdv9gnviX2IQdpkbnhrt0QJQe0H4BKC9JHvDsF06A+B8n/xON98LK/mCpO7l4NzlcejOPxwnmtEfP3vS2zlkHbtBXDW/RMZum2x4jj4lFcUv/JcCsp+trBMNvJ7Xpea9DOisHJXChvoywiyZ9kTZDVivP2JcbiUrC/uo2FALPDCZZIxujX4bsjSQZxUV1yQOw42tDsTjkTEWeT3Kft52198C7TpAW9MCvu0wmozNtTcb+9SNgonWCiG2LOouza4EvkgJ7tgjFRPazcBTpdZVfzIuHIp1x+ZNk0JPfDtJ+LGxomndKa7dl+6i0xWA8+wCY5uMYa7q/whNAuND9wrII3HCaRMf1By8Jdt72GlORThFtm/C/2inHWCy3q6AiBx1vsIpvskGVGFw23207glWRV1pbaFYHYga4enSuT6IylaJNiIQgfUYJV/x+/ps90A4N4OrpJM10znx5A49dRFMp5Hls0XMbnoMu/BPu/tjwub/CMse4zJ6Bqd1NU4l2oycQ7kMf3BzAdiaJwGPTtfUaeRv9QU0uPiZ57VIr9EavlyBhRx78yXakJx8ThHEnjyy5jfw2CewquuyRO+cQ8bZClVpqsWsTrm0sndroOfnWTPW8N/eDfGSM7zCbasZL1ZJKt5nRSNfImSx+gA1AiNyPqMnF6BdzcRB+s9DrXZHwgsmmyD7p5dzNZUapOfhW0YFXy5EQ/gC5gZAt//+inAGnssox7lc4AzYtJwgnMz0FuEIeyB+IDS66/Ho5PMN31uHxfCm/ZEExY1oUjQ41ttpE1nNRUJN+5075bfOKXex2BqyarQE5IaJaFV2gbhyf4rdKlp03OkuCZG/NYh4XyaKrZw0cqDiXWqfoNOcJ/VyCH/ieOQNlgekg9Ko/q1nwiPFBtDMZ4baKCyzT5U3KUmqBi2hlbRlyH9ijtzXEdCt3R3h22Xvc6WrEfH7I6rcBr/p1YJXI0D+vtQkKI4dR9pa4gb/ZO2Uy3UbnCVo/ghzvGDE03qMPppDR9O5AkItWwKPitUeZ9By8pVP0FSU97YrUtNTSWq0iF9peRbyJoAi1nqL4A5dFZ70PM3PAIaPwxqtqzDjHJMlpgsT1IwHqm2InQECEWqJ4GtLacAlD3Q8vKXsrqjiaXg5A9gHe2vt2RrJU7Xwe4DTO8MBDblHpBM0ovqx+Vn+3tfEYCWcuhl8hybuLK5CKxaRMInX8BsqWhp0bEVYtGJz3xANZV1T9R1ldpvWObl2oKZj6DjSPPIUknysazpsnGypoBPh8kWGw67BeuFUjNGEJrbKfG56SndTqbwN3Ev65dJHRFrLB3qSVJpSGS8eFxbvvCRVJe6D$4000,0,0], X-Api-Version=[3.0], User-Agent=[Finish Line/2.6.1 (Android 9; Build/PKQ1.180716.001)], welove=[maltliquor], Content-Type=[application/json; charset=utf-8], Content-Length=[0], RiskifiedID=[1592533730354], Riskified-User-Agent=[Dalvik/2.1.0 (Linux; U; Android 9; ONEPLUS A5010 Build/PKQ1.180716.001)]}
+Request Headers = {X-acf-sensor-data=[1,a,e4Wfdoy4NSebkhcUzgf3HFecp8H1vNFnZysSw7vdszo0xfPchUeuO/cufLsKN7AQ7pdRd41fFfOTu/uL0zuYHupxVVHAGGJl2/zLRN+Hov8B0ebywada0eju1rBnhC3ckTud7TSdYUCjdSsvieNGte00z4JTx9IlWlyVbXd2D8c=,a1e4PxjKFXb8tPFETn4SUxxZSnNs25ih2jGf3ezZJpo7oovzazH96CCcHlMRtaqvfql79oyRXmPntLh+Q9FN8Bl80MZ4dvrYlp3XkHWP3XTBpK7LnX/LeIk57NGKzPx4k9lvRC13rgX9NnM7mnVdxv5tPjlNpFlB5UtlLNrtq/Y=$L2RW9ykjz8ZwD9nqmRBYzFxeiYTlg1WkYawQv7g1rf/NNvqQS/ZGqnUgNLJ6iaRLKSj95PSVBka8ZpZ3rtYyic6BlGtDOxk1ix4NYGV/nnH5+sm0hM8uml6gtd96wYpgKbr8V2Llf2WDCz6X5hsfHdaxDegtedYZKNjLXAov1Z5ufSPWULOIMpBJ0YAO1cP97bIGmykBVhv9wAiRYTGTCgYn9uxymHVS5cAfxSlgLkbEeWawvHxVqIzbfz9iOVp7EwxVjQjrpCHPguYBGxTYYX2QOYvJunDKryuyhfXj8FZsbtYAGBzi1gW5ja9//VggIRdINsbFUDSwD7hI/i+lXbnxjU2YOs/p9hz4DV8tOhdbBTYAxlx1jMsFWGMUNmBoI3pcnzSDCXnhDt6tM1qEIKGs4avqfGhQOSlvb61eWKOQxX+61w3Bfx7E7/RYlAx8iCmOJUxlZSZzuJcB2M8lvxhfl64ws6Av5s1Zfdml5hcckniGPmREL5mfs+okVyRH+W0Lwdv9gnviX2IQdpkbnhrt0QJQe0H4BKC9JHvDsF06A+B8n/xON98LK/mCpO7l4NzlcejOPxwnmtEfP3vS2zlkHbtBXDW/RMZum2x4jj4lFcUv/JcCsp+trBMNvJ7Xpea9DOisHJXChvoywiyZ9kTZDVivP2JcbiUrC/uo2FALPDCZZIxujX4bsjSQZxUV1yQOw42tDsTjkTEWeT3Kft52198C7TpAW9MCvu0wmozNtTcb+9SNgonWCiG2LOouza4EvkgJ7tgjFRPazcBTpdZVfzIuHIp1x+ZNk0JPfDtJ+LGxomndKa7dl+6i0xWA8+wCY5uMYa7q/whNAuND9wrII3HCaRMf1By8Jdt72GlORThFtm/C/2inHWCy3q6AiBx1vsIpvskGVGFw23207glWRV1pbaFYHYga4enSuT6IylaJNiIQgfUYJV/x+/ps90A4N4OrpJM10znx5A49dRFMp5Hls0XMbnoMu/BPu/tjwub/CMse4zJ6Bqd1NU4l2oycQ7kMf3BzAdiaJwGPTtfUaeRv9QU0uPiZ57VIr9EavlyBhRx78yXakJx8ThHEnjyy5jfw2CewquuyRO+cQ8bZClVpqsWsTrm0sndroOfnWTPW8N/eDfGSM7zCbasZL1ZJKt5nRSNfImSx+gA1AiNyPqMnF6BdzcRB+s9DrXZHwgsmmyD7p5dzNZUapOfhW0YFXy5EQ/gC5gZAt//+inAGnssox7lc4AzYtJwgnMz0FuEIeyB+IDS66/Ho5PMN31uHxfCm/ZEExY1oUjQ41ttpE1nNRUJN+5075bfOKXex2BqyarQE5IaJaFV2gbhyf4rdKlp03OkuCZG/NYh4XyaKrZw0cqDiXWqfoNOcJ/VyCH/ieOQNlgekg9Ko/q1nwiPFBtDMZ4baKCyzT5U3KUmqBi2hlbRlyH9ijtzXEdCt3R3h22Xvc6WrEfH7I6rcBr/p1YJXI0D+vtQkKI4dR9pa4gb/ZO2Uy3UbnCVo/ghzvGDE03qMPppDR9O5AkItWwKPitUeZ9By8pVP0FSU97YrUtNTSWq0iF9peRbyJoAi1nqL4A5dFZ70PM3PAIaPwxqtqzDjHJMlpgsT1IwHqm2InQECEWqJ4GtLacAlD3Q8vKXsrqjiaXg5A9gHe2vt2RrJU7Xwe4DTO8MBDblHpBM0ovqx+Vn+3tfEYCWcuhl8hybuLK5CKxaRMInX8BsqWhp0bEVYtGJz3xANZV1T9R1ldpvWObl2oKZj6DjSPPIUknysazpsnGypoBPh8kWGw67BeuFUjNGEJrbKfG56SndTqbwN3Ev65dJHRFrLB3qSVJpSGS8eFxbvvCRVJe6D$4000,0,0], X-Api-Version=[3.0], User-Agent=[Finish Line/2.6.1 (Android 9; Build/PKQ1.180716.001)], welove=[maltliquor], Content-Type=[application/json; charset=utf-8], Content-Length=[0], RiskifiedID=[1592533730354], Riskified-User-Agent=[Dalvik/2.1.0 (Linux; U; Android 9; ONEPLUS A5010 Build/PKQ1.180716.001)]}
+prodmobloy2.finishline.com
+com.koushikdutta.ion.f.j@80d0b14
+Using loader: com.koushikdutta.ion.f.j@80d0b14
+s:https://prodmobloy2.finishline.com/api/account/guest
+/api/account/guest/
+pool-30-thread-1
+/api/account/guest/
+Illegal sign-in mode: 3
+ak_bmsc=AB2E753BD36C9FDB0358978CF5FF76216863EF3EFE440000E222EC5EBECE981A~pliU0hsp/GJG1WM8XXJ/cm419NcCUqNKWMvbdPyeJm2Gc4ixUaakN5balvU/zSEvIjf7MktZuiPRzuMWudZSw4M8j2NG6CEUB8h0BV/CXu7KdpOWCVLF1qK3cNjj1KtaiFeVT7Ldu37ct3IIOIVUEs8X+xIvJfxXJ9LpPnQ0wBtBgkcX+XGnKliSyh2P/77Iton1eCKQlpvhuWfTOnxF+hQWQE4ssPgcqeGXa/oQ96ABA=
+{}
+pool-31-thread-
+pool-31-thread-1
+GAC_Executor[0]
+akavpau_FL-MobApp=1592534030~id=df36a75bec303709bafd774a16897d71
+ak_bmsc=AB2E753BD36C9FDB0358978CF5FF76216863EF3EFE440000E222EC5EBECE981A~pliU0hsp/GJG1WM8XXJ/cm419NcCUqNKWMvbdPyeJm2Gc4ixUaakN5balvU/zSEvIjf7MktZuiPRzuMWudZSw4M8j2NG6CEUB8h0BV/CXu7KdpOWCVLF1qK3cNjj1KtaiFeVT7Ldu37ct3IIOIVUEs8X+xIvJfxXJ9LpPnQ0wBtBgkcX+XGnKliSyh2P/77Iton1eCKQlpvhuWfTOnxF+hQWQE4ssPgcqeGXa/oQ96ABA=; akavpau_FL-MobApp=1592534030~id=df36a75bec303709bafd774a16897d71
+s:https://prodmobloy2.finishline.com/api/account/guest
+https.proxyHost
+pool-31-thread-2
+GAC_Executor[1]
+android.os.BinderProxy@cabd4fd
+CreateServiceData{token=android.os.BinderProxy@cabd4fd className=com.urbanairship.job.AirshipService packageName=com.WinnersCircle intent=null}
+serviceCreate: CreateServiceData{token=android.os.BinderProxy@cabd4fd className=com.urbanairship.job.AirshipService packageName=com.WinnersCircle intent=null}
+https.proxyPort
+android.os.BinderProxy@cabd4fd
+b34b1590e3fa73b12c5bbf7d542444b2.0
+com.WinnersCircle/com.urbanairship.job.AirshipService
+Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }
+ServiceArgsData{token=android.os.BinderProxy@cabd4fd startId=1 args=Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }}
+serviceStart: ServiceArgsData{token=android.os.BinderProxy@cabd4fd startId=1 args=Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }}
+com.WinnersCircle/com.urbanairship.job.AirshipService
+Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }
+AirshipService - Received intent: Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }
+GoogleApiClient is not configured to use SafetyNet.API required for this call.
+/data/user/0/com.WinnersCircle/cache/ion/b34b1590e3fa73b12c5bbf7d542444b2.0
+ (No such file or directory)
+/data/user/0/com.WinnersCircle/cache/ion/b34b1590e3fa73b12c5bbf7d542444b2.0 (No such file or directory)
+b34b1590e3fa73b12c5bbf7d542444b2.0
+b34b1590e3fa73b12c5bbf7d542444b2.0
+log.looper.10119.Airship Service.slow
+/data/user/0/com.WinnersCircle/cache/ion/b34b1590e3fa73b12c5bbf7d542444b2.0
+10.0.1.69:8085
+10.0.1.69:8085
+prodmobloy2.finishline.com
+{}
+JobInfo{action=ACTION_UPDATE_PUSH_REGISTRATION, id=4, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+AirshipService - Running job: JobInfo{action=ACTION_UPDATE_PUSH_REGISTRATION, id=4, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+https//prodmobloy2.finishline.com:443?proxy=10.0.1.69:8085
+GET https://prodmobloy2.finishline.com/api/account/guest HTTP/1.1
+|T|156274640316|FCM
+GET https://prodmobloy2.finishline.com/api/account/guest HTTP/1.1
+
+GET https://prodmobloy2.finishline.com/api/account/guest HTTP/1.1
+Host: prodmobloy2.finishline.com
+User-Agent: Finish Line/2.6.1 (Android 9; Build/PKQ1.180716.001)
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Accept: */*
+X-acf-sensor-data: 1,a,e4Wfdoy4NSebkhcUzgf3HFecp8H1vNFnZysSw7vdszo0xfPchUeuO/cufLsKN7AQ7pdRd41fFfOTu/uL0zuYHupxVVHAGGJl2/zLRN+Hov8B0ebywada0eju1rBnhC3ckTud7TSdYUCjdSsvieNGte00z4JTx9IlWlyVbXd2D8c=,a1e4PxjKFXb8tPFETn4SUxxZSnNs25ih2jGf3ezZJpo7oovzazH96CCcHlMRtaqvfql79oyRXmPntLh+Q9FN8Bl80MZ4dvrYlp3XkHWP3XTBpK7LnX/LeIk57NGKzPx4k9lvRC13rgX9NnM7mnVdxv5tPjlNpFlB5UtlLNrtq/Y=$L2RW9ykjz8ZwD9nqmRBYzFxeiYTlg1WkYawQv7g1rf/NNvqQS/ZGqnUgNLJ6iaRLKSj95PSVBka8ZpZ3rtYyic6BlGtDOxk1ix4NYGV/nnH5+sm0hM8uml6gtd96wYpgKbr8V2Llf2WDCz6X5hsfHdaxDegtedYZKNjLXAov1Z5ufSPWULOIMpBJ0YAO1cP97bIGmykBVhv9wAiRYTGTCgYn9uxymHVS5cAfxSlgLkbEeWawvHxVqIzbfz9iOVp7EwxVjQjrpCHPguYBGxTYYX2QOYvJunDKryuyhfXj8FZsbtYAGBzi1gW5ja9//VggIRdINsbFUDSwD7hI/i+lXbnxjU2YOs/p9hz4DV8tOhdbBTYAxlx1jMsFWGMUNmBoI3pcnzSDCXnhDt6tM1qEIKGs4avqfGhQOSlvb61eWKOQxX+61w3Bfx7E7/RYlAx8iCmOJUxlZSZzuJcB2M8lvxhfl64ws6Av5s1Zfdml5hcckniGPmREL5mfs+okVyRH+W0Lwdv9gnviX2IQdpkbnhrt0QJQe0H4BKC9JHvDsF06A+B8n/xON98LK/mCpO7l4NzlcejOPxwnmtEfP3vS2zlkHbtBXDW/RMZum2x4jj4lFcUv/JcCsp+trBMNvJ7Xpea9DOisHJXChvoywiyZ9kTZDVivP2JcbiUrC/uo2FALPDCZZIxujX4bsjSQZxUV1yQOw42tDsTjkTEWeT3Kft52198C7TpAW9MCvu0wmozNtTcb+9SNgonWCiG2LOouza4EvkgJ7tgjFRPazcBTpdZVfzIuHIp1x+ZNk0JPfDtJ+LGxomndKa7dl+6i0xWA8+wCY5uMYa7q/whNAuND9wrII3HCaRMf1By8Jdt72GlORThFtm/C/2inHWCy3q6AiBx1vsIpvskGVGFw23207glWRV1pbaFYHYga4enSuT6IylaJNiIQgfUYJV/x+/ps90A4N4OrpJM10znx5A49dRFMp5Hls0XMbnoMu/BPu/tjwub/CMse4zJ6Bqd1NU4l2oycQ7kMf3BzAdiaJwGPTtfUaeRv9QU0uPiZ57VIr9EavlyBhRx78yXakJx8ThHEnjyy5jfw2CewquuyRO+cQ8bZClVpqsWsTrm0sndroOfnWTPW8N/eDfGSM7zCbasZL1ZJKt5nRSNfImSx+gA1AiNyPqMnF6BdzcRB+s9DrXZHwgsmmyD7p5dzNZUapOfhW0YFXy5EQ/gC5gZAt//+inAGnssox7lc4AzYtJwgnMz0FuEIeyB+IDS66/Ho5PMN31uHxfCm/ZEExY1oUjQ41ttpE1nNRUJN+5075bfOKXex2BqyarQE5IaJaFV2gbhyf4rdKlp03OkuCZG/NYh4XyaKrZw0cqDiXWqfoNOcJ/VyCH/ieOQNlgekg9Ko/q1nwiPFBtDMZ4baKCyzT5U3KUmqBi2hlbRlyH9ijtzXEdCt3R3h22Xvc6WrEfH7I6rcBr/p1YJXI0D+vtQkKI4dR9pa4gb/ZO2Uy3UbnCVo/ghzvGDE03qMPppDR9O5AkItWwKPitUeZ9By8pVP0FSU97YrUtNTSWq0iF9peRbyJoAi1nqL4A5dFZ70PM3PAIaPwxqtqzDjHJMlpgsT1IwHqm2InQECEWqJ4GtLacAlD3Q8vKXsrqjiaXg5A9gHe2vt2RrJU7Xwe4DTO8MBDblHpBM0ovqx+Vn+3tfEYCWcuhl8hybuLK5CKxaRMInX8BsqWhp0bEVYtGJz3xANZV1T9R1ldpvWObl2oKZj6DjSPPIUknysazpsnGypoBPh8kWGw67BeuFUjNGEJrbKfG56SndTqbwN3Ev65dJHRFrLB3qSVJpSGS8eFxbvvCRVJe6D$4000,0,0
+X-Api-Version: 3.0
+welove: maltliquor
+Content-Type: application/json; charset=utf-8
+Content-Length: 0
+RiskifiedID: 1592533730354
+Riskified-User-Agent: Dalvik/2.1.0 (Linux; U; Android 9; ONEPLUS A5010 Build/PKQ1.180716.001)
+Cookie: ak_bmsc=AB2E753BD36C9FDB0358978CF5FF76216863EF3EFE440000E222EC5EBECE981A~pliU0hsp/GJG1WM8XXJ/cm419NcCUqNKWMvbdPyeJm2Gc4ixUaakN5balvU/zSEvIjf7MktZuiPRzuMWudZSw4M8j2NG6CEUB8h0BV/CXu7KdpOWCVLF1qK3cNjj1KtaiFeVT7Ldu37ct3IIOIVUEs8X+xIvJfxXJ9LpPnQ0wBtBgkcX+XGnKliSyh2P/77Iton1eCKQlpvhuWfTOnxF+hQWQE4ssPgcqeGXa/oQ96ABA=; akavpau_FL-MobApp=1592534030~id=df36a75bec303709bafd774a16897d71
+
+
+
+GET https://prodmobloy2.finishline.com/api/account/guest HTTP/1.1
+Host: prodmobloy2.finishline.com
+User-Agent: Finish Line/2.6.1 (Android 9; Build/PKQ1.180716.001)
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Accept: */*
+X-acf-sensor-data: 1,a,e4Wfdoy4NSebkhcUzgf3HFecp8H1vNFnZysSw7vdszo0xfPchUeuO/cufLsKN7AQ7pdRd41fFfOTu/uL0zuYHupxVVHAGGJl2/zLRN+Hov8B0ebywada0eju1rBnhC3ckTud7TSdYUCjdSsvieNGte00z4JTx9IlWlyVbXd2D8c=,a1e4PxjKFXb8tPFETn4SUxxZSnNs25ih2jGf3ezZJpo7oovzazH96CCcHlMRtaqvfql79oyRXmPntLh+Q9FN8Bl80MZ4dvrYlp3XkHWP3XTBpK7LnX/LeIk57NGKzPx4k9lvRC13rgX9NnM7mnVdxv5tPjlNpFlB5UtlLNrtq/Y=$L2RW9ykjz8ZwD9nqmRBYzFxeiYTlg1WkYawQv7g1rf/NNvqQS/ZGqnUgNLJ6iaRLKSj95PSVBka8ZpZ3rtYyic6BlGtDOxk1ix4NYGV/nnH5+sm0hM8uml6gtd96wYpgKbr8V2Llf2WDCz6X5hsfHdaxDegtedYZKNjLXAov1Z5ufSPWULOIMpBJ0YAO1cP97bIGmykBVhv9wAiRYTGTCgYn9uxymHVS5cAfxSlgLkbEeWawvHxVqIzbfz9iOVp7EwxVjQjrpCHPguYBGxTYYX2QOYvJunDKryuyhfXj8FZsbtYAGBzi1gW5ja9//VggIRdINsbFUDSwD7hI/i+lXbnxjU2YOs/p9hz4DV8tOhdbBTYAxlx1jMsFWGMUNmBoI3pcnzSDCXnhDt6tM1qEIKGs4avqfGhQOSlvb61eWKOQxX+61w3Bfx7E7/RYlAx8iCmOJUxlZSZzuJcB2M8lvxhfl64ws6Av5s1Zfdml5hcckniGPmREL5mfs+okVyRH+W0Lwdv9gnviX2IQdpkbnhrt0QJQe0H4BKC9JHvDsF06A+B8n/xON98LK/mCpO7l4NzlcejOPxwnmtEfP3vS2zlkHbtBXDW/RMZum2x4jj4lFcUv/JcCsp+trBMNvJ7Xpea9DOisHJXChvoywiyZ9kTZDVivP2JcbiUrC/uo2FALPDCZZIxujX4bsjSQZxUV1yQOw42tDsTjkTEWeT3Kft52198C7TpAW9MCvu0wmozNtTcb+9SNgonWCiG2LOouza4EvkgJ7tgjFRPazcBTpdZVfzIuHIp1x+ZNk0JPfDtJ+LGxomndKa7dl+6i0xWA8+wCY5uMYa7q/whNAuND9wrII3HCaRMf1By8Jdt72GlORThFtm/C/2inHWCy3q6AiBx1vsIpvskGVGFw23207glWRV1pbaFYHYga4enSuT6IylaJNiIQgfUYJV/x+/ps90A4N4OrpJM10znx5A49dRFMp5Hls0XMbnoMu/BPu/tjwub/CMse4zJ6Bqd1NU4l2oycQ7kMf3BzAdiaJwGPTtfUaeRv9QU0uPiZ57VIr9EavlyBhRx78yXakJx8ThHEnjyy5jfw2CewquuyRO+cQ8bZClVpqsWsTrm0sndroOfnWTPW8N/eDfGSM7zCbasZL1ZJKt5nRSNfImSx+gA1AiNyPqMnF6BdzcRB+s9DrXZHwgsmmyD7p5dzNZUapOfhW0YFXy5EQ/gC5gZAt//+inAGnssox7lc4AzYtJwgnMz0FuEIeyB+IDS66/Ho5PMN31uHxfCm/ZEExY1oUjQ41ttpE1nNRUJN+5075bfOKXex2BqyarQE5IaJaFV2gbhyf4rdKlp03OkuCZG/NYh4XyaKrZw0cqDiXWqfoNOcJ/VyCH/ieOQNlgekg9Ko/q1nwiPFBtDMZ4baKCyzT5U3KUmqBi2hlbRlyH9ijtzXEdCt3R3h22Xvc6WrEfH7I6rcBr/p1YJXI0D+vtQkKI4dR9pa4gb/ZO2Uy3UbnCVo/ghzvGDE03qMPppDR9O5AkItWwKPitUeZ9By8pVP0FSU97YrUtNTSWq0iF9peRbyJoAi1nqL4A5dFZ70PM3PAIaPwxqtqzDjHJMlpgsT1IwHqm2InQECEWqJ4GtLacAlD3Q8vKXsrqjiaXg5A9gHe2vt2RrJU7Xwe4DTO8MBDblHpBM0ovqx+Vn+3tfEYCWcuhl8hybuLK5CKxaRMInX8BsqWhp0bEVYtGJz3xANZV1T9R1ldpvWObl2oKZj6DjSPPIUknysazpsnGypoBPh8kWGw67BeuFUjNGEJrbKfG56SndTqbwN3Ev65dJHRFrLB3qSVJpSGS8eFxbvvCRVJe6D$4000,0,0
+X-Api-Version: 3.0
+welove: maltliquor
+Content-Type: application/json; charset=utf-8
+Content-Length: 0
+RiskifiedID: 1592533730354
+Riskified-User-Agent: Dalvik/2.1.0 (Linux; U; Android 9; ONEPLUS A5010 Build/PKQ1.180716.001)
+Cookie: ak_bmsc=AB2E753BD36C9FDB0358978CF5FF76216863EF3EFE440000E222EC5EBECE981A~pliU0hsp/GJG1WM8XXJ/cm419NcCUqNKWMvbdPyeJm2Gc4ixUaakN5balvU/zSEvIjf7MktZuiPRzuMWudZSw4M8j2NG6CEUB8h0BV/CXu7KdpOWCVLF1qK3cNjj1KtaiFeVT7Ldu37ct3IIOIVUEs8X+xIvJfxXJ9LpPnQ0wBtBgkcX+XGnKliSyh2P/77Iton1eCKQlpvhuWfTOnxF+hQWQE4ssPgcqeGXa/oQ96ABA=; akavpau_FL-MobApp=1592534030~id=df36a75bec303709bafd774a16897d71
+
+
+[5, 4, 3, 15]
+GoogleApiClient is not configured to use SafetyNet.API required for this call.
+[5, 4, 3, 15]
+GoogleApiClient is not configured to use SafetyNet.API required for this call.
+android.webkit.WebView{f3e2bce VFEDHVC.. ......I. 0,0-0,0}
+Webview android.webkit.WebView{f3e2bce VFEDHVC.. ......I. 0,0-0,0} loaded successfully
+
+SELECT post_time, data_json FROM dispatch ORDER BY post_time ASC
+requiredPos cannot be negative, but was 0
+06/19/2020
+DELETE FROM dispatch
+{"carrier_iso":"us","app_version":"2.6.1","app_uuid":"a2d9ffca-2904-4240-a7df-2ac24d21487b","lifecycle_totalwakecount":"1","uuid":"116e05d9-f75d-4150-9771-db9f5c62fbcc","link_id":"lifecycle","device_os_build":"1910081948","timestamp_local":"2020-06-18T22:28:49","timestamp_unix":"1592533729","was_queued":"true","lifecycle_firstlaunchdate_MMDDYYYY":"06\/19\/2020","tealium_library_name":"android","tealium_random":"7913732657407869","timestamp_offset":"-4","lifecycle_lastwakedate":"2020-06-19T02:28:49Z","tealium_session_id":"1592533729543","lifecycle_dayssincelastwake":"0","lifecycle_dayssincelaunch":"0","autotracked":"true","tealium_event_type":"activity","lifecycle_priorsecondsawake":"0","lifecycle_dayofweek_local":"5","device_cputype":"aarch64","app_build":"46","tealium_visitor_id":"116e05d9f75d41509771db9f5c62fbcc","lifecycle_firstlaunchdate":"2020-06-19T02:28:49Z","device_orientation":"Portrait","lifecycle_sleepcount":"0","event_name":"lifecycle","device_os_version":"9","tealium_account":"finishline","device_language":"en","device_ischarging":"true","tealium_event":"lifecycle","device":"OnePlus ONEPLUS A5010","lifecycle_totallaunchcount":"1","lifecycle_wakecount":"1","lifecycle_isfirstwakemonth":"true","lifecycle_hourofday_local":"22","origin":"mobile","visitor_id":"116e05d9f75d41509771db9f5c62fbcc","device_battery_percent":"100","platform":"android","app_rdns":"com.WinnersCircle","library_version":"5.5.2","lifecycle_totalsleepcount":"0","app_memory_usage":"28","call_type":"link","device_architecture":"32","timestamp":"2020-06-19T02:28:49Z","lifecycle_isfirstwaketoday":"true","orientation":"Portrait","lifecycle_launchcount":"1","connection_type":"WIFI","lifecycle_lastlaunchdate":"2020-06-19T02:28:49Z","device_free_system_storage":"277528576","os_version":"9","tealium_profile":"mobileapp","tealium_timestamp_epoch":"1592533729","timestamp_unix_milliseconds":"1592533729705","app_name":"Finish Line","carrier":"","lifecycle_totalcrashcount":"0","device_resolution":"1080x2034","device_free_external_storage":"49415372800","tealium_library_version":"5.5.2","lifecycle_totalsecondsawake":"0","lifecycle_isfirstlaunch":"true","tealium_vid":"116e05d9f75d41509771db9f5c62fbcc","lifecycle_type":"launch","device_android_runtime":"2.1.0"}
+utag.track("link", {"carrier_iso":"us","app_version":"2.6.1","app_uuid":"a2d9ffca-2904-4240-a7df-2ac24d21487b","lifecycle_totalwakecount":"1","uuid":"116e05d9-f75d-4150-9771-db9f5c62fbcc","link_id":"lifecycle","device_os_build":"1910081948","timestamp_local":"2020-06-18T22:28:49","timestamp_unix":"1592533729","was_queued":"true","lifecycle_firstlaunchdate_MMDDYYYY":"06\/19\/2020","tealium_library_name":"android","tealium_random":"7913732657407869","timestamp_offset":"-4","lifecycle_lastwakedate":"2020-06-19T02:28:49Z","tealium_session_id":"1592533729543","lifecycle_dayssincelastwake":"0","lifecycle_dayssincelaunch":"0","autotracked":"true","tealium_event_type":"activity","lifecycle_priorsecondsawake":"0","lifecycle_dayofweek_local":"5","device_cputype":"aarch64","app_build":"46","tealium_visitor_id":"116e05d9f75d41509771db9f5c62fbcc","lifecycle_firstlaunchdate":"2020-06-19T02:28:49Z","device_orientation":"Portrait","lifecycle_sleepcount":"0","event_name":"lifecycle","device_os_version":"9","tealium_account":"finishline","device_language":"en","device_ischarging":"true","tealium_event":"lifecycle","device":"OnePlus ONEPLUS A5010","lifecycle_totallaunchcount":"1","lifecycle_wakecount":"1","lifecycle_isfirstwakemonth":"true","lifecycle_hourofday_local":"22","origin":"mobile","visitor_id":"116e05d9f75d41509771db9f5c62fbcc","device_battery_percent":"100","platform":"android","app_rdns":"com.WinnersCircle","library_version":"5.5.2","lifecycle_totalsleepcount":"0","app_memory_usage":"28","call_type":"link","device_architecture":"32","timestamp":"2020-06-19T02:28:49Z","lifecycle_isfirstwaketoday":"true","orientation":"Portrait","lifecycle_launchcount":"1","connection_type":"WIFI","lifecycle_lastlaunchdate":"2020-06-19T02:28:49Z","device_free_system_storage":"277528576","os_version":"9","tealium_profile":"mobileapp","tealium_timestamp_epoch":"1592533729","timestamp_unix_milliseconds":"1592533729705","app_name":"Finish Line","carrier":"","lifecycle_totalcrashcount":"0","device_resolution":"1080x2034","device_free_external_storage":"49415372800","tealium_library_version":"5.5.2","lifecycle_totalsecondsawake":"0","lifecycle_isfirstlaunch":"true","tealium_vid":"116e05d9f75d41509771db9f5c62fbcc","lifecycle_type":"launch","device_android_runtime":"2.1.0"})
+[5, 4, 3, 15]
+GoogleApiClient is not configured to use SafetyNet.API required for this call.
+[5, 4, 3, 15]
+GoogleApiClient is not configured to use SafetyNet.API required for this call.
+[5, 4, 3, 15]
+GoogleApiClient is not configured to use SafetyNet.API required for this call.
+{"token":"c3uMj4LMzBk:APA91bEMDE-VbsYxG02N9sT8joswVgZVQdOnmI7BrB1joN44wBCItFhQqVXXG5kxc1fkFLBHmMLdMxORPzQkvYjdmunoxDXFEikUsrtvMBGVWrNKdbjfLMFeOKi8aAXJ26k23zmowbY7","appVersion":"46","timestamp":1592533731108}
+|T|156274640316|*
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+{}
+{}
+JobInfo{action=ACTION_UPDATE_PUSH_REGISTRATION, id=4, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+Job - Finished: JobInfo{action=ACTION_UPDATE_PUSH_REGISTRATION, id=4, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=true, initialDelay=0, persistent=false} with result: 0
+android.os.BinderProxy@cabd4fd
+com.WinnersCircle/com.urbanairship.job.AirshipService
+AirshipService - Component finished job with startId: 1
+Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }
+ServiceArgsData{token=android.os.BinderProxy@cabd4fd startId=2 args=Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }}
+AirshipService - All jobs finished, stopping with last startId: 1
+serviceStart: ServiceArgsData{token=android.os.BinderProxy@cabd4fd startId=2 args=Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }}
+com.WinnersCircle/com.urbanairship.job.AirshipService
+Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }
+AirshipService - Received intent: Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }
+{}
+JobInfo{action=ACTION_UPDATE_CHANNEL_REGISTRATION, id=5, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+AirshipService - Running job: JobInfo{action=ACTION_UPDATE_CHANNEL_REGISTRATION, id=5, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+America/New_York
+{}
+JobInfo{action=ACTION_UPDATE_CHANNEL_REGISTRATION, id=5, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+Job - Finished: JobInfo{action=ACTION_UPDATE_CHANNEL_REGISTRATION, id=5, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=true, initialDelay=0, persistent=false} with result: 0
+AirshipService - Component finished job with startId: 2
+AirshipService - All jobs finished, stopping with last startId: 2
+v1/install-qwt
+{"hardware_id":"60b4488c57919beb","is_hardware_id_real":true,"brand":"OnePlus","model":"ONEPLUS A5010","screen_dpi":420,"screen_height":2034,"screen_width":1080,"wifi":true,"ui_mode":"UI_MODE_TYPE_NORMAL","os":"Android","os_version":28,"country":"US","language":"en","local_ip":"10.0.1.82","app_version":"2.6.1","facebook_app_link_checked":false,"is_referrable":1,"debug":false,"update":0,"latest_install_time":1592522445177,"latest_update_time":1592522445177,"first_install_time":1592522445177,"previous_update_time":0,"environment":"FULL_APP","cd":{"mv":"-1","pn":"com.WinnersCircle"},"metadata":{},"google_advertising_id":"c4163680-e3f1-464d-8f16-48049d9e4ad2","lat_val":0}
+https://api2.branch.io/v1/install
+posting to https://api2.branch.io/v1/install
+{"hardware_id":"60b4488c57919beb","is_hardware_id_real":true,"brand":"OnePlus","model":"ONEPLUS A5010","screen_dpi":420,"screen_height":2034,"screen_width":1080,"wifi":true,"ui_mode":"UI_MODE_TYPE_NORMAL","os":"Android","os_version":28,"country":"US","language":"en","local_ip":"10.0.1.82","app_version":"2.6.1","facebook_app_link_checked":false,"is_referrable":1,"debug":false,"update":0,"latest_install_time":1592522445177,"latest_update_time":1592522445177,"first_install_time":1592522445177,"previous_update_time":0,"environment":"FULL_APP","cd":{"mv":"-1","pn":"com.WinnersCircle"},"metadata":{},"google_advertising_id":"c4163680-e3f1-464d-8f16-48049d9e4ad2","lat_val":0,"instrumentation":{"v1\/install-qwt":"0"},"sdk":"android3.0.4","branch_key":"key_live_adIdSsyAFvvZ02YSv00fyeeiuEoaUk0I"}
+Post value = {"hardware_id":"60b4488c57919beb","is_hardware_id_real":true,"brand":"OnePlus","model":"ONEPLUS A5010","screen_dpi":420,"screen_height":2034,"screen_width":1080,"wifi":true,"ui_mode":"UI_MODE_TYPE_NORMAL","os":"Android","os_version":28,"country":"US","language":"en","local_ip":"10.0.1.82","app_version":"2.6.1","facebook_app_link_checked":false,"is_referrable":1,"debug":false,"update":0,"latest_install_time":1592522445177,"latest_update_time":1592522445177,"first_install_time":1592522445177,"previous_update_time":0,"environment":"FULL_APP","cd":{"mv":"-1","pn":"com.WinnersCircle"},"metadata":{},"google_advertising_id":"c4163680-e3f1-464d-8f16-48049d9e4ad2","lat_val":0,"instrumentation":{"v1\/install-qwt":"0"},"sdk":"android3.0.4","branch_key":"key_live_adIdSsyAFvvZ02YSv00fyeeiuEoaUk0I"}
+URL:null
+https://api2.branch.io/v1/install
+https://api2.branch.io/v1/install
+https://api2.branch.io/
+https://api2.branch.io/
+s:https://api2.branch.io/
+https.proxyHost
+https.proxyPort
+api2.branch.io:443
+api2.branch.io:443
+CONNECT api2.branch.io:443 HTTP/1.1
+*.branch.io
+CN=*.branch.io
+Branch Metrics\, Inc.
+O=Branch Metrics\, Inc.
+Redwood City
+L=Redwood City
+California
+ST=California
+US
+C=US
+cn=*.branch.io,o=branch metrics\, inc.,l=redwood city,st=california,c=us
+*.branch.io
+CN=*.branch.io
+Branch Metrics\, Inc.
+O=Branch Metrics\, Inc.
+Redwood City
+L=Redwood City
+California
+ST=California
+US
+C=US
+cn=*.branch.io,o=branch metrics\, inc.,l=redwood city,st=california,c=us
+*.branch.io
+CN=*.branch.io
+Branch Metrics\, Inc.
+O=Branch Metrics\, Inc.
+Redwood City
+L=Redwood City
+California
+ST=California
+US
+C=US
+cn=*.branch.io,o=branch metrics\, inc.,l=redwood city,st=california,c=us
+71ef36a2.0
+/system/etc/security/cacerts/71ef36a2.0
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+api2.branch.io.
+*.branch.io.
+{"hardware_id":"60b4488c57919beb","is_hardware_id_real":true,"brand":"OnePlus","model":"ONEPLUS A5010","screen_dpi":420,"screen_height":2034,"screen_width":1080,"wifi":true,"ui_mode":"UI_MODE_TYPE_NORMAL","os":"Android","os_version":28,"country":"US","language":"en","local_ip":"10.0.1.82","app_version":"2.6.1","facebook_app_link_checked":false,"is_referrable":1,"debug":false,"update":0,"latest_install_time":1592522445177,"latest_update_time":1592522445177,"first_install_time":1592522445177,"previous_update_time":0,"environment":"FULL_APP","cd":{"mv":"-1","pn":"com.WinnersCircle"},"metadata":{},"google_advertising_id":"c4163680-e3f1-464d-8f16-48049d9e4ad2","lat_val":0,"instrumentation":{"v1\/install-qwt":"0"},"sdk":"android3.0.4","branch_key":"key_live_adIdSsyAFvvZ02YSv00fyeeiuEoaUk0I","retryNumber":0}
+POST /v1/install HTTP/1.1
+returned {"session_id":"802351502794570465","identity_id":"802351502803074983","link":"https://finishline.app.link?%24identity_id=802351502803074983","data":"{\"+clicked_branch_link\":false,\"+is_first_session\":false}","device_fingerprint_id":"802302602813847758"}
+{"+clicked_branch_link":false,"+is_first_session":false}
+v1/install-brtt
+Thread-13
+[]
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+~referring_link
+https://cdn.branch.io/sdk/uriskiplist_v1.json
+URL:null
+https://cdn.branch.io/sdk/uriskiplist_v1.json
+https://cdn.branch.io/sdk/uriskiplist_v1.json
+https://cdn.branch.io/
+https://cdn.branch.io/
+s:https://cdn.branch.io/
+https.proxyHost
+https.proxyPort
+cdn.branch.io:443
+cdn.branch.io:443
+CONNECT cdn.branch.io:443 HTTP/1.1
+*.branch.io
+CN=*.branch.io
+Branch Metrics\, Inc.
+O=Branch Metrics\, Inc.
+Redwood City
+L=Redwood City
+California
+ST=California
+US
+C=US
+cn=*.branch.io,o=branch metrics\, inc.,l=redwood city,st=california,c=us
+*.branch.io
+CN=*.branch.io
+Branch Metrics\, Inc.
+O=Branch Metrics\, Inc.
+Redwood City
+L=Redwood City
+California
+ST=California
+US
+C=US
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Server: Kestrel
+X-Session: 9015293192249070874
+cn=*.branch.io,o=branch metrics\, inc.,l=redwood city,st=california,c=us
+X-Session-Expires-At: 1592534511
+*.branch.io
+CN=*.branch.io
+X-Cookie: C_vKaEnblUqhfXZ93gsH6mO0tHHhnfgHY-9pVHOaB3NFbFLwvXaH!1915357623
+Branch Metrics\, Inc.
+O=Branch Metrics\, Inc.
+Redwood City
+L=Redwood City
+California
+ST=California
+X-OCEnvironment: weblogic_instance:prod_store153 sessionId:C_vKaEnblUqhfXZ93gsH6mO0tHHhnfgHY-9pVHOaB3NFbFLwvXaH!1915357623!1592533731861 DB Driver Version:disabled
+US
+C=US
+cn=*.branch.io,o=branch metrics\, inc.,l=redwood city,st=california,c=us
+AkamaiCookie: akaalb_prod-finishline=1592534631~op=prod_aka_finishline_com:prod_Blue|~rv=58~m=prod_Blue:0|~os=9985b765e94777655df09359a5a46bbc~id=f6d0f934ff5ee5be358e46c4bd100053
+71ef36a2.0
+/system/etc/security/cacerts/71ef36a2.0
+api-supported-versions: 2.0, 3.0
+mitmproxy
+O=mitmproxy
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+mitmproxy
+CN=mitmproxy
+Content-Length: 4
+o=mitmproxy,cn=mitmproxy
+Date: Fri, 19 Jun 2020 02:28:51 GMT
+mitmproxy
+O=mitmproxy
+Set-Cookie: akavpau_FL-MobApp=1592534031~id=ec997ee6b73c474bb722e8868ac55b38; Path=/; Secure; SameSite=None
+Connection: keep-alive
+mitmproxy
+CN=mitmproxy
+
+o=mitmproxy,cn=mitmproxy
+HTTP/1.1 200 OK
+mitmproxy
+O=mitmproxy
+HTTP/1.1 200 OK
+
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Server: Kestrel
+X-Session: 9015293192249070874
+X-Session-Expires-At: 1592534511
+X-Cookie: C_vKaEnblUqhfXZ93gsH6mO0tHHhnfgHY-9pVHOaB3NFbFLwvXaH!1915357623
+X-OCEnvironment: weblogic_instance:prod_store153 sessionId:C_vKaEnblUqhfXZ93gsH6mO0tHHhnfgHY-9pVHOaB3NFbFLwvXaH!1915357623!1592533731861 DB Driver Version:disabled
+AkamaiCookie: akaalb_prod-finishline=1592534631~op=prod_aka_finishline_com:prod_Blue|~rv=58~m=prod_Blue:0|~os=9985b765e94777655df09359a5a46bbc~id=f6d0f934ff5ee5be358e46c4bd100053
+api-supported-versions: 2.0, 3.0
+Content-Length: 4
+Date: Fri, 19 Jun 2020 02:28:51 GMT
+Set-Cookie: akavpau_FL-MobApp=1592534031~id=ec997ee6b73c474bb722e8868ac55b38; Path=/; Secure; SameSite=None
+Connection: keep-alive
+
+
+Received headers:
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Server: Kestrel
+X-Session: 9015293192249070874
+X-Session-Expires-At: 1592534511
+X-Cookie: C_vKaEnblUqhfXZ93gsH6mO0tHHhnfgHY-9pVHOaB3NFbFLwvXaH!1915357623
+X-OCEnvironment: weblogic_instance:prod_store153 sessionId:C_vKaEnblUqhfXZ93gsH6mO0tHHhnfgHY-9pVHOaB3NFbFLwvXaH!1915357623!1592533731861 DB Driver Version:disabled
+AkamaiCookie: akaalb_prod-finishline=1592534631~op=prod_aka_finishline_com:prod_Blue|~rv=58~m=prod_Blue:0|~os=9985b765e94777655df09359a5a46bbc~id=f6d0f934ff5ee5be358e46c4bd100053
+api-supported-versions: 2.0, 3.0
+Content-Length: 4
+Date: Fri, 19 Jun 2020 02:28:51 GMT
+Set-Cookie: akavpau_FL-MobApp=1592534031~id=ec997ee6b73c474bb722e8868ac55b38; Path=/; Secure; SameSite=None
+Connection: keep-alive
+
+
+s:https://prodmobloy2.finishline.com/api/account/guest
+mitmproxy
+CN=mitmproxy
+java.net.CookieManager.level
+o=mitmproxy,cn=mitmproxy
+java.net.CookieManager.useParentHandlers
+java.level
+java.handlers
+java.net.level
+java.net.handlers
+mitmproxy
+O=mitmproxy
+java.net.CookieManager.level
+mitmproxy
+CN=mitmproxy
+java.net.CookieManager.useParentHandlers
+java.level
+java.handlers
+java.net.level
+java.net.handlers
+o=mitmproxy,cn=mitmproxy
+java.net.CookieManager.handlers
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+/api/account/guest/
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+ak_bmsc=AB2E753BD36C9FDB0358978CF5FF76216863EF3EFE440000E222EC5EBECE981A~pliU0hsp/GJG1WM8XXJ/cm419NcCUqNKWMvbdPyeJm2Gc4ixUaakN5balvU/zSEvIjf7MktZuiPRzuMWudZSw4M8j2NG6CEUB8h0BV/CXu7KdpOWCVLF1qK3cNjj1KtaiFeVT7Ldu37ct3IIOIVUEs8X+xIvJfxXJ9LpPnQ0wBtBgkcX+XGnKliSyh2P/77Iton1eCKQlpvhuWfTOnxF+hQWQE4ssPgcqeGXa/oQ96ABA=; path=/
+akavpau_FL-MobApp=1592534031~id=ec997ee6b73c474bb722e8868ac55b38; path=/
+https://prodmobloy2.finishline.com
+mitmproxy
+O=mitmproxy
+HTTP/1.1 200 OK
+
+HTTP/1.1 200 OK
+Set-Cookie: ak_bmsc=AB2E753BD36C9FDB0358978CF5FF76216863EF3EFE440000E222EC5EBECE981A~pliU0hsp/GJG1WM8XXJ/cm419NcCUqNKWMvbdPyeJm2Gc4ixUaakN5balvU/zSEvIjf7MktZuiPRzuMWudZSw4M8j2NG6CEUB8h0BV/CXu7KdpOWCVLF1qK3cNjj1KtaiFeVT7Ldu37ct3IIOIVUEs8X+xIvJfxXJ9LpPnQ0wBtBgkcX+XGnKliSyh2P/77Iton1eCKQlpvhuWfTOnxF+hQWQE4ssPgcqeGXa/oQ96ABA=; path=/
+Set-Cookie: akavpau_FL-MobApp=1592534031~id=ec997ee6b73c474bb722e8868ac55b38; path=/
+
+
+mitmproxy
+CN=mitmproxy
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+o=mitmproxy,cn=mitmproxy
+cdn.branch.io.
+*.branch.io.
+GET /sdk/uriskiplist_v1.json HTTP/1.1
+HTTP/1.1 200 OK
+/data/user/0/com.WinnersCircle/cache/ion/61eb7aff83d651c6fc42a8498eafcc70
+/data/user/0/com.WinnersCircle/cache/ion/8d9d7ba91bedec4839b79363eee1f4dd
+https://prodmobloy2.finishline.com/api/account/guest
+
+GET
+
+0
+
+HTTP/1.1 200 OK
+
+11
+
+content-type: application/json; charset=utf-8
+
+server: Kestrel
+
+x-session: 9015293192249070874
+
+x-session-expires-at: 1592534511
+
+x-cookie: C_vKaEnblUqhfXZ93gsH6mO0tHHhnfgHY-9pVHOaB3NFbFLwvXaH!1915357623
+
+x-ocenvironment: weblogic_instance:prod_store153 sessionId:C_vKaEnblUqhfXZ93gsH6mO0tHHhnfgHY-9pVHOaB3NFbFLwvXaH!1915357623!1592533731861 DB Driver Version:disabled
+
+akamaicookie: akaalb_prod-finishline=1592534631~op=prod_aka_finishline_com:prod_Blue|~rv=58~m=prod_Blue:0|~os=9985b765e94777655df09359a5a46bbc~id=f6d0f934ff5ee5be358e46c4bd100053
+
+api-supported-versions: 2.0, 3.0
+
+date: Fri, 19 Jun 2020 02:28:51 GMT
+
+set-cookie: akavpau_FL-MobApp=1592534031~id=ec997ee6b73c474bb722e8868ac55b38; Path=/; Secure; SameSite=None
+
+connection: keep-alive
+
+null
+
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Server: Kestrel
+X-Session: 9015293192249070874
+X-Session-Expires-At: 1592534511
+X-Cookie: C_vKaEnblUqhfXZ93gsH6mO0tHHhnfgHY-9pVHOaB3NFbFLwvXaH!1915357623
+X-OCEnvironment: weblogic_instance:prod_store153 sessionId:C_vKaEnblUqhfXZ93gsH6mO0tHHhnfgHY-9pVHOaB3NFbFLwvXaH!1915357623!1592533731861 DB Driver Version:disabled
+AkamaiCookie: akaalb_prod-finishline=1592534631~op=prod_aka_finishline_com:prod_Blue|~rv=58~m=prod_Blue:0|~os=9985b765e94777655df09359a5a46bbc~id=f6d0f934ff5ee5be358e46c4bd100053
+api-supported-versions: 2.0, 3.0
+Content-Length: 4
+Date: Fri, 19 Jun 2020 02:28:51 GMT
+Set-Cookie: akavpau_FL-MobApp=1592534031~id=ec997ee6b73c474bb722e8868ac55b38; Path=/; Secure; SameSite=None
+Connection: keep-alive
+
+
+Final (post cache response) headers:
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Server: Kestrel
+X-Session: 9015293192249070874
+X-Session-Expires-At: 1592534511
+X-Cookie: C_vKaEnblUqhfXZ93gsH6mO0tHHhnfgHY-9pVHOaB3NFbFLwvXaH!1915357623
+X-OCEnvironment: weblogic_instance:prod_store153 sessionId:C_vKaEnblUqhfXZ93gsH6mO0tHHhnfgHY-9pVHOaB3NFbFLwvXaH!1915357623!1592533731861 DB Driver Version:disabled
+AkamaiCookie: akaalb_prod-finishline=1592534631~op=prod_aka_finishline_com:prod_Blue|~rv=58~m=prod_Blue:0|~os=9985b765e94777655df09359a5a46bbc~id=f6d0f934ff5ee5be358e46c4bd100053
+api-supported-versions: 2.0, 3.0
+Content-Length: 4
+Date: Fri, 19 Jun 2020 02:28:51 GMT
+Set-Cookie: akavpau_FL-MobApp=1592534031~id=ec997ee6b73c474bb722e8868ac55b38; Path=/; Secure; SameSite=None
+Connection: keep-alive
+
+
+true
+result = true
+b34b1590e3fa73b12c5bbf7d542444b2.0
+/data/user/0/com.WinnersCircle/cache/ion/b34b1590e3fa73b12c5bbf7d542444b2.0
+b34b1590e3fa73b12c5bbf7d542444b2.0
+/data/user/0/com.WinnersCircle/cache/ion/b34b1590e3fa73b12c5bbf7d542444b2.0
+^fb\d+:
+61eb7aff83d651c6fc42a8498eafcc70.0
+61eb7aff83d651c6fc42a8498eafcc70.0
+/data/user/0/com.WinnersCircle/cache/ion/61eb7aff83d651c6fc42a8498eafcc70.0
+^li\d+:
+^pdk\d+:
+^com\.googleusercontent\.apps\.\d+-.*:\/oauth
+b34b1590e3fa73b12c5bbf7d542444b2.0
+/data/user/0/com.WinnersCircle/cache/ion/b34b1590e3fa73b12c5bbf7d542444b2.0
+^(?i).+:.*[?].*\b(password|o?auth|o?auth.?token|access|access.?token)\b
+b34b1590e3fa73b12c5bbf7d542444b2.1
+/data/user/0/com.WinnersCircle/cache/ion/b34b1590e3fa73b12c5bbf7d542444b2.1
+result code = 200
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+8d9d7ba91bedec4839b79363eee1f4dd.0
+8d9d7ba91bedec4839b79363eee1f4dd.0
+/data/user/0/com.WinnersCircle/cache/ion/8d9d7ba91bedec4839b79363eee1f4dd.0
+b34b1590e3fa73b12c5bbf7d542444b2.1
+/data/user/0/com.WinnersCircle/cache/ion/b34b1590e3fa73b12c5bbf7d542444b2.1
+10.0.1.69:8085
+10.0.1.69:8085
+https//prodmobloy2.finishline.com:443?proxy=10.0.1.69:8085
+10.0.1.69:8085
+10.0.1.69:8085
+https//prodmobloy2.finishline.com:443?proxy=10.0.1.69:8085
+setSessionType: GUEST
+[application/json; charset=utf-8]
+[Kestrel]
+[9015293192249070874]
+[1592534511]
+[C_vKaEnblUqhfXZ93gsH6mO0tHHhnfgHY-9pVHOaB3NFbFLwvXaH!1915357623]
+[weblogic_instance:prod_store153 sessionId:C_vKaEnblUqhfXZ93gsH6mO0tHHhnfgHY-9pVHOaB3NFbFLwvXaH!1915357623!1592533731861 DB Driver Version:disabled]
+[akaalb_prod-finishline=1592534631~op=prod_aka_finishline_com:prod_Blue|~rv=58~m=prod_Blue:0|~os=9985b765e94777655df09359a5a46bbc~id=f6d0f934ff5ee5be358e46c4bd100053]
+[2.0, 3.0]
+[4]
+[Fri, 19 Jun 2020 02:28:51 GMT]
+[akavpau_FL-MobApp=1592534031~id=ec997ee6b73c474bb722e8868ac55b38; Path=/; Secure; SameSite=None]
+[keep-alive]
+{content-type=[application/json; charset=utf-8], server=[Kestrel], x-session=[9015293192249070874], x-session-expires-at=[1592534511], x-cookie=[C_vKaEnblUqhfXZ93gsH6mO0tHHhnfgHY-9pVHOaB3NFbFLwvXaH!1915357623], x-ocenvironment=[weblogic_instance:prod_store153 sessionId:C_vKaEnblUqhfXZ93gsH6mO0tHHhnfgHY-9pVHOaB3NFbFLwvXaH!1915357623!1592533731861 DB Driver Version:disabled], akamaicookie=[akaalb_prod-finishline=1592534631~op=prod_aka_finishline_com:prod_Blue|~rv=58~m=prod_Blue:0|~os=9985b765e94777655df09359a5a46bbc~id=f6d0f934ff5ee5be358e46c4bd100053], api-supported-versions=[2.0, 3.0], content-length=[4], date=[Fri, 19 Jun 2020 02:28:51 GMT], set-cookie=[akavpau_FL-MobApp=1592534031~id=ec997ee6b73c474bb722e8868ac55b38; Path=/; Secure; SameSite=None], connection=[keep-alive]}
+https://prodmobloy2.finishline.com/api/account/guest: responseHeaders: {content-type=[application/json; charset=utf-8], server=[Kestrel], x-session=[9015293192249070874], x-session-expires-at=[1592534511], x-cookie=[C_vKaEnblUqhfXZ93gsH6mO0tHHhnfgHY-9pVHOaB3NFbFLwvXaH!1915357623], x-ocenvironment=[weblogic_instance:prod_store153 sessionId:C_vKaEnblUqhfXZ93gsH6mO0tHHhnfgHY-9pVHOaB3NFbFLwvXaH!1915357623!1592533731861 DB Driver Version:disabled], akamaicookie=[akaalb_prod-finishline=1592534631~op=prod_aka_finishline_com:prod_Blue|~rv=58~m=prod_Blue:0|~os=9985b765e94777655df09359a5a46bbc~id=f6d0f934ff5ee5be358e46c4bd100053], api-supported-versions=[2.0, 3.0], content-length=[4], date=[Fri, 19 Jun 2020 02:28:51 GMT], set-cookie=[akavpau_FL-MobApp=1592534031~id=ec997ee6b73c474bb722e8868ac55b38; Path=/; Secure; SameSite=None], connection=[keep-alive]}
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+-
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+/data/user/0/com.WinnersCircle/files/cart.object
+ (No such file or directory)
+/data/user/0/com.WinnersCircle/files/cart.object (No such file or directory)
+File not found!! cart.object
+File found!! cart.object
+Lcom/google/gson/reflect/TypeToken<Ljava/util/List<Lcom/WinnersCircle/helpers/CartHelper$CartItem;>;>;
+com
+google
+gson
+reflect
+TypeToken
+java
+util
+List
+com
+WinnersCircle
+helpers
+CartHelper$CartItem
+com.WinnersCircle.helpers.CartHelper$CartItem
+java.util.List
+com.google.gson.reflect.TypeToken
+0
+0000
+0000
+\u0000
+0
+0001
+0001
+\u0001
+0
+0002
+0002
+\u0002
+0
+0003
+0003
+\u0003
+0
+0004
+0004
+\u0004
+0
+0005
+0005
+\u0005
+0
+0006
+0006
+\u0006
+0
+0007
+0007
+\u0007
+0
+0008
+0008
+\u0008
+0
+0009
+0009
+\u0009
+0
+000a
+000a
+\u000a
+0
+000b
+000b
+\u000b
+0
+000c
+000c
+\u000c
+0
+000d
+000d
+\u000d
+0
+000e
+000e
+\u000e
+0
+000f
+000f
+\u000f
+0
+0010
+0010
+\u0010
+0
+0011
+0011
+\u0011
+0
+0012
+0012
+\u0012
+0
+0013
+0013
+\u0013
+0
+0014
+0014
+\u0014
+0
+0015
+0015
+\u0015
+0
+0016
+0016
+\u0016
+0
+0017
+0017
+\u0017
+0
+0018
+0018
+\u0018
+0
+0019
+0019
+\u0019
+0
+001a
+001a
+\u001a
+0
+001b
+001b
+\u001b
+0
+001c
+001c
+\u001c
+0
+001d
+001d
+\u001d
+0
+001e
+001e
+\u001e
+0
+001f
+001f
+\u001f
+<E:Ljava/lang/Object;>Ljava/util/AbstractList<TE;>;Ljava/util/List<TE;>;Ljava/util/RandomAccess;Ljava/lang/Cloneable;Ljava/io/Serializable;
+E
+java
+lang
+Object
+java.lang.Object
+java
+util
+AbstractList
+E
+java.util.AbstractList
+java
+util
+List
+E
+java.util.List
+java
+util
+RandomAccess
+java.util.RandomAccess
+java
+lang
+Cloneable
+java.lang.Cloneable
+java
+io
+Serializable
+java.io.Serializable
+<E:Ljava/lang/Object;>Ljava/lang/Object;Ljava/util/Collection<TE;>;
+E
+java
+lang
+Object
+java.lang.Object
+java
+lang
+Object
+java.lang.Object
+java
+util
+Collection
+E
+java.util.Collection
+<E:Ljava/lang/Object;>Ljava/lang/Object;Ljava/util/Collection<TE;>;
+E
+java
+lang
+Object
+java.lang.Object
+java
+lang
+Object
+java.lang.Object
+java
+util
+Collection
+E
+java.util.Collection
+<E:Ljava/lang/Object;>Ljava/lang/Object;Ljava/util/Collection<TE;>;
+E
+java
+lang
+Object
+java.lang.Object
+java
+lang
+Object
+java.lang.Object
+java
+util
+Collection
+E
+java.util.Collection
+<E:Ljava/lang/Object;>Ljava/util/AbstractList<TE;>;Ljava/util/List<TE;>;Ljava/util/RandomAccess;Ljava/lang/Cloneable;Ljava/io/Serializable;
+E
+java
+lang
+Object
+java.lang.Object
+java
+util
+AbstractList
+E
+java.util.AbstractList
+java
+util
+List
+E
+java.util.List
+java
+util
+RandomAccess
+java.util.RandomAccess
+java
+lang
+Cloneable
+java.lang.Cloneable
+java
+io
+Serializable
+java.io.Serializable
+/data/user/0/com.WinnersCircle/files/cart.object
+90152931922490708741592533731751
+90152931922490708741592533731751
+ro.dalvik.vm.isa.arm
+app_version=2.6.1&
+app_version=2.6.1&model=ONEPLUS+A5010&
+app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&
+en-US
+com.WinnersCircle.apk
+8338bddb
+b
+db
+ddb
+bddb
+-bddb
+8-bddb
+38-bddb
+338-bddb
+8338-bddb
+-8338-bddb
+color.com.WinnersCircle.apk
+/data/theme/com.WinnersCircle.apk
+/data/theme/color/color.com.WinnersCircle.apk
+a32e6eb2
+2
+com.google.android.gms.apk
+color.com.google.android.gms.apk
+/data/theme/com.google.android.gms.apk
+b2
+eb2
+6eb2
+-6eb2
+e-6eb2
+2e-6eb2
+32e-6eb2
+/data/theme/color/color.com.google.android.gms.apk
+a32e-6eb2
+-a32e-6eb2
+8338-bddb-a32e-6eb2
+app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&
+/data/user/0/com.google.android.gms/shared_prefs
+google_ads_flags.xml
+/data/user/0/com.google.android.gms/shared_prefs/google_ads_flags.xml
+app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&riskified_cookie=null&
+app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&riskified_cookie=null&name=OnePlus5T&
+app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&riskified_cookie=null&name=OnePlus5T&system_version=28&
+app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&riskified_cookie=null&name=OnePlus5T&system_version=28&system_name=REL&
+app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&riskified_cookie=null&name=OnePlus5T&system_version=28&system_name=REL&shop=finishline.com&
+en_US
+app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&riskified_cookie=null&name=OnePlus5T&system_version=28&system_name=REL&shop=finishline.com&lang=en_US&
+app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&riskified_cookie=null&name=OnePlus5T&system_version=28&system_name=REL&shop=finishline.com&lang=en_US&cart_id=90152931922490708741592533731751&
+app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&riskified_cookie=null&name=OnePlus5T&system_version=28&system_name=REL&shop=finishline.com&lang=en_US&cart_id=90152931922490708741592533731751&source=android&
+app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&riskified_cookie=null&name=OnePlus5T&system_version=28&system_name=REL&shop=finishline.com&lang=en_US&cart_id=90152931922490708741592533731751&source=android&carrierName=&
+app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&riskified_cookie=null&name=OnePlus5T&system_version=28&system_name=REL&shop=finishline.com&lang=en_US&cart_id=90152931922490708741592533731751&source=android&carrierName=&isoCountryCode=us&
+app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&riskified_cookie=null&name=OnePlus5T&system_version=28&system_name=REL&shop=finishline.com&lang=en_US&cart_id=90152931922490708741592533731751&source=android&carrierName=&isoCountryCode=us&mobileNetworkCode=&
+Remote stack trace:
+	at com.android.server.LocationManagerService.checkResolutionLevelIsSufficientForProviderUse(LocationManagerService.java:1571)
+	at com.android.server.LocationManagerService.requestLocationUpdates(LocationManagerService.java:2243)
+	at android.location.ILocationManager$Stub.onTransact(ILocationManager.java:72)
+	at android.os.Binder.execTransact(Binder.java:752)
+
+Collected device info: app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&riskified_cookie=null&name=OnePlus5T&system_version=28&system_name=REL&shop=finishline.com&lang=en_US&cart_id=90152931922490708741592533731751&source=android&carrierName=&isoCountryCode=us&mobileNetworkCode=&
+https://c.riskified.com/device_infos.json?app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&riskified_cookie=null&name=OnePlus5T&system_version=28&system_name=REL&shop=finishline.com&lang=en_US&cart_id=90152931922490708741592533731751&source=android&carrierName=&isoCountryCode=us&mobileNetworkCode=&
+URL: https://c.riskified.com/device_infos.json?app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&riskified_cookie=null&name=OnePlus5T&system_version=28&system_name=REL&shop=finishline.com&lang=en_US&cart_id=90152931922490708741592533731751&source=android&carrierName=&isoCountryCode=us&mobileNetworkCode=&
+{"version":1,"uri_skip_list":["^fb\\d+:","^li\\d+:","^pdk\\d+:","^twitterkit-.*:","^com\\.googleusercontent\\.apps\\.\\d+-.*:\\\/oauth","^(?i).+:.*[?].*\\b(password|o?auth|o?auth.?token|access|access.?token)\\b"]}
+/device_infos.json?app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&riskified_cookie=null&name=OnePlus5T&system_version=28&system_name=REL&shop=finishline.com&lang=en_US&cart_id=90152931922490708741592533731751&source=android&carrierName=&isoCountryCode=us&mobileNetworkCode=&
+URL:app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&riskified_cookie=null&name=OnePlus5T&system_version=28&system_name=REL&shop=finishline.com&lang=en_US&cart_id=90152931922490708741592533731751&source=android&carrierName=&isoCountryCode=us&mobileNetworkCode=&
+https://c.riskified.com/device_infos.json?app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&riskified_cookie=null&name=OnePlus5T&system_version=28&system_name=REL&shop=finishline.com&lang=en_US&cart_id=90152931922490708741592533731751&source=android&carrierName=&isoCountryCode=us&mobileNetworkCode=&
+https://c.riskified.com/device_infos.json?app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&riskified_cookie=null&name=OnePlus5T&system_version=28&system_name=REL&shop=finishline.com&lang=en_US&cart_id=90152931922490708741592533731751&source=android&carrierName=&isoCountryCode=us&mobileNetworkCode=&
+https://c.riskified.com/
+https://c.riskified.com/
+s:https://c.riskified.com/
+https.proxyHost
+https.proxyPort
+c.riskified.com:443
+c.riskified.com:443
+CONNECT c.riskified.com:443 HTTP/1.1
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+*.riskified.com
+CN=*.riskified.com
+cn=*.riskified.com
+*.riskified.com
+CN=*.riskified.com
+cn=*.riskified.com
+*.riskified.com
+CN=*.riskified.com
+cn=*.riskified.com
+74d17e43.0
+/system/etc/security/cacerts/74d17e43.0
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+c.riskified.com.
+*.riskified.com.
+/device_infos.json?app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&riskified_cookie=null&name=OnePlus5T&system_version=28&system_name=REL&shop=finishline.com&lang=en_US&cart_id=90152931922490708741592533731751&source=android&carrierName=&isoCountryCode=us&mobileNetworkCode=&
+GET /device_infos.json?app_version=2.6.1&model=ONEPLUS+A5010&beacon_version=1.3.0&old_riskified_cookie=8338-bddb-a32e-6eb2&riskified_cookie=null&name=OnePlus5T&system_version=28&system_name=REL&shop=finishline.com&lang=en_US&cart_id=90152931922490708741592533731751&source=android&carrierName=&isoCountryCode=us&mobileNetworkCode=& HTTP/1.1
+$
+ at line 1 column 1 path $
+End of input at line 1 column 1 path $
+com.WinnersCircle/.ui.activities.WelcomeActivity
+Intent { cmp=com.WinnersCircle/.ui.activities.WelcomeActivity }
+android.app.ActivityThread@22d3d1d
+android.os.BinderProxy@7500b92
+Start resolving transaction for client: android.app.ActivityThread@22d3d1d, token: android.os.BinderProxy@7500b92
+PauseActivityItem{finished=false,userLeaving=true,configChanges=0,dontReport=false}
+Resolving lifecycle state: PauseActivityItem{finished=false,userLeaving=true,configChanges=0,dontReport=false}
+Activity paused: ui.activities.SplashScreenActivity
+Activity Paused: ui.activities.SplashScreenActivity
+sensor=4
+{_o=auto, _et=4656, _sc=SplashScreenActivity, _si=-7836664653647585681}
+Bundle[{_o=auto, _et=4656, _sc=SplashScreenActivity, _si=-7836664653647585681}]
+/data/user/0/com.WinnersCircle/databases/google_app_measurement_local.db
+unregisterListenerImpl sensorName:BMI160 Gyroscope,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+PRAGMA synchronous=NORMAL
+sensor=1
+PRAGMA journal_size_limit=524288
+PRAGMA wal_autocheckpoint=100
+unregisterListenerImpl sensorName:BMI160 Accelerometer,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+en_US
+SELECT name FROM SQLITE_MASTER WHERE name=?
+requiredPos cannot be negative, but was 0
+sensor=2
+SELECT * FROM messages LIMIT 0
+unregisterListenerImpl sensorName:AK09911 Magnetometer,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+requiredPos cannot be negative, but was 0
+INSERT INTO messages(entry,type) VALUES (?,?)
+sensor=9
+unregisterListenerImpl sensorName:Gravity,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+en-US
+en-US
+android.app.ActivityThread@22d3d1d
+android.os.BinderProxy@c2023f0
+Start resolving transaction for client: android.app.ActivityThread@22d3d1d, token: android.os.BinderProxy@c2023f0
+WindowVisibilityItem{showWindow=true}
+Resolving callback: WindowVisibilityItem{showWindow=true}
+android.os.BinderProxy@c2023f0
+handleWindowVisibility: no activity for token android.os.BinderProxy@c2023f0
+android.app.ActivityThread@22d3d1d
+android.os.BinderProxy@c2023f0
+Start resolving transaction for client: android.app.ActivityThread@22d3d1d, token: android.os.BinderProxy@c2023f0
+|T|156274640316|*
+com.WinnersCircle/.ui.activities.WelcomeActivity
+Intent { cmp=com.WinnersCircle/.ui.activities.WelcomeActivity }
+ActivityInfo{429d69 com.WinnersCircle.ui.activities.WelcomeActivity}
+en_US
+/data/user/0/com.WinnersCircle/databases/google_app_measurement_local.db
+[en_US]
+Rect(0, 0 - 0, 0)
+Rect(0, 0 - 1080, 2034)
+/data/user/0/com.WinnersCircle/databases/google_app_measurement_local.db
+{ mBounds=Rect(0, 0 - 0, 0) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=undefined}
+mThemeChanged = 0
+PRAGMA synchronous=NORMAL
+{1.0 0 ?mcc?mnc [en_US] ldltr sw411dp w411dp h750dp 420dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=undefined} s.6mThemeChanged = 0}
+en_US
+[en_US]
+Rect(0, 0 - 1080, 2034)
+Rect(0, 0 - 1080, 2034)
+PRAGMA journal_size_limit=524288
+{ mBounds=Rect(0, 0 - 1080, 2034) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=standard}
+PRAGMA wal_autocheckpoint=100
+mThemeChanged = 0
+en_US
+{1.0 0 ?mcc?mnc [en_US] ldltr sw411dp w411dp h750dp 420dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2034) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=standard} s.6mThemeChanged = 0}
+LaunchActivityItem{intent=Intent { cmp=com.WinnersCircle/.ui.activities.WelcomeActivity },ident=198240851,info=ActivityInfo{429d69 com.WinnersCircle.ui.activities.WelcomeActivity},curConfig={1.0 0 ?mcc?mnc [en_US] ldltr sw411dp w411dp h750dp 420dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=undefined} s.6mThemeChanged = 0},overrideConfig={1.0 0 ?mcc?mnc [en_US] ldltr sw411dp w411dp h750dp 420dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2034) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=standard} s.6mThemeChanged = 0},referrer=com.WinnersCircle,procState=2,state=null,persistentState=null,pendingResults=null,pendingNewIntents=null,profilerInfo=null}
+Resolving callback: LaunchActivityItem{intent=Intent { cmp=com.WinnersCircle/.ui.activities.WelcomeActivity },ident=198240851,info=ActivityInfo{429d69 com.WinnersCircle.ui.activities.WelcomeActivity},curConfig={1.0 0 ?mcc?mnc [en_US] ldltr sw411dp w411dp h750dp 420dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=undefined} s.6mThemeChanged = 0},overrideConfig={1.0 0 ?mcc?mnc [en_US] ldltr sw411dp w411dp h750dp 420dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2034) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=standard} s.6mThemeChanged = 0},referrer=com.WinnersCircle,procState=2,state=null,persistentState=null,pendingResults=null,pendingNewIntents=null,profilerInfo=null}
+SELECT name FROM SQLITE_MASTER WHERE name=?
+requiredPos cannot be negative, but was 0
+SELECT * FROM messages LIMIT 0
+en-US
+SELECT rowid, type, entry FROM messages ORDER BY rowid asc LIMIT 100
+requiredPos cannot be negative, but was 0
+com.WinnersCircle.apk
+ WHERE rowid <= ?
+DELETE FROM messages WHERE rowid <= ?
+color.com.WinnersCircle.apk
+/data/theme/com.WinnersCircle.apk
+/data/theme/color/color.com.WinnersCircle.apk
+com.WinnersCircle.apk
+color.com.WinnersCircle.apk
+/data/theme/com.WinnersCircle.apk
+/data/theme/color/color.com.WinnersCircle.apk
+com.WinnersCircle/com.WinnersCircle.ui.activities.WelcomeActivity
+androidx.lifecycle.ViewModelProvider.DefaultKey:androidx.fragment.app.H
+android:fragment:0
+Activity Created: ui.activities.WelcomeActivity
+DecorView[]
+android-com.android.chrome-com.oneplus-com.WinnersCircle-fonts/knock49l.ttf-0--1--1--null--
+android-com.android.chrome-com.oneplus-com.WinnersCircle-fonts/Roboto-Regular.ttf-0--1--1--null--
+android.widget.TableLayout
+android.widget.TableRow
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+com.WinnersCircle.ui.activities.WelcomeActivity_ViewBinding
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+ResumeActivityItem{procState=-1,updateProcState=false,isForward=true}
+Resolving lifecycle state: ResumeActivityItem{procState=-1,updateProcState=false,isForward=true}
+Transitioning to state: 2
+Activity Started:ui.activities.WelcomeActivity
+Activity resumed: ui.activities.WelcomeActivity
+Activity Resumed:ui.activities.WelcomeActivity
+{_o=auto, _pc=SplashScreenActivity, _pi=-7836664653647585681, _sc=WelcomeActivity, _si=-7836664653647585680}
+Bundle[{_o=auto, _pc=SplashScreenActivity, _pi=-7836664653647585681, _sc=WelcomeActivity, _si=-7836664653647585680}]
+sensor=1,rate=200000
+/data/user/0/com.WinnersCircle/databases/google_app_measurement_local.db
+registerListenerImpl sensorName:BMI160 Accelerometer,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+PRAGMA synchronous=NORMAL
+PRAGMA journal_size_limit=524288
+PRAGMA wal_autocheckpoint=100
+en_US
+SELECT name FROM SQLITE_MASTER WHERE name=?
+requiredPos cannot be negative, but was 0
+SELECT * FROM messages LIMIT 0
+sensor=4,rate=200000
+registerListenerImpl sensorName:BMI160 Gyroscope,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+requiredPos cannot be negative, but was 0
+INSERT INTO messages(entry,type) VALUES (?,?)
+GyroScope status true and Accelerometer status true
+sensor=1,rate=200000
+registerListenerImpl sensorName:BMI160 Accelerometer,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+sensor=2,rate=200000
+registerListenerImpl sensorName:AK09911 Magnetometer,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+|T|156274640316|*
+/data/user/0/com.WinnersCircle/databases/google_app_measurement_local.db
+sensor=9,rate=200000
+/data/user/0/com.WinnersCircle/databases/google_app_measurement_local.db
+registerListenerImpl sensorName:Gravity,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+PRAGMA synchronous=NORMAL
+PRAGMA journal_size_limit=524288
+PRAGMA wal_autocheckpoint=100
+en_US
+sensor=1
+SELECT name FROM SQLITE_MASTER WHERE name=?
+unregisterListenerImpl sensorName:BMI160 Accelerometer,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+requiredPos cannot be negative, but was 0
+Activity Class Name = WelcomeActivity
+SELECT * FROM messages LIMIT 0
+<init> []
+SELECT rowid, type, entry FROM messages ORDER BY rowid asc LIMIT 100
+requiredPos cannot be negative, but was 0
+ WHERE rowid <= ?
+DELETE FROM messages WHERE rowid <= ?
+window_type=1,window_flag=-2139029248
+ViewRootImpl[WelcomeActivity]
+aq:native-post-ime:com.WinnersCircle/com.WinnersCircle.ui.activities.WelcomeActivity
+aq:ime:com.WinnersCircle/com.WinnersCircle.ui.activities.WelcomeActivity
+aq:native-pre-ime:com.WinnersCircle/com.WinnersCircle.ui.activities.WelcomeActivity
+aq:pending:com.WinnersCircle/com.WinnersCircle.ui.activities.WelcomeActivity
+setElevation
+getElevation
+setTranslationZ
+getTranslationZ
+en-US
+DecorView@9b187e3[WelcomeActivity]
+onWindowFocusChangedFromViewRoot hasFocus: true, DecorView@9b187e3[WelcomeActivity]
+en-US
+en-US
+-4
+-4
+0
+7524430898733189
+7524430898733189
+7524430898733189
+100
+true
+{"carrier_iso":"us","app_type":"Android","app_version":"2.6.1","app_uuid":"a2d9ffca-2904-4240-a7df-2ac24d21487b","lifecycle_totalwakecount":"1","uuid":"116e05d9-f75d-4150-9771-db9f5c62fbcc","device_os_build":"1910081948","timestamp_local":"2020-06-18T22:28:54","timestamp_unix":"1592533734","page_name":"Welcome","lifecycle_firstlaunchdate_MMDDYYYY":"06\/19\/2020","tealium_library_name":"android","tealium_random":"7524430898733189","timestamp_offset":"-4","lifecycle_lastwakedate":"2020-06-19T02:28:49Z","tealium_session_id":"1592533729543","screen_title":"Home","lifecycle_dayssincelastwake":"0","tealium_event_type":"view","lifecycle_dayssincelaunch":"0","autotracked":"false","mega_nav":"Welcome","login_status":"Logged Out","lifecycle_dayofweek_local":"5","device_cputype":"aarch64","app_build":"46","tealium_visitor_id":"116e05d9f75d41509771db9f5c62fbcc","lifecycle_firstlaunchdate":"2020-06-19T02:28:49Z","device_orientation":"Portrait","lifecycle_sleepcount":"0","device_os_version":"9","tealium_account":"finishline","device_language":"en","device_ischarging":"true","tealium_event":"Home","device":"OnePlus ONEPLUS A5010","lifecycle_totallaunchcount":"1","time_parting":"1592533734","lifecycle_wakecount":"1","server":"m.finishline.com","page_type":"Welcome","sub_category":"Welcome","lifecycle_hourofday_local":"22","origin":"mobile","visitor_id":"116e05d9f75d41509771db9f5c62fbcc","device_battery_percent":"100","platform":"android","app_rdns":"com.WinnersCircle","library_version":"5.5.2","lifecycle_totalsleepcount":"0","app_memory_usage":"123","call_type":"view","user_agent":"Finish Line\/2.6.1 (Android 9; Build\/PKQ1.180716.001)","device_architecture":"32","timestamp":"2020-06-19T02:28:54Z","orientation":"Portrait","lifecycle_launchcount":"1","connection_type":"WIFI","lifecycle_lastlaunchdate":"2020-06-19T02:28:49Z","device_free_system_storage":"277528576","os_version":"9","tealium_profile":"mobileapp","tealium_timestamp_epoch":"1592533734","timestamp_unix_milliseconds":"1592533734521","app_name":"Finish Line","carrier":"","lifecycle_totalcrashcount":"0","device_resolution":"1080x2034","device_free_external_storage":"49415348224","tealium_library_version":"5.5.2","category":"Welcome","lifecycle_totalsecondsawake":"0","tealium_vid":"116e05d9f75d41509771db9f5c62fbcc","device_android_runtime":"2.1.0"}
+en-US
+en-US
+en-US
+en-US
+utag.track("remote_api", {"carrier_iso":"us","app_type":"Android","app_version":"2.6.1","app_uuid":"a2d9ffca-2904-4240-a7df-2ac24d21487b","lifecycle_totalwakecount":"1","uuid":"116e05d9-f75d-4150-9771-db9f5c62fbcc","device_os_build":"1910081948","timestamp_local":"2020-06-18T22:28:54","timestamp_unix":"1592533734","page_name":"Welcome","lifecycle_firstlaunchdate_MMDDYYYY":"06\/19\/2020","tealium_library_name":"android","tealium_random":"7524430898733189","timestamp_offset":"-4","lifecycle_lastwakedate":"2020-06-19T02:28:49Z","tealium_session_id":"1592533729543","screen_title":"Home","lifecycle_dayssincelastwake":"0","tealium_event_type":"view","lifecycle_dayssincelaunch":"0","autotracked":"false","mega_nav":"Welcome","login_status":"Logged Out","lifecycle_dayofweek_local":"5","device_cputype":"aarch64","app_build":"46","tealium_visitor_id":"116e05d9f75d41509771db9f5c62fbcc","lifecycle_firstlaunchdate":"2020-06-19T02:28:49Z","device_orientation":"Portrait","lifecycle_sleepcount":"0","device_os_version":"9","tealium_account":"finishline","device_language":"en","device_ischarging":"true","tealium_event":"Home","device":"OnePlus ONEPLUS A5010","lifecycle_totallaunchcount":"1","time_parting":"1592533734","lifecycle_wakecount":"1","server":"m.finishline.com","page_type":"Welcome","sub_category":"Welcome","lifecycle_hourofday_local":"22","origin":"mobile","visitor_id":"116e05d9f75d41509771db9f5c62fbcc","device_battery_percent":"100","platform":"android","app_rdns":"com.WinnersCircle","library_version":"5.5.2","lifecycle_totalsleepcount":"0","app_memory_usage":"123","call_type":"view","user_agent":"Finish Line\/2.6.1 (Android 9; Build\/PKQ1.180716.001)","device_architecture":"32","timestamp":"2020-06-19T02:28:54Z","orientation":"Portrait","lifecycle_launchcount":"1","connection_type":"WIFI","lifecycle_lastlaunchdate":"2020-06-19T02:28:49Z","device_free_system_storage":"277528576","os_version":"9","tealium_profile":"mobileapp","tealium_timestamp_epoch":"1592533734","timestamp_unix_milliseconds":"1592533734521","app_name":"Finish Line","carrier":"","lifecycle_totalcrashcount":"0","device_resolution":"1080x2034","device_free_external_storage":"49415348224","tealium_library_version":"5.5.2","category":"Welcome","lifecycle_totalsecondsawake":"0","tealium_vid":"116e05d9f75d41509771db9f5c62fbcc","device_android_runtime":"2.1.0"})
+en-US
+en-US
+{"carrier_iso":"us","app_type":"Android","app_version":"2.6.1","app_uuid":"a2d9ffca-2904-4240-a7df-2ac24d21487b","lifecycle_totalwakecount":"1","uuid":"116e05d9-f75d-4150-9771-db9f5c62fbcc","device_os_build":"1910081948","timestamp_local":"2020-06-18T22:28:54","timestamp_unix":"1592533734","was_queued":"false","page_name":"Welcome","lifecycle_firstlaunchdate_MMDDYYYY":"06\/19\/2020","tealium_library_name":"android","tealium_random":"7524430898733189","timestamp_offset":"-4","lifecycle_lastwakedate":"2020-06-19T02:28:49Z","tealium_session_id":"1592533729543","screen_title":"Home","lifecycle_dayssincelastwake":"0","tealium_event_type":"view","lifecycle_dayssincelaunch":"0","autotracked":"false","mega_nav":"Welcome","login_status":"Logged Out","lifecycle_dayofweek_local":"5","device_cputype":"aarch64","app_build":"46","tealium_visitor_id":"116e05d9f75d41509771db9f5c62fbcc","lifecycle_firstlaunchdate":"2020-06-19T02:28:49Z","device_orientation":"Portrait","lifecycle_sleepcount":"0","device_os_version":"9","tealium_account":"finishline","device_language":"en","device_ischarging":"true","tealium_event":"Home","device":"OnePlus ONEPLUS A5010","lifecycle_totallaunchcount":"1","time_parting":"1592533734","lifecycle_wakecount":"1","server":"m.finishline.com","page_type":"Welcome","sub_category":"Welcome","lifecycle_hourofday_local":"22","origin":"mobile","visitor_id":"116e05d9f75d41509771db9f5c62fbcc","device_battery_percent":"100","platform":"android","app_rdns":"com.WinnersCircle","library_version":"5.5.2","lifecycle_totalsleepcount":"0","app_memory_usage":"123","call_type":"view","user_agent":"Finish Line\/2.6.1 (Android 9; Build\/PKQ1.180716.001)","device_architecture":"32","timestamp":"2020-06-19T02:28:54Z","orientation":"Portrait","lifecycle_launchcount":"1","connection_type":"WIFI","lifecycle_lastlaunchdate":"2020-06-19T02:28:49Z","device_free_system_storage":"277528576","os_version":"9","tealium_profile":"mobileapp","tealium_timestamp_epoch":"1592533734","timestamp_unix_milliseconds":"1592533734521","app_name":"Finish Line","carrier":"","lifecycle_totalcrashcount":"0","device_resolution":"1080x2034","device_free_external_storage":"49415348224","tealium_library_version":"5.5.2","category":"Welcome","lifecycle_totalsecondsawake":"0","tealium_vid":"116e05d9f75d41509771db9f5c62fbcc","device_android_runtime":"2.1.0"}
+utag.track("view", {"carrier_iso":"us","app_type":"Android","app_version":"2.6.1","app_uuid":"a2d9ffca-2904-4240-a7df-2ac24d21487b","lifecycle_totalwakecount":"1","uuid":"116e05d9-f75d-4150-9771-db9f5c62fbcc","device_os_build":"1910081948","timestamp_local":"2020-06-18T22:28:54","timestamp_unix":"1592533734","was_queued":"false","page_name":"Welcome","lifecycle_firstlaunchdate_MMDDYYYY":"06\/19\/2020","tealium_library_name":"android","tealium_random":"7524430898733189","timestamp_offset":"-4","lifecycle_lastwakedate":"2020-06-19T02:28:49Z","tealium_session_id":"1592533729543","screen_title":"Home","lifecycle_dayssincelastwake":"0","tealium_event_type":"view","lifecycle_dayssincelaunch":"0","autotracked":"false","mega_nav":"Welcome","login_status":"Logged Out","lifecycle_dayofweek_local":"5","device_cputype":"aarch64","app_build":"46","tealium_visitor_id":"116e05d9f75d41509771db9f5c62fbcc","lifecycle_firstlaunchdate":"2020-06-19T02:28:49Z","device_orientation":"Portrait","lifecycle_sleepcount":"0","device_os_version":"9","tealium_account":"finishline","device_language":"en","device_ischarging":"true","tealium_event":"Home","device":"OnePlus ONEPLUS A5010","lifecycle_totallaunchcount":"1","time_parting":"1592533734","lifecycle_wakecount":"1","server":"m.finishline.com","page_type":"Welcome","sub_category":"Welcome","lifecycle_hourofday_local":"22","origin":"mobile","visitor_id":"116e05d9f75d41509771db9f5c62fbcc","device_battery_percent":"100","platform":"android","app_rdns":"com.WinnersCircle","library_version":"5.5.2","lifecycle_totalsleepcount":"0","app_memory_usage":"123","call_type":"view","user_agent":"Finish Line\/2.6.1 (Android 9; Build\/PKQ1.180716.001)","device_architecture":"32","timestamp":"2020-06-19T02:28:54Z","orientation":"Portrait","lifecycle_launchcount":"1","connection_type":"WIFI","lifecycle_lastlaunchdate":"2020-06-19T02:28:49Z","device_free_system_storage":"277528576","os_version":"9","tealium_profile":"mobileapp","tealium_timestamp_epoch":"1592533734","timestamp_unix_milliseconds":"1592533734521","app_name":"Finish Line","carrier":"","lifecycle_totalcrashcount":"0","device_resolution":"1080x2034","device_free_external_storage":"49415348224","tealium_library_version":"5.5.2","category":"Welcome","lifecycle_totalsecondsawake":"0","tealium_vid":"116e05d9f75d41509771db9f5c62fbcc","device_android_runtime":"2.1.0"})
+en-US
+en-US
+en-US
+en-US
+en-US
+en-US
+*.google-analytics.com
+CN=*.google-analytics.com
+Google LLC
+O=Google LLC
+Mountain View
+L=Mountain View
+California
+ST=California
+US
+C=US
+cn=*.google-analytics.com,o=google llc,l=mountain view,st=california,c=us
+*.google-analytics.com
+CN=*.google-analytics.com
+Google LLC
+O=Google LLC
+Mountain View
+L=Mountain View
+California
+ST=California
+US
+C=US
+cn=*.google-analytics.com,o=google llc,l=mountain view,st=california,c=us
+*.google-analytics.com
+CN=*.google-analytics.com
+Google LLC
+O=Google LLC
+Mountain View
+L=Mountain View
+California
+ST=California
+US
+C=US
+cn=*.google-analytics.com,o=google llc,l=mountain view,st=california,c=us
+5d4d833c.0
+/system/etc/security/cacerts/5d4d833c.0
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+1.2.840.10045.2.1 AlgorithmParameters not available
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+mitmproxy
+O=mitmproxy
+mitmproxy
+CN=mitmproxy
+o=mitmproxy,cn=mitmproxy
+en-US
+en-US
+en-US
+android.app.ActivityThread@22d3d1d
+android.os.BinderProxy@7500b92
+Start resolving transaction for client: android.app.ActivityThread@22d3d1d, token: android.os.BinderProxy@7500b92
+DestroyActivityItem{finished=true,mConfigChanges=0}
+Resolving lifecycle state: DestroyActivityItem{finished=true,mConfigChanges=0}
+Transitioning to state: 5
+Activity Stopped:ui.activities.SplashScreenActivity
+d.b.a.f@32b3816
+removeUpdates listener=d.b.a.f@32b3816 packageName=  com.WinnersCircle
+cancelAllActivityTransaction = SplashScreenActivity
+Activity Destroyed: ui.activities.SplashScreenActivity
+, id[0]=
+, toolType[0]=
+MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=934.0, y[0]=159.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=9695306, downTime=9695306, deviceId=5, source=0x1002 }
+2,2913,0,0,1,1,1,-1;
+2,2913,0,0,1,1,1,-1;
+, id[0]=
+, toolType[0]=
+MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=934.0, y[0]=159.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=1, eventTime=9695312, downTime=9695306, deviceId=5, source=0x1002 }
+1,6,0,0,1,1,1,-1;
+2,2913,0,0,1,1,1,-1;1,6,0,0,1,1,1,-1;
+, id[0]=
+, toolType[0]=
+MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=934.0, y[0]=159.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=9695361, downTime=9695306, deviceId=5, source=0x1002 }
+3,49,0,0,1,1,1,-1;
+2,2913,0,0,1,1,1,-1;1,6,0,0,1,1,1,-1;3,49,0,0,1,1,1,-1;
+<init> []
+com.WinnersCircle/.ui.activities.MainActivity
+Intent { cmp=com.WinnersCircle/.ui.activities.MainActivity }
+android.app.ActivityThread@22d3d1d
+android.os.BinderProxy@c2023f0
+Start resolving transaction for client: android.app.ActivityThread@22d3d1d, token: android.os.BinderProxy@c2023f0
+PauseActivityItem{finished=false,userLeaving=true,configChanges=0,dontReport=false}
+Resolving lifecycle state: PauseActivityItem{finished=false,userLeaving=true,configChanges=0,dontReport=false}
+Activity paused: ui.activities.WelcomeActivity
+Activity Paused: ui.activities.WelcomeActivity
+sensor=4
+{_o=auto, _et=3071, _sc=WelcomeActivity, _si=-7836664653647585680}
+Bundle[{_o=auto, _et=3071, _sc=WelcomeActivity, _si=-7836664653647585680}]
+/data/user/0/com.WinnersCircle/databases/google_app_measurement_local.db
+unregisterListenerImpl sensorName:BMI160 Gyroscope,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+PRAGMA synchronous=NORMAL
+PRAGMA journal_size_limit=524288
+sensor=1
+PRAGMA wal_autocheckpoint=100
+unregisterListenerImpl sensorName:BMI160 Accelerometer,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+en_US
+SELECT name FROM SQLITE_MASTER WHERE name=?
+requiredPos cannot be negative, but was 0
+sensor=2
+SELECT * FROM messages LIMIT 0
+unregisterListenerImpl sensorName:AK09911 Magnetometer,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+requiredPos cannot be negative, but was 0
+INSERT INTO messages(entry,type) VALUES (?,?)
+sensor=9
+unregisterListenerImpl sensorName:Gravity,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+en-US
+en-US
+android.app.ActivityThread@22d3d1d
+android.os.BinderProxy@85b5737
+Start resolving transaction for client: android.app.ActivityThread@22d3d1d, token: android.os.BinderProxy@85b5737
+WindowVisibilityItem{showWindow=true}
+Resolving callback: WindowVisibilityItem{showWindow=true}
+android.os.BinderProxy@85b5737
+handleWindowVisibility: no activity for token android.os.BinderProxy@85b5737
+android.app.ActivityThread@22d3d1d
+|T|156274640316|*
+android.os.BinderProxy@85b5737
+Start resolving transaction for client: android.app.ActivityThread@22d3d1d, token: android.os.BinderProxy@85b5737
+com.WinnersCircle/.ui.activities.MainActivity
+Intent { flg=0x10000000 cmp=com.WinnersCircle/.ui.activities.MainActivity }
+ActivityInfo{f0114a4 com.WinnersCircle.ui.activities.MainActivity}
+en_US
+[en_US]
+Rect(0, 0 - 0, 0)
+Rect(0, 0 - 1080, 2034)
+{ mBounds=Rect(0, 0 - 0, 0) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=undefined}
+/data/user/0/com.WinnersCircle/databases/google_app_measurement_local.db
+/data/user/0/com.WinnersCircle/databases/google_app_measurement_local.db
+mThemeChanged = 0
+{1.0 0 ?mcc?mnc [en_US] ldltr sw411dp w411dp h750dp 420dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=undefined} s.6mThemeChanged = 0}
+en_US
+[en_US]
+Rect(0, 0 - 1080, 2034)
+PRAGMA synchronous=NORMAL
+Rect(0, 0 - 1080, 2034)
+{ mBounds=Rect(0, 0 - 1080, 2034) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=standard}
+PRAGMA journal_size_limit=524288
+PRAGMA wal_autocheckpoint=100
+mThemeChanged = 0
+{1.0 0 ?mcc?mnc [en_US] ldltr sw411dp w411dp h750dp 420dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2034) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=standard} s.6mThemeChanged = 0}
+en_US
+LaunchActivityItem{intent=Intent { flg=0x10000000 cmp=com.WinnersCircle/.ui.activities.MainActivity },ident=241997673,info=ActivityInfo{f0114a4 com.WinnersCircle.ui.activities.MainActivity},curConfig={1.0 0 ?mcc?mnc [en_US] ldltr sw411dp w411dp h750dp 420dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=undefined} s.6mThemeChanged = 0},overrideConfig={1.0 0 ?mcc?mnc [en_US] ldltr sw411dp w411dp h750dp 420dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2034) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=standard} s.6mThemeChanged = 0},referrer=com.WinnersCircle,procState=2,state=null,persistentState=null,pendingResults=null,pendingNewIntents=null,profilerInfo=null}
+Resolving callback: LaunchActivityItem{intent=Intent { flg=0x10000000 cmp=com.WinnersCircle/.ui.activities.MainActivity },ident=241997673,info=ActivityInfo{f0114a4 com.WinnersCircle.ui.activities.MainActivity},curConfig={1.0 0 ?mcc?mnc [en_US] ldltr sw411dp w411dp h750dp 420dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=undefined} s.6mThemeChanged = 0},overrideConfig={1.0 0 ?mcc?mnc [en_US] ldltr sw411dp w411dp h750dp 420dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2034) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=standard} s.6mThemeChanged = 0},referrer=com.WinnersCircle,procState=2,state=null,persistentState=null,pendingResults=null,pendingNewIntents=null,profilerInfo=null}
+SELECT name FROM SQLITE_MASTER WHERE name=?
+com.WinnersCircle.apk
+color.com.WinnersCircle.apk
+requiredPos cannot be negative, but was 0
+/data/theme/com.WinnersCircle.apk
+SELECT * FROM messages LIMIT 0
+/data/theme/color/color.com.WinnersCircle.apk
+SELECT rowid, type, entry FROM messages ORDER BY rowid asc LIMIT 100
+com.WinnersCircle/com.WinnersCircle.ui.activities.MainActivity
+requiredPos cannot be negative, but was 0
+androidx.lifecycle.ViewModelProvider.DefaultKey:androidx.fragment.app.H
+ WHERE rowid <= ?
+DELETE FROM messages WHERE rowid <= ?
+android:fragment:0
+Activity Created: ui.activities.MainActivity
+com.WinnersCircle/.ui.activities.ServicesOptInActivity
+Intent { cmp=com.WinnersCircle/.ui.activities.ServicesOptInActivity }
+-4
+-4
+0
+DecorView[]
+7610512580768557
+7610512580768557
+7610512580768557
+ResumeActivityItem{procState=-1,updateProcState=false,isForward=true}
+Resolving lifecycle state: ResumeActivityItem{procState=-1,updateProcState=false,isForward=true}
+100
+Transitioning to state: 2
+true
+android.app.ActivityThread@22d3d1d
+android.os.BinderProxy@85b5737
+Start resolving transaction for client: android.app.ActivityThread@22d3d1d, token: android.os.BinderProxy@85b5737
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+PauseActivityItem{finished=false,userLeaving=true,configChanges=0,dontReport=false}
+Resolving lifecycle state: PauseActivityItem{finished=false,userLeaving=true,configChanges=0,dontReport=false}
+Transitioning to state: 2
+Transitioning to state: 3
+{"carrier_iso":"us","app_version":"2.6.1","app_uuid":"a2d9ffca-2904-4240-a7df-2ac24d21487b","lifecycle_totalwakecount":"1","uuid":"116e05d9-f75d-4150-9771-db9f5c62fbcc","link_id":"Skip","device_os_build":"1910081948","timestamp_local":"2020-06-18T22:28:57","timestamp_unix":"1592533737","page_name":"Welcome","lifecycle_firstlaunchdate_MMDDYYYY":"06\/19\/2020","tealium_library_name":"android","tealium_random":"7610512580768557","timestamp_offset":"-4","lifecycle_lastwakedate":"2020-06-19T02:28:49Z","tealium_session_id":"1592533729543","lifecycle_dayssincelastwake":"0","tealium_event_type":"activity","lifecycle_dayssincelaunch":"0","autotracked":"false","lifecycle_dayofweek_local":"5","device_cputype":"aarch64","app_build":"46","tealium_visitor_id":"116e05d9f75d41509771db9f5c62fbcc","lifecycle_firstlaunchdate":"2020-06-19T02:28:49Z","device_orientation":"Portrait","lifecycle_sleepcount":"0","event_name":"Skip","device_os_version":"9","tealium_account":"finishline","device_language":"en","device_ischarging":"true","tealium_event":"Skip","device":"OnePlus ONEPLUS A5010","lifecycle_totallaunchcount":"1","time_parting":"1592533737","lifecycle_wakecount":"1","ga_action":"Click","lifecycle_hourofday_local":"22","origin":"mobile","visitor_id":"116e05d9f75d41509771db9f5c62fbcc","device_battery_percent":"100","platform":"android","app_rdns":"com.WinnersCircle","library_version":"5.5.2","lifecycle_totalsleepcount":"0","app_memory_usage":"134","call_type":"link","ga_label":"Skip:Welcome","user_agent":"Finish Line\/2.6.1 (Android 9; Build\/PKQ1.180716.001)","device_architecture":"32","timestamp":"2020-06-19T02:28:57Z","orientation":"Portrait","lifecycle_launchcount":"1","connection_type":"WIFI","lifecycle_lastlaunchdate":"2020-06-19T02:28:49Z","device_free_system_storage":"277528576","os_version":"9","tealium_profile":"mobileapp","tealium_timestamp_epoch":"1592533737","timestamp_unix_milliseconds":"1592533737515","app_name":"Finish Line","carrier":"","lifecycle_totalcrashcount":"0","device_resolution":"1080x2034","device_free_external_storage":"49415348224","tealium_library_version":"5.5.2","ga_category":"Welcome","lifecycle_totalsecondsawake":"0","tealium_vid":"116e05d9f75d41509771db9f5c62fbcc","device_android_runtime":"2.1.0"}
+utag.track("remote_api", {"carrier_iso":"us","app_version":"2.6.1","app_uuid":"a2d9ffca-2904-4240-a7df-2ac24d21487b","lifecycle_totalwakecount":"1","uuid":"116e05d9-f75d-4150-9771-db9f5c62fbcc","link_id":"Skip","device_os_build":"1910081948","timestamp_local":"2020-06-18T22:28:57","timestamp_unix":"1592533737","page_name":"Welcome","lifecycle_firstlaunchdate_MMDDYYYY":"06\/19\/2020","tealium_library_name":"android","tealium_random":"7610512580768557","timestamp_offset":"-4","lifecycle_lastwakedate":"2020-06-19T02:28:49Z","tealium_session_id":"1592533729543","lifecycle_dayssincelastwake":"0","tealium_event_type":"activity","lifecycle_dayssincelaunch":"0","autotracked":"false","lifecycle_dayofweek_local":"5","device_cputype":"aarch64","app_build":"46","tealium_visitor_id":"116e05d9f75d41509771db9f5c62fbcc","lifecycle_firstlaunchdate":"2020-06-19T02:28:49Z","device_orientation":"Portrait","lifecycle_sleepcount":"0","event_name":"Skip","device_os_version":"9","tealium_account":"finishline","device_language":"en","device_ischarging":"true","tealium_event":"Skip","device":"OnePlus ONEPLUS A5010","lifecycle_totallaunchcount":"1","time_parting":"1592533737","lifecycle_wakecount":"1","ga_action":"Click","lifecycle_hourofday_local":"22","origin":"mobile","visitor_id":"116e05d9f75d41509771db9f5c62fbcc","device_battery_percent":"100","platform":"android","app_rdns":"com.WinnersCircle","library_version":"5.5.2","lifecycle_totalsleepcount":"0","app_memory_usage":"134","call_type":"link","ga_label":"Skip:Welcome","user_agent":"Finish Line\/2.6.1 (Android 9; Build\/PKQ1.180716.001)","device_architecture":"32","timestamp":"2020-06-19T02:28:57Z","orientation":"Portrait","lifecycle_launchcount":"1","connection_type":"WIFI","lifecycle_lastlaunchdate":"2020-06-19T02:28:49Z","device_free_system_storage":"277528576","os_version":"9","tealium_profile":"mobileapp","tealium_timestamp_epoch":"1592533737","timestamp_unix_milliseconds":"1592533737515","app_name":"Finish Line","carrier":"","lifecycle_totalcrashcount":"0","device_resolution":"1080x2034","device_free_external_storage":"49415348224","tealium_library_version":"5.5.2","ga_category":"Welcome","lifecycle_totalsecondsawake":"0","tealium_vid":"116e05d9f75d41509771db9f5c62fbcc","device_android_runtime":"2.1.0"})
+en-US
+en-US
+{"carrier_iso":"us","app_version":"2.6.1","app_uuid":"a2d9ffca-2904-4240-a7df-2ac24d21487b","lifecycle_totalwakecount":"1","uuid":"116e05d9-f75d-4150-9771-db9f5c62fbcc","link_id":"Skip","device_os_build":"1910081948","timestamp_local":"2020-06-18T22:28:57","timestamp_unix":"1592533737","was_queued":"false","page_name":"Welcome","lifecycle_firstlaunchdate_MMDDYYYY":"06\/19\/2020","tealium_library_name":"android","tealium_random":"7610512580768557","timestamp_offset":"-4","lifecycle_lastwakedate":"2020-06-19T02:28:49Z","tealium_session_id":"1592533729543","lifecycle_dayssincelastwake":"0","tealium_event_type":"activity","lifecycle_dayssincelaunch":"0","autotracked":"false","lifecycle_dayofweek_local":"5","device_cputype":"aarch64","app_build":"46","tealium_visitor_id":"116e05d9f75d41509771db9f5c62fbcc","lifecycle_firstlaunchdate":"2020-06-19T02:28:49Z","device_orientation":"Portrait","lifecycle_sleepcount":"0","event_name":"Skip","device_os_version":"9","tealium_account":"finishline","device_language":"en","device_ischarging":"true","tealium_event":"Skip","device":"OnePlus ONEPLUS A5010","lifecycle_totallaunchcount":"1","time_parting":"1592533737","lifecycle_wakecount":"1","ga_action":"Click","lifecycle_hourofday_local":"22","origin":"mobile","visitor_id":"116e05d9f75d41509771db9f5c62fbcc","device_battery_percent":"100","platform":"android","app_rdns":"com.WinnersCircle","library_version":"5.5.2","lifecycle_totalsleepcount":"0","app_memory_usage":"134","call_type":"link","ga_label":"Skip:Welcome","user_agent":"Finish Line\/2.6.1 (Android 9; Build\/PKQ1.180716.001)","device_architecture":"32","timestamp":"2020-06-19T02:28:57Z","orientation":"Portrait","lifecycle_launchcount":"1","connection_type":"WIFI","lifecycle_lastlaunchdate":"2020-06-19T02:28:49Z","device_free_system_storage":"277528576","os_version":"9","tealium_profile":"mobileapp","tealium_timestamp_epoch":"1592533737","timestamp_unix_milliseconds":"1592533737515","app_name":"Finish Line","carrier":"","lifecycle_totalcrashcount":"0","device_resolution":"1080x2034","device_free_external_storage":"49415348224","tealium_library_version":"5.5.2","ga_category":"Welcome","lifecycle_totalsecondsawake":"0","tealium_vid":"116e05d9f75d41509771db9f5c62fbcc","device_android_runtime":"2.1.0"}
+android.app.ActivityThread@22d3d1d
+android.os.BinderProxy@776787d
+Start resolving transaction for client: android.app.ActivityThread@22d3d1d, token: android.os.BinderProxy@776787d
+WindowVisibilityItem{showWindow=true}
+Resolving callback: WindowVisibilityItem{showWindow=true}
+android.os.BinderProxy@776787d
+handleWindowVisibility: no activity for token android.os.BinderProxy@776787d
+utag.track("link", {"carrier_iso":"us","app_version":"2.6.1","app_uuid":"a2d9ffca-2904-4240-a7df-2ac24d21487b","lifecycle_totalwakecount":"1","uuid":"116e05d9-f75d-4150-9771-db9f5c62fbcc","link_id":"Skip","device_os_build":"1910081948","timestamp_local":"2020-06-18T22:28:57","timestamp_unix":"1592533737","was_queued":"false","page_name":"Welcome","lifecycle_firstlaunchdate_MMDDYYYY":"06\/19\/2020","tealium_library_name":"android","tealium_random":"7610512580768557","timestamp_offset":"-4","lifecycle_lastwakedate":"2020-06-19T02:28:49Z","tealium_session_id":"1592533729543","lifecycle_dayssincelastwake":"0","tealium_event_type":"activity","lifecycle_dayssincelaunch":"0","autotracked":"false","lifecycle_dayofweek_local":"5","device_cputype":"aarch64","app_build":"46","tealium_visitor_id":"116e05d9f75d41509771db9f5c62fbcc","lifecycle_firstlaunchdate":"2020-06-19T02:28:49Z","device_orientation":"Portrait","lifecycle_sleepcount":"0","event_name":"Skip","device_os_version":"9","tealium_account":"finishline","device_language":"en","device_ischarging":"true","tealium_event":"Skip","device":"OnePlus ONEPLUS A5010","lifecycle_totallaunchcount":"1","time_parting":"1592533737","lifecycle_wakecount":"1","ga_action":"Click","lifecycle_hourofday_local":"22","origin":"mobile","visitor_id":"116e05d9f75d41509771db9f5c62fbcc","device_battery_percent":"100","platform":"android","app_rdns":"com.WinnersCircle","library_version":"5.5.2","lifecycle_totalsleepcount":"0","app_memory_usage":"134","call_type":"link","ga_label":"Skip:Welcome","user_agent":"Finish Line\/2.6.1 (Android 9; Build\/PKQ1.180716.001)","device_architecture":"32","timestamp":"2020-06-19T02:28:57Z","orientation":"Portrait","lifecycle_launchcount":"1","connection_type":"WIFI","lifecycle_lastlaunchdate":"2020-06-19T02:28:49Z","device_free_system_storage":"277528576","os_version":"9","tealium_profile":"mobileapp","tealium_timestamp_epoch":"1592533737","timestamp_unix_milliseconds":"1592533737515","app_name":"Finish Line","carrier":"","lifecycle_totalcrashcount":"0","device_resolution":"1080x2034","device_free_external_storage":"49415348224","tealium_library_version":"5.5.2","ga_category":"Welcome","lifecycle_totalsecondsawake":"0","tealium_vid":"116e05d9f75d41509771db9f5c62fbcc","device_android_runtime":"2.1.0"})
+android.app.ActivityThread@22d3d1d
+android.os.BinderProxy@776787d
+Start resolving transaction for client: android.app.ActivityThread@22d3d1d, token: android.os.BinderProxy@776787d
+com.WinnersCircle/.ui.activities.ServicesOptInActivity
+Intent { cmp=com.WinnersCircle/.ui.activities.ServicesOptInActivity }
+ActivityInfo{3d59372 com.WinnersCircle.ui.activities.ServicesOptInActivity}
+en_US
+[en_US]
+Rect(0, 0 - 0, 0)
+Rect(0, 0 - 1080, 2034)
+{ mBounds=Rect(0, 0 - 0, 0) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=undefined}
+mThemeChanged = 0
+{1.0 0 ?mcc?mnc [en_US] ldltr sw411dp w411dp h750dp 420dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=undefined} s.6mThemeChanged = 0}
+en_US
+[en_US]
+Rect(0, 0 - 1080, 2034)
+Rect(0, 0 - 1080, 2034)
+{ mBounds=Rect(0, 0 - 1080, 2034) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=standard}
+mThemeChanged = 0
+{1.0 0 ?mcc?mnc [en_US] ldltr sw411dp w411dp h750dp 420dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2034) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=standard} s.6mThemeChanged = 0}
+LaunchActivityItem{intent=Intent { cmp=com.WinnersCircle/.ui.activities.ServicesOptInActivity },ident=175050923,info=ActivityInfo{3d59372 com.WinnersCircle.ui.activities.ServicesOptInActivity},curConfig={1.0 0 ?mcc?mnc [en_US] ldltr sw411dp w411dp h750dp 420dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=undefined} s.6mThemeChanged = 0},overrideConfig={1.0 0 ?mcc?mnc [en_US] ldltr sw411dp w411dp h750dp 420dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2034) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=standard} s.6mThemeChanged = 0},referrer=com.WinnersCircle,procState=2,state=null,persistentState=null,pendingResults=null,pendingNewIntents=null,profilerInfo=null}
+Resolving callback: LaunchActivityItem{intent=Intent { cmp=com.WinnersCircle/.ui.activities.ServicesOptInActivity },ident=175050923,info=ActivityInfo{3d59372 com.WinnersCircle.ui.activities.ServicesOptInActivity},curConfig={1.0 0 ?mcc?mnc [en_US] ldltr sw411dp w411dp h750dp 420dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=undefined} s.6mThemeChanged = 0},overrideConfig={1.0 0 ?mcc?mnc [en_US] ldltr sw411dp w411dp h750dp 420dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2034) mAppBounds=Rect(0, 0 - 1080, 2034) mWindowingMode=fullscreen mActivityType=standard} s.6mThemeChanged = 0},referrer=com.WinnersCircle,procState=2,state=null,persistentState=null,pendingResults=null,pendingNewIntents=null,profilerInfo=null}
+com.WinnersCircle/com.WinnersCircle.ui.activities.ServicesOptInActivity
+androidx.lifecycle.ViewModelProvider.DefaultKey:androidx.fragment.app.H
+android:fragment:0
+Activity Created: ui.activities.ServicesOptInActivity
+DecorView[]
+com.WinnersCircle.ui.activities.ServicesOptInActivity_ViewBinding
+ResumeActivityItem{procState=-1,updateProcState=false,isForward=true}
+Resolving lifecycle state: ResumeActivityItem{procState=-1,updateProcState=false,isForward=true}
+Transitioning to state: 2
+Activity Started:ui.activities.ServicesOptInActivity
+Activity resumed: ui.activities.ServicesOptInActivity
+Activity Resumed:ui.activities.ServicesOptInActivity
+{_o=auto, _pc=WelcomeActivity, _pi=-7836664653647585680, _sc=ServicesOptInActivity, _si=-7836664653647585679}
+sensor=1,rate=200000
+Bundle[{_o=auto, _pc=WelcomeActivity, _pi=-7836664653647585680, _sc=ServicesOptInActivity, _si=-7836664653647585679}]
+/data/user/0/com.WinnersCircle/databases/google_app_measurement_local.db
+registerListenerImpl sensorName:BMI160 Accelerometer,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+PRAGMA synchronous=NORMAL
+PRAGMA journal_size_limit=524288
+PRAGMA wal_autocheckpoint=100
+en_US
+SELECT name FROM SQLITE_MASTER WHERE name=?
+requiredPos cannot be negative, but was 0
+SELECT * FROM messages LIMIT 0
+requiredPos cannot be negative, but was 0
+sensor=4,rate=200000
+INSERT INTO messages(entry,type) VALUES (?,?)
+registerListenerImpl sensorName:BMI160 Gyroscope,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+GyroScope status true and Accelerometer status true
+sensor=1,rate=200000
+registerListenerImpl sensorName:BMI160 Accelerometer,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+sensor=2,rate=200000
+registerListenerImpl sensorName:AK09911 Magnetometer,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+|T|156274640316|*
+sensor=9,rate=200000
+/data/user/0/com.WinnersCircle/databases/google_app_measurement_local.db
+/data/user/0/com.WinnersCircle/databases/google_app_measurement_local.db
+registerListenerImpl sensorName:Gravity,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+PRAGMA synchronous=NORMAL
+PRAGMA journal_size_limit=524288
+PRAGMA wal_autocheckpoint=100
+en_US
+SELECT name FROM SQLITE_MASTER WHERE name=?
+sensor=1
+requiredPos cannot be negative, but was 0
+unregisterListenerImpl sensorName:BMI160 Accelerometer,isWakeUpSensor:false,callingApp: com.WinnersCircle,callingPid:16031,callingUid:10119
+SELECT * FROM messages LIMIT 0
+Activity Class Name = ServicesOptInActivity
+SELECT rowid, type, entry FROM messages ORDER BY rowid asc LIMIT 100
+window_type=1,window_flag=-2139029248
+requiredPos cannot be negative, but was 0
+ WHERE rowid <= ?
+ViewRootImpl[ServicesOptInActivity]
+DELETE FROM messages WHERE rowid <= ?
+aq:native-post-ime:com.WinnersCircle/com.WinnersCircle.ui.activities.ServicesOptInActivity
+aq:ime:com.WinnersCircle/com.WinnersCircle.ui.activities.ServicesOptInActivity
+aq:native-pre-ime:com.WinnersCircle/com.WinnersCircle.ui.activities.ServicesOptInActivity
+aq:pending:com.WinnersCircle/com.WinnersCircle.ui.activities.ServicesOptInActivity
+DecorView@ff813d0[ServicesOptInActivity]
+onWindowFocusChangedFromViewRoot hasFocus: true, DecorView@ff813d0[ServicesOptInActivity]
+en-US
+en-US
+en-US
+en-US
+en-US
+en-US
+en-US
+en-US
+en-US
+android.app.ActivityThread@22d3d1d
+android.os.BinderProxy@85b5737
+Start resolving transaction for client: android.app.ActivityThread@22d3d1d, token: android.os.BinderProxy@85b5737
+DestroyActivityItem{finished=true,mConfigChanges=0}
+Resolving lifecycle state: DestroyActivityItem{finished=true,mConfigChanges=0}
+Transitioning to state: 2
+Transitioning to state: 3
+Transitioning to state: 4
+Transitioning to state: 5
+cancelAllActivityTransaction = MainActivity
+Activity Destroyed: ui.activities.MainActivity
+android.app.ActivityThread@22d3d1d
+android.os.BinderProxy@c2023f0
+Start resolving transaction for client: android.app.ActivityThread@22d3d1d, token: android.os.BinderProxy@c2023f0
+DestroyActivityItem{finished=true,mConfigChanges=0}
+Resolving lifecycle state: DestroyActivityItem{finished=true,mConfigChanges=0}
+Transitioning to state: 5
+Activity Stopped:ui.activities.WelcomeActivity
+cancelAllActivityTransaction = WelcomeActivity
+Activity Destroyed: ui.activities.WelcomeActivity
+android.os.BinderProxy@702360b
+CreateServiceData{token=android.os.BinderProxy@702360b className=com.urbanairship.job.AndroidJobService packageName=com.WinnersCircle intent=null}
+serviceCreate: CreateServiceData{token=android.os.BinderProxy@702360b className=com.urbanairship.job.AndroidJobService packageName=com.WinnersCircle intent=null}
+{"EXTRA_FORCEFULLY":false}
+JobInfo{action=ACTION_RICH_PUSH_USER_UPDATE, id=7, extras='{"EXTRA_FORCEFULLY":false}', airshipComponentName='com.urbanairship.richpush.RichPushInbox', isNetworkAccessRequired=false, initialDelay=0, persistent=false}
+AndroidJobService - Running job: JobInfo{action=ACTION_RICH_PUSH_USER_UPDATE, id=7, extras='{"EXTRA_FORCEFULLY":false}', airshipComponentName='com.urbanairship.richpush.RichPushInbox', isNetworkAccessRequired=false, initialDelay=0, persistent=false}
+{"EXTRA_FORCEFULLY":false}
+JobInfo{action=ACTION_RICH_PUSH_USER_UPDATE, id=7, extras='{"EXTRA_FORCEFULLY":false}', airshipComponentName='com.urbanairship.richpush.RichPushInbox', isNetworkAccessRequired=false, initialDelay=0, persistent=false}
+Job - Finished: JobInfo{action=ACTION_RICH_PUSH_USER_UPDATE, id=7, extras='{"EXTRA_FORCEFULLY":false}', airshipComponentName='com.urbanairship.richpush.RichPushInbox', isNetworkAccessRequired=false, initialDelay=0, persistent=false} with result: 0
+Must be called on GoogleApiHandler thread, but got GoogleApiHandler.
+Must be called on GoogleApiHandler thread, but got GoogleApiHandler.
+android.os.BinderProxy@13cdf01
+CreateServiceData{token=android.os.BinderProxy@13cdf01 className=com.urbanairship.job.AndroidJobService packageName=com.WinnersCircle intent=null}
+serviceCreate: CreateServiceData{token=android.os.BinderProxy@13cdf01 className=com.urbanairship.job.AndroidJobService packageName=com.WinnersCircle intent=null}
+{}
+JobInfo{action=ACTION_UPDATE_PUSH_REGISTRATION, id=4, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=false, initialDelay=0, persistent=false}
+AndroidJobService - Running job: JobInfo{action=ACTION_UPDATE_PUSH_REGISTRATION, id=4, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=false, initialDelay=0, persistent=false}
+|T|156274640316|FCM
+{"token":"c3uMj4LMzBk:APA91bEMDE-VbsYxG02N9sT8joswVgZVQdOnmI7BrB1joN44wBCItFhQqVXXG5kxc1fkFLBHmMLdMxORPzQkvYjdmunoxDXFEikUsrtvMBGVWrNKdbjfLMFeOKi8aAXJ26k23zmowbY7","appVersion":"46","timestamp":1592533740764}
+|T|156274640316|*
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+{}
+android.os.BinderProxy@49c27e7
+{}
+JobInfo{action=ACTION_UPDATE_PUSH_REGISTRATION, id=4, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=false, initialDelay=0, persistent=false}
+CreateServiceData{token=android.os.BinderProxy@49c27e7 className=com.urbanairship.job.AirshipService packageName=com.WinnersCircle intent=null}
+Job - Finished: JobInfo{action=ACTION_UPDATE_PUSH_REGISTRATION, id=4, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=false, initialDelay=0, persistent=false} with result: 0
+serviceCreate: CreateServiceData{token=android.os.BinderProxy@49c27e7 className=com.urbanairship.job.AirshipService packageName=com.WinnersCircle intent=null}
+log.looper.10119.Airship Service.slow
+android.os.BinderProxy@49c27e7
+com.WinnersCircle/com.urbanairship.job.AirshipService
+Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }
+ServiceArgsData{token=android.os.BinderProxy@49c27e7 startId=1 args=Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }}
+serviceStart: ServiceArgsData{token=android.os.BinderProxy@49c27e7 startId=1 args=Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }}
+com.WinnersCircle/com.urbanairship.job.AirshipService
+Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }
+AirshipService - Received intent: Intent { act=RUN_JOB cmp=com.WinnersCircle/com.urbanairship.job.AirshipService (has extras) }
+{}
+JobInfo{action=ACTION_UPDATE_CHANNEL_REGISTRATION, id=5, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+AirshipService - Running job: JobInfo{action=ACTION_UPDATE_CHANNEL_REGISTRATION, id=5, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+America/New_York
+{}
+JobInfo{action=ACTION_UPDATE_CHANNEL_REGISTRATION, id=5, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=true, initialDelay=0, persistent=false}
+Job - Finished: JobInfo{action=ACTION_UPDATE_CHANNEL_REGISTRATION, id=5, extras='{}', airshipComponentName='com.urbanairship.push.PushManager', isNetworkAccessRequired=true, initialDelay=0, persistent=false} with result: 0
+AirshipService - Component finished job with startId: 1
+AirshipService - All jobs finished, stopping with last startId: 1
+com.google.android.gms.internal.measurement.zziy@2850232
+Service not registered: com.google.android.gms.internal.measurement.zziy@2850232
+{_o=auto, _sc=ServicesOptInActivity, _si=-7836664653647585679}
+Bundle[{_o=auto, _sc=ServicesOptInActivity, _si=-7836664653647585679}]
+/data/user/0/com.WinnersCircle/databases/google_app_measurement_local.db
+PRAGMA synchronous=NORMAL
+PRAGMA journal_size_limit=524288
+PRAGMA wal_autocheckpoint=100
+en_US
+SELECT name FROM SQLITE_MASTER WHERE name=?
+requiredPos cannot be negative, but was 0
+SELECT * FROM messages LIMIT 0
+requiredPos cannot be negative, but was 0
+INSERT INTO messages(entry,type) VALUES (?,?)
+|T|156274640316|*
+/data/user/0/com.WinnersCircle/databases/google_app_measurement_local.db
+/data/user/0/com.WinnersCircle/databases/google_app_measurement_local.db
+PRAGMA synchronous=NORMAL
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+PRAGMA journal_size_limit=524288
+PRAGMA wal_autocheckpoint=100
+en_US
+SELECT name FROM SQLITE_MASTER WHERE name=?
+requiredPos cannot be negative, but was 0
+SELECT * FROM messages LIMIT 0
+SELECT rowid, type, entry FROM messages ORDER BY rowid asc LIMIT 100
+requiredPos cannot be negative, but was 0
+ WHERE rowid <= ?
+DELETE FROM messages WHERE rowid <= ?

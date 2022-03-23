@@ -1,0 +1,241 @@
+{
+  "version": "2.2.2",
+  "device_height": "2135",
+  "device_width": "1080",
+  "battery_receiver_flag": "0",
+  "firebase_analytics_level": "798",
+  "app_config_orientation": "1",
+  "language": "en",
+  "build_version_release": "9",
+  "acceleromer_rotation": "0",
+  "build_model": "ONEPLUS%20A6010",
+  "build_bootloader": "unknown",
+  "build_hardware": "qcom",
+  "package": "com.WinnersCircle",
+  "android_id": "e9eca502b5324753",
+  "has_keyboard": "0",
+  "is_adb_enabled": "1",
+  "build_version_codename": "REL",
+  "build_version_incremental": "1901231231",
+  "build_version_sdk_int": "28",
+  "build_manufacturer": "OnePlus",
+  "build_product": "OnePlus6T",
+  "build_tags": "release-keys",
+  "build_type": "user",
+  "build_user": "OnePlus",
+  "build_display": "ONEPLUS%20A6010_41_190123",
+  "build_board": "sdm845",
+  "build_brand": "OnePlus",
+  "build_device": "OnePlus6T",
+  "build_fingerprint": "OnePlus/OnePlus6T/OnePlus6T:9/PKQ1.180716.001/1901231231:user/release-keys",
+  "build_host": "ubuntu-214",
+  "build_id": "PKQ1.180716.001",
+  "devinfo_hash": "24667",
+  "randint": "1198151256",
+  "t0_wall_div2": 794968609612,
+  "do_en": "do_en",
+  "dm_en": "dm_en",
+  "t_en": "t_en",
+  "touch_events": [],
+  "orient_events": [
+    {
+      "dt": "1241",
+      "yaw": "131.9",
+      "pitch": "0.4",
+      "roll": "-1.25",
+      "usually_one": "1"
+    },
+    {
+      "dt": "113",
+      "yaw": "132.72",
+      "pitch": "0.4",
+      "roll": "-1.25",
+      "usually_one": "1"
+    },
+    {
+      "dt": "254",
+      "yaw": "132.39",
+      "pitch": "0.4",
+      "roll": "-1.25",
+      "usually_one": "1"
+    },
+    {
+      "dt": "142",
+      "yaw": "132.52",
+      "pitch": "0.41",
+      "roll": "-1.25",
+      "usually_one": "1"
+    }
+  ],
+  "motion_events": [
+    {
+      "dt": "1121",
+      "dax": "-0.05",
+      "day": "-0.02",
+      "daz": "-2.37",
+      "ax": "-0.21",
+      "ay": "-0.07",
+      "az": "-9.81",
+      "gax": "0.05",
+      "gay": "-0.01",
+      "gaz": "-0.1",
+      "usually_one": "1"
+    },
+    {
+      "dt": "307",
+      "dax": "-0.01",
+      "day": "-0",
+      "daz": "-0.38",
+      "ax": "-0.21",
+      "ay": "-0.07",
+      "az": "-9.79",
+      "gax": "0.03",
+      "gay": "-0.01",
+      "gaz": "-0.08",
+      "usually_one": "1"
+    },
+    {
+      "dt": "231",
+      "dax": "-0",
+      "day": "-0",
+      "daz": "-0.07",
+      "ax": "-0.21",
+      "ay": "-0.07",
+      "az": "-9.78",
+      "gax": "0.07",
+      "gay": "-0.01",
+      "gaz": "-0.08",
+      "usually_one": "1"
+    },
+    {
+      "dt": "180",
+      "dax": "-0",
+      "day": "0",
+      "daz": "-0.03",
+      "ax": "-0.21",
+      "ay": "-0.07",
+      "az": "-9.79",
+      "gax": "0.05",
+      "gay": "-0.01",
+      "gaz": "-0.08",
+      "usually_one": "1"
+    }
+  ],
+  "orient_quant": {
+    "min": "113.00",
+    "max": "1241.00",
+    "sampleHash": "1765516571",
+    "quantStr": "}AHB"
+  },
+  "orient_quant2": [
+    {
+      "min": "131.90",
+      "max": "132.72",
+      "sampleHash": "1817683969",
+      "quantStr": "A}dm"
+    },
+    {
+      "min": "0.40",
+      "max": "0.41",
+      "sampleHash": "3492248535",
+      "quantStr": "AYj}"
+    },
+    {
+      "min": "-1.25",
+      "max": "-1.25",
+      "sampleHash": "3857295870",
+      "quantStr": "BS}A"
+    }
+  ],
+  "motion_quant": {
+    "min": "180.00",
+    "max": "1121.00",
+    "sampleHash": "1385490965",
+    "quantStr": "}IDA"
+  },
+  "motion_quant2": [
+    {
+      "min": "-0.05",
+      "max": "0.00",
+      "sampleHash": "2940185264",
+      "quantStr": "Asz}"
+    },
+    {
+      "min": "-0.02",
+      "max": "0.00",
+      "sampleHash": "59434428",
+      "quantStr": "Asv}"
+    },
+    {
+      "min": "-2.37",
+      "max": "-0.03",
+      "sampleHash": "4230618035",
+      "quantStr": "At|}"
+    },
+    {
+      "min": "-0.21",
+      "max": "-0.21",
+      "sampleHash": "3166365477",
+      "quantStr": "ALA}"
+    },
+    {
+      "min": "-0.07",
+      "max": "-0.07",
+      "sampleHash": "2045942069",
+      "quantStr": "j}Av"
+    },
+    {
+      "min": "-9.81",
+      "max": "-9.78",
+      "sampleHash": "3835112448",
+      "quantStr": "Aq}y"
+    },
+    {
+      "min": "0.03",
+      "max": "0.07",
+      "sampleHash": "3806605896",
+      "quantStr": "TA}T"
+    },
+    {
+      "min": "-0.01",
+      "max": "-0.01",
+      "sampleHash": "3561483401",
+      "quantStr": "4}"
+    },
+    {
+      "min": "-0.10",
+      "max": "-0.08",
+      "sampleHash": "1422284372",
+      "quantStr": "A3}"
+    }
+  ],
+  "touch_dt_sum": "0",
+  "orient_quant_sum": "9167254667",
+  "motion_quant_sum": "25068029118",
+  "touch_orient_motion_sum": "34235283785",
+  "sensor_dt": "3144",
+  "text_change_count": "0",
+  "motion_evt_count": "0",
+  "orient_evt_count": "4",
+  "orient_evt_count_2": "4",
+  "v.p*1000": "5000",
+  "sensor_uptime_dt": "2077000",
+  "has_orientation_listener": "1",
+  "evt_hash": "199117402507715945",
+  "start_ts": 1589937219224,
+  "perf_0": "15",
+  "perf_1": "1595",
+  "perf_2": "59",
+  "perf_3": "410",
+  "perf_4": "60800",
+  "perf_5": "3251",
+  "perf_6": "20800",
+  "perf_7": "392",
+  "perf_8": "14368",
+  "lifecycle": [
+    {
+      "type": "3",
+      "ts": 1589937220494
+    }
+  ]
+}

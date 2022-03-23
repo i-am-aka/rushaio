@@ -1,0 +1,52 @@
+[{
+  "dnsSearchDomains": [],
+  "logConfiguration": {
+    "logDriver": "awslogs",
+    "secretOptions": [],
+    "options": {
+      "awslogs-group": "/ecs/rush-api-py",
+      "awslogs-region": "us-east-1",
+      "awslogs-stream-prefix": "ecs"
+    }
+  },
+  "entryPoint": [],
+  "portMappings": [
+    {
+      "hostPort": 8081,
+      "protocol": "tcp",
+      "containerPort": 8081
+    }
+  ],
+  "command": [],
+  "linuxParameters": {},
+  "cpu": 0,
+  "environment": [],
+  "resourceRequirements": [],
+  "ulimits": [
+    {
+      "name": "nofile",
+      "softLimit": 100000,
+      "hardLimit": 1000000
+    }
+  ],
+  "dnsServers": [],
+  "mountPoints": [],
+  "secrets": [],
+  "dockerSecurityOptions": [],
+  "memory": 2000,
+  "memoryReservation": 1496,
+  "volumesFrom": [],
+  "image": "503719304735.dkr.ecr.us-east-1.amazonaws.com/rush-api-py:latest",
+  "dependsOn": [],
+  "disableNetworking": false,
+  "interactive": false,
+  "essential": true,
+  "links": [],
+  "extraHosts": [],
+  "pseudoTerminal": false,
+  "readonlyRootFilesystem": false, 
+  "dockerLabels": {},
+  "systemControls": [],
+  "privileged": false,
+  "name": "rush-api-py"
+}]

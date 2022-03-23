@@ -1,0 +1,1 @@
+[{"targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:503719304735:targetgroup/rush-api-py-ecs/02bb6d97224d89a1", "containerName": "rush-api-py", "containerPort": 8081}]
