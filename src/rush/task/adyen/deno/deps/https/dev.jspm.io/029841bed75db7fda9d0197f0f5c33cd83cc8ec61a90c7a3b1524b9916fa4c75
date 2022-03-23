@@ -1,0 +1,16 @@
+import { dew as _URLDewDew } from "./lib/URL.dew.js";
+import { dew as _URLSearchParamsDewDew } from "./lib/URLSearchParams.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const URL = _URLDewDew();
+
+  const URLSearchParams = _URLSearchParamsDewDew();
+
+  exports.URL = URL;
+  exports.URLSearchParams = URLSearchParams;
+  return exports;
+}

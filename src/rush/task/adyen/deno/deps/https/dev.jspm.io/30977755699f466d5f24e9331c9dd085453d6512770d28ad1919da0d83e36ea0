@@ -1,0 +1,25 @@
+import { dew as _TextImplDewDew } from "./Text-impl.dew.js";
+import { dew as _nodeTypeDewDew } from "../node-type.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const TextImpl = _TextImplDewDew().implementation;
+
+  const NODE_TYPE = _nodeTypeDewDew();
+
+  class CDATASectionImpl extends TextImpl {
+    constructor(globalObject, args, privateData) {
+      super(globalObject, args, privateData);
+      this.nodeType = NODE_TYPE.CDATA_SECTION_NODE;
+    }
+
+  }
+
+  exports = {
+    implementation: CDATASectionImpl
+  };
+  return exports;
+}

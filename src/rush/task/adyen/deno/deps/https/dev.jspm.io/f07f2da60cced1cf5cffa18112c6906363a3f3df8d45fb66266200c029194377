@@ -1,0 +1,37 @@
+import { dew as _XMLDocumentDewDew } from "./generated/XMLDocument.dew.js";
+import { dew as _DocumentDewDew } from "./generated/Document.dew.js";
+import { dew as _utilsDewDew } from "./generated/utils.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const XMLDocument = _XMLDocumentDewDew();
+
+  const Document = _DocumentDewDew();
+
+  const {
+    wrapperForImpl
+  } = _utilsDewDew();
+
+  exports.createImpl = (globalObject, options, {
+    alwaysUseDocumentClass = false
+  } = {}) => {
+    if (options.parsingMode === "xml" && !alwaysUseDocumentClass) {
+      return XMLDocument.createImpl(globalObject, [], {
+        options
+      });
+    }
+
+    return Document.createImpl(globalObject, [], {
+      options
+    });
+  };
+
+  exports.createWrapper = (...args) => {
+    return wrapperForImpl(exports.createImpl(...args));
+  };
+
+  return exports;
+}

@@ -1,0 +1,2 @@
+export { dew } from "/npm:ecc-jsbn@0.1.2/lib/ec.dew.js";
+import "/npm:jsbn@0.1?dew";

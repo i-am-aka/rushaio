@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "set-cookie": "__cfduid=d1c0ac5020fb7d9a28f2ddf50995a17731587710732; expires=Sun, 24-May-20 06:45:32 GMT; path=/; domain=.jspm.io; HttpOnly; SameSite=Lax",
+    "cf-request-id": "024c8841ad0000ed1f0117e200000001",
+    "date": "Fri, 24 Apr 2020 06:45:32 GMT",
+    "cache-control": "max-age=31536000, public, immutable",
+    "content-type": "application/javascript",
+    "cf-cache-status": "HIT",
+    "access-control-allow-origin": "*",
+    "server": "cloudflare",
+    "cf-ray": "588ddcaf78b7ed1f-SJC",
+    "vary": "Accept-Encoding",
+    "age": "1302"
+  },
+  "url": "https://dev.jspm.io/npm:w3c-hr-time@1.0.2/lib/calculate-clock-offset.dew.js"
+}

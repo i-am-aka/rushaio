@@ -1,0 +1,3 @@
+export { dew } from "/npm:uuid@3.4.0/v4.dew.js";
+import "/npm:uuid@3.4.0/lib/rng.dew.js";
+import "/npm:uuid@3.4.0/lib/bytesToUuid.dew.js";

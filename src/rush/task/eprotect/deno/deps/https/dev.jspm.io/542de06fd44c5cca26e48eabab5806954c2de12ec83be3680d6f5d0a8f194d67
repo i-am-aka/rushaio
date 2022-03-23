@@ -1,0 +1,24 @@
+import { dew as _utilsDewDew } from "../../utils.dew.js";
+import { dew as _SVGElementImplDewDew } from "./SVGElement-impl.dew.js";
+import { dew as _SVGTestsImplDewDew } from "./SVGTests-impl.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const {
+    mixin
+  } = _utilsDewDew();
+
+  const SVGElementImpl = _SVGElementImplDewDew().implementation;
+
+  const SVGTestsImpl = _SVGTestsImplDewDew().implementation;
+
+  class SVGGraphicsElementImpl extends SVGElementImpl {}
+
+  SVGGraphicsElementImpl.attributeRegistry = new Map([...SVGElementImpl.attributeRegistry, ...SVGTestsImpl.attributeRegistry]);
+  mixin(SVGGraphicsElementImpl.prototype, SVGTestsImpl.prototype);
+  exports.implementation = SVGGraphicsElementImpl;
+  return exports;
+}

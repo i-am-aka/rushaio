@@ -1,0 +1,49 @@
+import { dew as _webidl2jsWrapperDewDew } from "/npm:domexception@2/webidl2js-wrapper?dew";
+import { dew as _nodeTypeDewDew } from "../node-type.dew.js";
+import { dew as _AbstractRangeImplDewDew } from "./AbstractRange-impl.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const DOMException = _webidl2jsWrapperDewDew();
+
+  const NODE_TYPE = _nodeTypeDewDew();
+
+  const AbstractRangeImpl = _AbstractRangeImplDewDew().implementation; // https://dom.spec.whatwg.org/#staticrange
+
+
+  class StaticRangeImpl extends AbstractRangeImpl {
+    // https://dom.spec.whatwg.org/#dom-staticrange-staticrange
+    constructor(globalObject, args) {
+      const {
+        startContainer,
+        startOffset,
+        endContainer,
+        endOffset
+      } = args[0];
+
+      if (startContainer.nodeType === NODE_TYPE.DOCUMENT_TYPE_NODE || startContainer.nodeType === NODE_TYPE.ATTRIBUTE_NODE || endContainer.nodeType === NODE_TYPE.DOCUMENT_TYPE_NODE || endContainer.nodeType === NODE_TYPE.ATTRIBUTE_NODE) {
+        throw DOMException.create(globalObject, ["The supplied node is incorrect.", "InvalidNodeTypeError"]);
+      }
+
+      super(globalObject, [], {
+        start: {
+          node: startContainer,
+          offset: startOffset
+        },
+        end: {
+          node: endContainer,
+          offset: endOffset
+        }
+      });
+    }
+
+  }
+
+  exports = {
+    implementation: StaticRangeImpl
+  };
+  return exports;
+}

@@ -1,0 +1,25 @@
+import { dew as _HTMLMediaElementImplDewDew } from "./HTMLMediaElement-impl.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const HTMLMediaElementImpl = _HTMLMediaElementImplDewDew().implementation;
+
+  class HTMLVideoElementImpl extends HTMLMediaElementImpl {
+    get videoWidth() {
+      return 0;
+    }
+
+    get videoHeight() {
+      return 0;
+    }
+
+  }
+
+  exports = {
+    implementation: HTMLVideoElementImpl
+  };
+  return exports;
+}

@@ -1,0 +1,109 @@
+import { dew as _DOMTokenListDewDew } from "../generated/DOMTokenList.dew.js";
+import { dew as _HTMLElementImplDewDew } from "./HTMLElement-impl.dew.js";
+import { dew as _DefaultConstraintValidationImplDewDew } from "../constraint-validation/DefaultConstraintValidation-impl.dew.js";
+import { dew as _utilsDewDew } from "../../utils.dew.js";
+import { dew as _formControlsDewDew } from "../helpers/form-controls.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const DOMTokenList = _DOMTokenListDewDew();
+
+  const HTMLElementImpl = _HTMLElementImplDewDew().implementation;
+
+  const DefaultConstraintValidationImpl = _DefaultConstraintValidationImplDewDew().implementation;
+
+  const {
+    mixin
+  } = _utilsDewDew();
+
+  const {
+    getLabelsForLabelable,
+    formOwner
+  } = _formControlsDewDew();
+
+  class HTMLOutputElementImpl extends HTMLElementImpl {
+    constructor(globalObject, args, privateData) {
+      super(globalObject, args, privateData);
+      this._labels = null;
+      this._defaultValue = "";
+      this._valueMode = "default";
+      this._customValidityErrorMessage = "";
+    }
+
+    _attrModified(name, value, oldValue) {
+      super._attrModified(name, value, oldValue);
+
+      if (name === "for" && this._htmlFor !== undefined) {
+        this._htmlFor.attrModified();
+      }
+    }
+
+    _barredFromConstraintValidationSpecialization() {
+      return true;
+    }
+
+    _formReset() {
+      if (this._valueMode === "value") {
+        this.textContent = this._defaultValue;
+      }
+
+      this._defaultValue = "";
+      this._valueMode = "default";
+    }
+
+    get htmlFor() {
+      if (this._htmlFor === undefined) {
+        this._htmlFor = DOMTokenList.createImpl(this._globalObject, [], {
+          element: this,
+          attributeLocalName: "for"
+        });
+      }
+
+      return this._htmlFor;
+    }
+
+    get type() {
+      return "output";
+    }
+
+    get labels() {
+      return getLabelsForLabelable(this);
+    }
+
+    get form() {
+      return formOwner(this);
+    }
+
+    get value() {
+      return this.textContent;
+    }
+
+    set value(val) {
+      this._valueMode = "value";
+      this._defaultValue = this.textContent;
+      this.textContent = val;
+    }
+
+    get defaultValue() {
+      return this._valueMode === "default" ? this.textContent : this._defaultValue;
+    }
+
+    set defaultValue(val) {
+      this._defaultValue = val;
+
+      if (this._valueMode === "default") {
+        this.textContent = val;
+      }
+    }
+
+  }
+
+  mixin(HTMLOutputElementImpl.prototype, DefaultConstraintValidationImpl.prototype);
+  exports = {
+    implementation: HTMLOutputElementImpl
+  };
+  return exports;
+}

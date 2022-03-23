@@ -1,0 +1,2 @@
+export { dew } from "/npm:mime-db@1.44.0/index.dew.js";
+import "/npm:mime-db@1.44.0/db.json.dew.js";

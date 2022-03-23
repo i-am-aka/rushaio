@@ -1,0 +1,16 @@
+import { dew as _HTMLElementImplDewDew } from "./HTMLElement-impl.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const HTMLElementImpl = _HTMLElementImplDewDew().implementation;
+
+  class HTMLBRElementImpl extends HTMLElementImpl {}
+
+  exports = {
+    implementation: HTMLBRElementImpl
+  };
+  return exports;
+}

@@ -1,0 +1,36 @@
+import { dew as _internalConstantsDewDew } from "./internal-constants.dew.js";
+import { dew as _nodeTypeDewDew } from "../node-type.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const {
+    domSymbolTree
+  } = _internalConstantsDewDew();
+
+  const {
+    CDATA_SECTION_NODE,
+    TEXT_NODE
+  } = _nodeTypeDewDew(); //
+  // https://dom.spec.whatwg.org/#concept-child-text-content
+  //
+
+
+  exports.childTextContent = node => {
+    let result = "";
+    const iterator = domSymbolTree.childrenIterator(node);
+
+    for (const child of iterator) {
+      if (child.nodeType === TEXT_NODE || // The CDataSection extends Text.
+      child.nodeType === CDATA_SECTION_NODE) {
+        result += child.data;
+      }
+    }
+
+    return result;
+  };
+
+  return exports;
+}

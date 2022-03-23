@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "cf-ray": "5941030e8ebaed5b-SJC",
+    "date": "Sat, 16 May 2020 00:34:15 GMT",
+    "content-type": "application/javascript",
+    "vary": "Accept-Encoding",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "set-cookie": "__cfduid=dccc80c99d8edbc1fd5911b2b811a53b71589589255; expires=Mon, 15-Jun-20 00:34:15 GMT; path=/; domain=.jspm.io; HttpOnly; SameSite=Lax",
+    "server": "cloudflare",
+    "cf-request-id": "02bc803d110000ed5b4206a200000001",
+    "cf-cache-status": "EXPIRED",
+    "cache-control": "max-age=200, public",
+    "access-control-allow-origin": "*"
+  },
+  "url": "https://dev.jspm.io/npm:source-map@0.6?dew"
+}

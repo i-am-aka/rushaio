@@ -1,0 +1,119 @@
+import { dew as _utilsDewDew } from "../generated/utils.dew.js";
+import { dew as _NodeListDewDew } from "../generated/NodeList.dew.js";
+import { dew as _HTMLCollectionDewDew } from "../generated/HTMLCollection.dew.js";
+import { dew as _selectorsDewDew } from "../helpers/selectors.dew.js";
+import { dew as _internalConstantsDewDew } from "../helpers/internal-constants.dew.js";
+import { dew as _nodeTypeDewDew } from "../node-type.dew.js";
+import { dew as _nodeDewDew } from "../node.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const idlUtils = _utilsDewDew();
+
+  const NodeList = _NodeListDewDew();
+
+  const HTMLCollection = _HTMLCollectionDewDew();
+
+  const {
+    addNwsapi
+  } = _selectorsDewDew();
+
+  const {
+    domSymbolTree
+  } = _internalConstantsDewDew();
+
+  const NODE_TYPE = _nodeTypeDewDew();
+
+  const {
+    convertNodesIntoNode
+  } = _nodeDewDew();
+
+  class ParentNodeImpl {
+    get children() {
+      if (!this._childrenList) {
+        this._childrenList = HTMLCollection.createImpl(this._globalObject, [], {
+          element: this,
+          query: () => domSymbolTree.childrenToArray(this, {
+            filter: node => node.nodeType === NODE_TYPE.ELEMENT_NODE
+          })
+        });
+      } else {
+        this._childrenList._update();
+      }
+
+      return this._childrenList;
+    }
+
+    get firstElementChild() {
+      for (const child of domSymbolTree.childrenIterator(this)) {
+        if (child.nodeType === NODE_TYPE.ELEMENT_NODE) {
+          return child;
+        }
+      }
+
+      return null;
+    }
+
+    get lastElementChild() {
+      for (const child of domSymbolTree.childrenIterator(this, {
+        reverse: true
+      })) {
+        if (child.nodeType === NODE_TYPE.ELEMENT_NODE) {
+          return child;
+        }
+      }
+
+      return null;
+    }
+
+    get childElementCount() {
+      return this.children.length;
+    }
+
+    prepend(...nodes) {
+      this._preInsert(convertNodesIntoNode(this._ownerDocument, nodes), this.firstChild);
+    }
+
+    append(...nodes) {
+      this._append(convertNodesIntoNode(this._ownerDocument, nodes));
+    }
+
+    querySelector(selectors) {
+      if (shouldAlwaysSelectNothing(this)) {
+        return null;
+      }
+
+      const matcher = addNwsapi(this);
+      return idlUtils.implForWrapper(matcher.first(selectors, idlUtils.wrapperForImpl(this)));
+    } // Warning for internal users: this returns a NodeList containing IDL wrappers instead of impls
+
+
+    querySelectorAll(selectors) {
+      if (shouldAlwaysSelectNothing(this)) {
+        return NodeList.create(this._globalObject, [], {
+          nodes: []
+        });
+      }
+
+      const matcher = addNwsapi(this);
+      const list = matcher.select(selectors, idlUtils.wrapperForImpl(this));
+      return NodeList.create(this._globalObject, [], {
+        nodes: list.map(n => idlUtils.tryImplForWrapper(n))
+      });
+    }
+
+  }
+
+  function shouldAlwaysSelectNothing(elImpl) {
+    // This is true during initialization.
+    return elImpl === elImpl._ownerDocument && !elImpl.documentElement;
+  }
+
+  exports = {
+    implementation: ParentNodeImpl
+  };
+  return exports;
+}

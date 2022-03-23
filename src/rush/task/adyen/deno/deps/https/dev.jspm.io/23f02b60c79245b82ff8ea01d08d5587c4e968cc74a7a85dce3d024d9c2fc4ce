@@ -1,0 +1,1 @@
+export { dew } from "/npm:ip-regex@2.1.0/index.dew.js";

@@ -1,0 +1,30 @@
+import { dew as _request2DewDew } from "/npm:request-promise-core@1.1.3/configure/request2?dew";
+import { dew as _npmStealthyRequire1DewDew } from "/npm:stealthy-require@1?dew";
+import { dew as _npmRequest2DewDew } from "/npm:request@2?dew";
+import { dew as _npmToughCookie2DewDew } from "/npm:tough-cookie@2?dew";
+var exports = {},
+    _dewExec = false;
+var module = {
+  exports: exports
+};
+export function dew() {
+  if (_dewExec) return module.exports;
+  _dewExec = true;
+
+  var configure = _request2DewDew(),
+      stealthyRequire = _npmStealthyRequire1DewDew(); // Load Request freshly - so that users can require an unaltered request instance!
+
+
+  var request = stealthyRequire({}, function () {
+    return _npmRequest2DewDew();
+  }, function () {
+    _npmToughCookie2DewDew();
+  }, module);
+  configure({
+    request: request,
+    PromiseImpl: Promise,
+    expose: ['then', 'catch', 'promise']
+  });
+  module.exports = request;
+  return module.exports;
+}

@@ -1,0 +1,37 @@
+import { dew as _utilsDewDew } from "../../utils.dew.js";
+import { dew as _NodeImplDewDew } from "./Node-impl.dew.js";
+import { dew as _ChildNodeImplDewDew } from "./ChildNode-impl.dew.js";
+import { dew as _nodeTypeDewDew } from "../node-type.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const {
+    mixin
+  } = _utilsDewDew();
+
+  const NodeImpl = _NodeImplDewDew().implementation;
+
+  const ChildNodeImpl = _ChildNodeImplDewDew().implementation;
+
+  const NODE_TYPE = _nodeTypeDewDew();
+
+  class DocumentTypeImpl extends NodeImpl {
+    constructor(globalObject, args, privateData) {
+      super(globalObject, args, privateData);
+      this.nodeType = NODE_TYPE.DOCUMENT_TYPE_NODE;
+      this.name = privateData.name;
+      this.publicId = privateData.publicId;
+      this.systemId = privateData.systemId;
+    }
+
+  }
+
+  mixin(DocumentTypeImpl.prototype, ChildNodeImpl.prototype);
+  exports = {
+    implementation: DocumentTypeImpl
+  };
+  return exports;
+}

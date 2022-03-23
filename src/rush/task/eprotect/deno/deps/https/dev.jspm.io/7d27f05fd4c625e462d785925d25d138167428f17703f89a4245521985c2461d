@@ -1,0 +1,16 @@
+import { dew as _npmPsl1DewDew } from "/npm:psl@1?dew";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  var psl = _npmPsl1DewDew();
+
+  function getPublicSuffix(domain) {
+    return psl.get(domain);
+  }
+
+  exports.getPublicSuffix = getPublicSuffix;
+  return exports;
+}

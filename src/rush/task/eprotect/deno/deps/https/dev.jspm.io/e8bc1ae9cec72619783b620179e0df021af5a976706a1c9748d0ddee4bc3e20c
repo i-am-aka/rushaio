@@ -1,0 +1,154 @@
+import _empty from "/npm:@jspm/core@1/nodelibs/@empty.js";
+import { dew as _npmWhatwgUrl8DewDew } from "/npm:whatwg-url@8?dew";
+import { dew as _npmDataUrls2DewDew } from "/npm:data-urls@2?dew";
+import { dew as _npmRequestPromiseNative1DewDew } from "/npm:request-promise-native@1?dew";
+import { dew as _wrapCookieJarForRequestDewDew } from "../../living/helpers/wrap-cookie-jar-for-request.dew.js";
+import { dew as _packageJsonDewDew } from "../../../../package.json.dew.js";
+import _process from "/npm:@jspm/core@1/nodelibs/process.js";
+import _buffer from "/npm:@jspm/core@1/nodelibs/buffer.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  var Buffer = _buffer.Buffer;
+  var process = _process;
+  const fs = _empty;
+
+  const {
+    parseURL
+  } = _npmWhatwgUrl8DewDew();
+
+  const dataURLFromRecord = _npmDataUrls2DewDew().fromURLRecord;
+
+  const request = _npmRequestPromiseNative1DewDew();
+
+  const wrapCookieJarForRequest = _wrapCookieJarForRequestDewDew();
+
+  const packageVersion = _packageJsonDewDew().version;
+
+  const IS_BROWSER = Object.prototype.toString.call(process) !== "[object process]";
+  exports = class ResourceLoader {
+    constructor({
+      strictSSL = true,
+      proxy = undefined,
+      userAgent = `Mozilla/5.0 (${process.platform || "unknown OS"}) AppleWebKit/537.36 ` + `(KHTML, like Gecko) jsdom/${packageVersion}`
+    } = {}) {
+      this._strictSSL = strictSSL;
+      this._proxy = proxy;
+      this._userAgent = userAgent;
+    }
+
+    _readDataURL(urlRecord) {
+      const dataURL = dataURLFromRecord(urlRecord);
+      let timeoutId;
+      const promise = new Promise(resolve => {
+        timeoutId = setTimeout(resolve, 0, dataURL.body);
+      });
+
+      promise.abort = () => {
+        if (timeoutId !== undefined) {
+          clearTimeout(timeoutId);
+        }
+      };
+
+      return promise;
+    }
+
+    _readFile(filePath) {
+      let readableStream;
+      let abort; // Native Promises doesn't have an "abort" method.
+
+      /*
+       * Creating a promise for two reason:
+       *   1. fetch always return a promise.
+       *   2. We need to add an abort handler.
+      */
+
+      const promise = new Promise((resolve, reject) => {
+        readableStream = fs.createReadStream(filePath);
+        let data = Buffer.alloc(0);
+        abort = reject;
+        readableStream.on("error", reject);
+        readableStream.on("data", chunk => {
+          data = Buffer.concat([data, chunk]);
+        });
+        readableStream.on("end", () => {
+          resolve(data);
+        });
+      });
+
+      promise.abort = () => {
+        readableStream.destroy();
+        const error = new Error("request canceled by user");
+        error.isAbortError = true;
+        abort(error);
+      };
+
+      return promise;
+    }
+
+    _getRequestOptions({
+      cookieJar,
+      referrer,
+      accept = "*/*"
+    }) {
+      const requestOptions = {
+        encoding: null,
+        gzip: true,
+        jar: wrapCookieJarForRequest(cookieJar),
+        strictSSL: this._strictSSL,
+        proxy: this._proxy,
+        forever: true,
+        headers: {
+          "User-Agent": this._userAgent,
+          "Accept-Language": "en",
+          Accept: accept
+        }
+      };
+
+      if (referrer && !IS_BROWSER) {
+        requestOptions.headers.referer = referrer;
+      }
+
+      return requestOptions;
+    }
+
+    fetch(urlString, options = {}) {
+      const url = parseURL(urlString);
+
+      if (!url) {
+        return Promise.reject(new Error(`Tried to fetch invalid URL ${urlString}`));
+      }
+
+      switch (url.scheme) {
+        case "data":
+          {
+            return this._readDataURL(url);
+          }
+
+        case "http":
+        case "https":
+          {
+            const requestOptions = this._getRequestOptions(options);
+
+            return request(urlString, requestOptions);
+          }
+
+        case "file":
+          {
+            // TODO: Improve the URL => file algorithm. See https://github.com/jsdom/jsdom/pull/2279#discussion_r199977987
+            const filePath = urlString.replace(/^file:\/\//, "").replace(/^\/([a-z]):\//i, "$1:/").replace(/%20/g, " ");
+            return this._readFile(filePath);
+          }
+
+        default:
+          {
+            return Promise.reject(new Error(`Tried to fetch URL ${urlString} with invalid scheme ${url.scheme}`));
+          }
+      }
+    }
+
+  };
+  return exports;
+}

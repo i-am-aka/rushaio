@@ -1,0 +1,18 @@
+import { dew as _atobDewDew } from "./lib/atob.dew.js";
+import { dew as _btoaDewDew } from "./lib/btoa.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const atob = _atobDewDew();
+
+  const btoa = _btoaDewDew();
+
+  exports = {
+    atob,
+    btoa
+  };
+  return exports;
+}

@@ -1,0 +1,2 @@
+export { dew } from "/npm:browser-process-hrtime@1.0.0/index.dew.js";
+import "/npm:@jspm/core@1/nodelibs/process.js";

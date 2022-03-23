@@ -1,0 +1,52 @@
+import { dew as _stringsDewDew } from "../helpers/strings.dew.js";
+import { dew as _basicTypesDewDew } from "../helpers/svg/basic-types.dew.js";
+import { dew as _SVGStringListDewDew } from "../generated/SVGStringList.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const {
+    splitOnASCIIWhitespace,
+    splitOnCommas
+  } = _stringsDewDew();
+
+  const {
+    reserializeCommaSeparatedTokens,
+    reserializeSpaceSeparatedTokens
+  } = _basicTypesDewDew();
+
+  const SVGStringList = _SVGStringListDewDew();
+
+  class SVGTestsImpl {
+    get requiredExtensions() {
+      return SVGStringList.createImpl(this._globalObject, [], {
+        element: this,
+        attribute: "requiredExtensions"
+      });
+    }
+
+    get systemLanguage() {
+      return SVGStringList.createImpl(this._globalObject, [], {
+        element: this,
+        attribute: "systemLanguage"
+      });
+    }
+
+  }
+
+  SVGTestsImpl.attributeRegistry = new Map([// https://svgwg.org/svg2-draft/struct.html#RequiredExtensionsAttribute
+  ["requiredExtensions", {
+    getValue: splitOnASCIIWhitespace,
+    serialize: reserializeSpaceSeparatedTokens,
+    initialValue: undefined
+  }], // https://svgwg.org/svg2-draft/struct.html#SystemLanguageAttribute
+  ["systemLanguage", {
+    getValue: splitOnCommas,
+    serialize: reserializeCommaSeparatedTokens,
+    initialValue: undefined
+  }]]);
+  exports.implementation = SVGTestsImpl;
+  return exports;
+}

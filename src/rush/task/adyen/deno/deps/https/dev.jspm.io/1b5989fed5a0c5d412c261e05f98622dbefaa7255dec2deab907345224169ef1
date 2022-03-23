@@ -1,0 +1,68 @@
+import { dew as _internalConstantsDewDew } from "../helpers/internal-constants.dew.js";
+import { dew as _nodeDewDew } from "../helpers/node.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const {
+    domSymbolTree
+  } = _internalConstantsDewDew();
+
+  const {
+    nodeRoot,
+    isFollowing,
+    isInclusiveAncestor
+  } = _nodeDewDew(); // Returns 0 if equal, +1 for after and -1 for before
+  // https://dom.spec.whatwg.org/#concept-range-bp-after
+
+
+  function compareBoundaryPointsPosition(bpA, bpB) {
+    const {
+      node: nodeA,
+      offset: offsetA
+    } = bpA;
+    const {
+      node: nodeB,
+      offset: offsetB
+    } = bpB;
+
+    if (nodeRoot(nodeA) !== nodeRoot(nodeB)) {
+      throw new Error(`Internal Error: Boundary points should have the same root!`);
+    }
+
+    if (nodeA === nodeB) {
+      if (offsetA === offsetB) {
+        return 0;
+      } else if (offsetA < offsetB) {
+        return -1;
+      }
+
+      return 1;
+    }
+
+    if (isFollowing(nodeA, nodeB)) {
+      return compareBoundaryPointsPosition(bpB, bpA) === -1 ? 1 : -1;
+    }
+
+    if (isInclusiveAncestor(nodeA, nodeB)) {
+      let child = nodeB;
+
+      while (domSymbolTree.parent(child) !== nodeA) {
+        child = domSymbolTree.parent(child);
+      }
+
+      if (domSymbolTree.index(child) < offsetA) {
+        return 1;
+      }
+    }
+
+    return -1;
+  }
+
+  exports = {
+    compareBoundaryPointsPosition
+  };
+  return exports;
+}

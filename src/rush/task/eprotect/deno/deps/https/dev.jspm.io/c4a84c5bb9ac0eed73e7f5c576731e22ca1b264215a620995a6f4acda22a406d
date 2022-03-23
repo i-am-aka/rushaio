@@ -1,0 +1,17 @@
+import { dew as _utilDewDew } from "./util.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  var util = _utilDewDew();
+
+  exports = SchemaObject;
+
+  function SchemaObject(obj) {
+    util.copy(obj, this);
+  }
+
+  return exports;
+}

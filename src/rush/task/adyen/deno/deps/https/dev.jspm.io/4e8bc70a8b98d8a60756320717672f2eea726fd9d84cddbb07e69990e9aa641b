@@ -1,0 +1,63 @@
+import { dew as _createEventAccessorDewDew } from "../helpers/create-event-accessor.dew.js";
+import { dew as _eventsDewDew } from "../helpers/events.dew.js";
+import { dew as _EventTargetImplDewDew } from "../events/EventTarget-impl.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const {
+    setupForSimpleEventAccessors
+  } = _createEventAccessorDewDew();
+
+  const {
+    fireAnEvent
+  } = _eventsDewDew();
+
+  const EventTargetImpl = _EventTargetImplDewDew().implementation;
+
+  class AbortSignalImpl extends EventTargetImpl {
+    constructor(globalObject, args, privateData) {
+      super(globalObject, args, privateData); // make event firing possible
+
+      this._ownerDocument = globalObject.document;
+      this.aborted = false;
+      this.abortAlgorithms = new Set();
+    }
+
+    _signalAbort() {
+      if (this.aborted) {
+        return;
+      }
+
+      this.aborted = true;
+
+      for (const algorithm of this.abortAlgorithms) {
+        algorithm();
+      }
+
+      this.abortAlgorithms.clear();
+      fireAnEvent("abort", this);
+    }
+
+    _addAlgorithm(algorithm) {
+      if (this.aborted) {
+        return;
+      }
+
+      this.abortAlgorithms.add(algorithm);
+    }
+
+    _removeAlgorithm(algorithm) {
+      this.abortAlgorithms.delete(algorithm);
+    }
+
+  }
+
+  setupForSimpleEventAccessors(AbortSignalImpl.prototype, ["abort"]);
+  exports = {
+    implementation: AbortSignalImpl
+  };
+  return exports;
+}

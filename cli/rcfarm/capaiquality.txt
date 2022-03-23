@@ -1,0 +1,25 @@
+OFFICIAL UNIT OF CAPTCHA AI QUALITY
+  Solves/(Core*Minute)
+
+  cap ai v0.0.1 (MOCHA):
+    400/(48*1) = 8.33 solves/core-minute
+      No Gmail
+      Mid IPs (v3 score in perfect browser 0.1-0.7)
+  cap ai v0.1 (JANUARY)
+                 80 solves/core-minute
+
+
+
+Captcha AI Architecture
+
+HTTP API
+  Mimic anti-captcha somewhat
+  POST /createTask
+  POST /getTaskResult
+
+Chromium tab pool
+
+Image Recognition Module
+  Pictures -> Bounding boxes
+  Runs inference on a object detection neural network
+

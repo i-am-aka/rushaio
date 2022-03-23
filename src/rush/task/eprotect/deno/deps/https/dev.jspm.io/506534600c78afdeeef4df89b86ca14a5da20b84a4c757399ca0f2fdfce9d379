@@ -1,0 +1,39 @@
+import "./chunk-dac557ba.js";
+import "./chunk-0c2d1322.js";
+import "./buffer.js";
+import "./util.js";
+import "./chunk-6e68c801.js";
+import "./events.js";
+import "./chunk-cffba9d4.js";
+import t from "./http.js";
+import "./punycode.js";
+import "./querystring.js";
+import o from "./url.js";
+var r = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof self ? self : global,
+    e = {},
+    l = t,
+    p = o,
+    n = e;
+
+for (var f in l) l.hasOwnProperty(f) && (n[f] = l[f]);
+
+function s(t) {
+  if ("string" == typeof t && (t = p.parse(t)), t.protocol || (t.protocol = "https:"), "https:" !== t.protocol) throw new Error('Protocol "' + t.protocol + '" not supported. Expected "https:"');
+  return t;
+}
+
+n.request = function (t, o) {
+  return t = s(t), l.request.call(this || r, t, o);
+}, n.get = function (t, o) {
+  return t = s(t), l.get.call(this || r, t, o);
+};
+var Agent = e.Agent;
+var ClientRequest = e.ClientRequest;
+var IncomingMessage = e.IncomingMessage;
+var METHODS = e.METHODS;
+var STATUS_CODES = e.STATUS_CODES;
+var get = e.get;
+var globalAgent = e.globalAgent;
+var request = e.request;
+export default e;
+export { Agent, ClientRequest, IncomingMessage, METHODS, STATUS_CODES, get, globalAgent, request };

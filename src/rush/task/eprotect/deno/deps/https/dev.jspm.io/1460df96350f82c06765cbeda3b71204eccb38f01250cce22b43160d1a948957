@@ -1,0 +1,30 @@
+import { dew as _EventImplDewDew } from "./Event-impl.dew.js";
+import { dew as _CustomEventInitDewDew } from "../generated/CustomEventInit.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const EventImpl = _EventImplDewDew().implementation;
+
+  const CustomEventInit = _CustomEventInitDewDew();
+
+  class CustomEventImpl extends EventImpl {
+    initCustomEvent(type, bubbles, cancelable, detail) {
+      if (this._dispatchFlag) {
+        return;
+      }
+
+      this.initEvent(type, bubbles, cancelable);
+      this.detail = detail;
+    }
+
+  }
+
+  CustomEventImpl.defaultInit = CustomEventInit.convert(undefined);
+  exports = {
+    implementation: CustomEventImpl
+  };
+  return exports;
+}

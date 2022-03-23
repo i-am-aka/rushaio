@@ -1,0 +1,32 @@
+import { dew as _UIEventImplDewDew } from "./UIEvent-impl.dew.js";
+import { dew as _InputEventInitDewDew } from "../generated/InputEventInit.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const UIEventImpl = _UIEventImplDewDew().implementation;
+
+  const InputEventInit = _InputEventInitDewDew(); // https://w3c.github.io/uievents/#interface-inputevent
+
+
+  class InputEventImpl extends UIEventImpl {
+    initInputEvent(type, bubbles, cancelable, data, isComposing) {
+      if (this._dispatchFlag) {
+        return;
+      }
+
+      this.initUIEvent(type, bubbles, cancelable);
+      this.data = data;
+      this.isComposing = isComposing;
+    }
+
+  }
+
+  InputEventImpl.defaultInit = InputEventInit.convert(undefined);
+  exports = {
+    implementation: InputEventImpl
+  };
+  return exports;
+}

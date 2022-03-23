@@ -1,0 +1,58 @@
+import { dew as _webidl2jsWrapperDewDew } from "/npm:domexception@2/webidl2js-wrapper?dew";
+import { dew as _MessageEventDewDew } from "./generated/MessageEvent.dew.js";
+import { dew as _utilsDewDew } from "./generated/utils.dew.js";
+import { dew as _utilsDew2Dew } from "../utils.dew.js";
+import { dew as _eventsDewDew } from "./helpers/events.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const DOMException = _webidl2jsWrapperDewDew();
+
+  const MessageEvent = _MessageEventDewDew();
+
+  const idlUtils = _utilsDewDew();
+
+  const {
+    isValidTargetOrigin
+  } = _utilsDew2Dew();
+
+  const {
+    fireAnEvent
+  } = _eventsDewDew();
+
+  exports = function (globalObject) {
+    return function (message, targetOrigin) {
+      if (arguments.length < 2) {
+        throw new TypeError("'postMessage' requires 2 arguments: 'message' and 'targetOrigin'");
+      }
+
+      targetOrigin = String(targetOrigin);
+
+      if (!isValidTargetOrigin(targetOrigin)) {
+        // TODO: Fix me
+        throw DOMException.create(globalObject, ["Failed to execute 'postMessage' on 'Window': " + "Invalid target origin '" + targetOrigin + "' in a call to 'postMessage'.", "SyntaxError"]);
+      } // TODO: targetOrigin === '/' - requires reference to source window
+      // See https://github.com/jsdom/jsdom/pull/1140#issuecomment-111587499
+
+
+      if (targetOrigin !== "*" && targetOrigin !== idlUtils.implForWrapper(globalObject._document)._origin) {
+        return;
+      } // TODO: event.source - requires reference to source window
+      // TODO: event.origin - requires reference to source window
+      // TODO: event.ports
+      // TODO: event.data - structured clone message - requires cloning DOM nodes
+
+
+      setTimeout(() => {
+        fireAnEvent("message", this, MessageEvent, {
+          data: message
+        });
+      }, 0);
+    };
+  };
+
+  return exports;
+}

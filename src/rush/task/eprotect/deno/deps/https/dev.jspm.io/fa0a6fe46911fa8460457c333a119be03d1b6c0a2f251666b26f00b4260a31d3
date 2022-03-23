@@ -1,0 +1,2 @@
+export { dew } from "/npm:isstream@0.1.2/isstream.dew.js";
+import "/npm:@jspm/core@1/nodelibs/stream.js";

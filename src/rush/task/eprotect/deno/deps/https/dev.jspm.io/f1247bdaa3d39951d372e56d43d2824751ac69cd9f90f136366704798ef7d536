@@ -1,0 +1,34 @@
+import { dew as _EventImplDewDew } from "./Event-impl.dew.js";
+import { dew as _MessageEventInitDewDew } from "../generated/MessageEventInit.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const EventImpl = _EventImplDewDew().implementation;
+
+  const MessageEventInit = _MessageEventInitDewDew();
+
+  class MessageEventImpl extends EventImpl {
+    initMessageEvent(type, bubbles, cancelable, data, origin, lastEventId, source, ports) {
+      if (this._dispatchFlag) {
+        return;
+      }
+
+      this.initEvent(type, bubbles, cancelable);
+      this.data = data;
+      this.origin = origin;
+      this.lastEventId = lastEventId;
+      this.source = source;
+      this.ports = ports;
+    }
+
+  }
+
+  MessageEventImpl.defaultInit = MessageEventInit.convert(undefined);
+  exports = {
+    implementation: MessageEventImpl
+  };
+  return exports;
+}

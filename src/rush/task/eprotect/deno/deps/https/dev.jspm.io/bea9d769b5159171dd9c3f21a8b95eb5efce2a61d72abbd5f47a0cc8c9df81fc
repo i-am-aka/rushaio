@@ -1,0 +1,36 @@
+import { dew as _mixinBaseDewDew } from "./mixin-base.dew.js";
+import { dew as _preprocessorMixinDewDew } from "../position-tracking/preprocessor-mixin.dew.js";
+import { dew as _mixinDewDew } from "../../utils/mixin.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const ErrorReportingMixinBase = _mixinBaseDewDew();
+
+  const PositionTrackingPreprocessorMixin = _preprocessorMixinDewDew();
+
+  const Mixin = _mixinDewDew();
+
+  class ErrorReportingPreprocessorMixin extends ErrorReportingMixinBase {
+    constructor(preprocessor, opts) {
+      super(preprocessor, opts);
+      this.posTracker = Mixin.install(preprocessor, PositionTrackingPreprocessorMixin);
+      this.lastErrOffset = -1;
+    }
+
+    _reportError(code) {
+      //NOTE: avoid reporting error twice on advance/retreat
+      if (this.lastErrOffset !== this.posTracker.offset) {
+        this.lastErrOffset = this.posTracker.offset;
+
+        super._reportError(code);
+      }
+    }
+
+  }
+
+  exports = ErrorReportingPreprocessorMixin;
+  return exports;
+}

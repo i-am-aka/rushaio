@@ -1,0 +1,4 @@
+export { dew } from "/npm:symbol-tree@3.2.4/lib/SymbolTree.dew.js";
+import "/npm:symbol-tree@3.2.4/lib/SymbolTreeNode.dew.js";
+import "/npm:symbol-tree@3.2.4/lib/TreePosition.dew.js";
+import "/npm:symbol-tree@3.2.4/lib/TreeIterator.dew.js";

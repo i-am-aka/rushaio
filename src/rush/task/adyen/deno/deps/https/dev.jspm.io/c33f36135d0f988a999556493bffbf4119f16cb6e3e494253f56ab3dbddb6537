@@ -1,0 +1,4 @@
+export { dew } from "/npm:w3c-xmlserializer@2.0.0/lib/serialize.dew.js";
+import "/npm:xml-name-validator@3?dew";
+import "/npm:w3c-xmlserializer@2.0.0/lib/attributes.dew.js";
+import "/npm:w3c-xmlserializer@2.0.0/lib/constants.dew.js";

@@ -1,0 +1,68 @@
+checkout zeronaught
+- init sequence (just exec nordstrom.js) triggers XHR to:
+  https://api.zeronaught.com/nordstrom/dc?key=AIzaSyBuU0TA0tI60fiu0qqaMTtI5ESwXN9f1x0&sc=AmL7KhVyAQAAhUondMncfoIKRetby4ryCZrwGE5uydjh4TRitgAAAXIVKvtiAasY1Zs|1|1|6997774fe5009988149889509255b0e63dd7cafe&si={"ts":1589516777,"p":0,"v":{"sq":299977904946},"c":{"tk":0,"sc":0},"ut":{"ts":1589516771,"sc":0}}
+
+- retval {"dc": "{\"c\": \"OTYwWlZlWUhDZks5cklKaA==J5DYS8FPLEhWZMidN0-SRRfq3ns3bON3S3bIdaovS8m2tQAuvxibB_q5FQMkeOZTvtOnlhdPyTt9n5mC0Quz2OH2H1JYVQ==\"}"}
+  where goes? analyzing rn
+
+- header gen for checkout PUT request
+  need ns_common.js
+
+  - x.getEncodedData()
+  - x comes from: ns_common.js
+
+    addEventListener(u, function bn(bo) {
+        x = bo.detail;
+        if (bo.detail == null) {
+            removeEventListener(u, bn)
+        }
+    })
+    u comes from:
+    function r(s) {
+        return String.fromCharCode(8238) + s + String.fromCharCode(8237)
+    }
+    var u = r("sOtcztEKa");
+
+    if not getting x/u events, analyze inline js more
+
+--
+
+5/16
+
+
+status: stepping through dc onload sm(sZ inner
+
+- cookies?
+  Ad34bsY56_dc nordstrom.js
+  Bd34bsY56 comes from first request with Ad34bsY56_dc
+  DONE
+
+
+- fp
+- dc request payload smaller in rush vs chrome, why ?
+
+>> BETTER trace to identify FP vectors... are we covering all bases? log all property accesses and function calls...
+  capture 'new' / other operators
+  trace in browser, compare to rush
+
+  - make zn outputs deterministic by overriding date / math.random / events, and work until browser fp matches rush fp?
+
+  - mouse/key events
+
+  - ua, referer of js requesting
+    - avoid import(url), use fetch(url)->tempfile->import tempfile
+      - includes cookies with js fetch()
+
+  - events:
+    - keydown, keyup, keypress, mousedown, mouseup, click, mousemove
+    - input
+    - submit
+  - querySelectorAll(script[src^=chrome-extension][src$=prompt\.js])
+  - getElementsByTagName(script);
+  - canvas (done?)
+  - speed up deno execution by pre-caching/JITing more js
+    - zn_common
+
+>> localstorage 'f' parameter
+  - maybe pass into znck ?
+

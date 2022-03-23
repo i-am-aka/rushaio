@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "age": "1303",
+    "cache-control": "max-age=31536000, public, immutable",
+    "cf-cache-status": "HIT",
+    "content-type": "application/javascript",
+    "set-cookie": "__cfduid=d1c0ac5020fb7d9a28f2ddf50995a17731587710732; expires=Sun, 24-May-20 06:45:32 GMT; path=/; domain=.jspm.io; HttpOnly; SameSite=Lax",
+    "access-control-allow-origin": "*",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "cf-ray": "588ddcad8a80ed1f-SJC",
+    "cf-request-id": "024c8840780000ed1f01373200000001",
+    "vary": "Accept-Encoding",
+    "date": "Fri, 24 Apr 2020 06:45:32 GMT",
+    "server": "cloudflare"
+  },
+  "url": "https://dev.jspm.io/npm:jsdom@16.2.2/lib/jsdom/living/generated/Attr.dew.js"
+}

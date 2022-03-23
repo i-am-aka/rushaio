@@ -1,0 +1,12 @@
+import { dew as _DocumentImplDewDew } from "./Document-impl.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const DocumentImpl = _DocumentImplDewDew().implementation;
+
+  exports.implementation = class XMLDocumentImpl extends DocumentImpl {};
+  return exports;
+}

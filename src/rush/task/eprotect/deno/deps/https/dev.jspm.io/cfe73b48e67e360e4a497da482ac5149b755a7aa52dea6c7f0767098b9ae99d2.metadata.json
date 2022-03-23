@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "cf-cache-status": "HIT",
+    "vary": "Accept-Encoding",
+    "date": "Sat, 16 May 2020 00:34:15 GMT",
+    "cache-control": "max-age=31536000, public, immutable",
+    "cf-ray": "5941030f68f4ed5b-SJC",
+    "server": "cloudflare",
+    "age": "155848",
+    "cf-request-id": "02bc803da40000ed5b420d9200000001",
+    "content-type": "application/javascript",
+    "set-cookie": "__cfduid=dccc80c99d8edbc1fd5911b2b811a53b71589589255; expires=Mon, 15-Jun-20 00:34:15 GMT; path=/; domain=.jspm.io; HttpOnly; SameSite=Lax",
+    "access-control-allow-origin": "*"
+  },
+  "url": "https://dev.jspm.io/npm:punycode@2.1.1/punycode.dew.js"
+}

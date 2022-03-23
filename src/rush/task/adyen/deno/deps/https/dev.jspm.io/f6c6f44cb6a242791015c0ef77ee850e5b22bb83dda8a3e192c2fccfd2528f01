@@ -1,0 +1,31 @@
+import { dew as _HTMLElementImplDewDew } from "./HTMLElement-impl.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const HTMLElementImpl = _HTMLElementImplDewDew().implementation;
+
+  class HTMLOListElementImpl extends HTMLElementImpl {
+    get start() {
+      const value = parseInt(this.getAttributeNS(null, "start"));
+
+      if (!isNaN(value)) {
+        return value;
+      }
+
+      return 1;
+    }
+
+    set start(value) {
+      this.setAttributeNS(null, "start", value);
+    }
+
+  }
+
+  exports = {
+    implementation: HTMLOListElementImpl
+  };
+  return exports;
+}

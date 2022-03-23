@@ -1,0 +1,3 @@
+export { dew } from "/npm:psl@1.8.0/index.dew.js";
+import "/npm:@jspm/core@1/nodelibs/punycode.js";
+import "/npm:psl@1.8.0/data/rules.json.dew.js";

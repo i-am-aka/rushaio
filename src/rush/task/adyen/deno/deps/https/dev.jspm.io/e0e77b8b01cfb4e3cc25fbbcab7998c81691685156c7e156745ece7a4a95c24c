@@ -1,0 +1,16 @@
+import { dew as _SVGElementImplDewDew } from "./SVGElement-impl.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const SVGElementImpl = _SVGElementImplDewDew().implementation;
+
+  class SVGTitleElementImpl extends SVGElementImpl {}
+
+  exports = {
+    implementation: SVGTitleElementImpl
+  };
+  return exports;
+}

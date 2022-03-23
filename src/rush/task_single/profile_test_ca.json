@@ -1,0 +1,35 @@
+{
+  "Email": "jennings@gmail.com",
+  "ShippingAddress": {
+    "address1": "1628 Dickson Ave",
+    "address2": "",
+    "city": "Kelowna",
+    "zipcode": "V1Y 9X1",
+    "stateCode": "BC",
+    "country": "CA",
+    "firstName": "Danyka",
+    "lastName": "Rolfson",
+    "phoneNumber": "1-403-141-6068"
+  },
+  "BillingAddress": {
+    "address1": "1628 Dickson Ave",
+    "address2": "",
+    "city": "Kelowna",
+    "zipcode": "V1Y 9X1",
+    "stateCode": "BC",
+    "country": "CA",
+    "firstName": "Danyka",
+    "lastName": "Rolfson",
+    "phoneNumber": "1-403-141-6068"
+  },
+  "Card": {
+    "cardType": "VISA",
+    "number": "4767718261223137",
+    "cvc": "916",
+    "holder": "Danyka Falfaso",
+    "expirationMonth": 5,
+    "expirationYear": 2026,
+    "paymentMethodId": "CREDIT_CARD",
+    "lastFour": "3137"
+  }
+}

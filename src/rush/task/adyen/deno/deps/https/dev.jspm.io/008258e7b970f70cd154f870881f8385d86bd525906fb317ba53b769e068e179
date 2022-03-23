@@ -1,0 +1,51 @@
+import { dew as _nodeTypeDewDew } from "../node-type.dew.js";
+import { dew as _nodeDewDew } from "../helpers/node.dew.js";
+import { dew as _shadowDomDewDew } from "../helpers/shadow-dom.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const NODE_TYPE = _nodeTypeDewDew();
+
+  const {
+    nodeRoot
+  } = _nodeDewDew();
+
+  const {
+    retarget
+  } = _shadowDomDewDew();
+
+  class DocumentOrShadowRootImpl {
+    get activeElement() {
+      let candidate = this._ownerDocument._lastFocusedElement || this._ownerDocument.body;
+
+      if (!candidate) {
+        return null;
+      }
+
+      candidate = retarget(candidate, this);
+
+      if (nodeRoot(candidate) !== this) {
+        return null;
+      }
+
+      if (candidate.nodeType !== NODE_TYPE.DOCUMENT_NODE) {
+        return candidate;
+      }
+
+      if (candidate.body !== null) {
+        return candidate.body;
+      }
+
+      return candidate.documentElement;
+    }
+
+  }
+
+  exports = {
+    implementation: DocumentOrShadowRootImpl
+  };
+  return exports;
+}

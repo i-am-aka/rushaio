@@ -1,0 +1,4 @@
+export { dew } from "/npm:whatwg-mimetype@2.3.0/lib/mime-type.dew.js";
+import "/npm:whatwg-mimetype@2.3.0/lib/parser.dew.js";
+import "/npm:whatwg-mimetype@2.3.0/lib/serializer.dew.js";
+import "/npm:whatwg-mimetype@2.3.0/lib/utils.dew.js";

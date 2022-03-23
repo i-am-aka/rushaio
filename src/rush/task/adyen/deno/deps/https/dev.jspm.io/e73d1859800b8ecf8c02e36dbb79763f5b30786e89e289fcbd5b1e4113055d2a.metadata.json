@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "cf-cache-status": "HIT",
+    "cache-control": "max-age=31536000, public, immutable",
+    "cf-ray": "588ddcaefe66ed1f-SJC",
+    "content-type": "application/javascript",
+    "cf-request-id": "024c88415c0000ed1f0108b200000001",
+    "date": "Fri, 24 Apr 2020 06:45:32 GMT",
+    "access-control-allow-origin": "*",
+    "age": "1302",
+    "vary": "Accept-Encoding",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "set-cookie": "__cfduid=d1c0ac5020fb7d9a28f2ddf50995a17731587710732; expires=Sun, 24-May-20 06:45:32 GMT; path=/; domain=.jspm.io; HttpOnly; SameSite=Lax",
+    "server": "cloudflare"
+  },
+  "url": "https://dev.jspm.io/npm:jsdom@16.2.2/lib/jsdom/living/generated/TextTrackKind.dew.js"
+}

@@ -1,0 +1,157 @@
+import { dew as _parseDewDew } from "./parse.dew.js";
+var exports = {},
+    _dewExec = false;
+
+var _global = typeof self !== "undefined" ? self : global;
+
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  //.CommonJS
+  var CSSOM = {}; ///CommonJS
+
+  /**
+   * @constructor
+   * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration
+   */
+
+  CSSOM.CSSStyleDeclaration = function CSSStyleDeclaration() {
+    (this || _global).length = 0;
+    (this || _global).parentRule = null; // NON-STANDARD
+
+    (this || _global)._importants = {};
+  };
+
+  CSSOM.CSSStyleDeclaration.prototype = {
+    constructor: CSSOM.CSSStyleDeclaration,
+
+    /**
+     *
+     * @param {string} name
+     * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration-getPropertyValue
+     * @return {string} the value of the property if it has been explicitly set for this declaration block.
+     * Returns the empty string if the property has not been set.
+     */
+    getPropertyValue: function (name) {
+      return (this || _global)[name] || "";
+    },
+
+    /**
+     *
+     * @param {string} name
+     * @param {string} value
+     * @param {string} [priority=null] "important" or null
+     * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration-setProperty
+     */
+    setProperty: function (name, value, priority) {
+      if ((this || _global)[name]) {
+        // Property already exist. Overwrite it.
+        var index = Array.prototype.indexOf.call(this || _global, name);
+
+        if (index < 0) {
+          (this || _global)[(this || _global).length] = name;
+          (this || _global).length++;
+        }
+      } else {
+        // New property.
+        (this || _global)[(this || _global).length] = name;
+        (this || _global).length++;
+      }
+
+      (this || _global)[name] = value + "";
+      (this || _global)._importants[name] = priority;
+    },
+
+    /**
+     *
+     * @param {string} name
+     * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration-removeProperty
+     * @return {string} the value of the property if it has been explicitly set for this declaration block.
+     * Returns the empty string if the property has not been set or the property name does not correspond to a known CSS property.
+     */
+    removeProperty: function (name) {
+      if (!(name in (this || _global))) {
+        return "";
+      }
+
+      var index = Array.prototype.indexOf.call(this || _global, name);
+
+      if (index < 0) {
+        return "";
+      }
+
+      var prevValue = (this || _global)[name];
+      (this || _global)[name] = ""; // That's what WebKit and Opera do
+
+      Array.prototype.splice.call(this || _global, index, 1); // That's what Firefox does
+      //this[index] = ""
+
+      return prevValue;
+    },
+    getPropertyCSSValue: function () {//FIXME
+    },
+
+    /**
+     *
+     * @param {String} name
+     */
+    getPropertyPriority: function (name) {
+      return (this || _global)._importants[name] || "";
+    },
+
+    /**
+     *   element.style.overflow = "auto"
+     *   element.style.getPropertyShorthand("overflow-x")
+     *   -> "overflow"
+     */
+    getPropertyShorthand: function () {//FIXME
+    },
+    isPropertyImplicit: function () {//FIXME
+    },
+
+    // Doesn't work in IE < 9
+    get cssText() {
+      var properties = [];
+
+      for (var i = 0, length = (this || _global).length; i < length; ++i) {
+        var name = (this || _global)[i];
+        var value = this.getPropertyValue(name);
+        var priority = this.getPropertyPriority(name);
+
+        if (priority) {
+          priority = " !" + priority;
+        }
+
+        properties[i] = name + ": " + value + priority + ";";
+      }
+
+      return properties.join(" ");
+    },
+
+    set cssText(text) {
+      var i, name;
+
+      for (i = (this || _global).length; i--;) {
+        name = (this || _global)[i];
+        (this || _global)[name] = "";
+      }
+
+      Array.prototype.splice.call(this || _global, 0, (this || _global).length);
+      (this || _global)._importants = {};
+      var dummyRule = CSSOM.parse('#bogus{' + text + '}').cssRules[0].style;
+      var length = dummyRule.length;
+
+      for (i = 0; i < length; ++i) {
+        name = dummyRule[i];
+        this.setProperty(dummyRule[i], dummyRule.getPropertyValue(name), dummyRule.getPropertyPriority(name));
+      }
+    }
+
+  }; //.CommonJS
+
+  exports.CSSStyleDeclaration = CSSOM.CSSStyleDeclaration;
+  CSSOM.parse = _parseDewDew().parse; // Cannot be included sooner due to the mutual dependency between parse.js and CSSStyleDeclaration.js
+  ///CommonJS
+
+  return exports;
+}

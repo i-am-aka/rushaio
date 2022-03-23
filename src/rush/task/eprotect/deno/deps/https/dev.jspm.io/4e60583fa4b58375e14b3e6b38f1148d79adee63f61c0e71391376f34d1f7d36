@@ -1,0 +1,70 @@
+import { dew as _utilsDewDew } from "../../utils.dew.js";
+import { dew as _SVGNumberDewDew } from "../generated/SVGNumber.dew.js";
+import { dew as _SVGGraphicsElementImplDewDew } from "./SVGGraphicsElement-impl.dew.js";
+import { dew as _WindowEventHandlersImplDewDew } from "./WindowEventHandlers-impl.dew.js";
+import { dew as _internalConstantsDewDew } from "../helpers/internal-constants.dew.js";
+import { dew as _nodeTypeDewDew } from "../node-type.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const {
+    mixin
+  } = _utilsDewDew();
+
+  const SVGNumber = _SVGNumberDewDew();
+
+  const SVGGraphicsElementImpl = _SVGGraphicsElementImplDewDew().implementation;
+
+  const WindowEventHandlersImpl = _WindowEventHandlersImplDewDew().implementation;
+
+  const {
+    domSymbolTree
+  } = _internalConstantsDewDew();
+
+  const {
+    ELEMENT_NODE
+  } = _nodeTypeDewDew();
+
+  class SVGSVGElementImpl extends SVGGraphicsElementImpl {
+    constructor(globalObject, args, privateData) {
+      super(globalObject, args, privateData);
+
+      this._proxyWindowEventsToWindow();
+    }
+
+    createSVGNumber() {
+      return SVGNumber.createImpl(this._globalObject, [], {});
+    }
+
+    getElementById(elementId) {
+      // TODO: optimize with _ids caching trick; see Document class.
+      for (const node of domSymbolTree.treeIterator(this)) {
+        if (node.nodeType === ELEMENT_NODE && node.getAttributeNS(null, "id") === elementId) {
+          return node;
+        }
+      }
+
+      return null;
+    }
+
+    suspendRedraw() {
+      return 1;
+    }
+
+    unsuspendRedraw() {}
+
+    unsuspendRedrawAll() {}
+
+    forceRedraw() {}
+
+  }
+
+  mixin(SVGSVGElementImpl.prototype, WindowEventHandlersImpl.prototype);
+  exports = {
+    implementation: SVGSVGElementImpl
+  };
+  return exports;
+}

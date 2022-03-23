@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "age": "1302",
+    "cf-request-id": "024c8842000000ed1f011a7200000001",
+    "cf-cache-status": "HIT",
+    "server": "cloudflare",
+    "cache-control": "max-age=31536000, public, immutable",
+    "content-type": "application/javascript",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "vary": "Accept-Encoding",
+    "set-cookie": "__cfduid=d1c0ac5020fb7d9a28f2ddf50995a17731587710732; expires=Sun, 24-May-20 06:45:32 GMT; path=/; domain=.jspm.io; HttpOnly; SameSite=Lax",
+    "access-control-allow-origin": "*",
+    "date": "Fri, 24 Apr 2020 06:45:32 GMT",
+    "cf-ray": "588ddcb009c2ed1f-SJC"
+  },
+  "url": "https://dev.jspm.io/npm:symbol-tree@3.2.4/lib/SymbolTreeNode.dew.js"
+}

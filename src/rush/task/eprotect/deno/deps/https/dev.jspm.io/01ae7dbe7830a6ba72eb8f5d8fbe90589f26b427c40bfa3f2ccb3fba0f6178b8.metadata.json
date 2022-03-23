@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "content-type": "application/javascript",
+    "server": "cloudflare",
+    "cf-ray": "5941030f8945ed5b-SJC",
+    "cf-request-id": "02bc803db50000ed5b4210c200000001",
+    "cf-cache-status": "MISS",
+    "vary": "Accept-Encoding",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "cache-control": "max-age=31536000, public, immutable",
+    "access-control-allow-origin": "*",
+    "set-cookie": "__cfduid=dccc80c99d8edbc1fd5911b2b811a53b71589589255; expires=Mon, 15-Jun-20 00:34:15 GMT; path=/; domain=.jspm.io; HttpOnly; SameSite=Lax",
+    "date": "Sat, 16 May 2020 00:34:15 GMT"
+  },
+  "url": "https://dev.jspm.io/npm:estraverse@4.3.0/package.json.dew.js"
+}

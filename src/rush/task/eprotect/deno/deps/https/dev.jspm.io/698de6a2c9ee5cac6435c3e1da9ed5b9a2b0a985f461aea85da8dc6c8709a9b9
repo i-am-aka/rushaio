@@ -1,0 +1,20 @@
+import { dew as _MouseEventImplDewDew } from "./MouseEvent-impl.dew.js";
+import { dew as _WheelEventInitDewDew } from "../generated/WheelEventInit.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const MouseEventImpl = _MouseEventImplDewDew().implementation;
+
+  const WheelEventInit = _WheelEventInitDewDew();
+
+  class WheelEventImpl extends MouseEventImpl {}
+
+  WheelEventImpl.defaultInit = WheelEventInit.convert(undefined);
+  exports = {
+    implementation: WheelEventImpl
+  };
+  return exports;
+}

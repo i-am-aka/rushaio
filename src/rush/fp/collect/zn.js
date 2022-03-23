@@ -1,0 +1,285 @@
+function dataURL() {
+  var canvas = document.createElement("canvas");
+  var ctx = canvas.getContext('2d');
+  ctx.font = "18pt Sans";
+  ctx.textBaseline = "top";
+  ctx.fillText("Hel$&?6%){mZ+#@", 2, 2);
+  return canvas.toDataURL();
+}
+
+function measureText() {
+  var measurements = {"0-_{w.": {}};
+
+  var canvas = document.createElement("canvas");
+  var ctx = canvas.getContext('2d');
+  ctx.textBaseline = "top";
+  ctx.font = "50px 'sans-serif', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+
+  ctx.font = "50px 'serif', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Andale Mono', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Andale Mono', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Arial Narrow', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Arial Narrow', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Arial Unicode MS', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Arial Unicode MS', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Batang', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Batang', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Bell MT', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Bell MT', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Brush Script', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Brush Script', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Brush Script MT', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Brush Script MT', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Calibri', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Calibri', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Charter', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Charter', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Courier', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Courier', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Courier New', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Courier New', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Curlz MT', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Curlz MT', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'DejaVu Sans', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'DejaVu Sans', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'DejaVu Sans Mono', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'DejaVu Sans Mono', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'DejaVu Serif Condensed', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'DejaVu Serif Condensed', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Droid Sans', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Droid Sans', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Droid Sans Fallback', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Droid Sans Fallback', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Droid Serif', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Droid Serif', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Forte', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Forte', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Futura', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Futura', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Geneva', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Geneva', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Hei', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Hei', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Leelawadee', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Leelawadee', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Levenim MT', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Levenim MT', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Liberation Sans', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Liberation Sans', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Liberation Sans Narrow', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Liberation Sans Narrow', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Marlett', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Marlett', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Meiryo UI', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Meiryo UI', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Microsoft Uighur', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Microsoft Uighur', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Microsoft YaHei UI', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Microsoft YaHei UI', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'MS Mincho', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'MS Mincho', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'MS UI Gothic', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'MS UI Gothic', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'NanumGothic', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'NanumGothic', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Nirmala UI', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Nirmala UI', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Palatino', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Palatino', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Papyrus', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Papyrus', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'PMingLiU', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'PMingLiU', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'PT Serif', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'PT Serif', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'SimHei', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'SimHei', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'STIXVariants', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'STIXVariants', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'STSong', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'STSong', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Traditional Arabic', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Traditional Arabic', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Urdu Typesetting', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Urdu Typesetting', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Verdana', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Verdana', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Wingdings', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Wingdings', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Wingdings 3', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Wingdings 3', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Helkevtrica', sans-serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+  ctx.font = "50px 'Helkevtrica', serif";
+  measurements["0-_{w."][ctx.font] = ctx.measureText("0-_{w.");
+
+  return measurements;
+}
+
+function glfp() {
+  var canvas = document.createElement('canvas');
+  var ctx = canvas.getContext('webgl');
+  var fp = {};
+
+  fp["ctx.getParameter(ctx.ALIASED_LINE_WIDTH_RANGE)"] = ctx.getParameter(ctx.ALIASED_LINE_WIDTH_RANGE);
+  fp["ctx.getParameter(ctx.ALIASED_POINT_SIZE_RANGE)"] = ctx.getParameter(ctx.ALIASED_POINT_SIZE_RANGE);
+  fp["ctx.getParameter(ctx.MAX_VIEWPORT_DIMS)"] = ctx.getParameter(ctx.MAX_VIEWPORT_DIMS);
+  fp["ctx.getParameter(ctx.ALPHA_BITS)"] = ctx.getParameter(ctx.ALPHA_BITS);
+  fp["ctx.getParameter(ctx.BLUE_BITS)"] = ctx.getParameter(ctx.BLUE_BITS);
+  fp["ctx.getParameter(ctx.GREEN_BITS)"] = ctx.getParameter(ctx.GREEN_BITS);
+  fp["ctx.getParameter(ctx.RED_BITS)"] = ctx.getParameter(ctx.RED_BITS);
+  fp["ctx.getParameter(ctx.DEPTH_BITS)"] = ctx.getParameter(ctx.DEPTH_BITS);
+  fp["ctx.getParameter(ctx.MAX_COMBINED_TEXTURE_IMAGE_UNITS)"] = ctx.getParameter(ctx.MAX_COMBINED_TEXTURE_IMAGE_UNITS);
+  fp["ctx.getParameter(ctx.MAX_CUBE_MAP_TEXTURE_SIZE)"] = ctx.getParameter(ctx.MAX_CUBE_MAP_TEXTURE_SIZE);
+  fp["ctx.getParameter(ctx.MAX_FRAGMENT_UNIFORM_VECTORS)"] = ctx.getParameter(ctx.MAX_FRAGMENT_UNIFORM_VECTORS);
+  fp["ctx.getParameter(ctx.MAX_RENDERBUFFER_SIZE)"] = ctx.getParameter(ctx.MAX_RENDERBUFFER_SIZE);
+  fp["ctx.getParameter(ctx.MAX_TEXTURE_IMAGE_UNITS)"] = ctx.getParameter(ctx.MAX_TEXTURE_IMAGE_UNITS);
+  fp["ctx.getParameter(ctx.MAX_TEXTURE_SIZE)"] = ctx.getParameter(ctx.MAX_TEXTURE_SIZE);
+  fp["ctx.getParameter(ctx.MAX_VARYING_VECTORS)"] = ctx.getParameter(ctx.MAX_VARYING_VECTORS);
+  fp["ctx.getParameter(ctx.MAX_VERTEX_ATTRIBS)"] = ctx.getParameter(ctx.MAX_VERTEX_ATTRIBS);
+  fp["ctx.getParameter(ctx.MAX_VERTEX_TEXTURE_IMAGE_UNITS)"] = ctx.getParameter(ctx.MAX_VERTEX_TEXTURE_IMAGE_UNITS);
+  fp["ctx.getParameter(ctx.MAX_VERTEX_UNIFORM_VECTORS)"] = ctx.getParameter(ctx.MAX_VERTEX_UNIFORM_VECTORS);
+  fp["ctx.getParameter(ctx.RENDERER)"] = ctx.getParameter(ctx.RENDERER);
+  fp["ctx.getParameter(ctx.SHADING_LANGUAGE_VERSION)"] = ctx.getParameter(ctx.SHADING_LANGUAGE_VERSION);
+  fp["ctx.getParameter(ctx.STENCIL_BITS)"] = ctx.getParameter(ctx.STENCIL_BITS);
+  fp["ctx.getParameter(ctx.VENDOR)"] = ctx.getParameter(ctx.VENDOR);
+  fp["ctx.getParameter(ctx.VERSION)"] = ctx.getParameter(ctx.VERSION);
+
+  fp["ctx.getExtension(\"WEBGL_debug_renderer_info\")"] = ctx.getExtension("WEBGL_debug_renderer_info");
+  fp["ctx.getContextAttributes()"] = ctx.getContextAttributes();
+  fp["ctx.getExtension(\"EXT_texture_filter_anisotropic\")"] = ctx.getExtension("EXT_texture_filter_anisotropic");
+  fp["ctx.getExtension(\"WEBKIT_EXT_texture_filter_anisotropic\")"] = ctx.getExtension("WEBKIT_EXT_texture_filter_anisotropic");
+  fp["ctx.getExtension(\"MOZ_EXT_texture_filter_anisotropic\")"] = ctx.getExtension("MOZ_EXT_texture_filter_anisotropic");
+  fp["ctx.getShaderPrecisionFormat(ctx.VERTEX_SHADER, ctx.HIGH_FLOAT)"] = ctx.getShaderPrecisionFormat(ctx.VERTEX_SHADER, ctx.HIGH_FLOAT);
+  fp["ctx.getShaderPrecisionFormat(ctx.VERTEX_SHADER, ctx.MEDIUM_FLOAT)"] = ctx.getShaderPrecisionFormat(ctx.VERTEX_SHADER, ctx.MEDIUM_FLOAT);
+  fp["ctx.getShaderPrecisionFormat(ctx.VERTEX_SHADER, ctx.LOW_FLOAT)"] = ctx.getShaderPrecisionFormat(ctx.VERTEX_SHADER, ctx.LOW_FLOAT);
+  fp["ctx.getShaderPrecisionFormat(ctx.FRAGMENT_SHADER, ctx.HIGH_FLOAT)"] = ctx.getShaderPrecisionFormat(ctx.FRAGMENT_SHADER, ctx.HIGH_FLOAT);
+  fp["ctx.getShaderPrecisionFormat(ctx.FRAGMENT_SHADER, ctx.MEDIUM_FLOAT)"] = ctx.getShaderPrecisionFormat(ctx.FRAGMENT_SHADER, ctx.MEDIUM_FLOAT);
+  fp["ctx.getShaderPrecisionFormat(ctx.FRAGMENT_SHADER, ctx.LOW_FLOAT)"] = ctx.getShaderPrecisionFormat(ctx.FRAGMENT_SHADER, ctx.LOW_FLOAT);
+  fp["ctx.getShaderPrecisionFormat(ctx.VERTEX_SHADER, ctx.HIGH_INT)"] = ctx.getShaderPrecisionFormat(ctx.VERTEX_SHADER, ctx.HIGH_INT);
+  fp["ctx.getShaderPrecisionFormat(ctx.VERTEX_SHADER, ctx.MEDIUM_INT)"] = ctx.getShaderPrecisionFormat(ctx.VERTEX_SHADER, ctx.MEDIUM_INT);
+  fp["ctx.getShaderPrecisionFormat(ctx.VERTEX_SHADER, ctx.LOW_INT)"] = ctx.getShaderPrecisionFormat(ctx.VERTEX_SHADER, ctx.LOW_INT);
+  fp["ctx.getShaderPrecisionFormat(ctx.FRAGMENT_SHADER, ctx.HIGH_INT)"] = ctx.getShaderPrecisionFormat(ctx.FRAGMENT_SHADER, ctx.HIGH_INT);
+  fp["ctx.getShaderPrecisionFormat(ctx.FRAGMENT_SHADER, ctx.MEDIUM_INT)"] = ctx.getShaderPrecisionFormat(ctx.FRAGMENT_SHADER, ctx.MEDIUM_INT);
+  fp["ctx.getShaderPrecisionFormat(ctx.FRAGMENT_SHADER, ctx.LOW_INT)"] = ctx.getShaderPrecisionFormat(ctx.FRAGMENT_SHADER, ctx.LOW_INT);
+  fp["ctx.getSupportedExtensions()"] = ctx.getSupportedExtensions();
+  fp["ctx.getParameter(37445)"] = ctx.getParameter(37445);
+  fp["ctx.getParameter(37446)"] = ctx.getParameter(37446);
+  fp['ctx.getParameter(34047)'] = ctx.getParameter(34047);
+
+  return recur(fp);
+}
+
+ function recur(obj) {
+      // TODO support cycles
+      var result = {}, _tmp;
+      for (var i in obj) {
+        if (i === 'enabledPlugin' || typeof obj[i] === 'function') {
+            continue;
+        } else if (obj[i] === null) {
+          result[i] = obj[i];
+        } else if (typeof obj[i] === 'object') {
+            _tmp = recur(obj[i]);
+            if (Object.keys(_tmp).length) {
+                result[i] = _tmp;
+            }
+        } else {
+            result[i] = obj[i];
+        }
+      }
+      return result;
+    }

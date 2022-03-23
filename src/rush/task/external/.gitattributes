@@ -1,0 +1,11 @@
+. filter=lfs diff=lfs merge=lfs -text
+geckodriver.exe filter=lfs diff=lfs merge=lfs -text
+zoneinfo.zip filter=lfs diff=lfs merge=lfs -text
+deno-x86_64-apple-darwin.zip filter=lfs diff=lfs merge=lfs -text
+deno.exe filter=lfs diff=lfs merge=lfs -text
+deno_osx_64 filter=lfs diff=lfs merge=lfs -text
+ff_mac filter=lfs diff=lfs merge=lfs -text
+deno-x86_64-pc-windows-msvc.zip filter=lfs diff=lfs merge=lfs -text
+deno_linux_x64 filter=lfs diff=lfs merge=lfs -text
+geckodriver-v0.28.0-win64.zip filter=lfs diff=lfs merge=lfs -text
+Firefox filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "vary": "Accept-Encoding",
+    "date": "Fri, 24 Apr 2020 06:45:32 GMT",
+    "age": "189",
+    "cf-ray": "588ddcb0ebd9ed1f-SJC",
+    "content-type": "application/javascript",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "set-cookie": "__cfduid=d1c0ac5020fb7d9a28f2ddf50995a17731587710732; expires=Sun, 24-May-20 06:45:32 GMT; path=/; domain=.jspm.io; HttpOnly; SameSite=Lax",
+    "cf-cache-status": "HIT",
+    "server": "cloudflare",
+    "access-control-allow-origin": "*",
+    "cf-request-id": "024c8842930000ed1f011f1200000001",
+    "cache-control": "max-age=200, public"
+  },
+  "url": "https://dev.jspm.io/npm:tunnel-agent@0.6?dew"
+}

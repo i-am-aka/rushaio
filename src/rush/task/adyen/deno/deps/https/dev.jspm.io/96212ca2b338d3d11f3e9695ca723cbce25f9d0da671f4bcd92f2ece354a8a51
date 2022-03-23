@@ -1,0 +1,1 @@
+export { dew } from "/npm:punycode@2.1.1/punycode.dew.js";

@@ -1,0 +1,4 @@
+export { dew } from "/npm:saxes@5.0.1/saxes.dew.js";
+import "/npm:xmlchars@2/xml/1.0/ed5?dew";
+import "/npm:xmlchars@2/xml/1.1/ed2?dew";
+import "/npm:xmlchars@2/xmlns/1.0/ed3?dew";

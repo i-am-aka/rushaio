@@ -1,0 +1,1 @@
+export { dew } from "/npm:json-schema@0.2.3/lib/validate.dew.js";

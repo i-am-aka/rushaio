@@ -1,0 +1,4 @@
+export { dew } from "/npm:extsprintf@1.3.0/lib/extsprintf.dew.js";
+import "/npm:@jspm/core@1/nodelibs/assert.js";
+import "/npm:@jspm/core@1/nodelibs/util.js";
+import "/npm:@jspm/core@1/nodelibs/process.js";

@@ -1,0 +1,72 @@
+import _crypto from "/npm:@jspm/core@1/nodelibs/crypto.js";
+import { dew as _npmJsbnDew } from "/npm:jsbn@0.1?dew";
+import { dew as _ecDewDew } from "./lib/ec.dew.js";
+import { dew as _npmSaferBuffer2DewDew } from "/npm:safer-buffer@2?dew";
+import { dew as _secDewDew } from "./lib/sec.dew.js";
+var exports = {},
+    _dewExec = false;
+
+var _global = typeof self !== "undefined" ? self : global;
+
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  var crypto = _crypto;
+
+  var BigInteger = _npmJsbnDew().BigInteger;
+
+  var ECPointFp = _ecDewDew().ECPointFp;
+
+  var Buffer = _npmSaferBuffer2DewDew().Buffer;
+
+  exports.ECCurves = _secDewDew(); // zero prepad
+
+  function unstupid(hex, len) {
+    return hex.length >= len ? hex : unstupid("0" + hex, len);
+  }
+
+  exports.ECKey = function (curve, key, isPublic) {
+    var priv;
+    var c = curve();
+    var n = c.getN();
+    var bytes = Math.floor(n.bitLength() / 8);
+
+    if (key) {
+      if (isPublic) {
+        var curve = c.getCurve(); //      var x = key.slice(1,bytes+1); // skip the 04 for uncompressed format
+        //      var y = key.slice(bytes+1);
+        //      this.P = new ECPointFp(curve,
+        //        curve.fromBigInteger(new BigInteger(x.toString("hex"), 16)),
+        //        curve.fromBigInteger(new BigInteger(y.toString("hex"), 16)));      
+
+        (this || _global).P = curve.decodePointHex(key.toString("hex"));
+      } else {
+        if (key.length != bytes) return false;
+        priv = new BigInteger(key.toString("hex"), 16);
+      }
+    } else {
+      var n1 = n.subtract(BigInteger.ONE);
+      var r = new BigInteger(crypto.randomBytes(n.bitLength()));
+      priv = r.mod(n1).add(BigInteger.ONE);
+      (this || _global).P = c.getG().multiply(priv);
+    }
+
+    if ((this || _global).P) {
+      //  var pubhex = unstupid(this.P.getX().toBigInteger().toString(16),bytes*2)+unstupid(this.P.getY().toBigInteger().toString(16),bytes*2);
+      //  this.PublicKey = Buffer.from("04"+pubhex,"hex");
+      (this || _global).PublicKey = Buffer.from(c.getCurve().encodeCompressedPointHex((this || _global).P), "hex");
+    }
+
+    if (priv) {
+      (this || _global).PrivateKey = Buffer.from(unstupid(priv.toString(16), bytes * 2), "hex");
+
+      (this || _global).deriveSharedSecret = function (key) {
+        if (!key || !key.P) return false;
+        var S = key.P.multiply(priv);
+        return Buffer.from(unstupid(S.getX().toBigInteger().toString(16), bytes * 2), "hex");
+      };
+    }
+  };
+
+  return exports;
+}

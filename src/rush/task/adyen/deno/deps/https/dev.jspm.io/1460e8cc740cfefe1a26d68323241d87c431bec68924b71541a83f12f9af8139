@@ -1,0 +1,11 @@
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  exports.POSITION_AT_SHORTHAND = {
+    first: 0,
+    second: 1
+  };
+  return exports;
+}

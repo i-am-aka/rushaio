@@ -1,0 +1,79 @@
+import { dew as _indexDewDew } from "../../browser/parser/index.dew.js";
+import { dew as _serializationDewDew } from "../domparsing/serialization.dew.js";
+import { dew as _nodeDewDew } from "../helpers/node.dew.js";
+import { dew as _utilsDewDew } from "../../utils.dew.js";
+import { dew as _DocumentFragmentImplDewDew } from "./DocumentFragment-impl.dew.js";
+import { dew as _DocumentOrShadowRootImplDewDew } from "./DocumentOrShadowRoot-impl.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const {
+    parseFragment
+  } = _indexDewDew();
+
+  const {
+    fragmentSerialization
+  } = _serializationDewDew();
+
+  const {
+    nodeRoot
+  } = _nodeDewDew();
+
+  const {
+    mixin
+  } = _utilsDewDew();
+
+  const DocumentFragment = _DocumentFragmentImplDewDew().implementation;
+
+  const DocumentOrShadowRootImpl = _DocumentOrShadowRootImplDewDew().implementation;
+
+  class ShadowRootImpl extends DocumentFragment {
+    constructor(globalObject, args, privateData) {
+      super(globalObject, args, privateData);
+      const {
+        mode
+      } = privateData;
+      this._mode = mode;
+    }
+
+    _getTheParent(event) {
+      if (!event.composed && this === nodeRoot(event._path[0].item)) {
+        return null;
+      }
+
+      return this._host;
+    }
+
+    get mode() {
+      return this._mode;
+    }
+
+    get host() {
+      return this._host;
+    } // https://w3c.github.io/DOM-Parsing/#dfn-innerhtml
+
+
+    get innerHTML() {
+      return fragmentSerialization(this, {
+        requireWellFormed: true,
+        globalObject: this._globalObject
+      });
+    }
+
+    set innerHTML(markup) {
+      const fragment = parseFragment(markup, this._host);
+
+      this._replaceAll(fragment);
+    }
+
+  }
+
+  mixin(ShadowRootImpl.prototype, DocumentOrShadowRootImpl.prototype);
+  exports = {
+    implementation: ShadowRootImpl
+  };
+  return exports;
+}

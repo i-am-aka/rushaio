@@ -1,0 +1,19 @@
+import { dew as _dbJsonDewDew } from "./db.json.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  /*!
+   * mime-db
+   * Copyright(c) 2014 Jonathan Ong
+   * MIT Licensed
+   */
+
+  /**
+   * Module exports.
+   */
+  exports = _dbJsonDewDew();
+  return exports;
+}

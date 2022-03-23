@@ -1,0 +1,7 @@
+export { dew } from "/npm:w3c-hr-time@1.0.2/index.dew.js";
+import "/npm:w3c-hr-time@1.0.2/lib/global-monotonic-clock.dew.js";
+import "/npm:w3c-hr-time@1.0.2/lib/performance.dew.js";
+import "/npm:w3c-hr-time@1.0.2/lib/clock-is-accurate.dew.js";
+import "/npm:w3c-hr-time@1.0.2/lib/utils.dew.js";
+import "/npm:browser-process-hrtime@1?dew";
+import "/npm:w3c-hr-time@1.0.2/lib/calculate-clock-offset.dew.js";

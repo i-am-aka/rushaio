@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "date": "Sat, 16 May 2020 00:34:16 GMT",
+    "server": "cloudflare",
+    "cf-request-id": "02bc803f930000ed5b421f4200000001",
+    "content-type": "application/javascript",
+    "cache-control": "max-age=31536000, public, immutable",
+    "cf-cache-status": "MISS",
+    "set-cookie": "__cfduid=df9ced50a7d509452217a3991bbbe899b1589589256; expires=Mon, 15-Jun-20 00:34:16 GMT; path=/; domain=.jspm.io; HttpOnly; SameSite=Lax",
+    "cf-ray": "594103128f75ed5b-SJC",
+    "access-control-allow-origin": "*",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "vary": "Accept-Encoding"
+  },
+  "url": "https://dev.jspm.io/npm:tweetnacl@0.14.5/nacl-fast.dew.js"
+}

@@ -1,0 +1,297 @@
+import { dew as _npmAssertPlus1DewDew } from "/npm:assert-plus@1?dew";
+import { dew as _algsDewDew } from "./algs.dew.js";
+import _crypto from "/npm:@jspm/core@1/nodelibs/crypto.js";
+import { dew as _fingerprintDewDew } from "./fingerprint.dew.js";
+import { dew as _signatureDewDew } from "./signature.dew.js";
+import { dew as _dheDewDew } from "./dhe.dew.js";
+import { dew as _errorsDewDew } from "./errors.dew.js";
+import { dew as _utilsDewDew } from "./utils.dew.js";
+import { dew as _privateKeyDewDew } from "./private-key.dew.js";
+import { dew as _edCompatDewDew } from "./ed-compat.dew.js";
+import { dew as _autoDewDew } from "./formats/auto.dew.js";
+import { dew as _pemDewDew } from "./formats/pem.dew.js";
+import { dew as _pkcs1DewDew } from "./formats/pkcs1.dew.js";
+import { dew as _pkcs8DewDew } from "./formats/pkcs8.dew.js";
+import { dew as _rfc4253DewDew } from "./formats/rfc4253.dew.js";
+import { dew as _sshDewDew } from "./formats/ssh.dew.js";
+import { dew as _sshPrivateDewDew } from "./formats/ssh-private.dew.js";
+import { dew as _dnssecDewDew } from "./formats/dnssec.dew.js";
+import { dew as _puttyDewDew } from "./formats/putty.dew.js";
+import _buffer from "/npm:@jspm/core@1/nodelibs/buffer.js";
+var exports = {},
+    _dewExec = false;
+
+var _global = typeof self !== "undefined" ? self : global;
+
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  var Buffer = _buffer.Buffer;
+  // Copyright 2018 Joyent, Inc.
+  exports = Key;
+
+  var assert = _npmAssertPlus1DewDew();
+
+  var algs = _algsDewDew();
+
+  var crypto = _crypto;
+
+  var Fingerprint = _fingerprintDewDew();
+
+  var Signature = _signatureDewDew();
+
+  var DiffieHellman = _dheDewDew().DiffieHellman;
+
+  var errs = _errorsDewDew();
+
+  var utils = _utilsDewDew();
+
+  var PrivateKey = _privateKeyDewDew();
+
+  var edCompat;
+
+  try {
+    edCompat = _edCompatDewDew();
+  } catch (e) {
+    /* Just continue through, and bail out if we try to use it. */
+  }
+
+  var InvalidAlgorithmError = errs.InvalidAlgorithmError;
+  var KeyParseError = errs.KeyParseError;
+  var formats = {};
+  formats['auto'] = _autoDewDew();
+  formats['pem'] = _pemDewDew();
+  formats['pkcs1'] = _pkcs1DewDew();
+  formats['pkcs8'] = _pkcs8DewDew();
+  formats['rfc4253'] = _rfc4253DewDew();
+  formats['ssh'] = _sshDewDew();
+  formats['ssh-private'] = _sshPrivateDewDew();
+  formats['openssh'] = formats['ssh-private'];
+  formats['dnssec'] = _dnssecDewDew();
+  formats['putty'] = _puttyDewDew();
+  formats['ppk'] = formats['putty'];
+
+  function Key(opts) {
+    assert.object(opts, 'options');
+    assert.arrayOfObject(opts.parts, 'options.parts');
+    assert.string(opts.type, 'options.type');
+    assert.optionalString(opts.comment, 'options.comment');
+    var algInfo = algs.info[opts.type];
+    if (typeof algInfo !== 'object') throw new InvalidAlgorithmError(opts.type);
+    var partLookup = {};
+
+    for (var i = 0; i < opts.parts.length; ++i) {
+      var part = opts.parts[i];
+      partLookup[part.name] = part;
+    }
+
+    (this || _global).type = opts.type;
+    (this || _global).parts = opts.parts;
+    (this || _global).part = partLookup;
+    (this || _global).comment = undefined;
+    (this || _global).source = opts.source;
+    /* for speeding up hashing/fingerprint operations */
+
+    (this || _global)._rfc4253Cache = opts._rfc4253Cache;
+    (this || _global)._hashCache = {};
+    var sz;
+    (this || _global).curve = undefined;
+
+    if ((this || _global).type === 'ecdsa') {
+      var curve = (this || _global).part.curve.data.toString();
+
+      (this || _global).curve = curve;
+      sz = algs.curves[curve].size;
+    } else if ((this || _global).type === 'ed25519' || (this || _global).type === 'curve25519') {
+      sz = 256;
+      (this || _global).curve = 'curve25519';
+    } else {
+      var szPart = (this || _global).part[algInfo.sizePart];
+      sz = szPart.data.length;
+      sz = sz * 8 - utils.countZeros(szPart.data);
+    }
+
+    (this || _global).size = sz;
+  }
+
+  Key.formats = formats;
+
+  Key.prototype.toBuffer = function (format, options) {
+    if (format === undefined) format = 'ssh';
+    assert.string(format, 'format');
+    assert.object(formats[format], 'formats[format]');
+    assert.optionalObject(options, 'options');
+
+    if (format === 'rfc4253') {
+      if ((this || _global)._rfc4253Cache === undefined) (this || _global)._rfc4253Cache = formats['rfc4253'].write(this || _global);
+      return (this || _global)._rfc4253Cache;
+    }
+
+    return formats[format].write(this || _global, options);
+  };
+
+  Key.prototype.toString = function (format, options) {
+    return this.toBuffer(format, options).toString();
+  };
+
+  Key.prototype.hash = function (algo, type) {
+    assert.string(algo, 'algorithm');
+    assert.optionalString(type, 'type');
+    if (type === undefined) type = 'ssh';
+    algo = algo.toLowerCase();
+    if (algs.hashAlgs[algo] === undefined) throw new InvalidAlgorithmError(algo);
+    var cacheKey = algo + '||' + type;
+    if ((this || _global)._hashCache[cacheKey]) return (this || _global)._hashCache[cacheKey];
+    var buf;
+
+    if (type === 'ssh') {
+      buf = this.toBuffer('rfc4253');
+    } else if (type === 'spki') {
+      buf = formats.pkcs8.pkcs8ToBuffer(this || _global);
+    } else {
+      throw new Error('Hash type ' + type + ' not supported');
+    }
+
+    var hash = crypto.createHash(algo).update(buf).digest();
+    (this || _global)._hashCache[cacheKey] = hash;
+    return hash;
+  };
+
+  Key.prototype.fingerprint = function (algo, type) {
+    if (algo === undefined) algo = 'sha256';
+    if (type === undefined) type = 'ssh';
+    assert.string(algo, 'algorithm');
+    assert.string(type, 'type');
+    var opts = {
+      type: 'key',
+      hash: this.hash(algo, type),
+      algorithm: algo,
+      hashType: type
+    };
+    return new Fingerprint(opts);
+  };
+
+  Key.prototype.defaultHashAlgorithm = function () {
+    var hashAlgo = 'sha1';
+    if ((this || _global).type === 'rsa') hashAlgo = 'sha256';
+    if ((this || _global).type === 'dsa' && (this || _global).size > 1024) hashAlgo = 'sha256';
+    if ((this || _global).type === 'ed25519') hashAlgo = 'sha512';
+
+    if ((this || _global).type === 'ecdsa') {
+      if ((this || _global).size <= 256) hashAlgo = 'sha256';else if ((this || _global).size <= 384) hashAlgo = 'sha384';else hashAlgo = 'sha512';
+    }
+
+    return hashAlgo;
+  };
+
+  Key.prototype.createVerify = function (hashAlgo) {
+    if (hashAlgo === undefined) hashAlgo = this.defaultHashAlgorithm();
+    assert.string(hashAlgo, 'hash algorithm');
+    /* ED25519 is not supported by OpenSSL, use a javascript impl. */
+
+    if ((this || _global).type === 'ed25519' && edCompat !== undefined) return new edCompat.Verifier(this || _global, hashAlgo);
+    if ((this || _global).type === 'curve25519') throw new Error('Curve25519 keys are not suitable for ' + 'signing or verification');
+    var v, nm, err;
+
+    try {
+      nm = hashAlgo.toUpperCase();
+      v = crypto.createVerify(nm);
+    } catch (e) {
+      err = e;
+    }
+
+    if (v === undefined || err instanceof Error && err.message.match(/Unknown message digest/)) {
+      nm = 'RSA-';
+      nm += hashAlgo.toUpperCase();
+      v = crypto.createVerify(nm);
+    }
+
+    assert.ok(v, 'failed to create verifier');
+    var oldVerify = v.verify.bind(v);
+    var key = this.toBuffer('pkcs8');
+    var curve = (this || _global).curve;
+    var self = this || _global;
+
+    v.verify = function (signature, fmt) {
+      if (Signature.isSignature(signature, [2, 0])) {
+        if (signature.type !== self.type) return false;
+        if (signature.hashAlgorithm && signature.hashAlgorithm !== hashAlgo) return false;
+        if (signature.curve && self.type === 'ecdsa' && signature.curve !== curve) return false;
+        return oldVerify(key, signature.toBuffer('asn1'));
+      } else if (typeof signature === 'string' || Buffer.isBuffer(signature)) {
+        return oldVerify(key, signature, fmt);
+        /*
+         * Avoid doing this on valid arguments, walking the prototype
+         * chain can be quite slow.
+         */
+      } else if (Signature.isSignature(signature, [1, 0])) {
+        throw new Error('signature was created by too old ' + 'a version of sshpk and cannot be verified');
+      } else {
+        throw new TypeError('signature must be a string, ' + 'Buffer, or Signature object');
+      }
+    };
+
+    return v;
+  };
+
+  Key.prototype.createDiffieHellman = function () {
+    if ((this || _global).type === 'rsa') throw new Error('RSA keys do not support Diffie-Hellman');
+    return new DiffieHellman(this || _global);
+  };
+
+  Key.prototype.createDH = Key.prototype.createDiffieHellman;
+
+  Key.parse = function (data, format, options) {
+    if (typeof data !== 'string') assert.buffer(data, 'data');
+    if (format === undefined) format = 'auto';
+    assert.string(format, 'format');
+    if (typeof options === 'string') options = {
+      filename: options
+    };
+    assert.optionalObject(options, 'options');
+    if (options === undefined) options = {};
+    assert.optionalString(options.filename, 'options.filename');
+    if (options.filename === undefined) options.filename = '(unnamed)';
+    assert.object(formats[format], 'formats[format]');
+
+    try {
+      var k = formats[format].read(data, options);
+      if (k instanceof PrivateKey) k = k.toPublic();
+      if (!k.comment) k.comment = options.filename;
+      return k;
+    } catch (e) {
+      if (e.name === 'KeyEncryptedError') throw e;
+      throw new KeyParseError(options.filename, format, e);
+    }
+  };
+
+  Key.isKey = function (obj, ver) {
+    return utils.isCompatible(obj, Key, ver);
+  };
+  /*
+   * API versions for Key:
+   * [1,0] -- initial ver, may take Signature for createVerify or may not
+   * [1,1] -- added pkcs1, pkcs8 formats
+   * [1,2] -- added auto, ssh-private, openssh formats
+   * [1,3] -- added defaultHashAlgorithm
+   * [1,4] -- added ed support, createDH
+   * [1,5] -- first explicitly tagged version
+   * [1,6] -- changed ed25519 part names
+   * [1,7] -- spki hash types
+   */
+
+
+  Key.prototype._sshpkApiVersion = [1, 7];
+
+  Key._oldVersionDetect = function (obj) {
+    assert.func(obj.toBuffer);
+    assert.func(obj.fingerprint);
+    if (obj.createDH) return [1, 4];
+    if (obj.defaultHashAlgorithm) return [1, 3];
+    if (obj.formats['auto']) return [1, 2];
+    if (obj.formats['pkcs1']) return [1, 1];
+    return [1, 0];
+  };
+
+  return exports;
+}

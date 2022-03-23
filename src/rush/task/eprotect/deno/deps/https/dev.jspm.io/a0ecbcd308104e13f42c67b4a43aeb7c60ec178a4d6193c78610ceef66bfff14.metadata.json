@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "cache-control": "max-age=31536000, public, immutable",
+    "cf-request-id": "02bc803d790000ed5b42096200000001",
+    "vary": "Accept-Encoding",
+    "cf-cache-status": "HIT",
+    "set-cookie": "__cfduid=dccc80c99d8edbc1fd5911b2b811a53b71589589255; expires=Mon, 15-Jun-20 00:34:15 GMT; path=/; domain=.jspm.io; HttpOnly; SameSite=Lax",
+    "content-type": "application/javascript",
+    "server": "cloudflare",
+    "date": "Sat, 16 May 2020 00:34:15 GMT",
+    "cf-ray": "5941030f2841ed5b-SJC",
+    "age": "40809",
+    "access-control-allow-origin": "*",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+  },
+  "url": "https://dev.jspm.io/npm:cssom@0.3.8/lib/CSSImportRule.dew.js"
+}

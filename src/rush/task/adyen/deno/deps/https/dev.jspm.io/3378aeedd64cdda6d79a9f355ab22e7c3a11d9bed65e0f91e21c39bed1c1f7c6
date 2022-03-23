@@ -1,0 +1,2 @@
+export { dew } from "/npm:xml-name-validator@3.0.0/lib/xml-name-validator.dew.js";
+import "/npm:xml-name-validator@3.0.0/lib/generated-parser.dew.js";

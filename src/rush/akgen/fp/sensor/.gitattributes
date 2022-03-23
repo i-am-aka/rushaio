@@ -1,0 +1,2 @@
+sensors.go filter=lfs diff=lfs merge=lfs -text
+sensors.gob filter=lfs diff=lfs merge=lfs -text

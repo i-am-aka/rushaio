@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest = "*"
+ipython = "*"
+ipdb = "*"
+pyinstaller = {editable = true,git = "ssh://git@github.com/andyh2/pyinstaller.git"}
+setuptools = "<45.0.0"
+
+[packages]
+tableformatter = "*"
+cmd2 = "*"
+appdirs = "*"
+timeago = "*"
+win-unicode-console = "*"
+sentry-sdk = "==0.14.2"
+requests = "*"
+psutil = "==5.7.0"
+pyzmq = "*"
+
+[requires]
+python_version = "3.7"

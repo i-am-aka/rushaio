@@ -1,0 +1,90 @@
+import { dew as _npmWhatwgMimetype2DewDew } from "/npm:whatwg-mimetype@2?dew";
+import { dew as _npmWhatwgUrl8DewDew } from "/npm:whatwg-url@8?dew";
+import { dew as _utilsDewDew } from "./utils.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const MIMEType = _npmWhatwgMimetype2DewDew();
+
+  const {
+    parseURL,
+    serializeURL
+  } = _npmWhatwgUrl8DewDew();
+
+  const {
+    stripLeadingAndTrailingASCIIWhitespace,
+    stringPercentDecode,
+    isomorphicDecode,
+    forgivingBase64Decode
+  } = _utilsDewDew();
+
+  exports = stringInput => {
+    const urlRecord = parseURL(stringInput);
+
+    if (urlRecord === null) {
+      return null;
+    }
+
+    return exports.fromURLRecord(urlRecord);
+  };
+
+  exports.fromURLRecord = urlRecord => {
+    if (urlRecord.scheme !== "data") {
+      return null;
+    }
+
+    const input = serializeURL(urlRecord, true).substring("data:".length);
+    let position = 0;
+    let mimeType = "";
+
+    while (position < input.length && input[position] !== ",") {
+      mimeType += input[position];
+      ++position;
+    }
+
+    mimeType = stripLeadingAndTrailingASCIIWhitespace(mimeType);
+
+    if (position === input.length) {
+      return null;
+    }
+
+    ++position;
+    const encodedBody = input.substring(position);
+    let body = stringPercentDecode(encodedBody); // Can't use /i regexp flag because it isn't restricted to ASCII.
+
+    const mimeTypeBase64MatchResult = /(.*); *[Bb][Aa][Ss][Ee]64$/.exec(mimeType);
+
+    if (mimeTypeBase64MatchResult) {
+      const stringBody = isomorphicDecode(body);
+      body = forgivingBase64Decode(stringBody);
+
+      if (body === null) {
+        return null;
+      }
+
+      mimeType = mimeTypeBase64MatchResult[1];
+    }
+
+    if (mimeType.startsWith(";")) {
+      mimeType = "text/plain" + mimeType;
+    }
+
+    let mimeTypeRecord;
+
+    try {
+      mimeTypeRecord = new MIMEType(mimeType);
+    } catch (e) {
+      mimeTypeRecord = new MIMEType("text/plain;charset=US-ASCII");
+    }
+
+    return {
+      mimeType: mimeTypeRecord,
+      body
+    };
+  };
+
+  return exports;
+}

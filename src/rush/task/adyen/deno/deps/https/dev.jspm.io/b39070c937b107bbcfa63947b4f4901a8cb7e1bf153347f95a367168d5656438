@@ -1,0 +1,42 @@
+import { dew as _internalConstantsDewDew } from "../helpers/internal-constants.dew.js";
+import { dew as _nodeTypeDewDew } from "../node-type.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const {
+    domSymbolTree
+  } = _internalConstantsDewDew();
+
+  const NODE_TYPE = _nodeTypeDewDew();
+
+  class NonDocumentTypeChildNodeImpl {
+    get nextElementSibling() {
+      for (const sibling of domSymbolTree.nextSiblingsIterator(this)) {
+        if (sibling.nodeType === NODE_TYPE.ELEMENT_NODE) {
+          return sibling;
+        }
+      }
+
+      return null;
+    }
+
+    get previousElementSibling() {
+      for (const sibling of domSymbolTree.previousSiblingsIterator(this)) {
+        if (sibling.nodeType === NODE_TYPE.ELEMENT_NODE) {
+          return sibling;
+        }
+      }
+
+      return null;
+    }
+
+  }
+
+  exports = {
+    implementation: NonDocumentTypeChildNodeImpl
+  };
+  return exports;
+}

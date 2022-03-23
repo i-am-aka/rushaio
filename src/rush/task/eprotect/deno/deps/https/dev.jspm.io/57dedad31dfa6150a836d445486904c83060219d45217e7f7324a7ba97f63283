@@ -1,0 +1,15 @@
+export { dew } from "/npm:whatwg-url@8.1.0/index.dew.js";
+import "/npm:whatwg-url@8.1.0/webidl2js-wrapper.dew.js";
+import "/npm:whatwg-url@8.1.0/lib/url-state-machine.dew.js";
+import "/npm:whatwg-url@8.1.0/lib/urlencoded.dew.js";
+import "/npm:whatwg-url@8.1.0/lib/URL.dew.js";
+import "/npm:whatwg-url@8.1.0/lib/URLSearchParams.dew.js";
+import "/npm:webidl-conversions@5?dew";
+import "/npm:whatwg-url@8.1.0/lib/utils.dew.js";
+import "/npm:whatwg-url@8.1.0/lib/URL-impl.dew.js";
+import "/npm:whatwg-url@8.1.0/lib/URLSearchParams-impl.dew.js";
+import "/npm:lodash.sortby@4?dew";
+import "/npm:@jspm/core@1/nodelibs/punycode.js";
+import "/npm:tr46@2?dew";
+import "/npm:whatwg-url@8.1.0/lib/infra.dew.js";
+import "/npm:@jspm/core@1/nodelibs/buffer.js";

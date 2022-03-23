@@ -1,0 +1,33 @@
+import { dew as _traversalDewDew } from "./traversal.dew.js";
+import { dew as _namespacesDewDew } from "./namespaces.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const {
+    firstChildWithLocalName
+  } = _traversalDewDew();
+
+  const {
+    HTML_NS
+  } = _namespacesDewDew(); // https://html.spec.whatwg.org/multipage/interactive-elements.html#summary-for-its-parent-details
+
+
+  exports.isSummaryForParentDetails = summaryElement => {
+    const parent = summaryElement.parentNode;
+
+    if (parent === null) {
+      return false;
+    }
+
+    if (parent._localName !== "details" || parent._namespaceURI !== HTML_NS) {
+      return false;
+    }
+
+    return firstChildWithLocalName(parent, "summary") === summaryElement;
+  };
+
+  return exports;
+}

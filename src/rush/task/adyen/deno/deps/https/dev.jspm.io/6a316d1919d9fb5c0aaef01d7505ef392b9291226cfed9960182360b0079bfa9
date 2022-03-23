@@ -1,0 +1,21 @@
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  exports = function getBasicPropertyDescriptor(name) {
+    return {
+      set: function (v) {
+        this._setProperty(name, v);
+      },
+      get: function () {
+        return this.getPropertyValue(name);
+      },
+      enumerable: true,
+      configurable: true
+    };
+  };
+
+  return exports;
+}

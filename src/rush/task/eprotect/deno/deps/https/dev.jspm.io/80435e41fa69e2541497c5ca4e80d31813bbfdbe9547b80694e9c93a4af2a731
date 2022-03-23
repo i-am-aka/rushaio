@@ -1,0 +1,18 @@
+import { dew as _EventImplDewDew } from "./Event-impl.dew.js";
+import { dew as _PopStateEventInitDewDew } from "../generated/PopStateEventInit.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const EventImpl = _EventImplDewDew().implementation;
+
+  const PopStateEventInit = _PopStateEventInitDewDew();
+
+  class PopStateEventImpl extends EventImpl {}
+
+  PopStateEventImpl.defaultInit = PopStateEventInit.convert(undefined);
+  exports.implementation = PopStateEventImpl;
+  return exports;
+}

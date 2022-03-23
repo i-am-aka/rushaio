@@ -1,0 +1,60 @@
+import { dew as _keyDewDew } from "./key.dew.js";
+import { dew as _fingerprintDewDew } from "./fingerprint.dew.js";
+import { dew as _signatureDewDew } from "./signature.dew.js";
+import { dew as _privateKeyDewDew } from "./private-key.dew.js";
+import { dew as _certificateDewDew } from "./certificate.dew.js";
+import { dew as _identityDewDew } from "./identity.dew.js";
+import { dew as _errorsDewDew } from "./errors.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  // Copyright 2015 Joyent, Inc.
+  var Key = _keyDewDew();
+
+  var Fingerprint = _fingerprintDewDew();
+
+  var Signature = _signatureDewDew();
+
+  var PrivateKey = _privateKeyDewDew();
+
+  var Certificate = _certificateDewDew();
+
+  var Identity = _identityDewDew();
+
+  var errs = _errorsDewDew();
+
+  exports = {
+    /* top-level classes */
+    Key: Key,
+    parseKey: Key.parse,
+    Fingerprint: Fingerprint,
+    parseFingerprint: Fingerprint.parse,
+    Signature: Signature,
+    parseSignature: Signature.parse,
+    PrivateKey: PrivateKey,
+    parsePrivateKey: PrivateKey.parse,
+    generatePrivateKey: PrivateKey.generate,
+    Certificate: Certificate,
+    parseCertificate: Certificate.parse,
+    createSelfSignedCertificate: Certificate.createSelfSigned,
+    createCertificate: Certificate.create,
+    Identity: Identity,
+    identityFromDN: Identity.parseDN,
+    identityForHost: Identity.forHost,
+    identityForUser: Identity.forUser,
+    identityForEmail: Identity.forEmail,
+    identityFromArray: Identity.fromArray,
+
+    /* errors */
+    FingerprintFormatError: errs.FingerprintFormatError,
+    InvalidAlgorithmError: errs.InvalidAlgorithmError,
+    KeyParseError: errs.KeyParseError,
+    SignatureParseError: errs.SignatureParseError,
+    KeyEncryptedError: errs.KeyEncryptedError,
+    CertificateParseError: errs.CertificateParseError
+  };
+  return exports;
+}

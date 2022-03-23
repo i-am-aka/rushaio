@@ -1,0 +1,7 @@
+export { dew } from "/npm:aws4@1.9.1/aws4.dew.js";
+import "/npm:@jspm/core@1/nodelibs/url.js";
+import "/npm:@jspm/core@1/nodelibs/querystring.js";
+import "/npm:@jspm/core@1/nodelibs/crypto.js";
+import "/npm:aws4@1.9.1/lru.dew.js";
+import "/npm:@jspm/core@1/nodelibs/process.js";
+import "/npm:@jspm/core@1/nodelibs/buffer.js";

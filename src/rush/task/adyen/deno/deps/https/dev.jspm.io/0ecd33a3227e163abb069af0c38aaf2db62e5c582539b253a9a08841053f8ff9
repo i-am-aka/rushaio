@@ -1,0 +1,19 @@
+import { dew as _npmSymbolTree3DewDew } from "/npm:symbol-tree@3?dew";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const SymbolTree = _npmSymbolTree3DewDew();
+
+  exports.cloningSteps = Symbol("cloning steps"); // TODO: the many underscore-prefixed hooks should move here
+  // E.g. _attrModified (which maybe should be split into its per-spec variants)
+
+  /**
+   * This SymbolTree is used to build the tree for all Node in a document
+   */
+
+  exports.domSymbolTree = new SymbolTree("DOM SymbolTree");
+  return exports;
+}

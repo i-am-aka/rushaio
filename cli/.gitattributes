@@ -1,0 +1,16 @@
+chrome/chromium_mac.zip filter=lfs diff=lfs merge=lfs -text
+chrome/chromium_win.zip filter=lfs diff=lfs merge=lfs -text
+re/sensor_samples.txt filter=lfs diff=lfs merge=lfs -text
+external/zoneinfo.zip filter=lfs diff=lfs merge=lfs -text
+external/deno.exe filter=lfs diff=lfs merge=lfs -text
+external/deno_100.exe filter=lfs diff=lfs merge=lfs -text
+external/deno_linux_x64 filter=lfs diff=lfs merge=lfs -text
+external/deno_osx_x64 filter=lfs diff=lfs merge=lfs -text
+external/deno_osx_x64_100 filter=lfs diff=lfs merge=lfs -text
+external/ff_mac filter=lfs diff=lfs merge=lfs -text
+external/deno-x86_64-apple-darwin.zip filter=lfs diff=lfs merge=lfs -text
+external/deno-x86_64-pc-windows-msvc.zip filter=lfs diff=lfs merge=lfs -text
+external/deno_osx_64 filter=lfs diff=lfs merge=lfs -text
+external/geckodriver-v0.28.0-win64.zip filter=lfs diff=lfs merge=lfs -text
+external/geckodriver.exe filter=lfs diff=lfs merge=lfs -text
+external/Firefox filter=lfs diff=lfs merge=lfs -text

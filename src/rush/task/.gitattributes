@@ -1,0 +1,5 @@
+cli/external filter=lfs diff=lfs merge=lfs -text
+../cli/external/deno.exe filter=lfs diff=lfs merge=lfs -text
+../cli/external/deno_linux_x64 filter=lfs diff=lfs merge=lfs -text
+../cli/external/deno_osx_x64 filter=lfs diff=lfs merge=lfs -text
+bin filter=lfs diff=lfs merge=lfs -text

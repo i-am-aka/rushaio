@@ -1,0 +1,1 @@
+export { dew } from "/npm:xmlchars@2.2.0/xml/1.1/ed2.dew.js";

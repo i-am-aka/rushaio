@@ -1,0 +1,235 @@
+import _util from "/npm:@jspm/core@1/nodelibs/util.js";
+import _stream from "/npm:@jspm/core@1/nodelibs/stream.js";
+import { dew as _npmDelayedStreamDew } from "/npm:delayed-stream@1.0?dew";
+import _buffer from "/npm:@jspm/core@1/nodelibs/buffer.js";
+var exports = {},
+    _dewExec = false;
+
+var _global = typeof self !== "undefined" ? self : global;
+
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  var Buffer = _buffer.Buffer;
+  var util = _util;
+  var Stream = _stream.Stream;
+
+  var DelayedStream = _npmDelayedStreamDew();
+
+  exports = CombinedStream;
+
+  function CombinedStream() {
+    (this || _global).writable = false;
+    (this || _global).readable = true;
+    (this || _global).dataSize = 0;
+    (this || _global).maxDataSize = 2 * 1024 * 1024;
+    (this || _global).pauseStreams = true;
+    (this || _global)._released = false;
+    (this || _global)._streams = [];
+    (this || _global)._currentStream = null;
+    (this || _global)._insideLoop = false;
+    (this || _global)._pendingNext = false;
+  }
+
+  util.inherits(CombinedStream, Stream);
+
+  CombinedStream.create = function (options) {
+    var combinedStream = new (this || _global)();
+    options = options || {};
+
+    for (var option in options) {
+      combinedStream[option] = options[option];
+    }
+
+    return combinedStream;
+  };
+
+  CombinedStream.isStreamLike = function (stream) {
+    return typeof stream !== 'function' && typeof stream !== 'string' && typeof stream !== 'boolean' && typeof stream !== 'number' && !Buffer.isBuffer(stream);
+  };
+
+  CombinedStream.prototype.append = function (stream) {
+    var isStreamLike = CombinedStream.isStreamLike(stream);
+
+    if (isStreamLike) {
+      if (!(stream instanceof DelayedStream)) {
+        var newStream = DelayedStream.create(stream, {
+          maxDataSize: Infinity,
+          pauseStream: (this || _global).pauseStreams
+        });
+        stream.on('data', (this || _global)._checkDataSize.bind(this || _global));
+        stream = newStream;
+      }
+
+      this._handleErrors(stream);
+
+      if ((this || _global).pauseStreams) {
+        stream.pause();
+      }
+    }
+
+    (this || _global)._streams.push(stream);
+
+    return this || _global;
+  };
+
+  CombinedStream.prototype.pipe = function (dest, options) {
+    Stream.prototype.pipe.call(this || _global, dest, options);
+    this.resume();
+    return dest;
+  };
+
+  CombinedStream.prototype._getNext = function () {
+    (this || _global)._currentStream = null;
+
+    if ((this || _global)._insideLoop) {
+      (this || _global)._pendingNext = true;
+      return; // defer call
+    }
+
+    (this || _global)._insideLoop = true;
+
+    try {
+      do {
+        (this || _global)._pendingNext = false;
+
+        this._realGetNext();
+      } while ((this || _global)._pendingNext);
+    } finally {
+      (this || _global)._insideLoop = false;
+    }
+  };
+
+  CombinedStream.prototype._realGetNext = function () {
+    var stream = (this || _global)._streams.shift();
+
+    if (typeof stream == 'undefined') {
+      this.end();
+      return;
+    }
+
+    if (typeof stream !== 'function') {
+      this._pipeNext(stream);
+
+      return;
+    }
+
+    var getStream = stream;
+    getStream(function (stream) {
+      var isStreamLike = CombinedStream.isStreamLike(stream);
+
+      if (isStreamLike) {
+        stream.on('data', (this || _global)._checkDataSize.bind(this || _global));
+
+        this._handleErrors(stream);
+      }
+
+      this._pipeNext(stream);
+    }.bind(this || _global));
+  };
+
+  CombinedStream.prototype._pipeNext = function (stream) {
+    (this || _global)._currentStream = stream;
+    var isStreamLike = CombinedStream.isStreamLike(stream);
+
+    if (isStreamLike) {
+      stream.on('end', (this || _global)._getNext.bind(this || _global));
+      stream.pipe(this || _global, {
+        end: false
+      });
+      return;
+    }
+
+    var value = stream;
+    this.write(value);
+
+    this._getNext();
+  };
+
+  CombinedStream.prototype._handleErrors = function (stream) {
+    var self = this || _global;
+    stream.on('error', function (err) {
+      self._emitError(err);
+    });
+  };
+
+  CombinedStream.prototype.write = function (data) {
+    this.emit('data', data);
+  };
+
+  CombinedStream.prototype.pause = function () {
+    if (!(this || _global).pauseStreams) {
+      return;
+    }
+
+    if ((this || _global).pauseStreams && (this || _global)._currentStream && typeof (this || _global)._currentStream.pause == 'function') (this || _global)._currentStream.pause();
+    this.emit('pause');
+  };
+
+  CombinedStream.prototype.resume = function () {
+    if (!(this || _global)._released) {
+      (this || _global)._released = true;
+      (this || _global).writable = true;
+
+      this._getNext();
+    }
+
+    if ((this || _global).pauseStreams && (this || _global)._currentStream && typeof (this || _global)._currentStream.resume == 'function') (this || _global)._currentStream.resume();
+    this.emit('resume');
+  };
+
+  CombinedStream.prototype.end = function () {
+    this._reset();
+
+    this.emit('end');
+  };
+
+  CombinedStream.prototype.destroy = function () {
+    this._reset();
+
+    this.emit('close');
+  };
+
+  CombinedStream.prototype._reset = function () {
+    (this || _global).writable = false;
+    (this || _global)._streams = [];
+    (this || _global)._currentStream = null;
+  };
+
+  CombinedStream.prototype._checkDataSize = function () {
+    this._updateDataSize();
+
+    if ((this || _global).dataSize <= (this || _global).maxDataSize) {
+      return;
+    }
+
+    var message = 'DelayedStream#maxDataSize of ' + (this || _global).maxDataSize + ' bytes exceeded.';
+
+    this._emitError(new Error(message));
+  };
+
+  CombinedStream.prototype._updateDataSize = function () {
+    (this || _global).dataSize = 0;
+    var self = this || _global;
+
+    (this || _global)._streams.forEach(function (stream) {
+      if (!stream.dataSize) {
+        return;
+      }
+
+      self.dataSize += stream.dataSize;
+    });
+
+    if ((this || _global)._currentStream && (this || _global)._currentStream.dataSize) {
+      (this || _global).dataSize += (this || _global)._currentStream.dataSize;
+    }
+  };
+
+  CombinedStream.prototype._emitError = function (err) {
+    this._reset();
+
+    this.emit('error', err);
+  };
+
+  return exports;
+}

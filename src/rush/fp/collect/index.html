@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html style="width: 100%; height: 100%">
+<head>
+<meta data-rh="true" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=1">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/2.1.0/fingerprint2.min.js"></script>
+<script type="text/javascript" src="/fp.js"></script>
+<script type="text/javascript" src="/ay.js"></script>
+<script type="text/javascript" src="/p.js"></script>
+</head>
+<body style="width: 100%; height: 100%;">
+  <img style="width: 100%; height: 100%; display: block" src="https://cdn.discordapp.com/attachments/680484989434986500/707042592004636762/goat.png" />
+  <script type="text/javascript">
+     setTimeout(function() {
+
+      function recur(obj) {
+        // TODO support cycles
+        var result = {}, _tmp;
+        for (var i in obj) {
+          if (i === 'enabledPlugin' || typeof obj[i] === 'function') {
+              continue;
+          } else if (typeof obj[i] === 'object') {
+              _tmp = recur(obj[i]);
+              if (Object.keys(_tmp).length) {
+                  result[i] = _tmp;
+              }
+          } else {
+              result[i] = obj[i];
+          }
+        }
+        return result;
+      }
+
+      // if (window.location.search.indexOf('ay') !== -1) {
+        try{
+          var input = document.createElement('input');
+          var promise = new Promise((resolve, reject) => {
+            dfDo(input, resolve);
+          });
+          promise.then(fp => fetch('/add', { method: 'POST', mode: 'no-cors', headers: {'Content-Type': 'application/json'}, body: fp }));
+        }catch(e){console.error(e)}
+      // } else {
+      var ll = parseInt((window.location.search.split('=')[1])) || 1;
+      for (var i = 0; i < ll; i++) {
+        setTimeout(doFpLite, 0);
+      }
+
+      var zn = {};
+      function doZn() {
+
+      }
+
+      var akn = getak();
+      akn.startTracking();
+      function doFp(vFp) {
+        var jsfp = {
+          akTel: akn.get_telemetry(),
+          window: Flatted.stringify(window),
+          navigator: recur(navigator),
+          zn: zn,
+          vFp: vFp,
+          rd: window.util.fill(),
+        };
+        var fpJson = JSON.stringify(jsfp);
+        fetch("/add", { method: 'POST', mode: 'no-cors', headers: {'Content-Type': 'application/json'}, body: fpJson });
+      }
+      function doFpLite() {
+        // console.log('doFpLite')
+        // console.trace();
+        const ak = getak();
+        if (Math.random() < 0.5) {
+          setTimeout(ak.startTracking(), 500);
+        }
+        var jsfp = {akTel: ak.get_telemetry()};
+        fetch("/add", { method: 'POST', mode: 'no-cors', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(jsfp) });
+        var t0 = Date.now();
+        var i = setInterval(function(ak) {
+          if (Date.now() - t0 > 60e3) {
+            clearInterval(i);
+          }
+          ak.firstLoad = false;
+          var jsfp = {akTel: ak.get_telemetry()};
+          fetch("/add", { method: 'POST', mode: 'no-cors', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(jsfp) });
+        }.bind(this, ak)
+        , 500);
+      }
+
+      setTimeout(function () {
+        try {
+            Fingerprint2.get({extendedJsFonts: true}, function (vFp) {
+              doFp(vFp);
+            })
+          }catch(e){console.error(e)}
+      }, 5000);
+    }
+  }, 10);
+  </script>
+</body>
+</html>

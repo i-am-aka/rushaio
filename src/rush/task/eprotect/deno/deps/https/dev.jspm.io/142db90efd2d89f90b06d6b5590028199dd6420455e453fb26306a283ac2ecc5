@@ -1,0 +1,16 @@
+import { dew as _HTMLMediaElementImplDewDew } from "./HTMLMediaElement-impl.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const HTMLMediaElementImpl = _HTMLMediaElementImplDewDew().implementation;
+
+  class HTMLAudioElementImpl extends HTMLMediaElementImpl {}
+
+  exports = {
+    implementation: HTMLAudioElementImpl
+  };
+  return exports;
+}

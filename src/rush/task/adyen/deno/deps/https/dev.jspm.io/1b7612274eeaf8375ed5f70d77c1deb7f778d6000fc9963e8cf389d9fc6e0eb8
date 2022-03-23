@@ -1,0 +1,12 @@
+import { dew as _XMLHttpRequestEventTargetImplDewDew } from "./XMLHttpRequestEventTarget-impl.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const XMLHttpRequestEventTargetImpl = _XMLHttpRequestEventTargetImplDewDew().implementation;
+
+  exports.implementation = class XMLHttpRequestUploadImpl extends XMLHttpRequestEventTargetImpl {};
+  return exports;
+}

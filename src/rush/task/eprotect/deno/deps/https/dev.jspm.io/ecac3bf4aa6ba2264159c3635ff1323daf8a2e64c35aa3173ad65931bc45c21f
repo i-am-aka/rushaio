@@ -1,0 +1,2 @@
+export { dew } from "/npm:estraverse@4.3.0/estraverse.dew.js";
+import "/npm:estraverse@4.3.0/package.json.dew.js";

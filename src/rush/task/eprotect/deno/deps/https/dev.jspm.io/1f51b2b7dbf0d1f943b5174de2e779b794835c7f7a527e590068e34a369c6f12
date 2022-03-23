@@ -1,0 +1,36 @@
+import { dew as _npmCssstyle2DewDew } from "/npm:cssstyle@2?dew";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const cssstyle = _npmCssstyle2DewDew();
+
+  class ElementCSSInlineStyle {
+    _initElementCSSInlineStyle() {
+      this._settingCssText = false;
+      this._style = new cssstyle.CSSStyleDeclaration(newCssText => {
+        if (!this._settingCssText) {
+          this._settingCssText = true;
+          this.setAttributeNS(null, "style", newCssText);
+          this._settingCssText = false;
+        }
+      });
+    }
+
+    get style() {
+      return this._style;
+    }
+
+    set style(value) {
+      this._style.cssText = value;
+    }
+
+  }
+
+  exports = {
+    implementation: ElementCSSInlineStyle
+  };
+  return exports;
+}

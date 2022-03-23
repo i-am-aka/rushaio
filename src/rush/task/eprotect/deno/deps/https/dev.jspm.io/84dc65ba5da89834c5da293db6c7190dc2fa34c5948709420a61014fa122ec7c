@@ -1,0 +1,67 @@
+import { dew as _clockIsAccurateDewDew } from "./clock-is-accurate.dew.js";
+import { dew as _calculateClockOffsetDewDew } from "./calculate-clock-offset.dew.js";
+import { dew as _utilsDewDew } from "./utils.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  // Actual implementation of the Performance class.
+  const clockIsAccurate = _clockIsAccurateDewDew();
+
+  const calculateClockOffset = _calculateClockOffsetDewDew();
+
+  const {
+    hrtime,
+    toMS
+  } = _utilsDewDew();
+
+  const kTimeOrigin = Symbol("time origin");
+  const kTimeOriginTimestamp = Symbol("time origin timestamp");
+
+  class Performance {
+    constructor() {
+      // Time origin.
+      const timeOrigin = hrtime();
+      this[kTimeOrigin] = timeOrigin;
+
+      if (clockIsAccurate) {
+        // Let |t1| be the DOMHighResTimeStamp representing the high resolution Unix time at which the global monotonic
+        // clock is zero. This has to be calculated for every Performance object to account for clock drifts.
+        const t1 = calculateClockOffset(); // Let |t2| be the DOMHighResTimeStamp representing the high resolution time value of the global monotonic clock
+        // at global's time origin.
+
+        const t2 = toMS(timeOrigin); // Return the sum of |t1| and |t2|.
+
+        this[kTimeOriginTimestamp] = t1 + t2;
+      } else {
+        // Clock isn't accurate enough. Use millisecond accuracy per spec.
+        const cur = Date.now();
+        this[kTimeOriginTimestamp] = cur;
+      }
+    } // The timeOrigin getter actually returns the time origin timestamp, not the raw time origin.
+
+
+    get timeOrigin() {
+      return this[kTimeOriginTimestamp];
+    }
+
+    now() {
+      const diff = toMS(hrtime(this[kTimeOrigin]));
+      return clockIsAccurate ? diff : Math.round(diff);
+    }
+
+    toJSON() {
+      return {
+        timeOrigin: this.timeOrigin
+      };
+    }
+
+  }
+
+  exports = {
+    Performance
+  };
+  return exports;
+}
